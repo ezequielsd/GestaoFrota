@@ -40,4 +40,4 @@ Ezequiel da Silva Daniel
 A versão Release do programa, executável com suas dependencias, basta copiar para um pen driver ou hd externo e levar para qualquer lugar, pode ser baixado no link abaixo:
 
 
-[QRCode Form](/Release/Release.zip)
+[Gestão de Frota](/Release/Release.zip)
