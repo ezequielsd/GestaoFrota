@@ -18,7 +18,7 @@ Para realizar debug e compilar, deve clonar o repositório ou baixar o código f
 
 **Para usuários**
 
-Basta baixar o programa, descompactar em alguma pasta e rodar o GestaoFrota.exe. Ele é estilo portable, ou seja, não é necessário sua instalação, sendo assim, é aconselhado a colocar a pasta em um pen driver ou hd externo e levar para qualquer lugar. Ao executar ele pela primeira vez, um arquivo chamado **Frota.sdf** será criado, ele é o banco de dados onde conterá todas as informações, e será gerado dentro da própria localização do executável. O sistema suporta uma boa capacidade de dados, porém para frotas acima de 5 carros entre em contato comigo que é mais aconselhado a usar um banco na nuvem, ou se for para empresa, será melhor instalar um banco SQL Server Express. Mas nestá situação, entre em contato que passo as orientações.
+Basta baixar o programa no tópico **Release** mais abaixo, descompactar em alguma pasta e rodar o GestaoFrota.exe. Ele é estilo portable, ou seja, não é necessário sua instalação, sendo assim, é aconselhado a colocar a pasta em um pen driver ou hd externo e levar para qualquer lugar. Ao executar ele pela primeira vez, um arquivo chamado **Frota.sdf** será criado, ele é o banco de dados onde conterá todas as informações, e será gerado dentro da própria localização do executável. O sistema suporta uma boa capacidade de dados, porém para frotas acima de 5 carros entre em contato comigo que é mais aconselhado a usar um banco na nuvem, ou se for para empresa, será melhor instalar um banco SQL Server Express. Mas nestá situação, entre em contato que passo as orientações.
 
 **Para desenvolvedores**
 
@@ -43,5 +43,6 @@ Ezequiel da Silva Daniel
 
 A versão Release do programa, executável com suas dependencias, basta copiar para um pen driver ou hd externo e levar para qualquer lugar, pode ser baixado no link abaixo:
 
+Atenção, aqui é para aqueles que apenas querem utilizar o programa...
 
 [Gestão de Frota](https://github.com/ezequielsd/GestaoFrota/raw/master/Release/Release.zip)
