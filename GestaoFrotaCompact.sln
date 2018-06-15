@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{2F868C1F-DE9C-4DE7-9AEC-270BFA838CF1}"
+	ProjectSection(SolutionItems) = preProject
+		GestaoFrota\Scripts\CreateTableVeiculo.sqlce = GestaoFrota\Scripts\CreateTableVeiculo.sqlce
+		GestaoFrota\Scripts\InsertAbastecimento.sqlce = GestaoFrota\Scripts\InsertAbastecimento.sqlce
+		GestaoFrota\Scripts\InsertCNH.sqlce = GestaoFrota\Scripts\InsertCNH.sqlce
+		GestaoFrota\Scripts\InsertCombustiveis.sqlce = GestaoFrota\Scripts\InsertCombustiveis.sqlce
+		GestaoFrota\Scripts\InsertManutencoes.sqlce = GestaoFrota\Scripts\InsertManutencoes.sqlce
+		GestaoFrota\Scripts\InsertMecanicas.sqlce = GestaoFrota\Scripts\InsertMecanicas.sqlce
+		GestaoFrota\Scripts\InsertOleos.sqlce = GestaoFrota\Scripts\InsertOleos.sqlce
+		GestaoFrota\Scripts\InsertTables.sqlce = GestaoFrota\Scripts\InsertTables.sqlce
+		GestaoFrota\Scripts\Insertveiculos.sqlce = GestaoFrota\Scripts\Insertveiculos.sqlce
+		SqlQuery_Insert.sql = SqlQuery_Insert.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoFrota", "GestaoFrota\GestaoFrota.csproj", "{D2C1AFC9-A42E-4AC0-9819-0011365075DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFSqlCe.Dal", "CFsqlCe.Dal\CFSqlCe.Dal.csproj", "{EB4A49E2-FEB6-4FA9-89D8-F75ECA3299C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIPE", "FIPE\FIPE.csproj", "{410FC40F-9997-4BE9-8A20-209D5B478A03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{737F71A3-AF8A-4C57-9D7F-CF7820D3DE08}"
+	ProjectSection(SolutionItems) = preProject
+		lib\PieChartControls.dll = lib\PieChartControls.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2C1AFC9-A42E-4AC0-9819-0011365075DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2C1AFC9-A42E-4AC0-9819-0011365075DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2C1AFC9-A42E-4AC0-9819-0011365075DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2C1AFC9-A42E-4AC0-9819-0011365075DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB4A49E2-FEB6-4FA9-89D8-F75ECA3299C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB4A49E2-FEB6-4FA9-89D8-F75ECA3299C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB4A49E2-FEB6-4FA9-89D8-F75ECA3299C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB4A49E2-FEB6-4FA9-89D8-F75ECA3299C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{410FC40F-9997-4BE9-8A20-209D5B478A03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{410FC40F-9997-4BE9-8A20-209D5B478A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{410FC40F-9997-4BE9-8A20-209D5B478A03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{410FC40F-9997-4BE9-8A20-209D5B478A03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C401C2F-FC61-4C4B-9EB0-5DFFAF6C6676}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ezequielsd.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = GestaoFrota\\GestaoFrota.csproj
+		SccProjectName1 = GestaoFrota
+		SccLocalPath1 = GestaoFrota
+		SccProjectUniqueName2 = CFsqlCe.Dal\\CFSqlCe.Dal.csproj
+		SccProjectName2 = CFsqlCe.Dal
+		SccLocalPath2 = CFsqlCe.Dal
+		SccProjectUniqueName3 = FIPE\\FIPE.csproj
+		SccProjectName3 = FIPE
+		SccLocalPath3 = FIPE
+	EndGlobalSection
+EndGlobal

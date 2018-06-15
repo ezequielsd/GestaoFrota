@@ -1,0 +1,78 @@
+﻿-- Script Date: 10/03/2018 11:01  - ErikEJ.SqlCeScripting version 3.5.2.75
+SET IDENTITY_INSERT [Manutencaos] ON;
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+1,{ts '2014-05-15 17:12:55.000'},150.00,N'- Instalação palheta dianteira 
+- Conserto maquina de vidro dianteiro esquerda',91000,N'Office Lens 04022018 1723.pdf',N'LRH-0484',1);
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+2,{ts '2014-05-09 17:28:57.000'},3950.00,N'- Pneu Semi Novo 
+- Roda K23 Aro 17 4x100 GL 
+- Parafuso LOB 
+- Geomeria Computadorizada 
+- Mão de obra 
+- Kit Batente amortecedor dianteiro 
+- Kit Amotercedor traseiro 
+- Amort. traseiro Toyota corola 03/ MONROE 
+- Amort dianteiro lado esquerdo Toyota Corolla 
+- Amort dianteiro lado direiro Toyota Corolla',91611,N'Office Lens 04022018 1548.pdf',N'LRH-0484',2);
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+3,{ts '2014-05-27 18:07:18.000'},430.00,N'Embuchamento pinças de freio',92343,N'Office Lens 04022018 1545.pdf',N'LRH-0484',3);
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+4,{ts '2014-08-04 18:11:13.000'},915.00,N'',92343,N'Novo Documento 2018-02-04 (9).pdf',N'LRH-0484',4);
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+5,{ts '2015-09-09 18:15:14.000'},163.00,N'- 1 palheta 
+- Solda barra Cimp. 
+- Mãode obra',92343,N'Office Lens 04022018 1543.pdf',N'LRH-0484',5);
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+6,{ts '2015-12-04 18:23:27.000'},555.00,N'- Scanner 
+- Limpeza no bicos',93000,N'Novo Documento 2018-02-04 (10).pdf',N'LRH-0484',6);
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+7,{ts '2016-08-05 18:27:48.000'},205.00,N'- Limpeza bico injetor',93500,N'Office Lens 04022018 1537.pdf',N'LRH-0484',1);
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+8,{ts '2016-09-26 18:28:58.000'},312.00,N'',98000,N'Office Lens 04022018 1549.pdf',N'LRH-0484',7);
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+9,{ts '2016-09-19 18:32:07.000'},355.00,N'- Scanner 
+- Mangueira 
+- Kit peneiras bicos injetores',94000,N'Office Lens 04022018 1539.pdf',N'LRH-0484',6);
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+10,{ts '2016-11-25 18:33:32.000'},765.00,N'- Pivo lado direito 
+- Rolamento roda dianteira lado direito 
+- Jogo de Vela 
+- Vedador de Bico 
+- Reset e reporogramação central eletronica 
+- Ajustes gerais 
+- Mão de obra',98000,N'Novo Documento 2018-02-04 (6).pdf',N'LRH-0484',8);
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+11,{ts '2016-12-22 18:37:28.000'},50.00,N'Balanceamento',98000,N'Novo Documento 2018-02-04 (8).pdf',N'LRH-0484',2);
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+12,{ts '2016-12-16 18:38:43.000'},740.00,N'- Micro V 6PK1930 
+- Bobina de ignição semi nova 
+- Teste sensor e conector de rotação e fase 
+-  Teste de bobinas de ignição 
+- Diagnóstico e teste modulo de injeção 
+- Descarbonização de velas 
+- Rolamento micro V 
+- Mão de obra',97500,N'Novo Documento 2018-02-04 (4).pdf',N'LRH-0484',8);
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+13,{ts '2017-04-11 18:40:59.000'},80.00,N'- Balanceamento 4 rodas 
+- Geometria 4 rodas',100000,N'Novo Documento 2018-02-04 (7).pdf',N'LRH-0484',9);
+GO
+INSERT INTO [Manutencaos] ([Id],[Data],[Valor],[Descricao],[KM],[PathComprovantePDF],[VeiculoID],[MecanicaID]) VALUES (
+14,{ts '2017-04-06 18:43:52.000'},2100.00,N'- Colocação de GNV',104000,N'Novo Documento 2018-02-04 (5).pdf',N'LRH-0484',10);
+GO
+SET IDENTITY_INSERT [Manutencaos] OFF;
+GO
+ALTER TABLE [Manutencaos] ALTER COLUMN [Id] IDENTITY (15,1);
+GO

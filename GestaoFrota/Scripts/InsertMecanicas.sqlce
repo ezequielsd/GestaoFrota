@@ -1,0 +1,37 @@
+﻿-- Script Date: 10/03/2018 11:01  - ErikEJ.SqlCeScripting version 3.5.2.75
+SET IDENTITY_INSERT [Mecanicas] ON;
+GO
+INSERT INTO [Mecanicas] ([Id],[Nome],[Endereco],[Numero],[Complemento],[CEP],[Bairro],[Cidade],[UF],[Site],[Email],[Telefone1],[Telefone2],[Celular1],[Celular1Operadora],[Celular2],[Celular2Operadora],[Contatos],[Observacao]) VALUES (
+1,N'So Portas - Blasius e Serviços Automotivos LTDA ME',N'Rua PARA',N'',N'',N'89204-420',N'America',N'Joinville',N'SC',N'',N'',N'(47) 3029-0058',N'(  )     -',N'(  )      -',N'',N'(  )      -',N'',N'',NULL);
+GO
+INSERT INTO [Mecanicas] ([Id],[Nome],[Endereco],[Numero],[Complemento],[CEP],[Bairro],[Cidade],[UF],[Site],[Email],[Telefone1],[Telefone2],[Celular1],[Celular1Operadora],[Celular2],[Celular2Operadora],[Contatos],[Observacao]) VALUES (
+2,N'Freitas Pneus LTDA',N'Rua TUIUTI',N'1203',N'',N'89160-000',N'Aventireiro',N'Joinville',N'SC',N'',N'',N'(47) 3467-6875',N'(  )     -',N'(  )      -',N'',N'(  )      -',N'',N'',NULL);
+GO
+INSERT INTO [Mecanicas] ([Id],[Nome],[Endereco],[Numero],[Complemento],[CEP],[Bairro],[Cidade],[UF],[Site],[Email],[Telefone1],[Telefone2],[Celular1],[Celular1Operadora],[Celular2],[Celular2Operadora],[Contatos],[Observacao]) VALUES (
+3,N'Auto Eletrica Edson LTDA - ME',N'Rua General Camara',N'220',N'',N'89222-450',N'Bom Retiro',N'Joinville',N'SC',N'',N'',N'(47) 3025-2827',N'(47) 3025-4465',N'(  )      -',N'',N'(  )      -',N'',N'',NULL);
+GO
+INSERT INTO [Mecanicas] ([Id],[Nome],[Endereco],[Numero],[Complemento],[CEP],[Bairro],[Cidade],[UF],[Site],[Email],[Telefone1],[Telefone2],[Celular1],[Celular1Operadora],[Celular2],[Celular2Operadora],[Contatos],[Observacao]) VALUES (
+4,N'Toyoville Com. Veiculos e Peças LTDA',N'XV de Novembro',N'4262',N'',N'89216-201',N'Gloria',N'Joinville',N'SC',N'',N'',N'(47) 2105-9900',N'(47) 2105-9916',N'(  )      -',N'',N'(  )      -',N'',N'',NULL);
+GO
+INSERT INTO [Mecanicas] ([Id],[Nome],[Endereco],[Numero],[Complemento],[CEP],[Bairro],[Cidade],[UF],[Site],[Email],[Telefone1],[Telefone2],[Celular1],[Celular1Operadora],[Celular2],[Celular2Operadora],[Contatos],[Observacao]) VALUES (
+5,N'Auto Elétrica Colincar',N'Rua Vice Prefeito Luiz Carlos Garcia',N'427',N'',N'     -',N'Costa e Silva',N'Joinville',N'SC',N'',N'',N'(47) 3435-2755',N'(  )     -',N'(47) 99971-1098',N'',N'(  )      -',N'',N'',NULL);
+GO
+INSERT INTO [Mecanicas] ([Id],[Nome],[Endereco],[Numero],[Complemento],[CEP],[Bairro],[Cidade],[UF],[Site],[Email],[Telefone1],[Telefone2],[Celular1],[Celular1Operadora],[Celular2],[Celular2Operadora],[Contatos],[Observacao]) VALUES (
+6,N'Meier - Auto Mecanica e Com. de Peças Adelino Meier LTDA',N'Rua Frederico Schlemm',N'58',N'',N'     -',N'Bom Retiro',N'Joinville',N'SC',N'http://www.mecanicameier.com.br/',N'',N'(47) 3425-1193',N'(47) 3425-4250',N'(  )      -',N'',N'(  )      -',N'',N'',NULL);
+GO
+INSERT INTO [Mecanicas] ([Id],[Nome],[Endereco],[Numero],[Complemento],[CEP],[Bairro],[Cidade],[UF],[Site],[Email],[Telefone1],[Telefone2],[Celular1],[Celular1Operadora],[Celular2],[Celular2Operadora],[Contatos],[Observacao]) VALUES (
+7,N'Auto Eletrica DW',N'Rua MAX Colin',N'1856',N'',N'89204-635',N'America',N'Joinville',N'SC',N'',N'',N'(  )     -',N'(  )     -',N'(  )      -',N'',N'(  )      -',N'',N'',NULL);
+GO
+INSERT INTO [Mecanicas] ([Id],[Nome],[Endereco],[Numero],[Complemento],[CEP],[Bairro],[Cidade],[UF],[Site],[Email],[Telefone1],[Telefone2],[Celular1],[Celular1Operadora],[Celular2],[Celular2Operadora],[Contatos],[Observacao]) VALUES (
+8,N'Auto Mecanica Costa e Silva',N'Rua das Codornas',N'120',N'',N'89220-050',N'Costa e Silva',N'Joinville',N'SC',N'',N'',N'(47) 3028-2318',N'(  )     -',N'(47) 99165-2318',N'VIVO',N'(47) 99903-8299',N'TIM',N'',NULL);
+GO
+INSERT INTO [Mecanicas] ([Id],[Nome],[Endereco],[Numero],[Complemento],[CEP],[Bairro],[Cidade],[UF],[Site],[Email],[Telefone1],[Telefone2],[Celular1],[Celular1Operadora],[Celular2],[Celular2Operadora],[Contatos],[Observacao]) VALUES (
+9,N'JS Pneus',N'Rua Tuiuti',N'4225',N'',N'89226-001',N'Aventureiro',N'Joinville',N'SC',N'',N'',N'(47) 3467-6196',N'(  )     -',N'(  )      -',N'',N'(  )      -',N'',N'',NULL);
+GO
+INSERT INTO [Mecanicas] ([Id],[Nome],[Endereco],[Numero],[Complemento],[CEP],[Bairro],[Cidade],[UF],[Site],[Email],[Telefone1],[Telefone2],[Celular1],[Celular1Operadora],[Celular2],[Celular2Operadora],[Contatos],[Observacao]) VALUES (
+10,N'Marcão Comercio e Manutenção de Equipamentos para GNV',N'Rua Albano Schmidt',N'3908',N'',N'89228-310',N'Boa Vista',N'Joinville',N'SC',N'',N'',N'(  )     -',N'(  )     -',N'(  )      -',N'',N'(  )      -',N'',N'',NULL);
+GO
+SET IDENTITY_INSERT [Mecanicas] OFF;
+GO
+ALTER TABLE [Mecanicas] ALTER COLUMN [Id] IDENTITY (11,1);
+GO

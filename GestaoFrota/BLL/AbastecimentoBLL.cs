@@ -1,0 +1,60 @@
+﻿using CFSqlCe.Dal;
+using GestaoFrota.DAL;
+using GestaoFrota.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GestaoFrota.BLL
+{
+    public class AbastecimentoBLL
+    { 
+        public void Insert(Abastecimento info)
+        {
+            info.DataS = info.Data.ToShortDateString();
+            new AbastecimentoDAL().Insert(info);
+        }
+
+        public List<DGridAbastecimentoInfo> List(DateTime dtAtual, Veiculo veiculo)
+        {
+            return new AbastecimentoDAL().List(dtAtual, veiculo);           
+        }
+        
+        public List<DGridAbastecimentoInfo> List(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
+        {
+            return new AbastecimentoDAL().List(dtInicial, dtFinal, veiculo);            
+        }
+      
+        public List<DGridAbastecimentoInfo> ListPorFiltro(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo, int combustivel)
+        {
+           return new AbastecimentoDAL().ListPorFiltro(dtInicial, dtFinal, veiculo, combustivel);            
+        }
+      
+        public ConsumoInfo GetConsumo(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
+        {
+            return new AbastecimentoDAL().GetConsumo(dtInicial, dtFinal, veiculo);
+        }
+
+        public ConsumoInfo GetConsumoAnual(DateTime dtAtual, Veiculo veiculo)
+        {
+            return new AbastecimentoDAL().GetConsumoAnual(dtAtual, veiculo);
+        }
+
+        public List<Abastecimento> ListExport()
+        {
+            return new AbastecimentoDAL().ListExport();
+        }
+       
+        public void AnexarComprovante(int id, string pathComprovante)
+        {
+            new AbastecimentoDAL().AnexarComprovante(id, pathComprovante);
+        }
+
+        public List<AutonomiaInfo> GetAutonomia(DateTime dataMes, Veiculo veiculo)
+        {
+            return new AbastecimentoDAL().GetAutonomia(dataMes, veiculo);
+        }
+    }
+}

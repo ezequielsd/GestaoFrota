@@ -1,0 +1,6 @@
+﻿-- Script Date: 10/03/2018 11:00  - ErikEJ.SqlCeScripting version 3.5.2.75
+INSERT INTO [CNHs] ([NumeroRegistro],[Nome],[Nascimento],[Categoria],[CPF],[Filiacao],[PrimeiraHabilitacao],[Emissao],[Validade],[Local],[PathDocumentoPDF],[Aivo]) VALUES (
+N'02398086685',N'Ezequiel da Silva Daniel',{ts '1982-08-09 08:20:27.000'},N'B',N'03450097970',N'Primo Perdona Daniel
+
+Helena da Silva Daniel',{ts '2002-06-25 08:20:27.000'},{ts '2017-09-06 08:20:27.000'},{ts '2022-09-03 08:20:27.000'},N'Joinville',N'Office Lens 08022018 1339.pdf',1);
+GO

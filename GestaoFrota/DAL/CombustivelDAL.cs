@@ -1,0 +1,98 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using CFSqlCe.Dal;
+
+namespace GestaoFrota.DAL
+{
+    public class CombustivelDAL
+    {       
+        public List<Combustivel> GetList()
+        {
+            using (var context = new Context())
+            {
+                return context.Combustiveis.ToList();
+            }
+        }
+               
+        public List<Combustivel> GetList(Veiculo veiculo)
+        {
+
+            switch (veiculo.Combustivel)
+            {
+                case 2:
+                    return new List<Combustivel>
+                    {
+                        new Combustivel { Tipo = "Gasolina"}
+                    };                    
+                case 3:
+                    return new List<Combustivel>
+                     {                        
+                        new Combustivel { Tipo = "Alcool"}                      
+                     };                    
+                case 4:
+                    return new List<Combustivel>
+                    {                           
+                        new Combustivel { Tipo = "Gasolina"},
+                        new Combustivel { Tipo = "Alcool"},                        
+                    };                    
+                case 5:
+                    return new List<Combustivel>
+                    {
+                        new Combustivel { Tipo = "GNV"}
+                    };                    
+                case 6:
+                    return new List<Combustivel>
+                    {                        
+                        new Combustivel { Tipo = "Gasolina"},
+                        new Combustivel { Tipo = "GNV"},
+                    };                    
+                case 7:
+                    return new List<Combustivel>
+                    {
+                        new Combustivel { Tipo = "Gasolina"},
+                        new Combustivel { Tipo = "Alcool"},                        
+                        new Combustivel { Tipo = "GNV"}                        
+                    };                    
+                case 8:
+                    return new List<Combustivel>
+                    {
+                        new Combustivel { Tipo = "Diesel"}                        
+                    };                    
+                case 9:
+                    return new List<Combustivel>
+                    {
+                        new Combustivel { Tipo = "Gasolina"},
+                        new Combustivel { Tipo = "Alcool"},                        
+                        new Combustivel { Tipo = "GNV"}                        
+                    };
+                case 10:
+                    return new List<Combustivel>
+                    {                        
+                        new Combustivel { Tipo = "Diesel"},                        
+                        new Combustivel { Tipo = "GNV"}                        
+                    };
+                default:
+                    return new List<Combustivel>();
+            }           
+        }
+
+        public Combustivel GetCombustivel(int id)
+        {
+            using (var context = new Context())
+            {
+                return context.Combustiveis.Find(id);
+            }
+        }
+
+        public int GetIdCombustivel(string combustivel)
+        {
+            using (var context = new Context())
+            {
+                return context.Combustiveis.Where(w => w.Tipo.Equals(combustivel)).Select(s => s.Id).FirstOrDefault();
+            }
+        }
+    }
+}

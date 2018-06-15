@@ -1,0 +1,37 @@
+﻿-- Script Date: 10/03/2018 11:00  - ErikEJ.SqlCeScripting version 3.5.2.75
+SET IDENTITY_INSERT [Combustivels] ON;
+GO
+INSERT INTO [Combustivels] ([Id],[Tipo]) VALUES (
+1,N'Não definido');
+GO
+INSERT INTO [Combustivels] ([Id],[Tipo]) VALUES (
+2,N'Gasolina');
+GO
+INSERT INTO [Combustivels] ([Id],[Tipo]) VALUES (
+3,N'Alcool');
+GO
+INSERT INTO [Combustivels] ([Id],[Tipo]) VALUES (
+4,N'Flex');
+GO
+INSERT INTO [Combustivels] ([Id],[Tipo]) VALUES (
+5,N'GNV');
+GO
+INSERT INTO [Combustivels] ([Id],[Tipo]) VALUES (
+6,N'Gasolina/GNV');
+GO
+INSERT INTO [Combustivels] ([Id],[Tipo]) VALUES (
+7,N'Flex/GNV');
+GO
+INSERT INTO [Combustivels] ([Id],[Tipo]) VALUES (
+8,N'Diesel');
+GO
+INSERT INTO [Combustivels] ([Id],[Tipo]) VALUES (
+9,N'Tri-Combustivel');
+GO
+INSERT INTO [Combustivels] ([Id],[Tipo]) VALUES (
+10,N'Diesel/GNV');
+GO
+SET IDENTITY_INSERT [Combustivels] OFF;
+GO
+ALTER TABLE [Combustivels] ALTER COLUMN [Id] IDENTITY (11,1);
+GO

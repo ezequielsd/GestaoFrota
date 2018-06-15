@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2C1AFC9-A42E-4AC0-9819-0011365075DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GestaoFrota</RootNamespace>
+    <AssemblyName>GestaoFrota</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>1.0.111.111</ApplicationVersion>
+    <AssemblyVersion>1.0.202.202</AssemblyVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>if_BT_c3side_905664.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.2.1.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.2.1\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Avisos.cs" />
+    <Compile Include="BLL\AbastecimentoBLL.cs" />
+    <Compile Include="BLL\CNHBLL.cs" />
+    <Compile Include="BLL\CombustivelBLL.cs" />
+    <Compile Include="BLL\ContratoSeguradoraBLL.cs" />
+    <Compile Include="BLL\ManutencaoBLL.cs" />
+    <Compile Include="BLL\MecanicaBLL.cs" />
+    <Compile Include="BLL\MultaBLL.cs" />
+    <Compile Include="BLL\OleoBLL.cs" />
+    <Compile Include="BLL\PagamentoDocumentoBLL.cs" />
+    <Compile Include="BLL\SeguradoraBLL.cs" />
+    <Compile Include="BLL\VeiculoBLL.cs" />
+    <Compile Include="DAL\AbastecimentoDAL.cs" />
+    <Compile Include="DAL\CNHDAL.cs" />
+    <Compile Include="DAL\CombustivelDAL.cs" />
+    <Compile Include="DAL\ContratoSeguradoraDAL.cs" />
+    <Compile Include="DAL\ManutencaoDAL.cs" />
+    <Compile Include="DAL\MecanicaDAL.cs" />
+    <Compile Include="DAL\MultaDAL.cs" />
+    <Compile Include="DAL\OleoDAL.cs" />
+    <Compile Include="DAL\PagamentoDocumentoDAL.cs" />
+    <Compile Include="DAL\SeguradoraDAL.cs" />
+    <Compile Include="DAL\VeiculoDAL.cs" />
+    <Compile Include="BLL\Export.cs" />
+    <Compile Include="frmAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboutBox.Designer.cs">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddVeiculo.Designer.cs">
+      <DependentUpon>frmAddVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdicionarComprovante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdicionarComprovante.Designer.cs">
+      <DependentUpon>frmAdicionarComprovante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddContratoSeguro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddContratoSeguro.Designer.cs">
+      <DependentUpon>frmAddContratoSeguro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlterarVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlterarVeiculo.Designer.cs">
+      <DependentUpon>frmAlterarVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastarMecanica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastarMecanica.Designer.cs">
+      <DependentUpon>frmCadastarMecanica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCNH.Designer.cs">
+      <DependentUpon>frmCNH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCNHs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCNHs.Designer.cs">
+      <DependentUpon>frmCNHs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarFIPE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarFIPE.Designer.cs">
+      <DependentUpon>frmConsultarFIPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMecanicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMecanicas.Designer.cs">
+      <DependentUpon>frmMecanicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRenomearArquivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRenomearArquivo.Designer.cs">
+      <DependentUpon>frmRenomearArquivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeguradora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeguradora.Designer.cs">
+      <DependentUpon>frmSeguradora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeguradoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeguradoras.Designer.cs">
+      <DependentUpon>frmSeguradoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVeiculo.Designer.cs">
+      <DependentUpon>frmVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Abastecimento.cs" />
+    <Compile Include="Models\CNH.cs" />
+    <Compile Include="Models\DashBoard.cs" />
+    <Compile Include="Models\Documento.cs" />
+    <Compile Include="Models\Enuns.cs" />
+    <Compile Include="Models\Manutencao.cs" />
+    <Compile Include="Models\Mecanica.cs" />
+    <Compile Include="Models\Multa.cs" />
+    <Compile Include="Models\Oleo.cs" />
+    <Compile Include="Models\Seguradora.cs" />
+    <Compile Include="Models\Seguros.cs" />
+    <Compile Include="Models\Veiculos.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAboutBox.resx">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddVeiculo.resx">
+      <DependentUpon>frmAddVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicionarComprovante.resx">
+      <DependentUpon>frmAdicionarComprovante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddContratoSeguro.resx">
+      <DependentUpon>frmAddContratoSeguro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlterarVeiculo.resx">
+      <DependentUpon>frmAlterarVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastarMecanica.resx">
+      <DependentUpon>frmCadastarMecanica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCNH.resx">
+      <DependentUpon>frmCNH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCNHs.resx">
+      <DependentUpon>frmCNHs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarFIPE.resx">
+      <DependentUpon>frmConsultarFIPE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMecanicas.resx">
+      <DependentUpon>frmMecanicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRenomearArquivo.resx">
+      <DependentUpon>frmRenomearArquivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeguradora.resx">
+      <DependentUpon>frmSeguradora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeguradoras.resx">
+      <DependentUpon>frmSeguradoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVeiculo.resx">
+      <DependentUpon>frmVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="GUIA RÁPIDO DE UTILIZAÇÃO DO GESTÃO DE FROTA PORTABLE.docx" />
+    <None Include="GUIA RÁPIDO DE UTILIZAÇÃO DO GESTÃO DE FROTA PORTABLE.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="if_BT_c3side_905664.ico" />
+    <None Include="Resources\if_Vector-icons_39_1041628.png" />
+    <None Include="Resources\if_ticket_216459.png" />
+    <None Include="Resources\if_news_103657.png" />
+    <None Include="Resources\if_chat_173174.png" />
+    <None Include="Resources\if_BT_c3side_905664.png" />
+    <None Include="Resources\if_mechanic2_216509.png" />
+    <None Include="Resources\if_oil1_216297.png" />
+    <None Include="Resources\if_money_bag_309025.png" />
+    <None Include="Resources\if_fuel_103260.png" />
+    <None Include="Resources\if_Move_distance_arrow_left_right_2630385.png" />
+    <None Include="Resources\if_security_1054983.png" />
+    <None Include="Resources\if_paper_document_107198.png" />
+    <None Include="Resources\if_WhatsApp_1298775.png" />
+    <None Include="Resources\if_Citycons_magnify_1342938.png" />
+    <None Include="Resources\if_flat-style-circle-add_1312548.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CFsqlCe.Dal\CFSqlCe.Dal.csproj">
+      <Project>{eb4a49e2-feb6-4fa9-89d8-f75eca3299c3}</Project>
+      <Name>CFSqlCe.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FIPE\FIPE.csproj">
+      <Project>{410fc40f-9997-4be9-8a20-209d5b478a03}</Project>
+      <Name>FIPE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

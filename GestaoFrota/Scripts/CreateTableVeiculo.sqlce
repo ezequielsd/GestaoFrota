@@ -1,0 +1,26 @@
+﻿-- Script Date: 05/10/2017 14:49  - ErikEJ.SqlCeScripting version 3.5.2.72
+CREATE TABLE [Veiculo] (
+  [Id] int IDENTITY (1,1) NOT NULL
+, [Tipo] nvarchar(100) NULL
+, [Marca] nvarchar(200) NULL
+, [Modelo] nvarchar(200) NULL
+, [Placa] nvarchar(100) NULL
+, [Renavam] nvarchar(100) NULL
+, [Chassi] nvarchar(200) NULL
+, [Combustivel] int NULL
+, [AnoFab] nvarchar(50) NULL
+, [AnoModelo] nvarchar(50) NULL
+, [Capacidade] nvarchar(100) NULL
+, [Cor] nvarchar(200) NULL
+, [Cidade] nvarchar(300) NULL
+, [UF] nvarchar(50) NULL
+, [CPFCNPJ] nvarchar(100) NULL
+, [Categoria] nvarchar(100) NULL
+, [KM] bigint NULL
+, [NomeEndereco] nvarchar(500) NULL
+, [Observacao] nvarchar(500) NULL
+, [Ativo] bit NULL
+);
+GO
+ALTER TABLE [Veiculo] ADD CONSTRAINT [PK_Veiculo] PRIMARY KEY ([Id]);
+GO

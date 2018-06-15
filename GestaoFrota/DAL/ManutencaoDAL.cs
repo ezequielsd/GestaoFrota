@@ -1,0 +1,160 @@
+﻿using CFSqlCe.Dal;
+using GestaoFrota.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GestaoFrota.DAL
+{
+    public class ManutencaoDAL
+    {
+        public void Insert(Manutencao info)
+        {
+            using (var context = new Context())
+            {
+                info.Mecanica = context.Mecanicas.Find(info.MecanicaID);
+                info.Veiculo = context.Veiculos.Find(info.Veiculo.Placa);
+                context.Manutencoes.Add(info);
+                context.SaveChanges();                
+            }
+        }
+                
+        public List<DGridManutencaoInfo> List( Veiculo veiculo)
+        {
+            using (var context = new Context())
+            {
+                return context.Manutencoes.Where(w => w.Veiculo.Placa.Equals(veiculo.Placa)).Select(s => new DGridManutencaoInfo
+                {
+                    Id = s.Id,
+                    Data = s.Data,
+                    DataS = s.DataS,
+                    KM = s.KM,
+                    Valor = s.Valor,
+                    Mecanica = context.Mecanicas.Where(w => w.Id.Equals(s.Mecanica.Id)).Select(s2 => s2.Nome).FirstOrDefault(),
+                    PathComprovantePDF = s.PathComprovantePDF
+                }).OrderByDescending(o => o.Data).ToList();
+            }
+        }
+                
+        public List<DGridManutencaoInfo> List(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
+        {
+            using (var context = new Context())
+            {
+                return context.Manutencoes.Where(w => w.Data >= dtInicial && w.Data <= dtFinal && w.Veiculo.Placa.Equals(veiculo.Placa)).Select(s => new DGridManutencaoInfo
+                {
+                    Id = s.Id,
+                    Data = s.Data,
+                    DataS = s.DataS,  
+                    KM = s.KM,
+                    Valor = s.Valor,
+                    Mecanica = context.Mecanicas.Where(w => w.Id.Equals(s.Mecanica.Id)).Select(s2 => s2.Nome).FirstOrDefault(),
+                    PathComprovantePDF = s.PathComprovantePDF
+                }).OrderByDescending(o => o.Data).ToList();
+            }
+        }
+                
+        public GastoManutencaoInfo GetGasto(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
+        {
+            GastoManutencaoInfo gasto = new GastoManutencaoInfo
+            {
+                TotalValor = 0
+            };
+
+            using (var context = new Context())
+            {
+                //busca o abastecimento do veiculo conforme range de data 
+                List<DGridManutencaoInfo> list = context.Manutencoes.Where(w => (w.Data >= dtInicial && w.Data <= dtFinal) && w.Veiculo.Placa.Equals(veiculo.Placa)).
+                    Select(s => new DGridManutencaoInfo
+                    {
+                        Id = s.Id,
+                        Data = s.Data,
+                        DataS = s.DataS,
+                        KM = s.KM,
+                        Valor = s.Valor,
+                        Mecanica = context.Mecanicas.Where(w => w.Id.Equals(s.Mecanica.Id)).Select(s2 => s2.Nome).FirstOrDefault(),
+                        PathComprovantePDF = s.PathComprovantePDF
+                    }).ToList();
+
+                gasto.TotalValor = list.Select(s => s.Valor).Sum();                
+            }
+
+            return gasto;
+        }
+          
+        public GastoManutencaoInfo GetGastoAnual(DateTime dtAtual, Veiculo veiculo)
+        {
+            GastoManutencaoInfo gasto = new GastoManutencaoInfo
+            {
+                TotalValor = 0
+            };
+
+            using (var context = new Context())
+            {
+                //busca o abastecimento do veiculo conforme range de data 
+                List<DGridManutencaoInfo> list = context.Manutencoes.Where(w => w.Veiculo.Placa.Equals(veiculo.Placa) && w.Data.Year.Equals(dtAtual.Year)).
+                    Select(s => new DGridManutencaoInfo
+                    {
+                        Id = s.Id,
+                        Data = s.Data,
+                        DataS = s.DataS,
+                        KM = s.KM,
+                        Valor = s.Valor,
+                        Mecanica = context.Mecanicas.Where(w => w.Id.Equals(s.Mecanica.Id)).Select(s2 => s2.Nome).FirstOrDefault(),
+                        PathComprovantePDF = s.PathComprovantePDF
+                    }).ToList();
+
+                gasto.TotalValor = list.Select(s => s.Valor).Sum();
+            }
+
+            return gasto;
+        }
+
+        public GastoManutencaoInfo GetGasto(Veiculo veiculo)
+        {
+            GastoManutencaoInfo gasto = new GastoManutencaoInfo
+            {
+                TotalValor = 0
+            };
+
+            using (var context = new Context())
+            {
+                //busca o abastecimento do veiculo conforme range de data 
+                List<DGridManutencaoInfo> list = context.Manutencoes.Where(w => w.Veiculo.Placa.Equals(veiculo.Placa)).
+                    Select(s => new DGridManutencaoInfo
+                    {
+                        Id = s.Id,
+                        Data = s.Data,
+                        DataS = s.DataS,
+                        KM = s.KM,
+                        Valor = s.Valor,
+                        Mecanica = context.Mecanicas.Where(w => w.Id.Equals(s.Mecanica.Id)).Select(s2 => s2.Nome).FirstOrDefault(),
+                        PathComprovantePDF = s.PathComprovantePDF
+                    }).ToList();
+
+                gasto.TotalValor = list.Select(s => s.Valor).Sum();
+            }
+
+            return gasto;
+        }
+                
+        public List<Manutencao> ListExport()
+        {
+            using (var context = new Context())
+            {
+                return context.Manutencoes.ToList();
+            }
+        }
+                
+        public void AnexarComprovante(int id, string pathComprovante)
+        {
+            using (var context = new Context())
+            {
+                var manu = context.Manutencoes.Find(id);
+                manu.PathComprovantePDF = pathComprovante;
+                context.SaveChanges();
+            }
+        }
+    }
+}
