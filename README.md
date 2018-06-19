@@ -46,9 +46,12 @@ Na pasta do programa, será criado tres novas pastas:
 
 **Importante**
 
-É de extrema importancia que o usuário mantenha o backup da basta do programa periodicamente salvo em outro local, para garantir a interidade dos dados se por algum acaso o disco aonde o programa esteja localizado seja corrompido.
-O ideal é pegar toda a pasta da aplicação e compactar e salvar em Google driver ou OneDriver, ou qualquer outro serviço.
-Estou pensando em desenvolver um serviço para realziar este backup em algum serviço a ser indicado pelo usuário, mas até lá, a melhor maneira é seguir por este caminho, pois tudo é passivel de um dia apresentar problemas.
+É de extrema importancia que o usuário mantenha o backup da pasta do programa periódicamente salvo em outro local, para garantir a integridade dos dados, se por algum motivo o disco aonde o programa esteja localizado seja corrompido.
+O ideal é pegar toda a pasta da aplicação e compactar e salvar em Google driver ou OneDrive, ou qualquer outro serviço.
+Estou pensando em desenvolver um serviço para realizar este backup em algum serviço a ser indicado pelo usuário, mas até lá, a melhor maneira é seguir por este caminho.
+Sempre preencha o maior numero de informações possíveis, principalmente no momento de lançamento de algum gasto (Abastecimento, óleo, manutenção), se possível anexe o comprovante, para que na janela de estatística ele apresente informações reais e também seja possível consultas futuras.
+
+Baixem e usem, duvidas, reclamações, problemas ou sugestões, podem me informar através do próprio programa, na tela principal em "Sugestões ou duvidas", como pode ver na imagem acima, que eu responderei com maior prazer. Ajude-me a enriquecer estre programa.
 
 # Imagens do programa
 
@@ -61,6 +64,8 @@ Estou pensando em desenvolver um serviço para realziar este backup em algum ser
 ![TelaOleo](Release/oleo.PNG)
 
 ![TelaManutencao](Release/manutencao.PNG)
+
+![TelaFIPE](Release/fipe.PNG)
 
 
 # Pacotes de terceiro
