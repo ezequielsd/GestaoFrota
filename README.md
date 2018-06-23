@@ -67,7 +67,7 @@ Baixem e usem, duvidas, reclamações, problemas ou sugestões, podem me informa
 
 ![TelaFIPE](Release/fipe.PNG)
 
-**Dica**
+**Dica:**
 Quando absteço eu ao entrar no carro já anoto a quilometragem no comprovante, ai pego o comprovante e passo o maximo de informação disponivel:
 
 ![Comprovante](Release/comprovante.PNG)
