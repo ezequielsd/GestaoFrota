@@ -61,17 +61,30 @@ namespace GestaoFrota.DAL
         {
             using (var context = new Context())
             {
-                return context.Abastecimentos.Where(w => (w.Data >= dtInicial && w.Data <= dtFinal) && w.Veiculo.Placa.Equals(veiculo.Placa)).Select(s => new DGridAbastecimentoInfo
-                {
-                    Id = s.Id,
-                    Data = s.Data,
-                    DataS = s.DataS,
-                    Combustivel = context.Combustiveis.Where(w2 => w2.Id.Equals(s.CombustivelId)).Select(s2 => s2.Tipo).FirstOrDefault(),
-                    KM = s.KM,
-                    Quantidade = s.Quantidade,
-                    Valor = s.Valor,
-                    PathComprovantePDF = s.PathComprovantePDF
-                }).OrderByDescending(o => o.Data).ToList();
+                if (combustivel == -1)
+                    return context.Abastecimentos.Where(w => (w.Data >= dtInicial && w.Data <= dtFinal) && w.Veiculo.Placa.Equals(veiculo.Placa)).Select(s => new DGridAbastecimentoInfo
+                    {
+                        Id = s.Id,
+                        Data = s.Data,
+                        DataS = s.DataS,
+                        Combustivel = context.Combustiveis.Where(w2 => w2.Id.Equals(s.CombustivelId)).Select(s2 => s2.Tipo).FirstOrDefault(),
+                        KM = s.KM,
+                        Quantidade = s.Quantidade,
+                        Valor = s.Valor,
+                        PathComprovantePDF = s.PathComprovantePDF
+                    }).OrderByDescending(o => o.Data).ToList();
+                else
+                    return context.Abastecimentos.Where(w => (w.Data >= dtInicial && w.Data <= dtFinal) && w.Veiculo.Placa.Equals(veiculo.Placa) && w.CombustivelId.Equals(combustivel)).Select(s => new DGridAbastecimentoInfo
+                    {
+                        Id = s.Id,
+                        Data = s.Data,
+                        DataS = s.DataS,
+                        Combustivel = context.Combustiveis.Where(w2 => w2.Id.Equals(s.CombustivelId)).Select(s2 => s2.Tipo).FirstOrDefault(),
+                        KM = s.KM,
+                        Quantidade = s.Quantidade,
+                        Valor = s.Valor,
+                        PathComprovantePDF = s.PathComprovantePDF
+                    }).OrderByDescending(o => o.Data).ToList();
             }
         }
 
@@ -216,7 +229,7 @@ namespace GestaoFrota.DAL
                 Combustivel combustivelVeiculo = context.Combustiveis.Where(w => w.Id.Equals(veiculo.Combustivel)).FirstOrDefault();
 
                 //busca o abastecimento do veiculo conforme range de data 
-                List<DGridAbastecimentoInfo> abastecimento = context.Abastecimentos.Where(w => w.Data.Year.Equals(dtAtual.Year)  && w.Veiculo.Placa.Equals(veiculo.Placa)).
+                List<DGridAbastecimentoInfo> abastecimento = context.Abastecimentos.Where(w => w.Data.Year.Equals(dtAtual.Year) && w.Veiculo.Placa.Equals(veiculo.Placa)).
                     Select(s => new DGridAbastecimentoInfo
                     {
                         Data = s.Data,
@@ -337,12 +350,12 @@ namespace GestaoFrota.DAL
         public List<AutonomiaInfo> GetAutonomia(DateTime dataMes, Veiculo veiculo)
         {
             //retrocede 3 meses
-            DateTime dataMesInicial = dataMes.AddMonths(-3);            
+            DateTime dataMesInicial = dataMes.AddMonths(-3);
 
             List<AutonomiaInfo> list = new List<AutonomiaInfo>();
 
             long km = 0;
-            
+
             // Loop para buscar abastecimento de 3 meses anteriores
             for (int i = 0; i < 3; i++)
             {
@@ -375,13 +388,13 @@ namespace GestaoFrota.DAL
                             var quantidadeGasolina1 = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
                             var mediaGasolina1 = km / quantidadeGasolina1;
                             autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                            autonomia.MediaGasolina = $"{Math.Round(mediaGasolina1, 2)} km/l";                           
+                            autonomia.MediaGasolina = $"{Math.Round(mediaGasolina1, 2)} km/l";
                             break;
                         case "Alcool":
                             var quantidadeAlcool1 = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
                             var mediaAlcool1 = km / quantidadeAlcool1;
                             autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                            autonomia.MediaAlcool = $"{Math.Round(mediaAlcool1, 2)} km/l";                           
+                            autonomia.MediaAlcool = $"{Math.Round(mediaAlcool1, 2)} km/l";
                             break;
                         case "Flex":
                             //Gasolina
@@ -392,24 +405,24 @@ namespace GestaoFrota.DAL
                             var mediaAlcool2 = km / quantidadeAlcool2;
                             autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
                             autonomia.MediaGasolina = $"{Math.Round(mediaGasolina2, 2)} km/l";
-                            autonomia.MediaAlcool = $"{Math.Round(mediaAlcool2, 2)} km/l";                            
+                            autonomia.MediaAlcool = $"{Math.Round(mediaAlcool2, 2)} km/l";
                             break;
                         case "GNV":
                             var quantidadeGNV1 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
                             var mediaGNV1 = km / quantidadeGNV1;
                             autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                            autonomia.MediaGNV = $"{Math.Round(mediaGNV1,2)} km/m³";                                                       
+                            autonomia.MediaGNV = $"{Math.Round(mediaGNV1, 2)} km/m³";
                             break;
                         case "Gasolina/GNV":
                             //Gasolina
                             var quantidadeGasolina3 = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
                             var mediaGasolina3 = km / quantidadeGasolina3;
                             //GNV
-                            var quantidadeGNV2 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();                            
+                            var quantidadeGNV2 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
                             var mediaGNV2 = km / quantidadeGNV2;
                             autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
                             autonomia.MediaGasolina = $"{Math.Round(mediaGasolina3, 2)} km/l";
-                            autonomia.MediaGNV = $"{Math.Round(mediaGNV2, 2)} km/m³";                           
+                            autonomia.MediaGNV = $"{Math.Round(mediaGNV2, 2)} km/m³";
                             break;
                         case "Flex/GNV":
                             //Gasolina
@@ -430,7 +443,7 @@ namespace GestaoFrota.DAL
                             var quantidadeDiesel1 = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Quantidade).Sum();
                             var mediaDiesel1 = km / quantidadeDiesel1;
                             autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                            autonomia.MediaDiesel = $"{Math.Round(mediaDiesel1, 2)} km/l";                                                       
+                            autonomia.MediaDiesel = $"{Math.Round(mediaDiesel1, 2)} km/l";
                             break;
                         case "Tri-Combustivel":
                             //Gasolina
@@ -445,7 +458,7 @@ namespace GestaoFrota.DAL
                             autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
                             autonomia.MediaGasolina = $"{Math.Round(mediaGasolina5, 2)} km/l";
                             autonomia.MediaAlcool = $"{Math.Round(mediaAlcool4, 2)} km/l";
-                            autonomia.MediaGNV = $"{Math.Round(mediaGNV4, 2)} km/m³";                           
+                            autonomia.MediaGNV = $"{Math.Round(mediaGNV4, 2)} km/m³";
                             break;
                         case "Diesel/GNV":
                             //Diesel
@@ -455,8 +468,8 @@ namespace GestaoFrota.DAL
                             var quantidadeGNV5 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
                             var mediaGNV5 = km / quantidadeGNV5;
                             autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                            autonomia.MediaDiesel = $"{Math.Round(mediaDiesel2, 2)} km/l";                           
-                            autonomia.MediaGNV = $"{Math.Round(mediaGNV5, 2)} km/m³";                          
+                            autonomia.MediaDiesel = $"{Math.Round(mediaDiesel2, 2)} km/l";
+                            autonomia.MediaGNV = $"{Math.Round(mediaGNV5, 2)} km/m³";
                             break;
                         default:
                             break;
@@ -466,7 +479,7 @@ namespace GestaoFrota.DAL
 
                     list.Add(autonomia);
                 }
-            }          
+            }
 
             return list;
         }

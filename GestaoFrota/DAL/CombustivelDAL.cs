@@ -91,7 +91,10 @@ namespace GestaoFrota.DAL
         {
             using (var context = new Context())
             {
-                return context.Combustiveis.Where(w => w.Tipo.Equals(combustivel)).Select(s => s.Id).FirstOrDefault();
+                if (string.IsNullOrEmpty(combustivel) || string.IsNullOrWhiteSpace(combustivel))
+                    return -1;
+                else
+                    return context.Combustiveis.Where(w => w.Tipo.Equals(combustivel)).Select(s => s.Id).FirstOrDefault();
             }
         }
     }

@@ -428,11 +428,16 @@ namespace GestaoFrota
         private void btnAplicarFiltroAbastecimentos_Click(object sender, EventArgs e)
         {
             dtAbastecimento.DataSource = new AbastecimentoBLL().ListPorFiltro(dateTimePickerFiltroDataInicial.Value.Date,
-                dateTimePickerFilroDataFinal.Value.Date, veiculo,
-                (cmbCombustivelAbastecimentoFiltro.SelectedValue != null ? (int)cmbCombustivelAbastecimentoFiltro.SelectedValue : -1));
+                dateTimePickerFilroDataFinal.Value.Date, veiculo, 
+                new CombustivelBLL().GetIdCombustivel(cmbCombustivelAbastecimentoFiltro.Text));
 
             FormartaDataGridViewAbastecimentos();
             CarregarDashBoardLocalConsumoCombustivelParcial(dateTimePickerFiltroDataInicial.Value.Date, dateTimePickerFilroDataFinal.Value.Date, veiculo);
+        }
+
+        private void btnRemoverFiltroCombustivel_Click(object sender, EventArgs e)
+        {
+            cmbCombustivelAbastecimentoFiltro.SelectedIndex = -1;
         }
 
         private void btnAnexarComprovante_Click(object sender, EventArgs e)
@@ -2025,6 +2030,7 @@ namespace GestaoFrota
                 }
             }
         }
-       
+
+        
     }
 }

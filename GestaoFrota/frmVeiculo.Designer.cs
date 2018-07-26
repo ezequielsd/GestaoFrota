@@ -86,6 +86,7 @@
             this.btnAdicionarComprovante = new System.Windows.Forms.Button();
             this.btnVisualizarComprovanteAbastecimento = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.btnRemoverFiltroCombustivel = new System.Windows.Forms.Button();
             this.cmbCombustivelAbastecimentoFiltro = new System.Windows.Forms.ComboBox();
             this.btnAplicarFiltroAbastecimentos = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -298,6 +299,8 @@
             this.btnAtivarContrato = new System.Windows.Forms.Button();
             this.txtSeguradora = new System.Windows.Forms.TextBox();
             this.tabPageMulta = new System.Windows.Forms.TabPage();
+            this.dateTimePickerDataPagamentoMulta = new System.Windows.Forms.DateTimePicker();
+            this.label91 = new System.Windows.Forms.Label();
             this.btnInformarPagamento = new System.Windows.Forms.Button();
             this.btnAdicionarMulta = new System.Windows.Forms.Button();
             this.btnVisualizaMulta = new System.Windows.Forms.Button();
@@ -329,8 +332,6 @@
             this.label59 = new System.Windows.Forms.Label();
             this.dtMultas = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.dateTimePickerDataPagamentoMulta = new System.Windows.Forms.DateTimePicker();
-            this.label91 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageDashDoard.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -1012,6 +1013,7 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.btnRemoverFiltroCombustivel);
             this.groupBox11.Controls.Add(this.cmbCombustivelAbastecimentoFiltro);
             this.groupBox11.Controls.Add(this.btnAplicarFiltroAbastecimentos);
             this.groupBox11.Controls.Add(this.label8);
@@ -1025,6 +1027,19 @@
             this.groupBox11.TabIndex = 23;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Filtrar";
+            // 
+            // btnRemoverFiltroCombustivel
+            // 
+            this.btnRemoverFiltroCombustivel.BackColor = System.Drawing.Color.Khaki;
+            this.btnRemoverFiltroCombustivel.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
+            this.btnRemoverFiltroCombustivel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoverFiltroCombustivel.Location = new System.Drawing.Point(222, 80);
+            this.btnRemoverFiltroCombustivel.Name = "btnRemoverFiltroCombustivel";
+            this.btnRemoverFiltroCombustivel.Size = new System.Drawing.Size(117, 23);
+            this.btnRemoverFiltroCombustivel.TabIndex = 25;
+            this.btnRemoverFiltroCombustivel.Text = "Remover filtro";
+            this.btnRemoverFiltroCombustivel.UseVisualStyleBackColor = false;
+            this.btnRemoverFiltroCombustivel.Click += new System.EventHandler(this.btnRemoverFiltroCombustivel_Click);
             // 
             // cmbCombustivelAbastecimentoFiltro
             // 
@@ -3240,6 +3255,22 @@
             this.tabPageMulta.Text = "Multa";
             this.tabPageMulta.UseVisualStyleBackColor = true;
             // 
+            // dateTimePickerDataPagamentoMulta
+            // 
+            this.dateTimePickerDataPagamentoMulta.Location = new System.Drawing.Point(302, 549);
+            this.dateTimePickerDataPagamentoMulta.Name = "dateTimePickerDataPagamentoMulta";
+            this.dateTimePickerDataPagamentoMulta.Size = new System.Drawing.Size(234, 20);
+            this.dateTimePickerDataPagamentoMulta.TabIndex = 30;
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Location = new System.Drawing.Point(299, 533);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(86, 13);
+            this.label91.TabIndex = 31;
+            this.label91.Text = "Data pagamento";
+            // 
             // btnInformarPagamento
             // 
             this.btnInformarPagamento.BackColor = System.Drawing.Color.DarkKhaki;
@@ -3553,22 +3584,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // dateTimePickerDataPagamentoMulta
-            // 
-            this.dateTimePickerDataPagamentoMulta.Location = new System.Drawing.Point(302, 549);
-            this.dateTimePickerDataPagamentoMulta.Name = "dateTimePickerDataPagamentoMulta";
-            this.dateTimePickerDataPagamentoMulta.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerDataPagamentoMulta.TabIndex = 30;
-            // 
-            // label91
-            // 
-            this.label91.AutoSize = true;
-            this.label91.Location = new System.Drawing.Point(299, 533);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(86, 13);
-            this.label91.TabIndex = 31;
-            this.label91.Text = "Data pagamento";
             // 
             // frmVeiculo
             // 
@@ -3986,5 +4001,6 @@
         private System.Windows.Forms.Button btnCancelarInformarPagamentoDocumento;
         private System.Windows.Forms.DateTimePicker dateTimePickerDataPagamentoMulta;
         private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Button btnRemoverFiltroCombustivel;
     }
 }
