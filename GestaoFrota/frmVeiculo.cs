@@ -432,7 +432,7 @@ namespace GestaoFrota
                 new CombustivelBLL().GetIdCombustivel(cmbCombustivelAbastecimentoFiltro.Text));
 
             FormartaDataGridViewAbastecimentos();
-            CarregarDashBoardLocalConsumoCombustivelParcial(dateTimePickerFiltroDataInicial.Value.Date, dateTimePickerFilroDataFinal.Value.Date, veiculo);
+            CarregarDashBoardLocalConsumoCombustivelKmPercorridoParcial(dateTimePickerFiltroDataInicial.Value.Date, dateTimePickerFilroDataFinal.Value.Date, veiculo);           
         }
 
         private void btnRemoverFiltroCombustivel_Click(object sender, EventArgs e)
@@ -516,11 +516,10 @@ namespace GestaoFrota
             cmbCombustivelAbastecimentoFiltro.SelectedIndex = -1;
         }
 
-        private void CarregarDashBoardLocalConsumoCombustivelParcial(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
+        private void CarregarDashBoardLocalConsumoCombustivelKmPercorridoParcial(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
             listBox3.Items.Clear();
-            ConsumoInfo consumo = new AbastecimentoBLL().GetConsumo(dtInicial.Date, dtFinal.Date, veiculo);
-            Combustivel combustivelVeiculo = new CombustivelBLL().GetCombustivel(veiculo.Combustivel);
+            ConsumoInfo consumo = new AbastecimentoBLL().GetConsumo(dtInicial.Date, dtFinal.Date, veiculo);          
 
             label66.Text = $"Gasto até o momento em {dataAtual.Year}";
 
@@ -532,22 +531,17 @@ namespace GestaoFrota
                 listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Gasolina: {0:C}    {1} lts", consumo.ValorGasolina, consumo.QuantidadeGasolina));
             if (consumo.ValorGNV != 0)
                 listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "GNV :       {0:C}    {1} m³ ", consumo.ValorGNV, consumo.QuantidadeGNV));
-        }
 
-        private void CarregarDashBoardLocalKmRodados(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
-        {
-            ConsumoInfo consumo = new AbastecimentoBLL().GetConsumoAnual(dataAtual.Date, veiculo);
-
+            //Atualiza o dashboard de KM percorrido parcial
             label68.Text = $"Percorrido até o momento em {dataAtual.Year}";
             label69.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:N0} Km", consumo.KM);
         }
-
+               
         private void CarregaDatagridAoAbrir(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
             dtAbastecimento.DataSource = new AbastecimentoBLL().List(DateTime.Now.Date, veiculo);
 
-            CarregarDashBoardLocalConsumoCombustivelParcial(dataInicialdoAno, dataFinaldoAno, veiculo);
-            CarregarDashBoardLocalKmRodados(dataInicialdoAno, dataFinaldoAno, veiculo);
+            CarregarDashBoardLocalConsumoCombustivelKmPercorridoParcial(dataInicialdoAno, dataFinaldoAno, veiculo);        
             FormartaDataGridViewAbastecimentos();
         }
 
@@ -2030,7 +2024,6 @@ namespace GestaoFrota
                 }
             }
         }
-
-        
+                
     }
 }
