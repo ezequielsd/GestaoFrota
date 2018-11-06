@@ -116,7 +116,7 @@ namespace GestaoFrota.DAL
                         KM = s.KM,
                         Quantidade = s.Quantidade,
                         Valor = s.Valor
-                    }).ToList();
+                    }).OrderBy(or => or.Data).ToList();
 
                 switch (combustivelVeiculo.Tipo)
                 {
@@ -237,7 +237,7 @@ namespace GestaoFrota.DAL
                         KM = s.KM,
                         Quantidade = s.Quantidade,
                         Valor = s.Valor
-                    }).ToList();
+                    }).OrderBy(or => or.Data).ToList();
 
                 switch (combustivelVeiculo.Tipo)
                 {
@@ -372,7 +372,7 @@ namespace GestaoFrota.DAL
                             KM = s.KM,
                             Quantidade = s.Quantidade,
                             Valor = s.Valor
-                        }).ToList();
+                        }).OrderBy(or => or.Data).ToList();
 
 
                     var kmInicial = abastecimento.Select(s => s.KM).FirstOrDefault();
