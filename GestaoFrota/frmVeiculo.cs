@@ -322,65 +322,68 @@ namespace GestaoFrota
             //https://stackoverflow.com/questions/10622674/chart-creating-dynamically-in-net-c-sharp
             //https://stackoverflow.com/questions/8403866/values-in-a-pie-chart
 
-            //  var total = graficoPizzaAnual.TotalCombustivel + graficoPizzaAnual.TotalManutencao + graficoPizzaAnual.TotalOleo;
-            label82.Text = $"Gasto até o momento: {string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", graficoPizzaAnual.Total)}";
+            if (graficoPizzaAnual.Total > 0)
+            {
+                //  var total = graficoPizzaAnual.TotalCombustivel + graficoPizzaAnual.TotalManutencao + graficoPizzaAnual.TotalOleo;
+                label82.Text = $"Gasto até o momento: {string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", graficoPizzaAnual.Total)}";
 
-            //calculo do percentual combustivel
-            double percentualCombustivel = Convert.ToDouble((graficoPizzaAnual.TotalCombustivel * 100) / graficoPizzaAnual.Total);
-            //calculo do percentual Manutenção
-            double percentualManutencao = Convert.ToDouble((graficoPizzaAnual.TotalManutencao * 100) / graficoPizzaAnual.Total);
-            //calculo do percentual oleo
-            double percentualOleo = Convert.ToDouble((graficoPizzaAnual.TotalOleo * 100) / graficoPizzaAnual.Total);
-            //calculo do percentual multa
-            double percentualMulta = Convert.ToDouble((graficoPizzaAnual.TotalMulta * 100) / graficoPizzaAnual.Total);
-            //calculo do percentual seguro
-            double percentualSeguro = Convert.ToDouble((graficoPizzaAnual.TotalSeguro * 100) / graficoPizzaAnual.Total);
-            //calculo do percentual Documento
-            double percentualDocumento = Convert.ToDouble((graficoPizzaAnual.TotalDocumento * 100) / graficoPizzaAnual.Total);
+                //calculo do percentual combustivel
+                double percentualCombustivel = Convert.ToDouble((graficoPizzaAnual.TotalCombustivel * 100) / graficoPizzaAnual.Total);
+                //calculo do percentual Manutenção
+                double percentualManutencao = Convert.ToDouble((graficoPizzaAnual.TotalManutencao * 100) / graficoPizzaAnual.Total);
+                //calculo do percentual oleo
+                double percentualOleo = Convert.ToDouble((graficoPizzaAnual.TotalOleo * 100) / graficoPizzaAnual.Total);
+                //calculo do percentual multa
+                double percentualMulta = Convert.ToDouble((graficoPizzaAnual.TotalMulta * 100) / graficoPizzaAnual.Total);
+                //calculo do percentual seguro
+                double percentualSeguro = Convert.ToDouble((graficoPizzaAnual.TotalSeguro * 100) / graficoPizzaAnual.Total);
+                //calculo do percentual Documento
+                double percentualDocumento = Convert.ToDouble((graficoPizzaAnual.TotalDocumento * 100) / graficoPizzaAnual.Total);
 
-            //define o tipo de grafico
-            this.chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            //define a localização da legenda no grafico
-            //chart1.Series[0]["PieLabelStyle"] = "Disabled";
-            chart1.Series[0]["PieLabelStyle"] = "Outside";
-            //define os pontos do grafico
-            this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Combustivel - {0:C}", graficoPizzaAnual.TotalCombustivel), percentualCombustivel);
-            this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Manutenção - {0:C}", graficoPizzaAnual.TotalManutencao), percentualManutencao);
-            this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Óleo - {0:C}", graficoPizzaAnual.TotalOleo), percentualOleo);
-            this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Multa - {0:C}", graficoPizzaAnual.TotalMulta), percentualMulta);
-            this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Seguro - {0:C}", graficoPizzaAnual.TotalSeguro), percentualSeguro);
-            this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Documento - {0:C}", graficoPizzaAnual.TotalDocumento), percentualDocumento);
+                //define o tipo de grafico
+                this.chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+                //define a localização da legenda no grafico
+                //chart1.Series[0]["PieLabelStyle"] = "Disabled";
+                chart1.Series[0]["PieLabelStyle"] = "Outside";
+                //define os pontos do grafico
+                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Combustivel - {0:C}", graficoPizzaAnual.TotalCombustivel), percentualCombustivel);
+                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Manutenção - {0:C}", graficoPizzaAnual.TotalManutencao), percentualManutencao);
+                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Óleo - {0:C}", graficoPizzaAnual.TotalOleo), percentualOleo);
+                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Multa - {0:C}", graficoPizzaAnual.TotalMulta), percentualMulta);
+                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Seguro - {0:C}", graficoPizzaAnual.TotalSeguro), percentualSeguro);
+                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Documento - {0:C}", graficoPizzaAnual.TotalDocumento), percentualDocumento);
 
-            //define as cores dos pontos do grafico
-            this.chart1.Series[0].Points[0].Color = Color.Yellow;
-            this.chart1.Series[0].Points[1].Color = Color.Tomato;
-            this.chart1.Series[0].Points[2].Color = Color.SeaGreen;
-            this.chart1.Series[0].Points[3].Color = Color.LightSkyBlue;
-            this.chart1.Series[0].Points[4].Color = Color.DarkViolet;
-            this.chart1.Series[0].Points[5].Color = Color.Coral;
+                //define as cores dos pontos do grafico
+                this.chart1.Series[0].Points[0].Color = Color.Yellow;
+                this.chart1.Series[0].Points[1].Color = Color.Tomato;
+                this.chart1.Series[0].Points[2].Color = Color.SeaGreen;
+                this.chart1.Series[0].Points[3].Color = Color.LightSkyBlue;
+                this.chart1.Series[0].Points[4].Color = Color.DarkViolet;
+                this.chart1.Series[0].Points[5].Color = Color.Coral;
 
-            // By sorting the data points, they show up in proper ascending order in the legend
-            this.chart1.DataManipulator.Sort(PointSortOrder.Descending, chart1.Series[0]);
-            //cria borda
-            this.chart1.Series[0].BorderWidth = 1;
-            this.chart1.Series[0].BorderColor = System.Drawing.Color.FromArgb(26, 59, 105);
-                                  
-                       
-            // Add a legend to the chart and dock it to the bottom-center
-           // this.chart1.Legends.Add("Legend1");
-            this.chart1.Legends[0].Enabled = true;
-            this.chart1.Legends[0].Docking = Docking.Bottom;
-            this.chart1.Legends[0].Alignment = System.Drawing.StringAlignment.Center;
+                // By sorting the data points, they show up in proper ascending order in the legend
+                this.chart1.DataManipulator.Sort(PointSortOrder.Descending, chart1.Series[0]);
+                //cria borda
+                this.chart1.Series[0].BorderWidth = 1;
+                this.chart1.Series[0].BorderColor = System.Drawing.Color.FromArgb(26, 59, 105);
 
-            // Set the legend to display pie chart values as percentages
-            // Again, the P2 indicates a precision of 2 decimals
-            this.chart1.Series[0].LegendText = "#VALX";
-            // Set the pie label as well as legend text to be displayed as percentage
-            // The P2 indicates a precision of 2 decimals
-            this.chart1.Series[0].Label = "#PERCENT{P2}";
 
-            // By sorting the data points, they show up in proper ascending order in the legend
-            this.chart1.DataManipulator.Sort(PointSortOrder.Descending, chart1.Series[0]);
+                // Add a legend to the chart and dock it to the bottom-center
+                // this.chart1.Legends.Add("Legend1");
+                this.chart1.Legends[0].Enabled = true;
+                this.chart1.Legends[0].Docking = Docking.Bottom;
+                this.chart1.Legends[0].Alignment = System.Drawing.StringAlignment.Center;
+
+                // Set the legend to display pie chart values as percentages
+                // Again, the P2 indicates a precision of 2 decimals
+                this.chart1.Series[0].LegendText = "#VALX";
+                // Set the pie label as well as legend text to be displayed as percentage
+                // The P2 indicates a precision of 2 decimals
+                this.chart1.Series[0].Label = "#PERCENT{P2}";
+
+                // By sorting the data points, they show up in proper ascending order in the legend
+                this.chart1.DataManipulator.Sort(PointSortOrder.Descending, chart1.Series[0]);
+            }           
         }
              
         #endregion
