@@ -1845,6 +1845,7 @@ namespace GestaoFrota
                 dateTimePickerVencimentoMulta.Value = DateTime.Now;
                 txtValorMulta.Clear();
                 txtLocalOcorrenciaMulta.Clear();
+                txtPathMulta.Clear();
                 ckPagamentoRealizado.Checked = false;
                 CarregarDatagridMulta(veiculo);
                 CarregarDashboard();
