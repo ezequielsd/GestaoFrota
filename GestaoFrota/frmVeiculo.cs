@@ -1,17 +1,10 @@
-﻿ using GestaoFrota.BLL;
+﻿using GestaoFrota.BLL;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestaoFrota.Models;
 using System.Diagnostics;
-using RestSharp;
-using Newtonsoft.Json;
 using FIPE;
 using CFSqlCe.Dal;
 using System.IO;
@@ -105,10 +98,7 @@ namespace GestaoFrota
             PreencherFormularioDocumento();
             DesabilitarCampos();
             CarregarContratoSeguro();
-            
-
-           ConsultaFIPE(veiculo.Tipo, veiculo.IdFIPEMarca, veiculo.IdFIPEModelo, veiculo.IdFipeAno);
-
+                                   
             if (String.IsNullOrEmpty(txtAnexarDocumento.Text) || String.IsNullOrWhiteSpace(txtAnexarDocumento.Text))
                 btnVisualizarDocumento.Visible = false;
             else
@@ -140,6 +130,7 @@ namespace GestaoFrota
 
         public void CarregarDashboard()
         {
+            graficoPizzaAnual.Total = 0;
             CarregarDashBoardConsumoCombustivelAnual(dataAtual.Date, veiculo);
             CarregarDashBoardKMAnual(dataAtual.Date, veiculo);
             CarregarDashBoardGastoManutencaoAnual(dataAtual.Date, veiculo);
@@ -187,6 +178,7 @@ namespace GestaoFrota
         {
             GastoOleoInfo consumo = new OleoBLL().GetGastoAnual(dataAtual, veiculo);
 
+            listBox2.Items.Clear();
             listBox2.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Completado:   {0:C}", consumo.TotalValorCompletarOleo));
             listBox2.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Trocado       :   {0:C}", consumo.TotalValorTrocaOleo));
             listBox2.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Total             :   {0:C}", consumo.TotalValor));
