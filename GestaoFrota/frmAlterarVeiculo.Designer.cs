@@ -29,23 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlterarVeiculo));
-            this.cmbAnoModelo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmbModelo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.txtAnoModelo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // cmbAnoModelo
-            // 
-            this.cmbAnoModelo.BackColor = System.Drawing.Color.White;
-            this.cmbAnoModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAnoModelo.FormattingEnabled = true;
-            this.cmbAnoModelo.Location = new System.Drawing.Point(7, 69);
-            this.cmbAnoModelo.Name = "cmbAnoModelo";
-            this.cmbAnoModelo.Size = new System.Drawing.Size(277, 21);
-            this.cmbAnoModelo.TabIndex = 18;
             // 
             // label4
             // 
@@ -55,17 +45,6 @@
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 19;
             this.label4.Text = "Ano modelo";
-            // 
-            // cmbModelo
-            // 
-            this.cmbModelo.BackColor = System.Drawing.Color.White;
-            this.cmbModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbModelo.FormattingEnabled = true;
-            this.cmbModelo.Location = new System.Drawing.Point(7, 25);
-            this.cmbModelo.Name = "cmbModelo";
-            this.cmbModelo.Size = new System.Drawing.Size(277, 21);
-            this.cmbModelo.TabIndex = 11;
-            this.cmbModelo.SelectionChangeCommitted += new System.EventHandler(this.cmbModelo_SelectionChangeCommitted);
             // 
             // label1
             // 
@@ -102,14 +81,28 @@
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
+            // txtModelo
+            // 
+            this.txtModelo.Location = new System.Drawing.Point(11, 26);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(245, 20);
+            this.txtModelo.TabIndex = 20;
+            // 
+            // txtAnoModelo
+            // 
+            this.txtAnoModelo.Location = new System.Drawing.Point(11, 70);
+            this.txtAnoModelo.Name = "txtAnoModelo";
+            this.txtAnoModelo.Size = new System.Drawing.Size(100, 20);
+            this.txtAnoModelo.TabIndex = 21;
+            // 
             // frmAlterarVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(293, 154);
-            this.Controls.Add(this.cmbAnoModelo);
+            this.Controls.Add(this.txtAnoModelo);
+            this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cmbModelo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAlterar);
@@ -125,12 +118,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cmbAnoModelo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbModelo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.TextBox txtAnoModelo;
     }
 }

@@ -55,15 +55,7 @@ namespace GestaoFrota
                 AtualizaTreeView();
             }
         }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            using (frmConsultarFIPE frmConsultaFipe = new frmConsultarFIPE())
-            {
-                frmConsultaFipe.ShowDialog();
-            }
-        }
-
+              
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             using (frmCNHs frmCNH = new frmCNHs())

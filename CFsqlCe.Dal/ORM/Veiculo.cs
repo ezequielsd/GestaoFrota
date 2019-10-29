@@ -17,26 +17,13 @@ namespace CFSqlCe.Dal
         public string Tipo { get; set; }
 
         [StringLength(200)]
-        public string FipeNameMarca { get; set; }
-
-        public int IdFIPEMarca { get; set; }
+        public string FipeNameMarca { get; set; }      
 
         [StringLength(200)]
-        public string KeyFIPEMarca { get; set; }
+        public string FIPEModelo { get; set; }  
 
         [StringLength(200)]
-        public string FIPEModelo { get; set; }
-
-        public long IdFIPEModelo { get; set; }
-
-        [StringLength(200)]
-        public string KeyFIPEModelo { get; set; }
-
-        [StringLength(200)]
-        public string FipeNameAno { get; set; }
-
-        [StringLength(100)]
-        public string IdFipeAno { get; set; }
+        public string FipeNameAno { get; set; }       
         
         [StringLength(100)]
         public string Renavam { get; set; }

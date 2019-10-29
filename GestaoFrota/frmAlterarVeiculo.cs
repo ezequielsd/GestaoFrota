@@ -25,64 +25,32 @@ namespace GestaoFrota
         public frmAlterarVeiculo(Veiculo info)
         {
             InitializeComponent();
-            veiculo = info;
-            cmbAnoModelo.Enabled = false;
+            veiculo = info;            
         }
 
         private void frmAlterarVeiculo_Load(object sender, EventArgs e)
         {
-            CarregarComboBoxModelo();
+            txtModelo.Text = veiculo.FIPEModelo;
+            txtAnoModelo.Text = veiculo.AnoModelo;
         }
-
-        private void cmbModelo_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            try
-            {
-                carrosAno = new FIPEBLL().FindCarrosAnoFIPE(veiculo.Tipo, veiculo.IdFIPEMarca, (long)cmbModelo.SelectedValue);
-
-                //preenche o combo carros
-                cmbAnoModelo.DataSource = carrosAno;
-                cmbAnoModelo.DisplayMember = "name";
-                cmbAnoModelo.ValueMember = "id";
-                cmbAnoModelo.SelectedIndex = -1;
-
-                cmbAnoModelo.Enabled = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Problemas ao consultar dados no servidor da FIPE: {ex.Message}", "Falha de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);                
-            }            
-        }
-
-        private void CarregarComboBoxModelo()
-        {
-            try
-            {
-                carros = new FIPEBLL().FindCarrosFIPE(veiculo.Tipo,  veiculo.IdFIPEMarca);
-
-                //preenche o combo carros
-                cmbModelo.DataSource = carros;
-                cmbModelo.DisplayMember = "fipe_name";
-                cmbModelo.ValueMember = "id";
-                cmbModelo.SelectedIndex = -1;
-
-                cmbModelo.Enabled = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Problemas ao consultar dados no servidor da FIPE: {ex.Message}", "Falha de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);                
-            }           
-        }
-
+               
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            veiculo.FIPEModelo = cmbModelo.Text;
-            veiculo.IdFIPEModelo = (long)cmbModelo.SelectedValue;           
-            veiculo.KeyFIPEModelo = carros.Where(w => w.id.Equals(veiculo.IdFIPEModelo)).Select(s => s.key).First();
-            veiculo.AnoModelo = cmbAnoModelo.Text;
-            veiculo.IdFipeAno = (string)cmbAnoModelo.SelectedValue;
-            veiculo.FipeNameAno = cmbAnoModelo.Text;
+            if(String.IsNullOrEmpty(txtAnoModelo.Text) || String.IsNullOrWhiteSpace(txtAnoModelo.Text))
+            {
+                MessageBox.Show("Informe um ano válido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            if (String.IsNullOrEmpty(txtModelo.Text) || String.IsNullOrWhiteSpace(txtModelo.Text))
+            {
+                MessageBox.Show("Informe um modelo válido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            veiculo.FIPEModelo = txtModelo.Text;                        
+            veiculo.AnoModelo = txtAnoModelo.Text;            
+            
             Veiculo = veiculo;
 
             this.Close();

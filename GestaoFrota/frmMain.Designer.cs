@@ -31,9 +31,13 @@
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Veiculos");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBoxAvisos = new System.Windows.Forms.ListBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.linkAddVeiculo = new System.Windows.Forms.LinkLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.atualizaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,11 +46,6 @@
             this.conatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkAddVeiculo = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -59,7 +58,6 @@
             this.panel1.Controls.Add(this.linkLabel3);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.linkLabel2);
-            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.treeView1);
             this.panel1.Controls.Add(this.linkAddVeiculo);
             this.panel1.Controls.Add(this.menuStrip1);
@@ -68,6 +66,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(432, 654);
             this.panel1.TabIndex = 0;
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.Image = global::GestaoFrota.Properties.Resources.if_chat_173174;
+            this.linkLabel4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel4.LinkColor = System.Drawing.Color.Red;
+            this.linkLabel4.Location = new System.Drawing.Point(82, 603);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(257, 42);
+            this.linkLabel4.TabIndex = 8;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Sugestões ou duvidas? Conte-me tudo...";
+            this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.Image = global::GestaoFrota.Properties.Resources.if_security_1054983;
+            this.linkLabel3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel3.LinkColor = System.Drawing.Color.Red;
+            this.linkLabel3.Location = new System.Drawing.Point(204, 35);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(94, 31);
+            this.linkLabel3.TabIndex = 7;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Seguradoras";
+            this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // groupBox1
             // 
@@ -91,6 +117,20 @@
             this.listBoxAvisos.Size = new System.Drawing.Size(420, 156);
             this.listBoxAvisos.TabIndex = 0;
             // 
+            // linkLabel2
+            // 
+            this.linkLabel2.Image = global::GestaoFrota.Properties.Resources.if_paper_document_107198;
+            this.linkLabel2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel2.LinkColor = System.Drawing.Color.Red;
+            this.linkLabel2.Location = new System.Drawing.Point(129, 35);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(56, 31);
+            this.linkLabel2.TabIndex = 5;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "CNH";
+            this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
             // treeView1
             // 
             this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -103,6 +143,20 @@
             this.treeView1.Size = new System.Drawing.Size(417, 326);
             this.treeView1.TabIndex = 1;
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
+            // 
+            // linkAddVeiculo
+            // 
+            this.linkAddVeiculo.Image = global::GestaoFrota.Properties.Resources.if_flat_style_circle_add_1312548;
+            this.linkAddVeiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkAddVeiculo.LinkColor = System.Drawing.Color.Green;
+            this.linkAddVeiculo.Location = new System.Drawing.Point(12, 35);
+            this.linkAddVeiculo.Name = "linkAddVeiculo";
+            this.linkAddVeiculo.Size = new System.Drawing.Size(100, 31);
+            this.linkAddVeiculo.TabIndex = 0;
+            this.linkAddVeiculo.TabStop = true;
+            this.linkAddVeiculo.Text = "Add Veículo";
+            this.linkAddVeiculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkAddVeiculo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAddVeiculo_LinkClicked);
             // 
             // menuStrip1
             // 
@@ -167,76 +221,6 @@
             this.manualToolStripMenuItem.Text = "Manual";
             this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
             // 
-            // linkLabel4
-            // 
-            this.linkLabel4.Image = global::GestaoFrota.Properties.Resources.if_chat_173174;
-            this.linkLabel4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.linkLabel4.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel4.Location = new System.Drawing.Point(82, 603);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(257, 42);
-            this.linkLabel4.TabIndex = 8;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Sugestões ou duvidas? Conte-me tudo...";
-            this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.Image = global::GestaoFrota.Properties.Resources.if_security_1054983;
-            this.linkLabel3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.linkLabel3.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel3.Location = new System.Drawing.Point(326, 35);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(94, 31);
-            this.linkLabel3.TabIndex = 7;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Seguradoras";
-            this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.Image = global::GestaoFrota.Properties.Resources.if_paper_document_107198;
-            this.linkLabel2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.linkLabel2.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel2.Location = new System.Drawing.Point(251, 35);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(56, 31);
-            this.linkLabel2.TabIndex = 5;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "CNH";
-            this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.Image = global::GestaoFrota.Properties.Resources.if_Citycons_magnify_1342938;
-            this.linkLabel1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel1.Location = new System.Drawing.Point(121, 35);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(114, 31);
-            this.linkLabel1.TabIndex = 2;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Consultar FIPE";
-            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // linkAddVeiculo
-            // 
-            this.linkAddVeiculo.Image = global::GestaoFrota.Properties.Resources.if_flat_style_circle_add_1312548;
-            this.linkAddVeiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.linkAddVeiculo.LinkColor = System.Drawing.Color.Green;
-            this.linkAddVeiculo.Location = new System.Drawing.Point(12, 35);
-            this.linkAddVeiculo.Name = "linkAddVeiculo";
-            this.linkAddVeiculo.Size = new System.Drawing.Size(100, 31);
-            this.linkAddVeiculo.TabIndex = 0;
-            this.linkAddVeiculo.TabStop = true;
-            this.linkAddVeiculo.Text = "Add Veículo";
-            this.linkAddVeiculo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.linkAddVeiculo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAddVeiculo_LinkClicked);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,7 +249,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.LinkLabel linkAddVeiculo;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem atualizaçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportarDadosToolStripMenuItem;

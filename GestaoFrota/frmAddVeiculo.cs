@@ -29,9 +29,11 @@ namespace GestaoFrota
         private void frmAddVeiculo_Load(object sender, EventArgs e)
         {
             PreencherComboBoxTipo();
-            cmbFabricante.Enabled = false;
-            cmbModelo.Enabled = false;
-            cmbAnoModelo.Enabled = false;
+            PreencherComboBoxCombustivel();
+            txtFabricante.Enabled = false;
+            txtModelo.Enabled = false;
+            txtAnoModelo.Enabled = false;
+            txtPlaca.Enabled = false;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -41,21 +43,42 @@ namespace GestaoFrota
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
+
+            if(String.IsNullOrEmpty(txtFabricante.Text) || String.IsNullOrWhiteSpace(txtFabricante.Text))
+            {
+                MessageBox.Show("Informe um fabricante válido.", "mesagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            if (String.IsNullOrEmpty(txtModelo.Text) || String.IsNullOrWhiteSpace(txtModelo.Text))
+            {
+                MessageBox.Show("Informe um nodelo válido.", "mesagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            if (String.IsNullOrEmpty(txtAnoModelo.Text) || String.IsNullOrWhiteSpace(txtAnoModelo.Text))
+            {
+                MessageBox.Show("Informe o ano do modelo corretamente.", "mesagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (String.IsNullOrEmpty(txtAnoModelo.Text) || String.IsNullOrWhiteSpace(txtAnoModelo.Text))
+            {
+                MessageBox.Show("Informe a placa do veículo corretamente.", "mesagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             VeiculoBLL veiculoBll = new VeiculoBLL();
 
             Veiculo info = new Veiculo();
 
-            info.FIPEModelo = cmbModelo.Text;
-            info.IdFIPEModelo = (long)cmbModelo.SelectedValue;         
-            info.FipeNameMarca = cmbFabricante.Text;
-            info.KeyFIPEModelo = carros.Where(w => w.id.Equals(info.IdFIPEModelo)).Select(s => s.key).First();
-            info.IdFIPEMarca = (int)cmbFabricante.SelectedValue;
-            info.KeyFIPEMarca = marcas.Where(w => w.Id.Equals(info.IdFIPEMarca)).Select(s => s.Key).First();
-            info.AnoModelo = cmbAnoModelo.Text;
-            info.IdFipeAno = (string)cmbAnoModelo.SelectedValue;
-            info.FipeNameAno = cmbAnoModelo.Text;
-            info.Placa = txtPlaca.Text.ToUpper();
-            info.Combustivel = 1;
+            info.FIPEModelo = txtModelo.Text;                
+            info.FipeNameMarca = txtFabricante.Text;           
+            info.AnoModelo = txtAnoModelo.Text;                        
+            info.Placa = txtPlaca.Text.ToUpper();           
+            info.Combustivel = (int)cmbCombustivel.SelectedValue;
             info.Tipo = (string)cmbTipo.SelectedValue;
             info.Ativo = true;
             info.DataVencimentoIPVA = DateTime.Now;
@@ -94,64 +117,22 @@ namespace GestaoFrota
        
         private void cmbTipo_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            try
-            {
-                marcas = new FIPEBLL().FindMarcasFIPE((string)cmbTipo.SelectedValue);
-
-                //preenche o combo fabricantes
-                cmbFabricante.DataSource = marcas;
-                cmbFabricante.DisplayMember = "Fipe_Name";
-                cmbFabricante.ValueMember = "Id";
-                cmbFabricante.SelectedIndex = -1;
-
-                cmbFabricante.Enabled = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Problemas ao consultar dados no servidor da FIPE: {ex.Message}", "Falha de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            txtFabricante.Enabled = true;
+            txtModelo.Enabled = true;
+            txtAnoModelo.Enabled = true;
+            txtPlaca.Enabled = true;
         }
 
-        private void cmbFabricante_SelectionChangeCommitted(object sender, EventArgs e)
+        private void PreencherComboBoxCombustivel()
         {
-            try
-            {
-                carros = new FIPEBLL().FindCarrosFIPE((string)cmbTipo.SelectedValue, (int)cmbFabricante.SelectedValue);
+            var combusitiveis = new CombustivelBLL().GetList();
 
-                //preenche o combo carros
-                cmbModelo.DataSource = carros;
-                cmbModelo.DisplayMember = "fipe_name";
-                cmbModelo.ValueMember = "id";
-                cmbModelo.SelectedIndex = -1;
-
-                cmbModelo.Enabled = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Problemas ao consultar dados no servidor da FIPE: {ex.Message}", "Falha de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);                
-            }
-            
+            //preenche o combo combustivel
+            cmbCombustivel.DataSource = combusitiveis;
+            cmbCombustivel.DisplayMember = "Tipo";
+            cmbCombustivel.ValueMember = "Id";
+            cmbCombustivel.SelectedIndex = -1;
         }
 
-        private void cmbModelo_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            try
-            {
-                carrosAno = new FIPEBLL().FindCarrosAnoFIPE((string)cmbTipo.SelectedValue, (int)cmbFabricante.SelectedValue, (long)cmbModelo.SelectedValue);
-
-                //preenche o combo carros
-                cmbAnoModelo.DataSource = carrosAno;
-                cmbAnoModelo.DisplayMember = "name";
-                cmbAnoModelo.ValueMember = "id";
-                cmbAnoModelo.SelectedIndex = -1;
-
-                cmbAnoModelo.Enabled = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Problemas ao consultar dados no servidor da FIPE: {ex.Message}", "Falha de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);                
-            }
-            
-        }        
     }
 }

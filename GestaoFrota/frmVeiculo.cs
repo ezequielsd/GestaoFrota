@@ -148,8 +148,7 @@ namespace GestaoFrota
             listBox1.Items.Clear();
             ConsumoInfo consumo = new AbastecimentoBLL().GetConsumoAnual(dataAtual.Date, veiculo);
             Combustivel combustivelVeiculo = new CombustivelBLL().GetCombustivel(veiculo.Combustivel);
-
-            label2.Text = $"Gasto até o momento em {dataAtual.Year}";            
+                       
             label65.Text = $"Gasto de combustivel";
             label12.Text = $"Consumido até o momento em {dataAtual.Year}";            
 
@@ -937,8 +936,7 @@ namespace GestaoFrota
                 {
                     veiculo = frmAlterarCarro.Veiculo;
 
-                    PreencherFormularioDocumento();
-                    ConsultaFIPE(veiculo.Tipo, veiculo.IdFIPEMarca, veiculo.IdFIPEModelo, veiculo.IdFipeAno);
+                    PreencherFormularioDocumento();                   
                 }
             }
         }
@@ -1442,28 +1440,7 @@ namespace GestaoFrota
             {
                 throw;
             }
-        }              
-
-        private void ConsultaFIPE(string tipo, int idMarca, long idModelo, string idAnoModelo)
-        {
-            try
-            {
-                ConsultaFIPEinfo consulta = new FIPEBLL().FindPrecoFIPE(tipo, idMarca, idModelo, idAnoModelo);
-
-                label10.Text = $"Marca: {consulta.marca}";
-                label11.Text = $"Veiculo: {consulta.veiculo}";
-                label12.Text = $"Ano modelo: {consulta.ano_modelo}";
-                label13.Text = $"Combustivel: {consulta.combustivel}";
-                label14.Text = $"Preço: {consulta.preco}";
-                label15.Text = $"Referência: {consulta.referencia}";
-
-                groupBoxSeuCarroFIPE.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Problemas ao consultar dados no servidor da FIPE: {ex.Message}", "Falha de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }        
+        }                             
 
         private void CarregarGridPagamentoDocumento(DateTime dtAtual, Veiculo veiculo)
         {

@@ -54,11 +54,7 @@ namespace GestaoFrota.DAL
                 veiculo.DataAquisicao = info.DataAquisicao;
                 veiculo.KM = info.KM;
                 veiculo.FipeNameMarca = info.FipeNameMarca;
-                veiculo.KeyFIPEMarca = info.KeyFIPEMarca;
-                veiculo.IdFIPEMarca = info.IdFIPEMarca;
                 veiculo.FIPEModelo = info.FIPEModelo;
-                veiculo.IdFIPEModelo = info.IdFIPEModelo;
-                veiculo.KeyFIPEModelo = info.KeyFIPEModelo;
                 veiculo.NomeEndereco = info.NomeEndereco;
                 veiculo.Observacao = info.Observacao;               
                 veiculo.Renavam = info.Renavam;

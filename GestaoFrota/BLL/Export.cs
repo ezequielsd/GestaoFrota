@@ -43,7 +43,7 @@ namespace GestaoFrota
 
             foreach (Veiculo item in list)
             {
-                conteudo.AppendLine($"{item.Placa};{item.Tipo};{item.FipeNameMarca};{item.IdFIPEMarca};{item.KeyFIPEMarca};{item.FIPEModelo};{item.IdFIPEModelo};{item.KeyFIPEModelo};{item.FipeNameAno};{item.IdFipeAno};{item.Renavam};{item.Chassi};{item.Combustivel};{item.AnoFab};{item.AnoModelo};{item.Capacidade};{item.Cor};{item.Cidade};{item.UF};{item.CPFCNPJ};{item.Categoria};{item.KM};{item.NomeEndereco};{item.DataAquisicao};{item.Observacao};{item.Potencia};{item.Ativo}");
+                conteudo.AppendLine($"{item.Placa};{item.Tipo};{item.FipeNameMarca};{item.FIPEModelo};{item.FipeNameAno};{item.Renavam};{item.Chassi};{item.Combustivel};{item.AnoFab};{item.AnoModelo};{item.Capacidade};{item.Cor};{item.Cidade};{item.UF};{item.CPFCNPJ};{item.Categoria};{item.KM};{item.NomeEndereco};{item.DataAquisicao};{item.Observacao};{item.Potencia};{item.Ativo}");
             }
 
             lock (_logLockObj)
