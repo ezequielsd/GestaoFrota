@@ -26,7 +26,13 @@ namespace GestaoFrota
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+            if (cmbPais.SelectedIndex == -1)
+                MessageBox.Show("Selecione seu País / Select your country!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                this.Close();
+            }            
         }
 
         private void PreencherComboBoxPais()
