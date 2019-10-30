@@ -85,7 +85,9 @@
     <Compile Include="BLL\AbastecimentoBLL.cs" />
     <Compile Include="BLL\CNHBLL.cs" />
     <Compile Include="BLL\CombustivelBLL.cs" />
+    <Compile Include="BLL\ConfiguracaoBLL.cs" />
     <Compile Include="BLL\ContratoSeguradoraBLL.cs" />
+    <Compile Include="BLL\InternacionalizacaoBLL.cs" />
     <Compile Include="BLL\ManutencaoBLL.cs" />
     <Compile Include="BLL\MecanicaBLL.cs" />
     <Compile Include="BLL\MultaBLL.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="DAL\AbastecimentoDAL.cs" />
     <Compile Include="DAL\CNHDAL.cs" />
     <Compile Include="DAL\CombustivelDAL.cs" />
+    <Compile Include="DAL\ConfiguracaoDAL.cs" />
     <Compile Include="DAL\ContratoSeguradoraDAL.cs" />
     <Compile Include="DAL\ManutencaoDAL.cs" />
     <Compile Include="DAL\MecanicaDAL.cs" />
@@ -189,6 +192,12 @@
     <Compile Include="frmSeguradoras.Designer.cs">
       <DependentUpon>frmSeguradoras.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSelecionarPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelecionarPais.Designer.cs">
+      <DependentUpon>frmSelecionarPais.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +209,7 @@
     <Compile Include="Models\DashBoard.cs" />
     <Compile Include="Models\Documento.cs" />
     <Compile Include="Models\Enuns.cs" />
+    <Compile Include="Models\Internacionalizacao.cs" />
     <Compile Include="Models\Manutencao.cs" />
     <Compile Include="Models\Mecanica.cs" />
     <Compile Include="Models\Multa.cs" />
@@ -250,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSeguradoras.resx">
       <DependentUpon>frmSeguradoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelecionarPais.resx">
+      <DependentUpon>frmSelecionarPais.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVeiculo.resx">
       <DependentUpon>frmVeiculo.cs</DependentUpon>

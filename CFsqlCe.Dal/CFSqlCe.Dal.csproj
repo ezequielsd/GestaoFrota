@@ -67,6 +67,7 @@
     <Compile Include="ORM\Abastecimento.cs" />
     <Compile Include="ORM\CNH.cs" />
     <Compile Include="ORM\Combustivel.cs" />
+    <Compile Include="ORM\Configuracao.cs" />
     <Compile Include="ORM\ContratoSeguro.cs" />
     <Compile Include="ORM\Manutencao.cs" />
     <Compile Include="ORM\Mecanica.cs" />

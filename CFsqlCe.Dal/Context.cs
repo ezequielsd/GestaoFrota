@@ -19,6 +19,7 @@ namespace CFSqlCe.Dal
                 db.Database.Initialize(false);
         }
 
+        public DbSet<Configuracao> Configuracaos { get; set; }
         public DbSet<Abastecimento> Abastecimentos { get; set; }
         public DbSet<Combustivel> Combustiveis { get; set; }        
         public DbSet<Veiculo> Veiculos { get; set; }        

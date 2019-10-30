@@ -25,6 +25,18 @@ namespace GestaoFrota
         {
             AtualizaTreeView();
             GetAvisos();
+
+            ConfiguracaoBLL configBll = new ConfiguracaoBLL();
+
+            Configuracao config = configBll.Get();
+            if (config == null)
+            {
+                this.Visible = false;
+                frmSelecionarPais frm = new frmSelecionarPais();
+                frm.ShowDialog();
+                config = configBll.Get();
+                this.Visible = true;
+            }
         }
 
         private void linkAddVeiculo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
