@@ -12,7 +12,26 @@ namespace GestaoFrota.BLL
     {
         public Configuracao Get()
         {
-            return new ConfiguracaoDAL().Get();
+            try
+            {
+                return new ConfiguracaoDAL().Get();
+            }
+            catch (Exception ex)
+            {                
+                throw ex;
+            }            
+        }
+
+        public void Insert(Configuracao config)
+        {
+            try
+            {
+                new ConfiguracaoDAL().Insert(config);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

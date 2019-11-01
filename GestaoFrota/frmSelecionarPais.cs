@@ -1,13 +1,8 @@
-﻿using GestaoFrota.BLL;
+﻿using CFSqlCe.Dal;
+using GestaoFrota.BLL;
 using GestaoFrota.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GestaoFrota
@@ -31,6 +26,13 @@ namespace GestaoFrota
                 MessageBox.Show("Selecione seu País / Select your country!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
+                Configuracao config = new Configuracao();
+                Internacionalizacao internacionalizacaoSelecionado = (Internacionalizacao)cmbPais.SelectedItem;
+                config.CodPais = internacionalizacaoSelecionado.CodPais;
+                config.CultureInfo = internacionalizacaoSelecionado.CodCultura;
+                config.Idioma = internacionalizacaoSelecionado.Idioma;
+                
+                new ConfiguracaoBLL().Insert(config);
                 this.Close();
             }            
         }

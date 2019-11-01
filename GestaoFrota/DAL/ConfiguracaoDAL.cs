@@ -16,5 +16,14 @@ namespace GestaoFrota.DAL
                 return context.Configuracaos.ToList().FirstOrDefault();
             }
         }
+
+        public void Insert(Configuracao config)
+        {
+            using(var context = new Context())
+            {
+                context.Configuracaos.Add(config);
+                context.SaveChanges();
+            }
+        }
     }
 }
