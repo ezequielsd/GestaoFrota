@@ -71,6 +71,9 @@ namespace CFSqlCe.Dal
         [StringLength(200)]
         public string Potencia { get; set; }
 
+        [StringLength(25)]
+        public string CultureInfo { get; set; }
+
         public string PathDocumentoPDF { get; set; }
 
         public DateTime DataVencimentoIPVA { get; set; }
