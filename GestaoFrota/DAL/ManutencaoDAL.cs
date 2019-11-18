@@ -32,8 +32,9 @@ namespace GestaoFrota.DAL
                     DataS = s.DataS,
                     KM = s.KM,
                     Valor = s.Valor,
-                    Mecanica = context.Mecanicas.Where(w => w.Id.Equals(s.Mecanica.Id)).Select(s2 => s2.Nome).FirstOrDefault(),
-                    PathComprovantePDF = s.PathComprovantePDF
+                    //Descricao = context.Mecanicas.Where(w => w.Id.Equals(s.Mecanica.Id)).Select(s2 => s2.Nome).FirstOrDefault(),
+                    Descricao = s.Descricao,
+                    PathComprovantePDF = (String.IsNullOrEmpty(s.PathComprovantePDF)) ? "Não" : "sim"
                 }).OrderByDescending(o => o.Data).ToList();
             }
         }
@@ -49,8 +50,9 @@ namespace GestaoFrota.DAL
                     DataS = s.DataS,  
                     KM = s.KM,
                     Valor = s.Valor,
-                    Mecanica = context.Mecanicas.Where(w => w.Id.Equals(s.Mecanica.Id)).Select(s2 => s2.Nome).FirstOrDefault(),
-                    PathComprovantePDF = s.PathComprovantePDF
+                    //Mecanica = context.Mecanicas.Where(w => w.Id.Equals(s.Mecanica.Id)).Select(s2 => s2.Nome).FirstOrDefault(),
+                    Descricao = s.Descricao,
+                    PathComprovantePDF = (String.IsNullOrEmpty(s.PathComprovantePDF)) ? "Não" : "sim"
                 }).OrderByDescending(o => o.Data).ToList();
             }
         }
@@ -73,8 +75,9 @@ namespace GestaoFrota.DAL
                         DataS = s.DataS,
                         KM = s.KM,
                         Valor = s.Valor,
-                        Mecanica = context.Mecanicas.Where(w => w.Id.Equals(s.Mecanica.Id)).Select(s2 => s2.Nome).FirstOrDefault(),
-                        PathComprovantePDF = s.PathComprovantePDF
+                        //Mecanica = context.Mecanicas.Where(w => w.Id.Equals(s.Mecanica.Id)).Select(s2 => s2.Nome).FirstOrDefault(),
+                        Descricao = s.Descricao,
+                        PathComprovantePDF = (String.IsNullOrEmpty(s.PathComprovantePDF)) ? "Não" : "sim"
                     }).ToList();
 
                 gasto.TotalValor = list.Select(s => s.Valor).Sum();                
@@ -101,8 +104,8 @@ namespace GestaoFrota.DAL
                         DataS = s.DataS,
                         KM = s.KM,
                         Valor = s.Valor,
-                        Mecanica = context.Mecanicas.Where(w => w.Id.Equals(s.Mecanica.Id)).Select(s2 => s2.Nome).FirstOrDefault(),
-                        PathComprovantePDF = s.PathComprovantePDF
+                        Descricao = s.Descricao,
+                        PathComprovantePDF = (String.IsNullOrEmpty(s.PathComprovantePDF)) ? "Não" : "sim"
                     }).ToList();
 
                 gasto.TotalValor = list.Select(s => s.Valor).Sum();
@@ -129,8 +132,8 @@ namespace GestaoFrota.DAL
                         DataS = s.DataS,
                         KM = s.KM,
                         Valor = s.Valor,
-                        Mecanica = context.Mecanicas.Where(w => w.Id.Equals(s.Mecanica.Id)).Select(s2 => s2.Nome).FirstOrDefault(),
-                        PathComprovantePDF = s.PathComprovantePDF
+                        Descricao = s.Descricao,
+                        PathComprovantePDF = (String.IsNullOrEmpty(s.PathComprovantePDF)) ? "Não" : "Sim"
                     }).ToList();
 
                 gasto.TotalValor = list.Select(s => s.Valor).Sum();

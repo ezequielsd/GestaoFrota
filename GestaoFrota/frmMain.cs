@@ -60,10 +60,20 @@ namespace GestaoFrota
                 MessageBox.Show("Selecione um veículo!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                using (frmVeiculo frmVeicu = new frmVeiculo(veicu))
+
+                switch (veicu.CultureInfo)
                 {
-                    frmVeicu.ShowDialog();
+                    case "pt-BR":
+                        using (frmVeiculo frmVeicu = new frmVeiculo(veicu))
+                        {
+                            frmVeicu.ShowDialog();
+                        }
+                        break;
+                    default:
+                        break;
                 }
+
+               
                 AtualizaTreeView();
             }
         }

@@ -20,7 +20,7 @@ namespace GestaoFrota.Models
 
         public long KM { get; set; }
 
-        public string Mecanica { get; set; }
+        public string Descricao { get; set; }
 
         public decimal Valor { get; set; }
 

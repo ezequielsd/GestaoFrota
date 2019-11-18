@@ -1671,7 +1671,7 @@
             this.btnAnexaComprovanteManutencaoDepois.BackColor = System.Drawing.Color.Khaki;
             this.btnAnexaComprovanteManutencaoDepois.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
             this.btnAnexaComprovanteManutencaoDepois.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnexaComprovanteManutencaoDepois.Location = new System.Drawing.Point(901, 536);
+            this.btnAnexaComprovanteManutencaoDepois.Location = new System.Drawing.Point(780, 535);
             this.btnAnexaComprovanteManutencaoDepois.Name = "btnAnexaComprovanteManutencaoDepois";
             this.btnAnexaComprovanteManutencaoDepois.Size = new System.Drawing.Size(137, 23);
             this.btnAnexaComprovanteManutencaoDepois.TabIndex = 87;
@@ -1684,7 +1684,7 @@
             this.btnVisualizarComprovanteManutencao.BackColor = System.Drawing.Color.Aquamarine;
             this.btnVisualizarComprovanteManutencao.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
             this.btnVisualizarComprovanteManutencao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarComprovanteManutencao.Location = new System.Drawing.Point(1044, 537);
+            this.btnVisualizarComprovanteManutencao.Location = new System.Drawing.Point(923, 536);
             this.btnVisualizarComprovanteManutencao.Name = "btnVisualizarComprovanteManutencao";
             this.btnVisualizarComprovanteManutencao.Size = new System.Drawing.Size(137, 23);
             this.btnVisualizarComprovanteManutencao.TabIndex = 86;
@@ -1701,7 +1701,7 @@
             this.groupBox26.Controls.Add(this.label42);
             this.groupBox26.Location = new System.Drawing.Point(370, 36);
             this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(811, 100);
+            this.groupBox26.Size = new System.Drawing.Size(690, 100);
             this.groupBox26.TabIndex = 27;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Filtrar";
@@ -1761,7 +1761,7 @@
             this.dtManutencao.Location = new System.Drawing.Point(370, 142);
             this.dtManutencao.Name = "dtManutencao";
             this.dtManutencao.ReadOnly = true;
-            this.dtManutencao.Size = new System.Drawing.Size(811, 389);
+            this.dtManutencao.Size = new System.Drawing.Size(705, 389);
             this.dtManutencao.TabIndex = 23;
             // 
             // btnVisualizarMecanicas

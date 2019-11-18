@@ -871,13 +871,29 @@ namespace GestaoFrota
             //ajusta lagura da coluna
             dtManutencao.Columns["Id"].Width = 50;
             dtManutencao.Columns["DataS"].Width = 80;
-            dtManutencao.Columns["KM"].Width = 80;
-            dtManutencao.Columns["Mecanica"].Width = 277;
+            dtManutencao.Columns["KM"].Width = 60;
+            dtManutencao.Columns["Descricao"].Width = 277;
             dtManutencao.Columns["Valor"].Width = 80;
-            dtManutencao.Columns["PathComprovantePDF"].Width = 200;
+            dtManutencao.Columns["PathComprovantePDF"].Width = 95;
+
+            //alinhamento dos headers das colunas
+            foreach (DataGridViewColumn col in dtManutencao.Columns)
+            {
+                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+            }
+
+
+            //alinhamento das colunas
+            dtManutencao.Columns["Id"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dtManutencao.Columns["DataS"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dtManutencao.Columns["KM"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dtManutencao.Columns["Valor"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dtManutencao.Columns["PathComprovantePDF"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             //ajusta o texto header do grid
             dtManutencao.Columns["PathComprovantePDF"].HeaderText = "Comprovante";
+            dtManutencao.Columns["Descricao"].HeaderText = "Efetuado"; 
             dtManutencao.Columns["DataS"].HeaderText = "Data";
         }
 
