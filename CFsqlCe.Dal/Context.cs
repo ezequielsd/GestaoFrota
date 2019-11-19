@@ -25,6 +25,7 @@ namespace CFSqlCe.Dal
         public DbSet<Veiculo> Veiculos { get; set; }        
         public DbSet<Mecanica> Mecanicas { get; set; }
         public DbSet<Manutencao> Manutencoes { get; set; }
+        public DbSet<TipoManutencao> TipoManutencaos { get; set; }
         public DbSet<Oleo> Oleos { get; set;}
         public DbSet<CNH> CNHs { get; set; }
         public DbSet<Seguradora> Seguradoras { get; set; }

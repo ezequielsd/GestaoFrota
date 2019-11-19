@@ -33,12 +33,20 @@ namespace CFSqlCe.Dal
 
         public int MecanicaID { get; set; }
 
-        [ForeignKey("MecanicaID")]
-        public virtual Mecanica Mecanica { get; set; }
-
+        [NotMapped]
+        public Mecanica Mecanica { get; set; }
+       
         public override string ToString()
         {
             return Data.ToShortDateString();
         }
+    }
+
+    public class TipoManutencao
+    {
+        [Key]
+        public int Id { get; set; }
+
+        public string Descricao { get; set; }
     }
 }

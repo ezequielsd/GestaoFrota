@@ -158,21 +158,6 @@
             this.label42 = new System.Windows.Forms.Label();
             this.dtManutencao = new System.Windows.Forms.DataGridView();
             this.btnVisualizarMecanicas = new System.Windows.Forms.Button();
-            this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.btnAnexarComprovanteManutencao = new System.Windows.Forms.Button();
-            this.label40 = new System.Windows.Forms.Label();
-            this.txtPathComprovanteManutencao = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.txtKMManutencao = new System.Windows.Forms.TextBox();
-            this.btnLancarManutencao = new System.Windows.Forms.Button();
-            this.label34 = new System.Windows.Forms.Label();
-            this.txtDescricaoManutencao = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.txtValorManutencao = new System.Windows.Forms.TextBox();
-            this.dateTimePickerManutencao = new System.Windows.Forms.DateTimePicker();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.cmbMecanica = new System.Windows.Forms.ComboBox();
             this.btnCadastrarMecanica = new System.Windows.Forms.Button();
             this.tabPageDocumento = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -332,6 +317,24 @@
             this.label59 = new System.Windows.Forms.Label();
             this.dtMultas = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAnexarComprovanteManutencao = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.cmbMecanica = new System.Windows.Forms.ComboBox();
+            this.txtPathComprovanteManutencao = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.dateTimePickerManutencao = new System.Windows.Forms.DateTimePicker();
+            this.txtKMManutencao = new System.Windows.Forms.TextBox();
+            this.txtValorManutencao = new System.Windows.Forms.TextBox();
+            this.btnLancarManutencao = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtDescricaoManutencao = new System.Windows.Forms.TextBox();
+            this.btnAdicionarTipoManutencao = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageDashDoard.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -376,7 +379,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.groupBox26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtManutencao)).BeginInit();
-            this.groupBox24.SuspendLayout();
             this.tabPageDocumento.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -396,6 +398,8 @@
             this.groupBox34.SuspendLayout();
             this.groupBox33.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).BeginInit();
+            this.tabControl2.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -411,6 +415,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.ShowToolTips = true;
             this.tabControl1.Size = new System.Drawing.Size(1286, 603);
             this.tabControl1.TabIndex = 0;
             // 
@@ -423,7 +428,7 @@
             this.tabPageDashDoard.Location = new System.Drawing.Point(4, 22);
             this.tabPageDashDoard.Name = "tabPageDashDoard";
             this.tabPageDashDoard.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDashDoard.Size = new System.Drawing.Size(1278, 577);
+            this.tabPageDashDoard.Size = new System.Drawing.Size(1600, 577);
             this.tabPageDashDoard.TabIndex = 6;
             this.tabPageDashDoard.Text = "Painel estatistico";
             // 
@@ -1608,14 +1613,16 @@
             // 
             // tabPageManutencao
             // 
+            this.tabPageManutencao.Controls.Add(this.btnAdicionarTipoManutencao);
+            this.tabPageManutencao.Controls.Add(this.tabControl2);
             this.tabPageManutencao.Controls.Add(this.panel8);
             this.tabPageManutencao.Controls.Add(this.btnAnexaComprovanteManutencaoDepois);
             this.tabPageManutencao.Controls.Add(this.btnVisualizarComprovanteManutencao);
             this.tabPageManutencao.Controls.Add(this.groupBox26);
             this.tabPageManutencao.Controls.Add(this.dtManutencao);
             this.tabPageManutencao.Controls.Add(this.btnVisualizarMecanicas);
-            this.tabPageManutencao.Controls.Add(this.groupBox24);
             this.tabPageManutencao.Controls.Add(this.btnCadastrarMecanica);
+            this.tabPageManutencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageManutencao.Location = new System.Drawing.Point(4, 22);
             this.tabPageManutencao.Name = "tabPageManutencao";
             this.tabPageManutencao.Padding = new System.Windows.Forms.Padding(3);
@@ -1630,15 +1637,15 @@
             this.panel8.Controls.Add(this.pictureBox12);
             this.panel8.Controls.Add(this.label80);
             this.panel8.Controls.Add(this.label81);
-            this.panel8.Location = new System.Drawing.Point(8, 472);
+            this.panel8.Location = new System.Drawing.Point(882, 42);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(356, 87);
+            this.panel8.Size = new System.Drawing.Size(193, 94);
             this.panel8.TabIndex = 92;
             // 
             // pictureBox12
             // 
             this.pictureBox12.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
-            this.pictureBox12.Location = new System.Drawing.Point(3, 33);
+            this.pictureBox12.Location = new System.Drawing.Point(3, 39);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(50, 52);
             this.pictureBox12.TabIndex = 3;
@@ -1646,10 +1653,9 @@
             // 
             // label80
             // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label80.ForeColor = System.Drawing.Color.DarkGray;
-            this.label80.Location = new System.Drawing.Point(3, 2);
+            this.label80.Location = new System.Drawing.Point(3, 8);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(164, 15);
             this.label80.TabIndex = 2;
@@ -1658,11 +1664,11 @@
             // label81
             // 
             this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label81.ForeColor = System.Drawing.Color.Red;
-            this.label81.Location = new System.Drawing.Point(51, 49);
+            this.label81.Location = new System.Drawing.Point(51, 56);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(87, 33);
+            this.label81.Size = new System.Drawing.Size(55, 24);
             this.label81.TabIndex = 1;
             this.label81.Text = "99,99";
             // 
@@ -1671,7 +1677,7 @@
             this.btnAnexaComprovanteManutencaoDepois.BackColor = System.Drawing.Color.Khaki;
             this.btnAnexaComprovanteManutencaoDepois.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
             this.btnAnexaComprovanteManutencaoDepois.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnexaComprovanteManutencaoDepois.Location = new System.Drawing.Point(780, 535);
+            this.btnAnexaComprovanteManutencaoDepois.Location = new System.Drawing.Point(793, 548);
             this.btnAnexaComprovanteManutencaoDepois.Name = "btnAnexaComprovanteManutencaoDepois";
             this.btnAnexaComprovanteManutencaoDepois.Size = new System.Drawing.Size(137, 23);
             this.btnAnexaComprovanteManutencaoDepois.TabIndex = 87;
@@ -1684,7 +1690,7 @@
             this.btnVisualizarComprovanteManutencao.BackColor = System.Drawing.Color.Aquamarine;
             this.btnVisualizarComprovanteManutencao.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
             this.btnVisualizarComprovanteManutencao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarComprovanteManutencao.Location = new System.Drawing.Point(923, 536);
+            this.btnVisualizarComprovanteManutencao.Location = new System.Drawing.Point(938, 548);
             this.btnVisualizarComprovanteManutencao.Name = "btnVisualizarComprovanteManutencao";
             this.btnVisualizarComprovanteManutencao.Size = new System.Drawing.Size(137, 23);
             this.btnVisualizarComprovanteManutencao.TabIndex = 86;
@@ -1701,7 +1707,7 @@
             this.groupBox26.Controls.Add(this.label42);
             this.groupBox26.Location = new System.Drawing.Point(370, 36);
             this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(690, 100);
+            this.groupBox26.Size = new System.Drawing.Size(506, 100);
             this.groupBox26.TabIndex = 27;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Filtrar";
@@ -1761,7 +1767,7 @@
             this.dtManutencao.Location = new System.Drawing.Point(370, 142);
             this.dtManutencao.Name = "dtManutencao";
             this.dtManutencao.ReadOnly = true;
-            this.dtManutencao.Size = new System.Drawing.Size(705, 389);
+            this.dtManutencao.Size = new System.Drawing.Size(705, 400);
             this.dtManutencao.TabIndex = 23;
             // 
             // btnVisualizarMecanicas
@@ -1773,151 +1779,6 @@
             this.btnVisualizarMecanicas.Text = "Visualizar Mecânicas/Elétricas cadastradas";
             this.btnVisualizarMecanicas.UseVisualStyleBackColor = true;
             this.btnVisualizarMecanicas.Click += new System.EventHandler(this.btnVisualizarMecanicas_Click);
-            // 
-            // groupBox24
-            // 
-            this.groupBox24.Controls.Add(this.btnAnexarComprovanteManutencao);
-            this.groupBox24.Controls.Add(this.label40);
-            this.groupBox24.Controls.Add(this.txtPathComprovanteManutencao);
-            this.groupBox24.Controls.Add(this.label36);
-            this.groupBox24.Controls.Add(this.txtKMManutencao);
-            this.groupBox24.Controls.Add(this.btnLancarManutencao);
-            this.groupBox24.Controls.Add(this.label34);
-            this.groupBox24.Controls.Add(this.txtDescricaoManutencao);
-            this.groupBox24.Controls.Add(this.label32);
-            this.groupBox24.Controls.Add(this.txtValorManutencao);
-            this.groupBox24.Controls.Add(this.dateTimePickerManutencao);
-            this.groupBox24.Controls.Add(this.label33);
-            this.groupBox24.Controls.Add(this.label26);
-            this.groupBox24.Controls.Add(this.cmbMecanica);
-            this.groupBox24.Location = new System.Drawing.Point(8, 36);
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(356, 419);
-            this.groupBox24.TabIndex = 17;
-            this.groupBox24.TabStop = false;
-            this.groupBox24.Text = "Lançar manutenção";
-            // 
-            // btnAnexarComprovanteManutencao
-            // 
-            this.btnAnexarComprovanteManutencao.Location = new System.Drawing.Point(295, 356);
-            this.btnAnexarComprovanteManutencao.Name = "btnAnexarComprovanteManutencao";
-            this.btnAnexarComprovanteManutencao.Size = new System.Drawing.Size(34, 23);
-            this.btnAnexarComprovanteManutencao.TabIndex = 8;
-            this.btnAnexarComprovanteManutencao.Text = "...";
-            this.btnAnexarComprovanteManutencao.UseVisualStyleBackColor = true;
-            this.btnAnexarComprovanteManutencao.Click += new System.EventHandler(this.btnAnexarComprovanteManutencao_Click);
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(6, 342);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(105, 13);
-            this.label40.TabIndex = 46;
-            this.label40.Text = "Anexar comprovante";
-            // 
-            // txtPathComprovanteManutencao
-            // 
-            this.txtPathComprovanteManutencao.Location = new System.Drawing.Point(6, 358);
-            this.txtPathComprovanteManutencao.Name = "txtPathComprovanteManutencao";
-            this.txtPathComprovanteManutencao.Size = new System.Drawing.Size(283, 20);
-            this.txtPathComprovanteManutencao.TabIndex = 7;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(6, 152);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(23, 13);
-            this.label36.TabIndex = 44;
-            this.label36.Text = "KM";
-            // 
-            // txtKMManutencao
-            // 
-            this.txtKMManutencao.Location = new System.Drawing.Point(6, 168);
-            this.txtKMManutencao.Name = "txtKMManutencao";
-            this.txtKMManutencao.Size = new System.Drawing.Size(100, 20);
-            this.txtKMManutencao.TabIndex = 5;
-            // 
-            // btnLancarManutencao
-            // 
-            this.btnLancarManutencao.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnLancarManutencao.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.btnLancarManutencao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLancarManutencao.Location = new System.Drawing.Point(254, 386);
-            this.btnLancarManutencao.Name = "btnLancarManutencao";
-            this.btnLancarManutencao.Size = new System.Drawing.Size(75, 23);
-            this.btnLancarManutencao.TabIndex = 9;
-            this.btnLancarManutencao.Text = "Lançar";
-            this.btnLancarManutencao.UseVisualStyleBackColor = false;
-            this.btnLancarManutencao.Click += new System.EventHandler(this.btnLancarManutencao_Click);
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(6, 192);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(107, 13);
-            this.label34.TabIndex = 42;
-            this.label34.Text = "Descrição do serviço";
-            // 
-            // txtDescricaoManutencao
-            // 
-            this.txtDescricaoManutencao.Location = new System.Drawing.Point(6, 208);
-            this.txtDescricaoManutencao.Multiline = true;
-            this.txtDescricaoManutencao.Name = "txtDescricaoManutencao";
-            this.txtDescricaoManutencao.Size = new System.Drawing.Size(323, 130);
-            this.txtDescricaoManutencao.TabIndex = 6;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(6, 112);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(54, 13);
-            this.label32.TabIndex = 40;
-            this.label32.Text = "Valor (R$)";
-            // 
-            // txtValorManutencao
-            // 
-            this.txtValorManutencao.Location = new System.Drawing.Point(6, 128);
-            this.txtValorManutencao.Name = "txtValorManutencao";
-            this.txtValorManutencao.Size = new System.Drawing.Size(100, 20);
-            this.txtValorManutencao.TabIndex = 4;
-            // 
-            // dateTimePickerManutencao
-            // 
-            this.dateTimePickerManutencao.Location = new System.Drawing.Point(6, 88);
-            this.dateTimePickerManutencao.Name = "dateTimePickerManutencao";
-            this.dateTimePickerManutencao.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerManutencao.TabIndex = 3;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(6, 72);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(30, 13);
-            this.label33.TabIndex = 38;
-            this.label33.Text = "Data";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(7, 28);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(100, 13);
-            this.label26.TabIndex = 14;
-            this.label26.Text = "Mecanica / Elétrica";
-            // 
-            // cmbMecanica
-            // 
-            this.cmbMecanica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMecanica.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cmbMecanica.Location = new System.Drawing.Point(6, 47);
-            this.cmbMecanica.Name = "cmbMecanica";
-            this.cmbMecanica.Size = new System.Drawing.Size(323, 21);
-            this.cmbMecanica.TabIndex = 2;
             // 
             // btnCadastrarMecanica
             // 
@@ -1942,7 +1803,7 @@
             this.tabPageDocumento.Location = new System.Drawing.Point(4, 22);
             this.tabPageDocumento.Name = "tabPageDocumento";
             this.tabPageDocumento.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDocumento.Size = new System.Drawing.Size(1278, 577);
+            this.tabPageDocumento.Size = new System.Drawing.Size(1600, 577);
             this.tabPageDocumento.TabIndex = 1;
             this.tabPageDocumento.Text = "Documento";
             this.tabPageDocumento.UseVisualStyleBackColor = true;
@@ -2790,7 +2651,7 @@
             this.tabPageSeguro.Location = new System.Drawing.Point(4, 22);
             this.tabPageSeguro.Name = "tabPageSeguro";
             this.tabPageSeguro.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSeguro.Size = new System.Drawing.Size(1278, 577);
+            this.tabPageSeguro.Size = new System.Drawing.Size(1600, 577);
             this.tabPageSeguro.TabIndex = 4;
             this.tabPageSeguro.Text = "Seguro";
             this.tabPageSeguro.UseVisualStyleBackColor = true;
@@ -3250,7 +3111,7 @@
             this.tabPageMulta.Location = new System.Drawing.Point(4, 22);
             this.tabPageMulta.Name = "tabPageMulta";
             this.tabPageMulta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMulta.Size = new System.Drawing.Size(1278, 577);
+            this.tabPageMulta.Size = new System.Drawing.Size(1600, 577);
             this.tabPageMulta.TabIndex = 5;
             this.tabPageMulta.Text = "Multa";
             this.tabPageMulta.UseVisualStyleBackColor = true;
@@ -3585,6 +3446,184 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // tabControl2
+            // 
+            this.tabControl2.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControl2.Controls.Add(this.tabPage1);
+            this.tabControl2.Controls.Add(this.tabPage2);
+            this.tabControl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl2.Location = new System.Drawing.Point(8, 42);
+            this.tabControl2.Multiline = true;
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.ShowToolTips = true;
+            this.tabControl2.Size = new System.Drawing.Size(356, 535);
+            this.tabControl2.TabIndex = 93;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Location = new System.Drawing.Point(23, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(329, 527);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Detalhes";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btnAnexarComprovanteManutencao);
+            this.tabPage2.Controls.Add(this.label26);
+            this.tabPage2.Controls.Add(this.label40);
+            this.tabPage2.Controls.Add(this.cmbMecanica);
+            this.tabPage2.Controls.Add(this.txtPathComprovanteManutencao);
+            this.tabPage2.Controls.Add(this.label33);
+            this.tabPage2.Controls.Add(this.label36);
+            this.tabPage2.Controls.Add(this.dateTimePickerManutencao);
+            this.tabPage2.Controls.Add(this.txtKMManutencao);
+            this.tabPage2.Controls.Add(this.txtValorManutencao);
+            this.tabPage2.Controls.Add(this.btnLancarManutencao);
+            this.tabPage2.Controls.Add(this.label32);
+            this.tabPage2.Controls.Add(this.label34);
+            this.tabPage2.Controls.Add(this.txtDescricaoManutencao);
+            this.tabPage2.Location = new System.Drawing.Point(24, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(328, 527);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Lançar manutenção";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnAnexarComprovanteManutencao
+            // 
+            this.btnAnexarComprovanteManutencao.Location = new System.Drawing.Point(278, 412);
+            this.btnAnexarComprovanteManutencao.Name = "btnAnexarComprovanteManutencao";
+            this.btnAnexarComprovanteManutencao.Size = new System.Drawing.Size(34, 23);
+            this.btnAnexarComprovanteManutencao.TabIndex = 53;
+            this.btnAnexarComprovanteManutencao.Text = "...";
+            this.btnAnexarComprovanteManutencao.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(18, 56);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(111, 15);
+            this.label26.TabIndex = 55;
+            this.label26.Text = "Mecanica / Elétrica";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(17, 370);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(119, 15);
+            this.label40.TabIndex = 60;
+            this.label40.Text = "Anexar comprovante";
+            // 
+            // cmbMecanica
+            // 
+            this.cmbMecanica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMecanica.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.cmbMecanica.Location = new System.Drawing.Point(17, 75);
+            this.cmbMecanica.Name = "cmbMecanica";
+            this.cmbMecanica.Size = new System.Drawing.Size(295, 23);
+            this.cmbMecanica.TabIndex = 47;
+            // 
+            // txtPathComprovanteManutencao
+            // 
+            this.txtPathComprovanteManutencao.Location = new System.Drawing.Point(17, 386);
+            this.txtPathComprovanteManutencao.Name = "txtPathComprovanteManutencao";
+            this.txtPathComprovanteManutencao.Size = new System.Drawing.Size(295, 21);
+            this.txtPathComprovanteManutencao.TabIndex = 52;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(17, 100);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(33, 15);
+            this.label33.TabIndex = 56;
+            this.label33.Text = "Data";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(17, 180);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(26, 15);
+            this.label36.TabIndex = 59;
+            this.label36.Text = "KM";
+            // 
+            // dateTimePickerManutencao
+            // 
+            this.dateTimePickerManutencao.Location = new System.Drawing.Point(17, 116);
+            this.dateTimePickerManutencao.Name = "dateTimePickerManutencao";
+            this.dateTimePickerManutencao.Size = new System.Drawing.Size(234, 21);
+            this.dateTimePickerManutencao.TabIndex = 48;
+            // 
+            // txtKMManutencao
+            // 
+            this.txtKMManutencao.Location = new System.Drawing.Point(17, 196);
+            this.txtKMManutencao.Name = "txtKMManutencao";
+            this.txtKMManutencao.Size = new System.Drawing.Size(100, 21);
+            this.txtKMManutencao.TabIndex = 50;
+            // 
+            // txtValorManutencao
+            // 
+            this.txtValorManutencao.Location = new System.Drawing.Point(17, 156);
+            this.txtValorManutencao.Name = "txtValorManutencao";
+            this.txtValorManutencao.Size = new System.Drawing.Size(100, 21);
+            this.txtValorManutencao.TabIndex = 49;
+            // 
+            // btnLancarManutencao
+            // 
+            this.btnLancarManutencao.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnLancarManutencao.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            this.btnLancarManutencao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLancarManutencao.Location = new System.Drawing.Point(237, 489);
+            this.btnLancarManutencao.Name = "btnLancarManutencao";
+            this.btnLancarManutencao.Size = new System.Drawing.Size(75, 23);
+            this.btnLancarManutencao.TabIndex = 54;
+            this.btnLancarManutencao.Text = "Lançar";
+            this.btnLancarManutencao.UseVisualStyleBackColor = false;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(17, 140);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(62, 15);
+            this.label32.TabIndex = 57;
+            this.label32.Text = "Valor (R$)";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(17, 220);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(120, 15);
+            this.label34.TabIndex = 58;
+            this.label34.Text = "Descrição do serviço";
+            // 
+            // txtDescricaoManutencao
+            // 
+            this.txtDescricaoManutencao.Location = new System.Drawing.Point(17, 236);
+            this.txtDescricaoManutencao.Multiline = true;
+            this.txtDescricaoManutencao.Name = "txtDescricaoManutencao";
+            this.txtDescricaoManutencao.Size = new System.Drawing.Size(295, 130);
+            this.txtDescricaoManutencao.TabIndex = 51;
+            // 
+            // btnAdicionarTipoManutencao
+            // 
+            this.btnAdicionarTipoManutencao.Location = new System.Drawing.Point(411, 7);
+            this.btnAdicionarTipoManutencao.Name = "btnAdicionarTipoManutencao";
+            this.btnAdicionarTipoManutencao.Size = new System.Drawing.Size(157, 23);
+            this.btnAdicionarTipoManutencao.TabIndex = 94;
+            this.btnAdicionarTipoManutencao.Text = "Classificação de manutenção";
+            this.btnAdicionarTipoManutencao.UseVisualStyleBackColor = true;
+            // 
             // frmVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3662,8 +3701,6 @@
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtManutencao)).EndInit();
-            this.groupBox24.ResumeLayout(false);
-            this.groupBox24.PerformLayout();
             this.tabPageDocumento.ResumeLayout(false);
             this.tabPageDocumento.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -3696,6 +3733,9 @@
             this.groupBox33.ResumeLayout(false);
             this.groupBox33.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).EndInit();
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3760,9 +3800,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TabPage tabPageManutencao;
         private System.Windows.Forms.Button btnCadastrarMecanica;
-        private System.Windows.Forms.GroupBox groupBox24;
-        private System.Windows.Forms.ComboBox cmbMecanica;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button btnVisualizarMecanicas;
         private System.Windows.Forms.DataGridView dtManutencao;
         private System.Windows.Forms.TabPage tabPageOleo;
@@ -3777,19 +3814,10 @@
         private System.Windows.Forms.TextBox txtValorOleo;
         private System.Windows.Forms.DateTimePicker dateTimePickerOleo;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox txtValorManutencao;
-        private System.Windows.Forms.DateTimePicker dateTimePickerManutencao;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Button btnLancarManutencao;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox txtDescricaoManutencao;
         private System.Windows.Forms.DataGridView dtOleo;
         private System.Windows.Forms.Button btnLancarOleo;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.ComboBox cmbAcaoOleo;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox txtKMManutencao;
         private System.Windows.Forms.GroupBox groupBox25;
         private System.Windows.Forms.Button btnAplicarFiltroOleo;
         private System.Windows.Forms.DateTimePicker dateTimePickerDataFinalFiltroOleo;
@@ -3806,9 +3834,6 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TextBox txtPathComprovanteAbastecimento;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button btnAnexarComprovanteManutencao;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox txtPathComprovanteManutencao;
         private System.Windows.Forms.Button btnAnexarComprovanteOleo;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox txtPathComprovanteOleo;
@@ -4002,5 +4027,23 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerDataPagamentoMulta;
         private System.Windows.Forms.Label label91;
         private System.Windows.Forms.Button btnRemoverFiltroCombustivel;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button btnAnexarComprovanteManutencao;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.ComboBox cmbMecanica;
+        private System.Windows.Forms.TextBox txtPathComprovanteManutencao;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.DateTimePicker dateTimePickerManutencao;
+        private System.Windows.Forms.TextBox txtKMManutencao;
+        private System.Windows.Forms.TextBox txtValorManutencao;
+        private System.Windows.Forms.Button btnLancarManutencao;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox txtDescricaoManutencao;
+        private System.Windows.Forms.Button btnAdicionarTipoManutencao;
     }
 }

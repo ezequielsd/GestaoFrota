@@ -13,8 +13,8 @@ namespace GestaoFrota.DAL
         public void Insert(Manutencao info)
         {
             using (var context = new Context())
-            {
-                info.Mecanica = context.Mecanicas.Find(info.MecanicaID);
+            {                
+                info.MecanicaID = info.MecanicaID;
                 info.Veiculo = context.Veiculos.Find(info.Veiculo.Placa);
                 context.Manutencoes.Add(info);
                 context.SaveChanges();                

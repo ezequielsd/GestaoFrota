@@ -764,7 +764,7 @@ namespace GestaoFrota
                     Data = dateTimePickerManutencao.Value.Date,
                     Valor = Convert.ToDecimal(txtValorManutencao.Text),
                     Descricao = txtDescricaoManutencao.Text,
-                    MecanicaID = (int)cmbMecanica.SelectedValue,
+                    MecanicaID = (cmbMecanica.SelectedValue == null) ? -1: (int)cmbMecanica.SelectedValue,
                     Veiculo = veiculo,
                     KM = Convert.ToInt64(txtKMManutencao.Text),
                     PathComprovantePDF = fileNameComprovante
