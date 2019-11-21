@@ -52,5 +52,20 @@ namespace GestaoFrota.BLL
         {
             new ManutencaoDAL().AnexarComprovante(id, pathComprovante);
         }
+
+        public List<TipoManutencao> ListTipo()
+        {
+            return new ManutencaoDAL().ListTipo();
+        }
+
+        public void InsertTipoManutencao(TipoManutencao tipoManutencao)
+        {
+            new ManutencaoDAL().InsertTipoManutencao(tipoManutencao);
+        }
+
+        public void Delete(int id)
+        {
+            new ManutencaoDAL().DeleteTipo(id);
+        }
     }
 }

@@ -10,13 +10,13 @@ namespace GestaoFrota.DAL
 {
     public class ManutencaoDAL
     {
-        public void Insert(Manutencao info)
+        public void Insert(Manutencao manutencao)
         {
             using (var context = new Context())
             {                
-                info.MecanicaID = info.MecanicaID;
-                info.Veiculo = context.Veiculos.Find(info.Veiculo.Placa);
-                context.Manutencoes.Add(info);
+                manutencao.MecanicaID = manutencao.MecanicaID;
+                manutencao.Veiculo = context.Veiculos.Find(manutencao.Veiculo.Placa);
+                context.Manutencoes.Add(manutencao);
                 context.SaveChanges();                
             }
         }
@@ -156,6 +156,33 @@ namespace GestaoFrota.DAL
             {
                 var manu = context.Manutencoes.Find(id);
                 manu.PathComprovantePDF = pathComprovante;
+                context.SaveChanges();
+            }
+        }             
+
+        public List<TipoManutencao> ListTipo()
+        {
+            using (var context = new Context())
+            {
+                return context.TipoManutencaos.ToList();
+            }
+        }
+
+        public void InsertTipoManutencao(TipoManutencao tipoManutencao)
+        {
+            using (var context = new Context())
+            {
+                context.TipoManutencaos.Add(tipoManutencao);
+                context.SaveChanges();
+            }
+        }
+
+        public void DeleteTipo(int id)
+        {
+            using (var context = new Context())
+            {
+                var tipo = context.TipoManutencaos.Find(id);
+                context.TipoManutencaos.Remove(tipo);
                 context.SaveChanges();
             }
         }
