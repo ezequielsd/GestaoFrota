@@ -897,6 +897,12 @@ namespace GestaoFrota
             dtManutencao.Columns["DataS"].HeaderText = "Data";
         }
 
+        private void btnTipoManutencao_Click(object sender, EventArgs e)
+        {
+            frmTipoManutencao frm = new frmTipoManutencao();
+            frm.ShowDialog();
+        }
+
         #endregion
 
         #region Aba Documento
@@ -2013,6 +2019,7 @@ namespace GestaoFrota
                 }
             }
         }
-                
+
+        
     }
 }

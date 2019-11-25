@@ -67,6 +67,18 @@ namespace GestaoFrota
             //ajusta o texto header do grid
             //dtAbastecimento.Columns["Quantidade"].HeaderText = "Qntd. (lts/m³)";
             //dtAbastecimento.Columns["PathComprovantePDF"].HeaderText = "Comprovante";
+
+            //alinhamento dos headers das colunas
+            foreach (DataGridViewColumn col in dtCNHs.Columns)
+            {
+                col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
+            }
+
+            //alinhamento das colunas
+            dtCNHs.Columns["NumeroRegistro"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dtCNHs.Columns["Nome"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dtCNHs.Columns["Validade"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
     }
 }

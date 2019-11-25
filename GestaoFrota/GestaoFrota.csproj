@@ -116,6 +116,12 @@
     <Compile Include="frmAboutBox.Designer.cs">
       <DependentUpon>frmAboutBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddTipoManutencao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddTipoManutencao.Designer.cs">
+      <DependentUpon>frmAddTipoManutencao.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,12 @@
     <Compile Include="frmSelecionarPais.Designer.cs">
       <DependentUpon>frmSelecionarPais.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTipoManutencao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoManutencao.Designer.cs">
+      <DependentUpon>frmTipoManutencao.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +235,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAboutBox.resx">
       <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddTipoManutencao.resx">
+      <DependentUpon>frmAddTipoManutencao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddVeiculo.resx">
       <DependentUpon>frmAddVeiculo.cs</DependentUpon>
@@ -248,6 +263,12 @@
     <EmbeddedResource Include="frmConsultarFIPE.resx">
       <DependentUpon>frmConsultarFIPE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.en.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.pt-PT.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelecionarPais.resx">
       <DependentUpon>frmSelecionarPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoManutencao.resx">
+      <DependentUpon>frmTipoManutencao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVeiculo.resx">
       <DependentUpon>frmVeiculo.cs</DependentUpon>
