@@ -35,6 +35,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDashDoard = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label78 = new System.Windows.Forms.Label();
             this.label79 = new System.Windows.Forms.Label();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
@@ -42,33 +43,44 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
             this.panelConsumoCombustivelAnual = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label65 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label94 = new System.Windows.Forms.Label();
             this.label95 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label67 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.label85 = new System.Windows.Forms.Label();
             this.label86 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblKmRodados = new System.Windows.Forms.Label();
             this.lblKmAnual = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label83 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label82 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label76 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.tabPageAbastecimento = new System.Windows.Forms.TabPage();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label68 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label66 = new System.Windows.Forms.Label();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.btnAdicionarComprovante = new System.Windows.Forms.Button();
@@ -102,6 +114,7 @@
             this.tabPageOleo = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.listBox4 = new System.Windows.Forms.ListBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label70 = new System.Windows.Forms.Label();
             this.btnAnexarComprovanteOleoDepois = new System.Windows.Forms.Button();
             this.btnVisualizarComprovanteOleo = new System.Windows.Forms.Button();
@@ -150,6 +163,7 @@
             this.label34 = new System.Windows.Forms.Label();
             this.txtDescricaoManutencao = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label80 = new System.Windows.Forms.Label();
             this.label81 = new System.Windows.Forms.Label();
             this.btnAnexaComprovanteManutencaoDepois = new System.Windows.Forms.Button();
@@ -321,43 +335,44 @@
             this.label59 = new System.Windows.Forms.Label();
             this.dtMultas = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.cmbTipoManutencao = new System.Windows.Forms.ComboBox();
+            this.label97 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageDashDoard.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.groupBox35.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox27.SuspendLayout();
             this.panelConsumoCombustivelAnual.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.tabPageAbastecimento.SuspendLayout();
             this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtAbastecimento)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPageOleo.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.groupBox25.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtOleo)).BeginInit();
             this.groupBox23.SuspendLayout();
@@ -365,6 +380,7 @@
             this.tabControl2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.groupBox26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtManutencao)).BeginInit();
             this.tabPageDocumento.SuspendLayout();
@@ -386,20 +402,6 @@
             this.groupBox34.SuspendLayout();
             this.groupBox33.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -442,6 +444,15 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(268, 58);
             this.panel7.TabIndex = 92;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
+            this.pictureBox11.Location = new System.Drawing.Point(215, 4);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(50, 52);
+            this.pictureBox11.TabIndex = 3;
+            this.pictureBox11.TabStop = false;
             // 
             // label78
             // 
@@ -530,6 +541,24 @@
             this.panelConsumoCombustivelAnual.Size = new System.Drawing.Size(284, 188);
             this.panelConsumoCombustivelAnual.TabIndex = 87;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GestaoFrota.Properties.Resources.if_fuel_103260;
+            this.pictureBox2.Location = new System.Drawing.Point(181, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::GestaoFrota.Properties.Resources.if_money_bag_309025;
+            this.pictureBox3.Location = new System.Drawing.Point(83, 21);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(55, 48);
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            // 
             // label65
             // 
             this.label65.AutoSize = true;
@@ -567,6 +596,15 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(268, 72);
             this.panel11.TabIndex = 95;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::GestaoFrota.Properties.Resources.if_news_103657;
+            this.pictureBox15.Location = new System.Drawing.Point(215, 3);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(50, 52);
+            this.pictureBox15.TabIndex = 3;
+            this.pictureBox15.TabStop = false;
             // 
             // label94
             // 
@@ -615,6 +653,15 @@
             this.listBox2.Size = new System.Drawing.Size(271, 60);
             this.listBox2.TabIndex = 98;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::GestaoFrota.Properties.Resources.if_oil1_216297;
+            this.pictureBox4.Location = new System.Drawing.Point(222, 6);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(55, 35);
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
             // label67
             // 
             this.label67.AutoSize = true;
@@ -637,6 +684,15 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(268, 72);
             this.panel10.TabIndex = 94;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::GestaoFrota.Properties.Resources.if_Vector_icons_39_1041628;
+            this.pictureBox14.Location = new System.Drawing.Point(215, 3);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(50, 52);
+            this.pictureBox14.TabIndex = 3;
+            this.pictureBox14.TabStop = false;
             // 
             // label85
             // 
@@ -672,6 +728,15 @@
             this.panel1.Size = new System.Drawing.Size(282, 71);
             this.panel1.TabIndex = 89;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GestaoFrota.Properties.Resources.if_Move_distance_arrow_left_right_2630385;
+            this.pictureBox1.Location = new System.Drawing.Point(222, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // lblKmRodados
             // 
             this.lblKmRodados.AutoSize = true;
@@ -705,6 +770,15 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(268, 72);
             this.panel9.TabIndex = 93;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::GestaoFrota.Properties.Resources.if_ticket_216459;
+            this.pictureBox13.Location = new System.Drawing.Point(215, 3);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(50, 52);
+            this.pictureBox13.TabIndex = 3;
+            this.pictureBox13.TabStop = false;
             // 
             // label83
             // 
@@ -768,6 +842,15 @@
             this.panel5.Size = new System.Drawing.Size(268, 72);
             this.panel5.TabIndex = 91;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
+            this.pictureBox7.Location = new System.Drawing.Point(215, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(50, 52);
+            this.pictureBox7.TabIndex = 3;
+            this.pictureBox7.TabStop = false;
+            // 
             // label76
             // 
             this.label76.AutoSize = true;
@@ -821,6 +904,15 @@
             this.panel14.Size = new System.Drawing.Size(252, 71);
             this.panel14.TabIndex = 91;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::GestaoFrota.Properties.Resources.if_Move_distance_arrow_left_right_2630385;
+            this.pictureBox8.Location = new System.Drawing.Point(199, 20);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(47, 46);
+            this.pictureBox8.TabIndex = 3;
+            this.pictureBox8.TabStop = false;
+            // 
             // label68
             // 
             this.label68.AutoSize = true;
@@ -855,6 +947,24 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(252, 188);
             this.panel4.TabIndex = 88;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::GestaoFrota.Properties.Resources.if_fuel_103260;
+            this.pictureBox5.Location = new System.Drawing.Point(181, 22);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox5.TabIndex = 13;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::GestaoFrota.Properties.Resources.if_money_bag_309025;
+            this.pictureBox6.Location = new System.Drawing.Point(83, 21);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(55, 48);
+            this.pictureBox6.TabIndex = 14;
+            this.pictureBox6.TabStop = false;
             // 
             // label66
             // 
@@ -1209,6 +1319,15 @@
             this.listBox4.Size = new System.Drawing.Size(271, 60);
             this.listBox4.TabIndex = 98;
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::GestaoFrota.Properties.Resources.if_oil1_216297;
+            this.pictureBox9.Location = new System.Drawing.Point(222, 6);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(55, 35);
+            this.pictureBox9.TabIndex = 3;
+            this.pictureBox9.TabStop = false;
+            // 
             // label70
             // 
             this.label70.AutoSize = true;
@@ -1551,6 +1670,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label97);
+            this.tabPage2.Controls.Add(this.cmbTipoManutencao);
             this.tabPage2.Controls.Add(this.btnAnexarComprovanteManutencao);
             this.tabPage2.Controls.Add(this.label26);
             this.tabPage2.Controls.Add(this.label40);
@@ -1585,11 +1706,11 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(18, 56);
+            this.label26.Location = new System.Drawing.Point(18, 55);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(111, 15);
+            this.label26.Size = new System.Drawing.Size(283, 15);
             this.label26.TabIndex = 55;
-            this.label26.Text = "Mecanica / Elétrica";
+            this.label26.Text = "Selecione a empresa que executou a manutenção";
             // 
             // label40
             // 
@@ -1604,7 +1725,7 @@
             // 
             this.cmbMecanica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMecanica.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cmbMecanica.Location = new System.Drawing.Point(17, 75);
+            this.cmbMecanica.Location = new System.Drawing.Point(17, 74);
             this.cmbMecanica.Name = "cmbMecanica";
             this.cmbMecanica.Size = new System.Drawing.Size(295, 23);
             this.cmbMecanica.TabIndex = 47;
@@ -1660,12 +1781,13 @@
             this.btnLancarManutencao.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnLancarManutencao.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
             this.btnLancarManutencao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLancarManutencao.Location = new System.Drawing.Point(237, 489);
+            this.btnLancarManutencao.Location = new System.Drawing.Point(236, 481);
             this.btnLancarManutencao.Name = "btnLancarManutencao";
-            this.btnLancarManutencao.Size = new System.Drawing.Size(75, 23);
+            this.btnLancarManutencao.Size = new System.Drawing.Size(76, 31);
             this.btnLancarManutencao.TabIndex = 54;
             this.btnLancarManutencao.Text = "Lançar";
             this.btnLancarManutencao.UseVisualStyleBackColor = false;
+            this.btnLancarManutencao.Click += new System.EventHandler(this.btnLancarManutencao_Click_1);
             // 
             // label32
             // 
@@ -1703,6 +1825,15 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(193, 94);
             this.panel8.TabIndex = 92;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
+            this.pictureBox12.Location = new System.Drawing.Point(3, 39);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(50, 52);
+            this.pictureBox12.TabIndex = 3;
+            this.pictureBox12.TabStop = false;
             // 
             // label80
             // 
@@ -3499,131 +3630,23 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // pictureBox11
+            // cmbTipoManutencao
             // 
-            this.pictureBox11.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
-            this.pictureBox11.Location = new System.Drawing.Point(215, 4);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox11.TabIndex = 3;
-            this.pictureBox11.TabStop = false;
+            this.cmbTipoManutencao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoManutencao.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.cmbTipoManutencao.Location = new System.Drawing.Point(16, 23);
+            this.cmbTipoManutencao.Name = "cmbTipoManutencao";
+            this.cmbTipoManutencao.Size = new System.Drawing.Size(296, 23);
+            this.cmbTipoManutencao.TabIndex = 61;
             // 
-            // pictureBox2
+            // label97
             // 
-            this.pictureBox2.Image = global::GestaoFrota.Properties.Resources.if_fuel_103260;
-            this.pictureBox2.Location = new System.Drawing.Point(181, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::GestaoFrota.Properties.Resources.if_money_bag_309025;
-            this.pictureBox3.Location = new System.Drawing.Point(83, 21);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(55, 48);
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::GestaoFrota.Properties.Resources.if_news_103657;
-            this.pictureBox15.Location = new System.Drawing.Point(215, 3);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox15.TabIndex = 3;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::GestaoFrota.Properties.Resources.if_oil1_216297;
-            this.pictureBox4.Location = new System.Drawing.Point(222, 6);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(55, 35);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = global::GestaoFrota.Properties.Resources.if_Vector_icons_39_1041628;
-            this.pictureBox14.Location = new System.Drawing.Point(215, 3);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox14.TabIndex = 3;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GestaoFrota.Properties.Resources.if_Move_distance_arrow_left_right_2630385;
-            this.pictureBox1.Location = new System.Drawing.Point(222, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::GestaoFrota.Properties.Resources.if_ticket_216459;
-            this.pictureBox13.Location = new System.Drawing.Point(215, 3);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox13.TabIndex = 3;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
-            this.pictureBox7.Location = new System.Drawing.Point(215, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox7.TabIndex = 3;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::GestaoFrota.Properties.Resources.if_Move_distance_arrow_left_right_2630385;
-            this.pictureBox8.Location = new System.Drawing.Point(199, 20);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(47, 46);
-            this.pictureBox8.TabIndex = 3;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::GestaoFrota.Properties.Resources.if_fuel_103260;
-            this.pictureBox5.Location = new System.Drawing.Point(181, 22);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::GestaoFrota.Properties.Resources.if_money_bag_309025;
-            this.pictureBox6.Location = new System.Drawing.Point(83, 21);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(55, 48);
-            this.pictureBox6.TabIndex = 14;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::GestaoFrota.Properties.Resources.if_oil1_216297;
-            this.pictureBox9.Location = new System.Drawing.Point(222, 6);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(55, 35);
-            this.pictureBox9.TabIndex = 3;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
-            this.pictureBox12.Location = new System.Drawing.Point(3, 39);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox12.TabIndex = 3;
-            this.pictureBox12.TabStop = false;
+            this.label97.AutoSize = true;
+            this.label97.Location = new System.Drawing.Point(16, 6);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(238, 15);
+            this.label97.TabIndex = 62;
+            this.label97.Text = "Selecione o tipo de manutenção realizada";
             // 
             // frmVeiculo
             // 
@@ -3643,6 +3666,7 @@
             this.tabPageDashDoard.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.groupBox35.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -3650,25 +3674,36 @@
             this.groupBox27.PerformLayout();
             this.panelConsumoCombustivelAnual.ResumeLayout(false);
             this.panelConsumoCombustivelAnual.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.tabPageAbastecimento.ResumeLayout(false);
             this.tabPageAbastecimento.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtAbastecimento)).EndInit();
@@ -3677,6 +3712,7 @@
             this.tabPageOleo.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.groupBox25.ResumeLayout(false);
             this.groupBox25.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtOleo)).EndInit();
@@ -3688,6 +3724,7 @@
             this.tabPage2.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtManutencao)).EndInit();
@@ -3723,20 +3760,6 @@
             this.groupBox33.ResumeLayout(false);
             this.groupBox33.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4046,5 +4069,7 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox txtDescricaoManutencao;
         private System.Windows.Forms.Button btnTipoManutencao;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.ComboBox cmbTipoManutencao;
     }
 }

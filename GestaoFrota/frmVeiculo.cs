@@ -123,6 +123,7 @@ namespace GestaoFrota
             PreencherComboBoxAbastecimento();
             PreencherComboBoxAbastecimentoFiltro();          
             PreencherComboBoxMecanica();
+            PreencherComboBoxLocalManutencao();
             CarregarComboBoxFiltroSeguradora();
         }
 
@@ -749,7 +750,25 @@ namespace GestaoFrota
             }
         }
 
-        private void btnLancarManutencao_Click(object sender, EventArgs e)
+        private void PreencherComboBoxLocalManutencao()
+        {
+            try
+            {
+                var tipos = new ManutencaoBLL().ListTipo();
+
+                //preenche o combo combustivel Abastecimento filtro
+                cmbTipoManutencao.DataSource = tipos;
+                cmbTipoManutencao.DisplayMember = "Descricao";
+                cmbTipoManutencao.ValueMember = "Id";
+                cmbTipoManutencao.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Problemas ao recuperar os dados: {ex.Message}", "Falha de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLancarManutencao_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -764,7 +783,7 @@ namespace GestaoFrota
                     Data = dateTimePickerManutencao.Value.Date,
                     Valor = Convert.ToDecimal(txtValorManutencao.Text),
                     Descricao = txtDescricaoManutencao.Text,
-                    MecanicaID = (cmbMecanica.SelectedValue == null) ? -1: (int)cmbMecanica.SelectedValue,
+                    MecanicaID = (cmbMecanica.SelectedValue == null) ? -1 : (int)cmbMecanica.SelectedValue,
                     Veiculo = veiculo,
                     KM = Convert.ToInt64(txtKMManutencao.Text),
                     PathComprovantePDF = fileNameComprovante
@@ -786,7 +805,7 @@ namespace GestaoFrota
                 MessageBox.Show($"Erro ao inserir manutenção: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+       
         private void btnAplicarFiltroMecanica_Click(object sender, EventArgs e)
         {
             CarregarDatagridManutencao(dateTimePickerDataIncialMecanicaFiltro.Value.Date, dateTimePickerDataFinalMecanicaFiltro.Value.Date, veiculo);
@@ -901,6 +920,7 @@ namespace GestaoFrota
         {
             frmTipoManutencao frm = new frmTipoManutencao();
             frm.ShowDialog();
+            PreencherComboBoxLocalManutencao();
         }
 
         #endregion
@@ -2019,7 +2039,6 @@ namespace GestaoFrota
                 }
             }
         }
-
         
     }
 }
