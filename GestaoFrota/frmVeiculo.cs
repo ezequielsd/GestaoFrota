@@ -754,7 +754,7 @@ namespace GestaoFrota
         {
             try
             {
-                var tipos = new ManutencaoBLL().ListTipo();
+                var tipos = new ManutencaoBLL().ListTipoManutencao();
 
                 //preenche o combo combustivel Abastecimento filtro
                 cmbTipoManutencao.DataSource = tipos;
@@ -921,6 +921,18 @@ namespace GestaoFrota
             frmTipoManutencao frm = new frmTipoManutencao();
             frm.ShowDialog();
             PreencherComboBoxLocalManutencao();
+        }
+
+        private void dtManutencao_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int id = (int)dtManutencao.CurrentRow.Cells[0].Value;
+            Manutencao manutencao = new ManutencaoBLL().Get(id);
+
+            label100.Text = manutencao.DataS;
+            label101.Text = (manutencao.Mecanica == null)? "": manutencao.Mecanica.Nome;
+            label102.Text = manutencao.Valor.ToString();
+            label105.Text = manutencao.Descricao;
+
         }
 
         #endregion
@@ -2039,6 +2051,7 @@ namespace GestaoFrota
                 }
             }
         }
+
         
     }
 }

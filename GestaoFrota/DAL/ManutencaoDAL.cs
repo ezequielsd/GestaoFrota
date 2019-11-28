@@ -56,6 +56,14 @@ namespace GestaoFrota.DAL
                 }).OrderByDescending(o => o.Data).ToList();
             }
         }
+
+        public Manutencao Get(int id)
+        {
+            using (var context = new Context())
+            {
+                return context.Manutencoes.Find(id);
+            }
+        }
                 
         public GastoManutencaoInfo GetGasto(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
@@ -160,7 +168,7 @@ namespace GestaoFrota.DAL
             }
         }             
 
-        public List<TipoManutencao> ListTipo()
+        public List<TipoManutencao> ListTipoManutencao()
         {
             using (var context = new Context())
             {
@@ -177,7 +185,15 @@ namespace GestaoFrota.DAL
             }
         }
 
-        public void DeleteTipo(int id)
+        public TipoManutencao GetTipoManutencao(int id)
+        {
+            using (var context = new Context())
+            {
+                return context.TipoManutencaos.Find(id);
+            }
+        }
+
+        public void DeleteTipoManutencao(int id)
         {
             using (var context = new Context())
             {

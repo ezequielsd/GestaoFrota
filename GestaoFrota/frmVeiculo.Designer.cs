@@ -148,6 +148,8 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label97 = new System.Windows.Forms.Label();
+            this.cmbTipoManutencao = new System.Windows.Forms.ComboBox();
             this.btnAnexarComprovanteManutencao = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
@@ -335,8 +337,14 @@
             this.label59 = new System.Windows.Forms.Label();
             this.dtMultas = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.cmbTipoManutencao = new System.Windows.Forms.ComboBox();
-            this.label97 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageDashDoard.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -378,6 +386,7 @@
             this.groupBox23.SuspendLayout();
             this.tabPageManutencao.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -1659,6 +1668,13 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label105);
+            this.tabPage1.Controls.Add(this.label104);
+            this.tabPage1.Controls.Add(this.label103);
+            this.tabPage1.Controls.Add(this.label102);
+            this.tabPage1.Controls.Add(this.label101);
+            this.tabPage1.Controls.Add(this.label100);
+            this.tabPage1.Controls.Add(this.label99);
             this.tabPage1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(24, 4);
             this.tabPage1.Name = "tabPage1";
@@ -1670,6 +1686,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label98);
             this.tabPage2.Controls.Add(this.label97);
             this.tabPage2.Controls.Add(this.cmbTipoManutencao);
             this.tabPage2.Controls.Add(this.btnAnexarComprovanteManutencao);
@@ -1694,9 +1711,27 @@
             this.tabPage2.Text = "Lançar manutenção";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Location = new System.Drawing.Point(16, 42);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(238, 15);
+            this.label97.TabIndex = 62;
+            this.label97.Text = "Selecione o tipo de manutenção realizada";
+            // 
+            // cmbTipoManutencao
+            // 
+            this.cmbTipoManutencao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoManutencao.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.cmbTipoManutencao.Location = new System.Drawing.Point(16, 59);
+            this.cmbTipoManutencao.Name = "cmbTipoManutencao";
+            this.cmbTipoManutencao.Size = new System.Drawing.Size(296, 23);
+            this.cmbTipoManutencao.TabIndex = 61;
+            // 
             // btnAnexarComprovanteManutencao
             // 
-            this.btnAnexarComprovanteManutencao.Location = new System.Drawing.Point(278, 412);
+            this.btnAnexarComprovanteManutencao.Location = new System.Drawing.Point(278, 448);
             this.btnAnexarComprovanteManutencao.Name = "btnAnexarComprovanteManutencao";
             this.btnAnexarComprovanteManutencao.Size = new System.Drawing.Size(34, 23);
             this.btnAnexarComprovanteManutencao.TabIndex = 53;
@@ -1706,7 +1741,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(18, 55);
+            this.label26.Location = new System.Drawing.Point(18, 91);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(283, 15);
             this.label26.TabIndex = 55;
@@ -1715,7 +1750,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(17, 370);
+            this.label40.Location = new System.Drawing.Point(17, 406);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(119, 15);
             this.label40.TabIndex = 60;
@@ -1725,14 +1760,14 @@
             // 
             this.cmbMecanica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMecanica.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cmbMecanica.Location = new System.Drawing.Point(17, 74);
+            this.cmbMecanica.Location = new System.Drawing.Point(17, 110);
             this.cmbMecanica.Name = "cmbMecanica";
             this.cmbMecanica.Size = new System.Drawing.Size(295, 23);
             this.cmbMecanica.TabIndex = 47;
             // 
             // txtPathComprovanteManutencao
             // 
-            this.txtPathComprovanteManutencao.Location = new System.Drawing.Point(17, 386);
+            this.txtPathComprovanteManutencao.Location = new System.Drawing.Point(17, 422);
             this.txtPathComprovanteManutencao.Name = "txtPathComprovanteManutencao";
             this.txtPathComprovanteManutencao.Size = new System.Drawing.Size(295, 21);
             this.txtPathComprovanteManutencao.TabIndex = 52;
@@ -1740,7 +1775,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(17, 100);
+            this.label33.Location = new System.Drawing.Point(17, 136);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(33, 15);
             this.label33.TabIndex = 56;
@@ -1749,7 +1784,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(17, 180);
+            this.label36.Location = new System.Drawing.Point(17, 216);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(26, 15);
             this.label36.TabIndex = 59;
@@ -1757,21 +1792,21 @@
             // 
             // dateTimePickerManutencao
             // 
-            this.dateTimePickerManutencao.Location = new System.Drawing.Point(17, 116);
+            this.dateTimePickerManutencao.Location = new System.Drawing.Point(17, 152);
             this.dateTimePickerManutencao.Name = "dateTimePickerManutencao";
             this.dateTimePickerManutencao.Size = new System.Drawing.Size(234, 21);
             this.dateTimePickerManutencao.TabIndex = 48;
             // 
             // txtKMManutencao
             // 
-            this.txtKMManutencao.Location = new System.Drawing.Point(17, 196);
+            this.txtKMManutencao.Location = new System.Drawing.Point(17, 232);
             this.txtKMManutencao.Name = "txtKMManutencao";
             this.txtKMManutencao.Size = new System.Drawing.Size(100, 21);
             this.txtKMManutencao.TabIndex = 50;
             // 
             // txtValorManutencao
             // 
-            this.txtValorManutencao.Location = new System.Drawing.Point(17, 156);
+            this.txtValorManutencao.Location = new System.Drawing.Point(17, 192);
             this.txtValorManutencao.Name = "txtValorManutencao";
             this.txtValorManutencao.Size = new System.Drawing.Size(100, 21);
             this.txtValorManutencao.TabIndex = 49;
@@ -1792,7 +1827,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(17, 140);
+            this.label32.Location = new System.Drawing.Point(17, 176);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(62, 15);
             this.label32.TabIndex = 57;
@@ -1801,7 +1836,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(17, 220);
+            this.label34.Location = new System.Drawing.Point(17, 256);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(120, 15);
             this.label34.TabIndex = 58;
@@ -1809,7 +1844,7 @@
             // 
             // txtDescricaoManutencao
             // 
-            this.txtDescricaoManutencao.Location = new System.Drawing.Point(17, 236);
+            this.txtDescricaoManutencao.Location = new System.Drawing.Point(17, 272);
             this.txtDescricaoManutencao.Multiline = true;
             this.txtDescricaoManutencao.Name = "txtDescricaoManutencao";
             this.txtDescricaoManutencao.Size = new System.Drawing.Size(295, 130);
@@ -1953,6 +1988,7 @@
             this.dtManutencao.ReadOnly = true;
             this.dtManutencao.Size = new System.Drawing.Size(705, 400);
             this.dtManutencao.TabIndex = 23;
+            this.dtManutencao.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtManutencao_CellMouseClick);
             // 
             // btnVisualizarMecanicas
             // 
@@ -3630,23 +3666,79 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // cmbTipoManutencao
+            // label98
             // 
-            this.cmbTipoManutencao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoManutencao.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cmbTipoManutencao.Location = new System.Drawing.Point(16, 23);
-            this.cmbTipoManutencao.Name = "cmbTipoManutencao";
-            this.cmbTipoManutencao.Size = new System.Drawing.Size(296, 23);
-            this.cmbTipoManutencao.TabIndex = 61;
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.Location = new System.Drawing.Point(16, 6);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(151, 20);
+            this.label98.TabIndex = 63;
+            this.label98.Text = "Lançar manutenção";
             // 
-            // label97
+            // label99
             // 
-            this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(16, 6);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(238, 15);
-            this.label97.TabIndex = 62;
-            this.label97.Text = "Selecione o tipo de manutenção realizada";
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.Location = new System.Drawing.Point(16, 6);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(70, 18);
+            this.label99.TabIndex = 0;
+            this.label99.Text = "Detalhes";
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(19, 52);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(47, 14);
+            this.label100.TabIndex = 1;
+            this.label100.Text = "label100";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Location = new System.Drawing.Point(19, 76);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(47, 14);
+            this.label101.TabIndex = 2;
+            this.label101.Text = "label101";
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(19, 100);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(47, 14);
+            this.label102.TabIndex = 3;
+            this.label102.Text = "label102";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Location = new System.Drawing.Point(19, 124);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(47, 14);
+            this.label103.TabIndex = 4;
+            this.label103.Text = "label103";
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(19, 148);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(47, 14);
+            this.label104.TabIndex = 5;
+            this.label104.Text = "label104";
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Location = new System.Drawing.Point(19, 172);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(47, 14);
+            this.label105.TabIndex = 6;
+            this.label105.Text = "label105";
             // 
             // frmVeiculo
             // 
@@ -3720,6 +3812,8 @@
             this.groupBox23.PerformLayout();
             this.tabPageManutencao.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -4071,5 +4165,13 @@
         private System.Windows.Forms.Button btnTipoManutencao;
         private System.Windows.Forms.Label label97;
         private System.Windows.Forms.ComboBox cmbTipoManutencao;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Label label98;
     }
 }

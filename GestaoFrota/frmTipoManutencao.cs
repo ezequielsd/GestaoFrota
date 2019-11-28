@@ -32,7 +32,7 @@ namespace GestaoFrota
 
         private void CarregaDatagrid()
         {
-            dtTipoManutencao.DataSource = new ManutencaoBLL().ListTipo();
+            dtTipoManutencao.DataSource = new ManutencaoBLL().ListTipoManutencao();
 
             FormartaDataGridViewAbastecimentos();
         }

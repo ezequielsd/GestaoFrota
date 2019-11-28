@@ -28,6 +28,11 @@ namespace GestaoFrota.BLL
             return new ManutencaoDAL().List(dtInicial, dtFinal, veiculo);            
         }
        
+        public Manutencao Get(int id)
+        {
+            return new ManutencaoDAL().Get(id);
+        }
+
         public GastoManutencaoInfo GetGasto(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
             return new ManutencaoDAL().GetGasto(dtInicial, dtFinal, veiculo);
@@ -53,9 +58,9 @@ namespace GestaoFrota.BLL
             new ManutencaoDAL().AnexarComprovante(id, pathComprovante);
         }
 
-        public List<TipoManutencao> ListTipo()
+        public List<TipoManutencao> ListTipoManutencao()
         {
-            return new ManutencaoDAL().ListTipo();
+            return new ManutencaoDAL().ListTipoManutencao();
         }
 
         public void InsertTipoManutencao(TipoManutencao tipoManutencao)
@@ -63,9 +68,14 @@ namespace GestaoFrota.BLL
             new ManutencaoDAL().InsertTipoManutencao(tipoManutencao);
         }
 
-        public void Delete(int id)
+        public TipoManutencao GetTipoManutencao(int id)
         {
-            new ManutencaoDAL().DeleteTipo(id);
+            return new ManutencaoDAL().GetTipoManutencao(id);
+        }
+
+        public void DeleteTipoManutencao(int id)
+        {
+            new ManutencaoDAL().DeleteTipoManutencao(id);
         }
     }
 }
