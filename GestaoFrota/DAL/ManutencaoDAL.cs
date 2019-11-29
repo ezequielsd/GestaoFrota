@@ -61,7 +61,11 @@ namespace GestaoFrota.DAL
         {
             using (var context = new Context())
             {
-                return context.Manutencoes.Find(id);
+                Manutencao manutencao = context.Manutencoes.Find(id);
+                manutencao.Mecanica = context.Mecanicas.Find(manutencao.MecanicaID);
+                manutencao.TipoManutencao = (manutencao.TipoManutencaoID == null) ? "" : context.TipoManutencaos.Find(manutencao.TipoManutencaoID).Descricao;
+
+                return manutencao;
             }
         }
                 

@@ -35,6 +35,11 @@ namespace CFSqlCe.Dal
 
         [NotMapped]
         public Mecanica Mecanica { get; set; }
+
+        public int? TipoManutencaoID { get; set; }
+
+        [NotMapped]
+        public string TipoManutencao { get; set; }
        
         public override string ToString()
         {

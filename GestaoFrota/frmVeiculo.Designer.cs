@@ -147,7 +147,24 @@
             this.btnTipoManutencao = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label111 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
+            this.btnAnexaComprovanteManutencaoDepois = new System.Windows.Forms.Button();
+            this.label108 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label98 = new System.Windows.Forms.Label();
             this.label97 = new System.Windows.Forms.Label();
             this.cmbTipoManutencao = new System.Windows.Forms.ComboBox();
             this.btnAnexarComprovanteManutencao = new System.Windows.Forms.Button();
@@ -168,8 +185,6 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label80 = new System.Windows.Forms.Label();
             this.label81 = new System.Windows.Forms.Label();
-            this.btnAnexaComprovanteManutencaoDepois = new System.Windows.Forms.Button();
-            this.btnVisualizarComprovanteManutencao = new System.Windows.Forms.Button();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
             this.btnAplicarFiltroMecanica = new System.Windows.Forms.Button();
             this.dateTimePickerDataFinalMecanicaFiltro = new System.Windows.Forms.DateTimePicker();
@@ -337,14 +352,6 @@
             this.label59 = new System.Windows.Forms.Label();
             this.dtMultas = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label98 = new System.Windows.Forms.Label();
-            this.label99 = new System.Windows.Forms.Label();
-            this.label100 = new System.Windows.Forms.Label();
-            this.label101 = new System.Windows.Forms.Label();
-            this.label102 = new System.Windows.Forms.Label();
-            this.label103 = new System.Windows.Forms.Label();
-            this.label104 = new System.Windows.Forms.Label();
-            this.label105 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageDashDoard.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -1627,8 +1634,6 @@
             this.tabPageManutencao.Controls.Add(this.btnTipoManutencao);
             this.tabPageManutencao.Controls.Add(this.tabControl2);
             this.tabPageManutencao.Controls.Add(this.panel8);
-            this.tabPageManutencao.Controls.Add(this.btnAnexaComprovanteManutencaoDepois);
-            this.tabPageManutencao.Controls.Add(this.btnVisualizarComprovanteManutencao);
             this.tabPageManutencao.Controls.Add(this.groupBox26);
             this.tabPageManutencao.Controls.Add(this.dtManutencao);
             this.tabPageManutencao.Controls.Add(this.btnVisualizarMecanicas);
@@ -1663,12 +1668,21 @@
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.ShowToolTips = true;
-            this.tabControl2.Size = new System.Drawing.Size(356, 535);
+            this.tabControl2.Size = new System.Drawing.Size(413, 535);
             this.tabControl2.TabIndex = 93;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label111);
+            this.tabPage1.Controls.Add(this.label110);
+            this.tabPage1.Controls.Add(this.label109);
+            this.tabPage1.Controls.Add(this.btnAnexaComprovanteManutencaoDepois);
+            this.tabPage1.Controls.Add(this.label108);
+            this.tabPage1.Controls.Add(this.label107);
+            this.tabPage1.Controls.Add(this.label106);
             this.tabPage1.Controls.Add(this.label105);
+            this.tabPage1.Controls.Add(this.linkLabel1);
+            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.label104);
             this.tabPage1.Controls.Add(this.label103);
             this.tabPage1.Controls.Add(this.label102);
@@ -1679,10 +1693,168 @@
             this.tabPage1.Location = new System.Drawing.Point(24, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(328, 527);
+            this.tabPage1.Size = new System.Drawing.Size(385, 527);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Detalhes";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Location = new System.Drawing.Point(96, 81);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(45, 14);
+            this.label111.TabIndex = 14;
+            this.label111.Text = "label111";
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label110.Location = new System.Drawing.Point(19, 81);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(71, 14);
+            this.label110.TabIndex = 1;
+            this.label110.Text = "Tipo manu.:";
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label109.Location = new System.Drawing.Point(19, 117);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(38, 14);
+            this.label109.TabIndex = 13;
+            this.label109.Text = "Valor:";
+            // 
+            // btnAnexaComprovanteManutencaoDepois
+            // 
+            this.btnAnexaComprovanteManutencaoDepois.BackColor = System.Drawing.Color.Khaki;
+            this.btnAnexaComprovanteManutencaoDepois.Enabled = false;
+            this.btnAnexaComprovanteManutencaoDepois.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
+            this.btnAnexaComprovanteManutencaoDepois.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnexaComprovanteManutencaoDepois.Location = new System.Drawing.Point(236, 498);
+            this.btnAnexaComprovanteManutencaoDepois.Name = "btnAnexaComprovanteManutencaoDepois";
+            this.btnAnexaComprovanteManutencaoDepois.Size = new System.Drawing.Size(137, 23);
+            this.btnAnexaComprovanteManutencaoDepois.TabIndex = 87;
+            this.btnAnexaComprovanteManutencaoDepois.Text = "Adicionar Comprovante";
+            this.btnAnexaComprovanteManutencaoDepois.UseVisualStyleBackColor = false;
+            this.btnAnexaComprovanteManutencaoDepois.Click += new System.EventHandler(this.btnAnexaComprovanteManutencaoDepois_Click);
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label108.Location = new System.Drawing.Point(19, 99);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(27, 14);
+            this.label108.TabIndex = 12;
+            this.label108.Text = "KM:";
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label107.Location = new System.Drawing.Point(19, 63);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(47, 14);
+            this.label107.TabIndex = 11;
+            this.label107.Text = "Oficina:";
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label106.Location = new System.Drawing.Point(19, 46);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(33, 14);
+            this.label106.TabIndex = 10;
+            this.label106.Text = "Data:";
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label105.Location = new System.Drawing.Point(19, 139);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(85, 14);
+            this.label105.TabIndex = 9;
+            this.label105.Text = "Comprovante:";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(19, 154);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(54, 14);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(22, 195);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(351, 297);
+            this.textBox1.TabIndex = 7;
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(19, 178);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(54, 14);
+            this.label104.TabIndex = 5;
+            this.label104.Text = "Realizado";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Location = new System.Drawing.Point(96, 117);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(47, 14);
+            this.label103.TabIndex = 4;
+            this.label103.Text = "label103";
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(96, 99);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(47, 14);
+            this.label102.TabIndex = 3;
+            this.label102.Text = "label102";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Location = new System.Drawing.Point(96, 63);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(47, 14);
+            this.label101.TabIndex = 2;
+            this.label101.Text = "label101";
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(96, 46);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(47, 14);
+            this.label100.TabIndex = 1;
+            this.label100.Text = "label100";
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.Location = new System.Drawing.Point(16, 6);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(70, 18);
+            this.label99.TabIndex = 0;
+            this.label99.Text = "Detalhes";
             // 
             // tabPage2
             // 
@@ -1706,10 +1878,20 @@
             this.tabPage2.Location = new System.Drawing.Point(24, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(328, 527);
+            this.tabPage2.Size = new System.Drawing.Size(385, 527);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lançar manutenção";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.Location = new System.Drawing.Point(16, 6);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(151, 20);
+            this.label98.TabIndex = 63;
+            this.label98.Text = "Lançar manutenção";
             // 
             // label97
             // 
@@ -1856,7 +2038,7 @@
             this.panel8.Controls.Add(this.pictureBox12);
             this.panel8.Controls.Add(this.label80);
             this.panel8.Controls.Add(this.label81);
-            this.panel8.Location = new System.Drawing.Point(882, 42);
+            this.panel8.Location = new System.Drawing.Point(939, 42);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(193, 94);
             this.panel8.TabIndex = 92;
@@ -1891,32 +2073,6 @@
             this.label81.TabIndex = 1;
             this.label81.Text = "99,99";
             // 
-            // btnAnexaComprovanteManutencaoDepois
-            // 
-            this.btnAnexaComprovanteManutencaoDepois.BackColor = System.Drawing.Color.Khaki;
-            this.btnAnexaComprovanteManutencaoDepois.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnAnexaComprovanteManutencaoDepois.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnexaComprovanteManutencaoDepois.Location = new System.Drawing.Point(793, 548);
-            this.btnAnexaComprovanteManutencaoDepois.Name = "btnAnexaComprovanteManutencaoDepois";
-            this.btnAnexaComprovanteManutencaoDepois.Size = new System.Drawing.Size(137, 23);
-            this.btnAnexaComprovanteManutencaoDepois.TabIndex = 87;
-            this.btnAnexaComprovanteManutencaoDepois.Text = "Adicionar Comprovante";
-            this.btnAnexaComprovanteManutencaoDepois.UseVisualStyleBackColor = false;
-            this.btnAnexaComprovanteManutencaoDepois.Click += new System.EventHandler(this.btnAnexaComprovanteManutencaoDepois_Click);
-            // 
-            // btnVisualizarComprovanteManutencao
-            // 
-            this.btnVisualizarComprovanteManutencao.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnVisualizarComprovanteManutencao.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnVisualizarComprovanteManutencao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarComprovanteManutencao.Location = new System.Drawing.Point(938, 548);
-            this.btnVisualizarComprovanteManutencao.Name = "btnVisualizarComprovanteManutencao";
-            this.btnVisualizarComprovanteManutencao.Size = new System.Drawing.Size(137, 23);
-            this.btnVisualizarComprovanteManutencao.TabIndex = 86;
-            this.btnVisualizarComprovanteManutencao.Text = "Visualizar Comprovante";
-            this.btnVisualizarComprovanteManutencao.UseVisualStyleBackColor = false;
-            this.btnVisualizarComprovanteManutencao.Click += new System.EventHandler(this.btnVisualizarComprovanteManutencao_Click);
-            // 
             // groupBox26
             // 
             this.groupBox26.Controls.Add(this.btnAplicarFiltroMecanica);
@@ -1924,7 +2080,7 @@
             this.groupBox26.Controls.Add(this.label41);
             this.groupBox26.Controls.Add(this.dateTimePickerDataIncialMecanicaFiltro);
             this.groupBox26.Controls.Add(this.label42);
-            this.groupBox26.Location = new System.Drawing.Point(370, 36);
+            this.groupBox26.Location = new System.Drawing.Point(427, 36);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.Size = new System.Drawing.Size(506, 100);
             this.groupBox26.TabIndex = 27;
@@ -1983,10 +2139,10 @@
             this.dtManutencao.AllowUserToResizeColumns = false;
             this.dtManutencao.AllowUserToResizeRows = false;
             this.dtManutencao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtManutencao.Location = new System.Drawing.Point(370, 142);
+            this.dtManutencao.Location = new System.Drawing.Point(427, 142);
             this.dtManutencao.Name = "dtManutencao";
             this.dtManutencao.ReadOnly = true;
-            this.dtManutencao.Size = new System.Drawing.Size(705, 400);
+            this.dtManutencao.Size = new System.Drawing.Size(705, 435);
             this.dtManutencao.TabIndex = 23;
             this.dtManutencao.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtManutencao_CellMouseClick);
             // 
@@ -3666,80 +3822,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label98.Location = new System.Drawing.Point(16, 6);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(151, 20);
-            this.label98.TabIndex = 63;
-            this.label98.Text = "Lançar manutenção";
-            // 
-            // label99
-            // 
-            this.label99.AutoSize = true;
-            this.label99.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label99.Location = new System.Drawing.Point(16, 6);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(70, 18);
-            this.label99.TabIndex = 0;
-            this.label99.Text = "Detalhes";
-            // 
-            // label100
-            // 
-            this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(19, 52);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(47, 14);
-            this.label100.TabIndex = 1;
-            this.label100.Text = "label100";
-            // 
-            // label101
-            // 
-            this.label101.AutoSize = true;
-            this.label101.Location = new System.Drawing.Point(19, 76);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(47, 14);
-            this.label101.TabIndex = 2;
-            this.label101.Text = "label101";
-            // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(19, 100);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(47, 14);
-            this.label102.TabIndex = 3;
-            this.label102.Text = "label102";
-            // 
-            // label103
-            // 
-            this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(19, 124);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(47, 14);
-            this.label103.TabIndex = 4;
-            this.label103.Text = "label103";
-            // 
-            // label104
-            // 
-            this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(19, 148);
-            this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(47, 14);
-            this.label104.TabIndex = 5;
-            this.label104.Text = "label104";
-            // 
-            // label105
-            // 
-            this.label105.AutoSize = true;
-            this.label105.Location = new System.Drawing.Point(19, 172);
-            this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(47, 14);
-            this.label105.TabIndex = 6;
-            this.label105.Text = "label105";
-            // 
             // frmVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3960,7 +4042,6 @@
         private System.Windows.Forms.TextBox txtAnexarDocumento;
         private System.Windows.Forms.Button btnVisualizarComprovanteAbastecimento;
         private System.Windows.Forms.Button btnVisualizarComprovanteOleo;
-        private System.Windows.Forms.Button btnVisualizarComprovanteManutencao;
         private System.Windows.Forms.Button btnVisualizarDocumento;
         private System.Windows.Forms.Button btnAdicionarComprovante;
         private System.Windows.Forms.Button btnAnexarComprovanteOleoDepois;
@@ -4165,7 +4246,6 @@
         private System.Windows.Forms.Button btnTipoManutencao;
         private System.Windows.Forms.Label label97;
         private System.Windows.Forms.ComboBox cmbTipoManutencao;
-        private System.Windows.Forms.Label label105;
         private System.Windows.Forms.Label label104;
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.Label label102;
@@ -4173,5 +4253,14 @@
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.Label label109;
+        private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.Label label110;
     }
 }

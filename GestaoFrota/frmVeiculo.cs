@@ -30,6 +30,7 @@ namespace GestaoFrota
         List<CarroAnoFIPEinfo> carrosAnoFIPE = new List<CarroAnoFIPEinfo>();
         List<DGridSeguradoraInfo> seguradoras = new List<DGridSeguradoraInfo>();
         graficoPizzaInfo graficoPizzaAnual = new graficoPizzaInfo();
+        Manutencao manutencaoVisualizacao;
         string pathOrigemComprovante = string.Empty;
         string pathOrigemOrcamentoSeguro = string.Empty;
         string pathOrigemCartaoSeguro = string.Empty;
@@ -105,7 +106,14 @@ namespace GestaoFrota
                 btnVisualizarDocumento.Visible = true;
             
             CarregarDashboard();
-            
+
+            //Aba manutenção
+            label100.Text = String.Empty;
+            label101.Text = String.Empty;
+            label102.Text = String.Empty;
+            label103.Text = String.Empty;
+            linkLabel1.Text = String.Empty;
+            label111.Text = String.Empty;
         }
 
         public void CarregarGrids()
@@ -784,6 +792,7 @@ namespace GestaoFrota
                     Valor = Convert.ToDecimal(txtValorManutencao.Text),
                     Descricao = txtDescricaoManutencao.Text,
                     MecanicaID = (cmbMecanica.SelectedValue == null) ? -1 : (int)cmbMecanica.SelectedValue,
+                    TipoManutencaoID = (cmbTipoManutencao.SelectedValue == null) ? -1 : (int)cmbTipoManutencao.SelectedValue,
                     Veiculo = veiculo,
                     KM = Convert.ToInt64(txtKMManutencao.Text),
                     PathComprovantePDF = fileNameComprovante
@@ -824,39 +833,47 @@ namespace GestaoFrota
             }
         }
 
-        private void btnVisualizarComprovanteManutencao_Click(object sender, EventArgs e)
-        {
-            string fileNameCompro = (string)dtManutencao.CurrentRow.Cells[6].Value;
-            if (String.IsNullOrEmpty(fileNameCompro) || String.IsNullOrWhiteSpace(fileNameCompro))
-                MessageBox.Show("Este registro não possui comprovante anexado.", "Sem comprovante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            else
-            {
-                try
-                {
-                    pathDestinoComprovante = Path.Combine(pathComprovante, fileNameCompro);
-                    Process.Start(pathDestinoComprovante);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Falha ao localizar comprovante. {ex.Message}", "Sem comprovante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-        }
+        //private void btnVisualizarComprovanteManutencao_Click(object sender, EventArgs e)
+        //{
+        //    int id = (int)dtManutencao.CurrentRow.Cells[0].Value;
+        //    Manutencao manutencao = new ManutencaoBLL().Get(id);
+        //    if (String.IsNullOrEmpty(manutencao.PathComprovantePDF) || String.IsNullOrWhiteSpace(manutencao.PathComprovantePDF))
+        //        MessageBox.Show("Este registro não possui comprovante anexado.", "Sem comprovante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        //    else
+        //    {
+        //        try
+        //        {
+        //            pathDestinoComprovante = Path.Combine(pathComprovante, manutencao.PathComprovantePDF);
+        //            Process.Start(pathDestinoComprovante);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show($"Falha ao localizar comprovante. {ex.Message}", "Sem comprovante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        //        }
+        //    }
+        //}
 
         private void btnAnexaComprovanteManutencaoDepois_Click(object sender, EventArgs e)
         {
-            string fileNameCompro = (string)dtManutencao.CurrentRow.Cells[6].Value;
-            if (String.IsNullOrEmpty(fileNameCompro) || String.IsNullOrWhiteSpace(fileNameCompro))
+            if (manutencaoVisualizacao != null)
             {
-                int id = (int)dtManutencao.CurrentRow.Cells[0].Value;
-                frmAdicionarComprovante frm = new frmAdicionarComprovante(id, TipoAnexo.Manutencao);
-                frm.ShowDialog();
-                CarregarDatagridManutencao(veiculo);
+                //string fileNameCompro = (string)dtManutencao.CurrentRow.Cells[6].Value;
+                if (String.IsNullOrEmpty(manutencaoVisualizacao.PathComprovantePDF) || String.IsNullOrWhiteSpace(manutencaoVisualizacao.PathComprovantePDF))
+                {
+                    int id = (int)dtManutencao.CurrentRow.Cells[0].Value;
+                    frmAdicionarComprovante frm = new frmAdicionarComprovante(id, TipoAnexo.Manutencao);
+                    frm.ShowDialog();
+                    CarregarDatagridManutencao(veiculo);
+                }
+                else
+                {
+                    MessageBox.Show("Este registro já possui comprovante anexado.", "Comprovante já anexado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
             else
-            {
-                MessageBox.Show("Este registro já possui comprovante anexado.", "Comprovante já anexado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+                MessageBox.Show("Selecione um registro de manutenção para poder ser adicionado um comprovante!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+           
+            
         }
 
         private void CarregarDatagridManutencao(Veiculo veiculo)
@@ -912,7 +929,7 @@ namespace GestaoFrota
 
             //ajusta o texto header do grid
             dtManutencao.Columns["PathComprovantePDF"].HeaderText = "Comprovante";
-            dtManutencao.Columns["Descricao"].HeaderText = "Efetuado"; 
+            dtManutencao.Columns["Descricao"].HeaderText = "Realizado"; 
             dtManutencao.Columns["DataS"].HeaderText = "Data";
         }
 
@@ -925,14 +942,33 @@ namespace GestaoFrota
 
         private void dtManutencao_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            manutencaoVisualizacao = null;
             int id = (int)dtManutencao.CurrentRow.Cells[0].Value;
-            Manutencao manutencao = new ManutencaoBLL().Get(id);
+            manutencaoVisualizacao = new ManutencaoBLL().Get(id);
 
-            label100.Text = manutencao.DataS;
-            label101.Text = (manutencao.Mecanica == null)? "": manutencao.Mecanica.Nome;
-            label102.Text = manutencao.Valor.ToString();
-            label105.Text = manutencao.Descricao;
+            if (manutencaoVisualizacao != null)
+            {
+                label100.Text = manutencaoVisualizacao.DataS;
+                label101.Text = (manutencaoVisualizacao.Mecanica == null) ? "" : manutencaoVisualizacao.Mecanica.Nome;
+                label102.Text = manutencaoVisualizacao.KM.ToString();
+                label103.Text = manutencaoVisualizacao.Valor.ToString();
+                linkLabel1.Text = (String.IsNullOrEmpty(manutencaoVisualizacao.PathComprovantePDF) || String.IsNullOrWhiteSpace(manutencaoVisualizacao.PathComprovantePDF)) ? "" : manutencaoVisualizacao.PathComprovantePDF;
+                textBox1.Text = manutencaoVisualizacao.Descricao;
+                label111.Text = manutencaoVisualizacao.TipoManutencao;
 
+                if (String.IsNullOrEmpty(manutencaoVisualizacao.PathComprovantePDF) && String.IsNullOrWhiteSpace(manutencaoVisualizacao.PathComprovantePDF))
+                {
+                    btnAnexaComprovanteManutencaoDepois.Enabled = true;
+                }
+                else
+                    btnAnexaComprovanteManutencaoDepois.Enabled = false;
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            pathDestinoComprovante = Path.Combine(pathComprovante, linkLabel1.Text);
+            Process.Start(pathDestinoComprovante);
         }
 
         #endregion
@@ -2052,6 +2088,6 @@ namespace GestaoFrota
             }
         }
 
-        
+       
     }
 }
