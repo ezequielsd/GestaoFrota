@@ -119,8 +119,7 @@ namespace GestaoFrota
         public void CarregarGrids()
         {
             CarregaDatagridAoAbrir(dataInicialAtual, dataFinalAtual, veiculo);
-            CarregarDatagridManutencao(veiculo);
-            CarregarDataGridOleoAnal(dataAtual, veiculo);
+            CarregarDatagridManutencao(veiculo);            
             CarregarDatagridMulta(veiculo);
             CarregarGridPagamentoDocumento(dataAtual, veiculo);
         }
@@ -143,8 +142,7 @@ namespace GestaoFrota
             CarregarDashBoardConsumoCombustivelAnual(dataAtual.Date, veiculo);
             CarregarDashBoardKMAnual(dataAtual.Date, veiculo);
             CarregarDashBoardGastoManutencaoAnual(dataAtual.Date, veiculo);
-            CarregarDashBoardGastoManutencaoTotal(veiculo);
-            CarregarDashBoardConsumoOleoAnual(dataAtual.Date, veiculo);
+            CarregarDashBoardGastoManutencaoTotal(veiculo);            
             CarregarDashBoardTotalMultaAnual(dataAtual.Date, veiculo);
             CarregarDashBoardTotalAnualSeguro(dataAtual.Date, veiculo);
             CarregarDashBoardTotalPagamentoDocumento(dataAtual.Date, veiculo);
@@ -181,22 +179,7 @@ namespace GestaoFrota
             lblKmRodados.Text = $"Percorrido";
             lblKmAnual.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:N0} Km", consumo.KM);            
         }
-
-        private void CarregarDashBoardConsumoOleoAnual(DateTime dataAtual, Veiculo veiculo)
-        {
-            GastoOleoInfo consumo = new OleoBLL().GetGastoAnual(dataAtual, veiculo);
-
-            listBox2.Items.Clear();
-            listBox2.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Completado:   {0:C}", consumo.TotalValorCompletarOleo));
-            listBox2.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Trocado       :   {0:C}", consumo.TotalValorTrocaOleo));
-            listBox2.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Total             :   {0:C}", consumo.TotalValor));
-
-            label67.Text = $"Gasto de óleo";
-            
-            graficoPizzaAnual.TotalOleo = consumo.TotalValor;
-            graficoPizzaAnual.Total += graficoPizzaAnual.TotalOleo;
-        }
-
+                
         private void CarregarDashBoardGastoManutencaoAnual(DateTime dataAtual, Veiculo veiculo)
         {
             GastoManutencaoInfo gasto = new ManutencaoBLL().GetGastoAnual(dataAtual, veiculo);
@@ -330,9 +313,7 @@ namespace GestaoFrota
                 //calculo do percentual combustivel
                 double percentualCombustivel = Convert.ToDouble((graficoPizzaAnual.TotalCombustivel * 100) / graficoPizzaAnual.Total);
                 //calculo do percentual Manutenção
-                double percentualManutencao = Convert.ToDouble((graficoPizzaAnual.TotalManutencao * 100) / graficoPizzaAnual.Total);
-                //calculo do percentual oleo
-                double percentualOleo = Convert.ToDouble((graficoPizzaAnual.TotalOleo * 100) / graficoPizzaAnual.Total);
+                double percentualManutencao = Convert.ToDouble((graficoPizzaAnual.TotalManutencao * 100) / graficoPizzaAnual.Total);                
                 //calculo do percentual multa
                 double percentualMulta = Convert.ToDouble((graficoPizzaAnual.TotalMulta * 100) / graficoPizzaAnual.Total);
                 //calculo do percentual seguro
@@ -347,19 +328,17 @@ namespace GestaoFrota
                 chart1.Series[0]["PieLabelStyle"] = "Outside";
                 //define os pontos do grafico
                 this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Combustivel - {0:C}", graficoPizzaAnual.TotalCombustivel), percentualCombustivel);
-                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Manutenção - {0:C}", graficoPizzaAnual.TotalManutencao), percentualManutencao);
-                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Óleo - {0:C}", graficoPizzaAnual.TotalOleo), percentualOleo);
+                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Manutenção - {0:C}", graficoPizzaAnual.TotalManutencao), percentualManutencao);               
                 this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Multa - {0:C}", graficoPizzaAnual.TotalMulta), percentualMulta);
                 this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Seguro - {0:C}", graficoPizzaAnual.TotalSeguro), percentualSeguro);
                 this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Documento - {0:C}", graficoPizzaAnual.TotalDocumento), percentualDocumento);
 
                 //define as cores dos pontos do grafico
                 this.chart1.Series[0].Points[0].Color = Color.Yellow;
-                this.chart1.Series[0].Points[1].Color = Color.Tomato;
-                this.chart1.Series[0].Points[2].Color = Color.SeaGreen;
-                this.chart1.Series[0].Points[3].Color = Color.LightSkyBlue;
-                this.chart1.Series[0].Points[4].Color = Color.DarkViolet;
-                this.chart1.Series[0].Points[5].Color = Color.Coral;
+                this.chart1.Series[0].Points[1].Color = Color.Tomato;               
+                this.chart1.Series[0].Points[2].Color = Color.LightSkyBlue;
+                this.chart1.Series[0].Points[3].Color = Color.DarkViolet;
+                this.chart1.Series[0].Points[4].Color = Color.Coral;
 
                 // By sorting the data points, they show up in proper ascending order in the legend
                 this.chart1.DataManipulator.Sort(PointSortOrder.Descending, chart1.Series[0]);
@@ -570,156 +549,7 @@ namespace GestaoFrota
 
         #endregion
 
-        #region Aba Oleo
-
-        private void btnLancarOleo_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!String.IsNullOrEmpty(txtPathComprovanteOleo.Text) || !String.IsNullOrWhiteSpace(txtPathComprovanteOleo.Text))
-                {
-                    VerificaPasta(pathComprovante);
-                    CopiaComprovante(pathOrigemComprovante, pathDestinoComprovante);
-                }
-
-                Oleo oleo = new Oleo
-                {
-                    Data = dateTimePickerOleo.Value.Date,
-                    KM = Convert.ToInt64(txtKmOleo.Text),
-                    Quantidade = Convert.ToDecimal(txtQuantidadeOleo.Text),
-                    TipoOleo = txtTipoOleo.Text,
-                    TipoOperacao = cmbAcaoOleo.Text,
-                    Valor = Convert.ToDecimal(txtValorOleo.Text),
-                    Veiculo = veiculo,
-                    PathComprovantePDF = fileNameComprovante
-                };
-
-                new OleoBLL().Insert(veiculo, oleo);
-
-                txtValorOleo.Clear();
-                txtTipoOleo.Clear();
-                txtPathComprovanteOleo.Clear();
-                cmbAcaoOleo.SelectedIndex = -1;
-                txtQuantidadeOleo.Clear();
-                txtValorOleo.Clear();
-                txtKmOleo.Clear();
-                CarregarDataGridOleoAnal(dataAtual, veiculo);
-                CarregarDashboard();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro ao inserir manutenção: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnAplicarFiltroOleo_Click(object sender, EventArgs e)
-        {
-            CarregarDatagridOleo(dateTimePickerDataInicialFiltroOleo.Value.Date, dateTimePickerDataFinalFiltroOleo.Value.Date, veiculo);
-        }
-
-        private void btnAnexarComprovanteOleo_Click(object sender, EventArgs e)
-        {
-            this.openFileDialog1 = new OpenFileDialog();
-
-            if (this.openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                pathOrigemComprovante = this.openFileDialog1.FileName;
-                fileNameComprovante = this.openFileDialog1.SafeFileName;
-                pathDestinoComprovante = Path.Combine(pathComprovante, fileNameComprovante);
-                txtPathComprovanteOleo.Text = fileNameComprovante;
-            }
-        }
-
-        private void btnVisualizarComprovanteOleo_Click(object sender, EventArgs e)
-        {
-            string fileNameCompro = (string)dtOleo.CurrentRow.Cells[8].Value;
-            if (String.IsNullOrEmpty(fileNameCompro) || String.IsNullOrWhiteSpace(fileNameCompro))
-                MessageBox.Show("Este registro não possui comprovante anexado.", "Sem comprovante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            else
-            {
-                try
-                {
-                    pathDestinoComprovante = Path.Combine(pathComprovante, fileNameCompro);
-                    Process.Start(pathDestinoComprovante);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Falha ao localizar comprovante. {ex.Message}", "Sem comprovante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-        }
-
-        private void btnAnexarComprovanteOleoDepois_Click(object sender, EventArgs e)
-        {
-            string fileNameCompro = (string)dtOleo.CurrentRow.Cells[8].Value;
-            if (String.IsNullOrEmpty(fileNameCompro) || String.IsNullOrWhiteSpace(fileNameCompro))
-            {
-                int id = (int)dtOleo.CurrentRow.Cells[0].Value;
-                frmAdicionarComprovante frm = new frmAdicionarComprovante(id, TipoAnexo.Oleo);
-                frm.ShowDialog();
-                CarregarDatagridOleo(dataInicialAtual.Date, dataFinalAtual.Date, veiculo);
-            }
-            else
-            {
-                MessageBox.Show("Este registro já possui comprovante anexado.", "Comprovante já anexado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
-        private void btnResetFiltroOleo_Click(object sender, EventArgs e)
-        {
-            CarregarDataGridOleoAnal(DateTime.Now, veiculo);
-        }
-
-        private void CarregarDataGridOleoAnal(DateTime dataAtual, Veiculo veiculo)
-        {
-            dtOleo.DataSource = new OleoBLL().List(dataAtual, veiculo);
-            CarregarConsumoOleo(dataInicialdoAno.Date, dataFinaldoAno.Date, veiculo);
-
-            FormartaDataGridViewOleo();           
-        }
-
-        private void CarregarDatagridOleo(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
-        {
-            dtOleo.DataSource = new OleoBLL().List(dtInicial.Date, dtFinal.Date, veiculo);
-
-            FormartaDataGridViewOleo();
-            CarregarConsumoOleo(dtInicial.Date, dtFinal.Date, veiculo);
-        }
-
-        private void CarregarConsumoOleo(DateTime dataIniAtual, DateTime dataFinAtual, Veiculo veiculo)
-        {
-            GastoOleoInfo consumo = new OleoBLL().GetGasto(dataIniAtual.Date, dataFinAtual.Date, veiculo);
-
-            listBox4.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Completado:   {0:C}", consumo.TotalValorCompletarOleo));
-            listBox4.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Trocado       :   {0:C}", consumo.TotalValorTrocaOleo));
-            listBox4.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Total             :   {0:C}", consumo.TotalValor));
-
-            label70.Text = $"Gasto de óleo";
-        }
-
-        private void FormartaDataGridViewOleo()
-        {
-            ////esconde as colunas desnecessárias
-            dtOleo.Columns["Data"].Visible = false;
-
-            //ajusta lagura da coluna   
-            dtOleo.Columns["Id"].Width = 50;
-            dtOleo.Columns["DataS"].Width = 80;
-            dtOleo.Columns["TipoOperacao"].Width = 145;
-            dtOleo.Columns["TipoOleo"].Width = 80;
-            dtOleo.Columns["KM"].Width = 65;
-            dtOleo.Columns["Quantidade"].Width = 80;
-            dtOleo.Columns["Valor"].Width = 60;
-            dtOleo.Columns["PathComprovantePDF"].Width = 200;
-
-            //ajusta o texto header do grid
-            dtOleo.Columns["PathComprovantePDF"].HeaderText = "Comprovante";
-            dtOleo.Columns["TipoOperacao"].HeaderText = "Operação";
-            dtOleo.Columns["DataS"].HeaderText = "Data";
-        }
-
-        #endregion
-
+       
         #region Aba Manunteção
 
         private void btnCadastrarMecanica_Click(object sender, EventArgs e)

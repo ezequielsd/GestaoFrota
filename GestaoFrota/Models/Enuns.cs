@@ -8,8 +8,7 @@ namespace GestaoFrota.Models
 {
     public enum TipoAnexo
     {
-        Abastecimento, 
-        Oleo, 
+        Abastecimento,        
         Manutencao,
         Multa
     }

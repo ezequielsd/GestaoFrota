@@ -93,7 +93,6 @@
     <Compile Include="BLL\ManutencaoBLL.cs" />
     <Compile Include="BLL\MecanicaBLL.cs" />
     <Compile Include="BLL\MultaBLL.cs" />
-    <Compile Include="BLL\OleoBLL.cs" />
     <Compile Include="BLL\PagamentoDocumentoBLL.cs" />
     <Compile Include="BLL\SeguradoraBLL.cs" />
     <Compile Include="BLL\VeiculoBLL.cs" />
@@ -105,7 +104,6 @@
     <Compile Include="DAL\ManutencaoDAL.cs" />
     <Compile Include="DAL\MecanicaDAL.cs" />
     <Compile Include="DAL\MultaDAL.cs" />
-    <Compile Include="DAL\OleoDAL.cs" />
     <Compile Include="DAL\PagamentoDocumentoDAL.cs" />
     <Compile Include="DAL\SeguradoraDAL.cs" />
     <Compile Include="DAL\VeiculoDAL.cs" />
@@ -227,7 +225,6 @@
     <Compile Include="Models\Manutencao.cs" />
     <Compile Include="Models\Mecanica.cs" />
     <Compile Include="Models\Multa.cs" />
-    <Compile Include="Models\Oleo.cs" />
     <Compile Include="Models\Seguradora.cs" />
     <Compile Include="Models\Seguros.cs" />
     <Compile Include="Models\Veiculos.cs" />

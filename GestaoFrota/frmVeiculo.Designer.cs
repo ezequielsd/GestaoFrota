@@ -51,10 +51,6 @@
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label94 = new System.Windows.Forms.Label();
             this.label95 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label67 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.label85 = new System.Windows.Forms.Label();
@@ -111,38 +107,6 @@
             this.cmbCombustivelAbastecimento = new System.Windows.Forms.ComboBox();
             this.dateTimePickerAbastecimento = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPageOleo = new System.Windows.Forms.TabPage();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label70 = new System.Windows.Forms.Label();
-            this.btnAnexarComprovanteOleoDepois = new System.Windows.Forms.Button();
-            this.btnVisualizarComprovanteOleo = new System.Windows.Forms.Button();
-            this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.btnResetFiltroOleo = new System.Windows.Forms.Button();
-            this.btnAplicarFiltroOleo = new System.Windows.Forms.Button();
-            this.dateTimePickerDataFinalFiltroOleo = new System.Windows.Forms.DateTimePicker();
-            this.label38 = new System.Windows.Forms.Label();
-            this.dateTimePickerDataInicialFiltroOleo = new System.Windows.Forms.DateTimePicker();
-            this.label39 = new System.Windows.Forms.Label();
-            this.dtOleo = new System.Windows.Forms.DataGridView();
-            this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.btnAnexarComprovanteOleo = new System.Windows.Forms.Button();
-            this.label43 = new System.Windows.Forms.Label();
-            this.txtPathComprovanteOleo = new System.Windows.Forms.TextBox();
-            this.btnLancarOleo = new System.Windows.Forms.Button();
-            this.label35 = new System.Windows.Forms.Label();
-            this.cmbAcaoOleo = new System.Windows.Forms.ComboBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.txtTipoOleo = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txtQuantidadeOleo = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txtKmOleo = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.txtValorOleo = new System.Windows.Forms.TextBox();
-            this.dateTimePickerOleo = new System.Windows.Forms.DateTimePicker();
-            this.label30 = new System.Windows.Forms.Label();
             this.tabPageManutencao = new System.Windows.Forms.TabPage();
             this.btnTipoManutencao = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -365,8 +329,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panel1.SuspendLayout();
@@ -385,12 +347,6 @@
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtAbastecimento)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.tabPageOleo.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.groupBox25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtOleo)).BeginInit();
-            this.groupBox23.SuspendLayout();
             this.tabPageManutencao.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -424,7 +380,6 @@
             // 
             this.tabControl1.Controls.Add(this.tabPageDashDoard);
             this.tabControl1.Controls.Add(this.tabPageAbastecimento);
-            this.tabControl1.Controls.Add(this.tabPageOleo);
             this.tabControl1.Controls.Add(this.tabPageManutencao);
             this.tabControl1.Controls.Add(this.tabPageDocumento);
             this.tabControl1.Controls.Add(this.tabPageSeguro);
@@ -528,7 +483,6 @@
             this.groupBox27.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox27.Controls.Add(this.panelConsumoCombustivelAnual);
             this.groupBox27.Controls.Add(this.panel11);
-            this.groupBox27.Controls.Add(this.panel2);
             this.groupBox27.Controls.Add(this.panel10);
             this.groupBox27.Controls.Add(this.panel1);
             this.groupBox27.Controls.Add(this.panel9);
@@ -644,51 +598,6 @@
             this.label95.TabIndex = 1;
             this.label95.Text = "99,99";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.listBox2);
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.label67);
-            this.panel2.Location = new System.Drawing.Point(304, 28);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(282, 113);
-            this.panel2.TabIndex = 90;
-            // 
-            // listBox2
-            // 
-            this.listBox2.BackColor = System.Drawing.Color.White;
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox2.ForeColor = System.Drawing.Color.Black;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(6, 46);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(271, 60);
-            this.listBox2.TabIndex = 98;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::GestaoFrota.Properties.Resources.if_oil1_216297;
-            this.pictureBox4.Location = new System.Drawing.Point(222, 6);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(55, 35);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ForeColor = System.Drawing.Color.DarkGray;
-            this.label67.Location = new System.Drawing.Point(3, 2);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(169, 15);
-            this.label67.TabIndex = 2;
-            this.label67.Text = "Óleo completrado no ano";
-            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
@@ -739,7 +648,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblKmRodados);
             this.panel1.Controls.Add(this.lblKmAnual);
-            this.panel1.Location = new System.Drawing.Point(304, 145);
+            this.panel1.Location = new System.Drawing.Point(304, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(282, 71);
             this.panel1.TabIndex = 89;
@@ -1293,341 +1202,6 @@
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Data";
-            // 
-            // tabPageOleo
-            // 
-            this.tabPageOleo.Controls.Add(this.panel6);
-            this.tabPageOleo.Controls.Add(this.btnAnexarComprovanteOleoDepois);
-            this.tabPageOleo.Controls.Add(this.btnVisualizarComprovanteOleo);
-            this.tabPageOleo.Controls.Add(this.groupBox25);
-            this.tabPageOleo.Controls.Add(this.dtOleo);
-            this.tabPageOleo.Controls.Add(this.groupBox23);
-            this.tabPageOleo.Location = new System.Drawing.Point(4, 22);
-            this.tabPageOleo.Name = "tabPageOleo";
-            this.tabPageOleo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageOleo.Size = new System.Drawing.Size(1278, 577);
-            this.tabPageOleo.TabIndex = 3;
-            this.tabPageOleo.Text = "Óleo";
-            this.tabPageOleo.UseVisualStyleBackColor = true;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.listBox4);
-            this.panel6.Controls.Add(this.pictureBox9);
-            this.panel6.Controls.Add(this.label70);
-            this.panel6.Location = new System.Drawing.Point(8, 354);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(282, 113);
-            this.panel6.TabIndex = 91;
-            // 
-            // listBox4
-            // 
-            this.listBox4.BackColor = System.Drawing.Color.White;
-            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox4.ForeColor = System.Drawing.Color.Black;
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 20;
-            this.listBox4.Location = new System.Drawing.Point(6, 46);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(271, 60);
-            this.listBox4.TabIndex = 98;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::GestaoFrota.Properties.Resources.if_oil1_216297;
-            this.pictureBox9.Location = new System.Drawing.Point(222, 6);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(55, 35);
-            this.pictureBox9.TabIndex = 3;
-            this.pictureBox9.TabStop = false;
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.ForeColor = System.Drawing.Color.DarkGray;
-            this.label70.Location = new System.Drawing.Point(3, 2);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(169, 15);
-            this.label70.TabIndex = 2;
-            this.label70.Text = "Óleo completrado no ano";
-            // 
-            // btnAnexarComprovanteOleoDepois
-            // 
-            this.btnAnexarComprovanteOleoDepois.BackColor = System.Drawing.Color.Khaki;
-            this.btnAnexarComprovanteOleoDepois.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnAnexarComprovanteOleoDepois.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnexarComprovanteOleoDepois.Location = new System.Drawing.Point(899, 537);
-            this.btnAnexarComprovanteOleoDepois.Name = "btnAnexarComprovanteOleoDepois";
-            this.btnAnexarComprovanteOleoDepois.Size = new System.Drawing.Size(137, 23);
-            this.btnAnexarComprovanteOleoDepois.TabIndex = 86;
-            this.btnAnexarComprovanteOleoDepois.Text = "Adicionar Comprovante";
-            this.btnAnexarComprovanteOleoDepois.UseVisualStyleBackColor = false;
-            this.btnAnexarComprovanteOleoDepois.Click += new System.EventHandler(this.btnAnexarComprovanteOleoDepois_Click);
-            // 
-            // btnVisualizarComprovanteOleo
-            // 
-            this.btnVisualizarComprovanteOleo.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnVisualizarComprovanteOleo.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnVisualizarComprovanteOleo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarComprovanteOleo.Location = new System.Drawing.Point(1044, 537);
-            this.btnVisualizarComprovanteOleo.Name = "btnVisualizarComprovanteOleo";
-            this.btnVisualizarComprovanteOleo.Size = new System.Drawing.Size(137, 23);
-            this.btnVisualizarComprovanteOleo.TabIndex = 85;
-            this.btnVisualizarComprovanteOleo.Text = "Visualizar Comprovante";
-            this.btnVisualizarComprovanteOleo.UseVisualStyleBackColor = false;
-            this.btnVisualizarComprovanteOleo.Click += new System.EventHandler(this.btnVisualizarComprovanteOleo_Click);
-            // 
-            // groupBox25
-            // 
-            this.groupBox25.Controls.Add(this.btnResetFiltroOleo);
-            this.groupBox25.Controls.Add(this.btnAplicarFiltroOleo);
-            this.groupBox25.Controls.Add(this.dateTimePickerDataFinalFiltroOleo);
-            this.groupBox25.Controls.Add(this.label38);
-            this.groupBox25.Controls.Add(this.dateTimePickerDataInicialFiltroOleo);
-            this.groupBox25.Controls.Add(this.label39);
-            this.groupBox25.Location = new System.Drawing.Point(378, 6);
-            this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(803, 94);
-            this.groupBox25.TabIndex = 26;
-            this.groupBox25.TabStop = false;
-            this.groupBox25.Text = "Filtrar";
-            // 
-            // btnResetFiltroOleo
-            // 
-            this.btnResetFiltroOleo.Location = new System.Drawing.Point(521, 64);
-            this.btnResetFiltroOleo.Name = "btnResetFiltroOleo";
-            this.btnResetFiltroOleo.Size = new System.Drawing.Size(96, 23);
-            this.btnResetFiltroOleo.TabIndex = 24;
-            this.btnResetFiltroOleo.Text = "Reset filtro";
-            this.btnResetFiltroOleo.UseVisualStyleBackColor = true;
-            this.btnResetFiltroOleo.Click += new System.EventHandler(this.btnResetFiltroOleo_Click);
-            // 
-            // btnAplicarFiltroOleo
-            // 
-            this.btnAplicarFiltroOleo.BackColor = System.Drawing.Color.Moccasin;
-            this.btnAplicarFiltroOleo.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
-            this.btnAplicarFiltroOleo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAplicarFiltroOleo.Location = new System.Drawing.Point(423, 64);
-            this.btnAplicarFiltroOleo.Name = "btnAplicarFiltroOleo";
-            this.btnAplicarFiltroOleo.Size = new System.Drawing.Size(75, 23);
-            this.btnAplicarFiltroOleo.TabIndex = 23;
-            this.btnAplicarFiltroOleo.Text = "Aplicar filtro";
-            this.btnAplicarFiltroOleo.UseVisualStyleBackColor = false;
-            this.btnAplicarFiltroOleo.Click += new System.EventHandler(this.btnAplicarFiltroOleo_Click);
-            // 
-            // dateTimePickerDataFinalFiltroOleo
-            // 
-            this.dateTimePickerDataFinalFiltroOleo.Location = new System.Drawing.Point(264, 32);
-            this.dateTimePickerDataFinalFiltroOleo.Name = "dateTimePickerDataFinalFiltroOleo";
-            this.dateTimePickerDataFinalFiltroOleo.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerDataFinalFiltroOleo.TabIndex = 4;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(264, 16);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(52, 13);
-            this.label38.TabIndex = 5;
-            this.label38.Text = "Data final";
-            // 
-            // dateTimePickerDataInicialFiltroOleo
-            // 
-            this.dateTimePickerDataInicialFiltroOleo.Location = new System.Drawing.Point(6, 32);
-            this.dateTimePickerDataInicialFiltroOleo.Name = "dateTimePickerDataInicialFiltroOleo";
-            this.dateTimePickerDataInicialFiltroOleo.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerDataInicialFiltroOleo.TabIndex = 2;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(6, 16);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(59, 13);
-            this.label39.TabIndex = 3;
-            this.label39.Text = "Data inicial";
-            // 
-            // dtOleo
-            // 
-            this.dtOleo.AllowUserToAddRows = false;
-            this.dtOleo.AllowUserToDeleteRows = false;
-            this.dtOleo.AllowUserToResizeColumns = false;
-            this.dtOleo.AllowUserToResizeRows = false;
-            this.dtOleo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtOleo.Location = new System.Drawing.Point(378, 106);
-            this.dtOleo.Name = "dtOleo";
-            this.dtOleo.ReadOnly = true;
-            this.dtOleo.Size = new System.Drawing.Size(803, 425);
-            this.dtOleo.TabIndex = 24;
-            // 
-            // groupBox23
-            // 
-            this.groupBox23.Controls.Add(this.btnAnexarComprovanteOleo);
-            this.groupBox23.Controls.Add(this.label43);
-            this.groupBox23.Controls.Add(this.txtPathComprovanteOleo);
-            this.groupBox23.Controls.Add(this.btnLancarOleo);
-            this.groupBox23.Controls.Add(this.label35);
-            this.groupBox23.Controls.Add(this.cmbAcaoOleo);
-            this.groupBox23.Controls.Add(this.label31);
-            this.groupBox23.Controls.Add(this.txtTipoOleo);
-            this.groupBox23.Controls.Add(this.label27);
-            this.groupBox23.Controls.Add(this.txtQuantidadeOleo);
-            this.groupBox23.Controls.Add(this.label28);
-            this.groupBox23.Controls.Add(this.txtKmOleo);
-            this.groupBox23.Controls.Add(this.label29);
-            this.groupBox23.Controls.Add(this.txtValorOleo);
-            this.groupBox23.Controls.Add(this.dateTimePickerOleo);
-            this.groupBox23.Controls.Add(this.label30);
-            this.groupBox23.Location = new System.Drawing.Point(8, 9);
-            this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(348, 339);
-            this.groupBox23.TabIndex = 0;
-            this.groupBox23.TabStop = false;
-            this.groupBox23.Text = "Movimentação de óleo";
-            // 
-            // btnAnexarComprovanteOleo
-            // 
-            this.btnAnexarComprovanteOleo.Location = new System.Drawing.Point(299, 280);
-            this.btnAnexarComprovanteOleo.Name = "btnAnexarComprovanteOleo";
-            this.btnAnexarComprovanteOleo.Size = new System.Drawing.Size(34, 23);
-            this.btnAnexarComprovanteOleo.TabIndex = 8;
-            this.btnAnexarComprovanteOleo.Text = "...";
-            this.btnAnexarComprovanteOleo.UseVisualStyleBackColor = true;
-            this.btnAnexarComprovanteOleo.Click += new System.EventHandler(this.btnAnexarComprovanteOleo_Click);
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(10, 266);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(105, 13);
-            this.label43.TabIndex = 49;
-            this.label43.Text = "Anexar comprovante";
-            // 
-            // txtPathComprovanteOleo
-            // 
-            this.txtPathComprovanteOleo.Location = new System.Drawing.Point(10, 282);
-            this.txtPathComprovanteOleo.Name = "txtPathComprovanteOleo";
-            this.txtPathComprovanteOleo.Size = new System.Drawing.Size(283, 20);
-            this.txtPathComprovanteOleo.TabIndex = 7;
-            // 
-            // btnLancarOleo
-            // 
-            this.btnLancarOleo.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnLancarOleo.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.btnLancarOleo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLancarOleo.Location = new System.Drawing.Point(258, 308);
-            this.btnLancarOleo.Name = "btnLancarOleo";
-            this.btnLancarOleo.Size = new System.Drawing.Size(75, 23);
-            this.btnLancarOleo.TabIndex = 9;
-            this.btnLancarOleo.Text = "Lançar";
-            this.btnLancarOleo.UseVisualStyleBackColor = false;
-            this.btnLancarOleo.Click += new System.EventHandler(this.btnLancarOleo_Click);
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(11, 26);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(32, 13);
-            this.label35.TabIndex = 44;
-            this.label35.Text = "Ação";
-            // 
-            // cmbAcaoOleo
-            // 
-            this.cmbAcaoOleo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAcaoOleo.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cmbAcaoOleo.Items.AddRange(new object[] {
-            "Completar o nível do óleo",
-            "Troca de óleo"});
-            this.cmbAcaoOleo.Location = new System.Drawing.Point(10, 45);
-            this.cmbAcaoOleo.Name = "cmbAcaoOleo";
-            this.cmbAcaoOleo.Size = new System.Drawing.Size(234, 21);
-            this.cmbAcaoOleo.TabIndex = 1;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(11, 188);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(51, 13);
-            this.label31.TabIndex = 42;
-            this.label31.Text = "Tipo óleo";
-            // 
-            // txtTipoOleo
-            // 
-            this.txtTipoOleo.Location = new System.Drawing.Point(10, 204);
-            this.txtTipoOleo.Name = "txtTipoOleo";
-            this.txtTipoOleo.Size = new System.Drawing.Size(100, 20);
-            this.txtTipoOleo.TabIndex = 5;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(10, 149);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(70, 13);
-            this.label27.TabIndex = 40;
-            this.label27.Text = "Qntd. ( Litros)";
-            // 
-            // txtQuantidadeOleo
-            // 
-            this.txtQuantidadeOleo.Location = new System.Drawing.Point(10, 165);
-            this.txtQuantidadeOleo.Name = "txtQuantidadeOleo";
-            this.txtQuantidadeOleo.Size = new System.Drawing.Size(100, 20);
-            this.txtQuantidadeOleo.TabIndex = 4;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(10, 110);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(23, 13);
-            this.label28.TabIndex = 38;
-            this.label28.Text = "KM";
-            // 
-            // txtKmOleo
-            // 
-            this.txtKmOleo.Location = new System.Drawing.Point(10, 126);
-            this.txtKmOleo.Name = "txtKmOleo";
-            this.txtKmOleo.Size = new System.Drawing.Size(100, 20);
-            this.txtKmOleo.TabIndex = 3;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(10, 227);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(54, 13);
-            this.label29.TabIndex = 36;
-            this.label29.Text = "Valor (R$)";
-            // 
-            // txtValorOleo
-            // 
-            this.txtValorOleo.Location = new System.Drawing.Point(10, 243);
-            this.txtValorOleo.Name = "txtValorOleo";
-            this.txtValorOleo.Size = new System.Drawing.Size(100, 20);
-            this.txtValorOleo.TabIndex = 6;
-            // 
-            // dateTimePickerOleo
-            // 
-            this.dateTimePickerOleo.Location = new System.Drawing.Point(10, 87);
-            this.dateTimePickerOleo.Name = "dateTimePickerOleo";
-            this.dateTimePickerOleo.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerOleo.TabIndex = 2;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(10, 71);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(30, 13);
-            this.label30.TabIndex = 34;
-            this.label30.Text = "Data";
             // 
             // tabPageManutencao
             // 
@@ -3853,9 +3427,6 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
@@ -3883,15 +3454,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtAbastecimento)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPageOleo.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.groupBox25.ResumeLayout(false);
-            this.groupBox25.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtOleo)).EndInit();
-            this.groupBox23.ResumeLayout(false);
-            this.groupBox23.PerformLayout();
             this.tabPageManutencao.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -4002,28 +3564,6 @@
         private System.Windows.Forms.Button btnCadastrarMecanica;
         private System.Windows.Forms.Button btnVisualizarMecanicas;
         private System.Windows.Forms.DataGridView dtManutencao;
-        private System.Windows.Forms.TabPage tabPageOleo;
-        private System.Windows.Forms.GroupBox groupBox23;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox txtTipoOleo;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txtQuantidadeOleo;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox txtKmOleo;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox txtValorOleo;
-        private System.Windows.Forms.DateTimePicker dateTimePickerOleo;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.DataGridView dtOleo;
-        private System.Windows.Forms.Button btnLancarOleo;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox cmbAcaoOleo;
-        private System.Windows.Forms.GroupBox groupBox25;
-        private System.Windows.Forms.Button btnAplicarFiltroOleo;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDataFinalFiltroOleo;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDataInicialFiltroOleo;
-        private System.Windows.Forms.Label label39;
         private System.Windows.Forms.GroupBox groupBox26;
         private System.Windows.Forms.Button btnAplicarFiltroMecanica;
         private System.Windows.Forms.DateTimePicker dateTimePickerDataFinalMecanicaFiltro;
@@ -4034,17 +3574,12 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TextBox txtPathComprovanteAbastecimento;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button btnAnexarComprovanteOleo;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox txtPathComprovanteOleo;
         private System.Windows.Forms.Button btnAnexarDocumento;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.TextBox txtAnexarDocumento;
         private System.Windows.Forms.Button btnVisualizarComprovanteAbastecimento;
-        private System.Windows.Forms.Button btnVisualizarComprovanteOleo;
         private System.Windows.Forms.Button btnVisualizarDocumento;
         private System.Windows.Forms.Button btnAdicionarComprovante;
-        private System.Windows.Forms.Button btnAnexarComprovanteOleoDepois;
         private System.Windows.Forms.Button btnAnexaComprovanteManutencaoDepois;
         private System.Windows.Forms.TabPage tabPageSeguro;
         private System.Windows.Forms.GroupBox groupBox29;
@@ -4122,7 +3657,6 @@
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.ComboBox cmbFiltroDataMultaPor;
         private System.Windows.Forms.Button btnResetFiltro;
-        private System.Windows.Forms.Button btnResetFiltroOleo;
         private System.Windows.Forms.TabPage tabPageDashDoard;
         private System.Windows.Forms.Panel panelConsumoCombustivelAnual;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -4132,9 +3666,6 @@
         private System.Windows.Forms.Label lblKmRodados;
         private System.Windows.Forms.Label lblKmAnual;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label76;
@@ -4177,7 +3708,6 @@
         private System.Windows.Forms.Label label94;
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.GroupBox groupBox27;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Panel panel3;
@@ -4192,10 +3722,6 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label label70;
         private System.Windows.Forms.GroupBox groupBox36;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.DateTimePicker dateTimePickerDataVencimentoDocumento;

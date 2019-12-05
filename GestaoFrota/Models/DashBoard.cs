@@ -13,9 +13,7 @@ namespace GestaoFrota.Models
         public decimal TotalCombustivel { get; set; }
 
         public decimal TotalManutencao { get; set; }
-
-        public decimal TotalOleo { get; set; }
-
+            
         public decimal TotalMulta { get; set; }
 
         public decimal TotalSeguro { get; set; }

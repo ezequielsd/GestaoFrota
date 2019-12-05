@@ -20,8 +20,7 @@ namespace GestaoFrota
             VerificaPastaExportacao(path);
             ExportVeiculos(path);
             ExportMecanica(path);
-            ExportAbastecimento(path);
-            ExportOleo(path);
+            ExportAbastecimento(path);           
             ExportManutencao(path);
         }
 
@@ -120,36 +119,7 @@ namespace GestaoFrota
                 }
             }
         }
-
-        static void ExportOleo(string path)
-        {
-            string fileName = Path.Combine(path, "Oleo.txt");
-
-            List<Oleo> list = new OleoBLL().ListExport();
-            StringBuilder conteudo = new StringBuilder();
-
-            foreach (Oleo item in list)
-            {
-                conteudo.AppendLine($"{item.Id};{item.Data};{item.TipoOperacao};{item.TipoOleo};{item.Quantidade};{item.Valor};{item.KM};{item.VeiculoID}");
-            }
-
-            lock (_logLockObj)
-            {
-                try
-                {
-                    FileInfo t = new FileInfo(fileName);
-                    using (StreamWriter Tex = t.CreateText())
-                    {
-                        Tex.WriteLine(conteudo.ToString()); //Aqui vai o conteúdo que já existia                        
-                    }
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-            }
-        }
-
+             
         static void ExportManutencao(string path)
         {
             string fileName = Path.Combine(path, "Manutencao.txt");

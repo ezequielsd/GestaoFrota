@@ -72,7 +72,6 @@
     <Compile Include="ORM\Manutencao.cs" />
     <Compile Include="ORM\Mecanica.cs" />
     <Compile Include="ORM\Multa.cs" />
-    <Compile Include="ORM\Oleo.cs" />
     <Compile Include="ORM\PagamentoDocumento.cs" />
     <Compile Include="ORM\PagamentosSeguro.cs" />
     <Compile Include="ORM\Seguradora.cs" />

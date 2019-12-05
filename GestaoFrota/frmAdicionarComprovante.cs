@@ -76,18 +76,7 @@ namespace GestaoFrota
                     }
                     else
                         MessageBox.Show("Selecionar um arquivo para anexar!", "Selecioner um arquivo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
-                case TipoAnexo.Oleo:
-                    if (!String.IsNullOrEmpty(txtPathComprovanteAbastecimento.Text) || !String.IsNullOrWhiteSpace(txtPathComprovanteAbastecimento.Text))
-                    {
-                        VerificaPasta(pathComprovante);
-                        CopiaComprovante(pathOrigemComprovante, pathDestinoComprovante);
-                        new OleoBLL().AnexarComprovante(idC, fileNameComprovante);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Selecionar um arquivo para anexar!", "Selecioner um arquivo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
+                    break;               
                 case TipoAnexo.Manutencao:
                     if (!String.IsNullOrEmpty(txtPathComprovanteAbastecimento.Text) || !String.IsNullOrWhiteSpace(txtPathComprovanteAbastecimento.Text))
                     {
