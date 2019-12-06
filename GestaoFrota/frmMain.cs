@@ -15,9 +15,20 @@ namespace GestaoFrota
         string fileNameManual = "GUIA RÁPIDO DE UTILIZAÇÃO DO GESTÃO DE FROTA PORTABLE.pdf";
         string pathManual = Environment.CurrentDirectory;
         string pathDestinoManual = string.Empty;
+        Configuracao config;
+        string culture = "pt_BR";
 
         public frmMain()
         {
+            ConfiguracaoBLL configBll = new ConfiguracaoBLL();
+            Configuracao config = configBll.Get();
+            if (config != null)
+            {
+                culture = config.CultureInfo;
+                System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(culture, true);
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(culture, true);
+            }                
+
             InitializeComponent();
         }
 
@@ -27,14 +38,13 @@ namespace GestaoFrota
             GetAvisos();
 
             ConfiguracaoBLL configBll = new ConfiguracaoBLL();
-
             Configuracao config = configBll.Get();
+
             if (config == null)
             {
                 this.Visible = false;
                 frmSelecionarPais frm = new frmSelecionarPais();
-                frm.ShowDialog();
-                config = configBll.Get();
+                frm.ShowDialog();               
                 this.Visible = true;
             }
         }
