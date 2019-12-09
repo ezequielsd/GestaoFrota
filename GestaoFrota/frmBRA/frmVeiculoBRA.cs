@@ -13,7 +13,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace GestaoFrota
 {
-    public partial class frmVeiculo : Form
+    public partial class frmVeiculoBRA : Form
     {
         #region Declarações
 
@@ -54,12 +54,12 @@ namespace GestaoFrota
 
         #region Construtores
 
-        public frmVeiculo()
+        public frmVeiculoBRA()
         {
             InitializeComponent();
         }
 
-        public frmVeiculo(Veiculo veiculoInfo)
+        public frmVeiculoBRA(Veiculo veiculoInfo)
         {
             InitializeComponent();
             veiculo = veiculoInfo;
@@ -69,7 +69,7 @@ namespace GestaoFrota
 
         #endregion
 
-        private void frmVeiculo_Load(object sender, EventArgs e)
+        private void frmVeiculoBRA_Load(object sender, EventArgs e)
         {
             dataAtual = DateTime.Now;
             dataInicialAtual = new DateTime(dataAtual.Year, dataAtual.Month, 1);

@@ -1,6 +1,6 @@
 ﻿namespace GestaoFrota
 {
-    partial class frmVeiculo
+    partial class frmVeiculoPRT
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVeiculo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVeiculoPRT));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDashDoard = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -3409,7 +3409,7 @@
             this.Name = "frmVeiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Veiculo";
-            this.Load += new System.EventHandler(this.frmVeiculo_Load);
+            this.Load += new System.EventHandler(this.frmVeiculoPRT_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPageDashDoard.ResumeLayout(false);
             this.panel7.ResumeLayout(false);

@@ -180,6 +180,12 @@
     <Compile Include="frmMecanicas.Designer.cs">
       <DependentUpon>frmMecanicas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPRT\frmVeiculoPRT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPRT\frmVeiculoPRT.Designer.cs">
+      <DependentUpon>frmVeiculoPRT.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRenomearArquivo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,11 +216,11 @@
     <Compile Include="frmTipoManutencao.Designer.cs">
       <DependentUpon>frmTipoManutencao.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVeiculo.cs">
+    <Compile Include="frmBRA\frmVeiculoBRA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVeiculo.Designer.cs">
-      <DependentUpon>frmVeiculo.cs</DependentUpon>
+    <Compile Include="frmBRA\frmVeiculoBRA.Designer.cs">
+      <DependentUpon>frmVeiculoBRA.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Abastecimento.cs" />
     <Compile Include="Models\CNH.cs" />
@@ -275,6 +281,9 @@
     <EmbeddedResource Include="frmMecanicas.resx">
       <DependentUpon>frmMecanicas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPRT\frmVeiculoPRT.resx">
+      <DependentUpon>frmVeiculoPRT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRenomearArquivo.resx">
       <DependentUpon>frmRenomearArquivo.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,8 +299,8 @@
     <EmbeddedResource Include="frmTipoManutencao.resx">
       <DependentUpon>frmTipoManutencao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVeiculo.resx">
-      <DependentUpon>frmVeiculo.cs</DependentUpon>
+    <EmbeddedResource Include="frmBRA\frmVeiculoBRA.resx">
+      <DependentUpon>frmVeiculoBRA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -352,10 +361,7 @@
       <Name>FIPE</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="frmBRA\" />
-    <Folder Include="frmPRT\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

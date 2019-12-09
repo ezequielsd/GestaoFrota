@@ -16,7 +16,7 @@ namespace GestaoFrota
         string pathManual = Environment.CurrentDirectory;
         string pathDestinoManual = string.Empty;
         Configuracao config;
-        string culture = "pt_BR";
+        string culture = "pt-BR";
 
         public frmMain()
         {
@@ -71,10 +71,16 @@ namespace GestaoFrota
             else
             {
 
-                switch (veicu.CultureInfo)
+                switch (culture)
                 {
                     case "pt-BR":
-                        using (frmVeiculo frmVeicu = new frmVeiculo(veicu))
+                        using (frmVeiculoBRA frmVeicu = new frmVeiculoBRA(veicu))
+                        {
+                            frmVeicu.ShowDialog();
+                        }
+                        break;
+                    case "pt-PT":
+                        using (frmVeiculoPRT frmVeicu = new frmVeiculoPRT(veicu))
                         {
                             frmVeicu.ShowDialog();
                         }
