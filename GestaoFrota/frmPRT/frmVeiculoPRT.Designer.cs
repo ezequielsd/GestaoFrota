@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVeiculoPRT));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVeiculoPRT));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDashDoard = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -165,6 +165,10 @@
             this.dateTimePickerDataPagamentoDocumento2 = new System.Windows.Forms.DateTimePicker();
             this.labelDataPagamentoDocumento2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCodigoPostal = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtMedidaPneus = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblMensagem = new System.Windows.Forms.Label();
             this.txtNomeEndereco = new System.Windows.Forms.TextBox();
@@ -186,9 +190,7 @@
             this.cmbCombustivel = new System.Windows.Forms.ComboBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label87 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.cmbUf = new System.Windows.Forms.ComboBox();
             this.label75 = new System.Windows.Forms.Label();
             this.txtChassi = new System.Windows.Forms.TextBox();
             this.btnAnexarDocumento = new System.Windows.Forms.Button();
@@ -219,9 +221,6 @@
             this.txtDecricaoPagamentoDocumento = new System.Windows.Forms.TextBox();
             this.labelDataPagamentoDocumento = new System.Windows.Forms.Label();
             this.txtValorPagamentoDocumento = new System.Windows.Forms.TextBox();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.cmbDetran = new System.Windows.Forms.ComboBox();
-            this.btnSiteDoDetran = new System.Windows.Forms.Button();
             this.label92 = new System.Windows.Forms.Label();
             this.dtPagamentoDocumento = new System.Windows.Forms.DataGridView();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
@@ -230,13 +229,6 @@
             this.label89 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label90 = new System.Windows.Forms.Label();
-            this.groupBoxSeuCarroFIPE = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.tabPageSeguro = new System.Windows.Forms.TabPage();
             this.btnAdicionarComprovantePagaSegu = new System.Windows.Forms.Button();
             this.btnVisualizarComprovantePagaSegu = new System.Windows.Forms.Button();
@@ -359,10 +351,8 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox36.SuspendLayout();
-            this.groupBox21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtPagamentoDocumento)).BeginInit();
             this.groupBox20.SuspendLayout();
-            this.groupBoxSeuCarroFIPE.SuspendLayout();
             this.tabPageSeguro.SuspendLayout();
             this.groupBox31.SuspendLayout();
             this.groupBox32.SuspendLayout();
@@ -378,108 +368,79 @@
             // 
             // tabControl1
             // 
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPageDashDoard);
             this.tabControl1.Controls.Add(this.tabPageAbastecimento);
             this.tabControl1.Controls.Add(this.tabPageManutencao);
             this.tabControl1.Controls.Add(this.tabPageDocumento);
             this.tabControl1.Controls.Add(this.tabPageSeguro);
             this.tabControl1.Controls.Add(this.tabPageMulta);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.ShowToolTips = true;
-            this.tabControl1.Size = new System.Drawing.Size(1286, 603);
-            this.tabControl1.TabIndex = 0;
             // 
             // tabPageDashDoard
             // 
+            resources.ApplyResources(this.tabPageDashDoard, "tabPageDashDoard");
             this.tabPageDashDoard.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPageDashDoard.Controls.Add(this.panel7);
             this.tabPageDashDoard.Controls.Add(this.groupBox35);
             this.tabPageDashDoard.Controls.Add(this.groupBox27);
-            this.tabPageDashDoard.Location = new System.Drawing.Point(4, 22);
             this.tabPageDashDoard.Name = "tabPageDashDoard";
-            this.tabPageDashDoard.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDashDoard.Size = new System.Drawing.Size(1278, 577);
-            this.tabPageDashDoard.TabIndex = 6;
-            this.tabPageDashDoard.Text = "Painel estatistico";
             // 
             // panel7
             // 
+            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.pictureBox11);
             this.panel7.Controls.Add(this.label78);
             this.panel7.Controls.Add(this.label79);
-            this.panel7.Location = new System.Drawing.Point(5, 499);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(268, 58);
-            this.panel7.TabIndex = 92;
             // 
             // pictureBox11
             // 
+            resources.ApplyResources(this.pictureBox11, "pictureBox11");
             this.pictureBox11.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
-            this.pictureBox11.Location = new System.Drawing.Point(215, 4);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox11.TabIndex = 3;
             this.pictureBox11.TabStop = false;
             // 
             // label78
             // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label78, "label78");
             this.label78.ForeColor = System.Drawing.Color.DarkGray;
-            this.label78.Location = new System.Drawing.Point(3, 2);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(187, 15);
-            this.label78.TabIndex = 2;
-            this.label78.Text = "Manutenção total do veículo";
             // 
             // label79
             // 
-            this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label79, "label79");
             this.label79.ForeColor = System.Drawing.Color.Red;
-            this.label79.Location = new System.Drawing.Point(6, 23);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(82, 31);
-            this.label79.TabIndex = 1;
-            this.label79.Text = "99,99";
             // 
             // groupBox35
             // 
+            resources.ApplyResources(this.groupBox35, "groupBox35");
             this.groupBox35.BackColor = System.Drawing.Color.White;
             this.groupBox35.Controls.Add(this.panel3);
-            this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox35.Location = new System.Drawing.Point(883, 7);
             this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Size = new System.Drawing.Size(389, 213);
-            this.groupBox35.TabIndex = 99;
             this.groupBox35.TabStop = false;
-            this.groupBox35.Text = "groupBox35";
             // 
             // panel3
             // 
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Location = new System.Drawing.Point(5, 24);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(378, 179);
-            this.panel3.TabIndex = 99;
             // 
             // dataGridView1
             // 
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 8);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(372, 150);
-            this.dataGridView1.TabIndex = 100;
             // 
             // groupBox27
             // 
+            resources.ApplyResources(this.groupBox27, "groupBox27");
             this.groupBox27.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox27.Controls.Add(this.panelConsumoCombustivelAnual);
             this.groupBox27.Controls.Add(this.panel11);
@@ -490,317 +451,220 @@
             this.groupBox27.Controls.Add(this.label82);
             this.groupBox27.Controls.Add(this.panel5);
             this.groupBox27.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox27.Location = new System.Drawing.Point(5, 4);
             this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Size = new System.Drawing.Size(871, 489);
-            this.groupBox27.TabIndex = 97;
             this.groupBox27.TabStop = false;
-            this.groupBox27.Text = "groupBox27";
             // 
             // panelConsumoCombustivelAnual
             // 
+            resources.ApplyResources(this.panelConsumoCombustivelAnual, "panelConsumoCombustivelAnual");
             this.panelConsumoCombustivelAnual.BackColor = System.Drawing.Color.White;
             this.panelConsumoCombustivelAnual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelConsumoCombustivelAnual.Controls.Add(this.pictureBox2);
             this.panelConsumoCombustivelAnual.Controls.Add(this.pictureBox3);
             this.panelConsumoCombustivelAnual.Controls.Add(this.label65);
             this.panelConsumoCombustivelAnual.Controls.Add(this.listBox1);
-            this.panelConsumoCombustivelAnual.Location = new System.Drawing.Point(14, 28);
             this.panelConsumoCombustivelAnual.Name = "panelConsumoCombustivelAnual";
-            this.panelConsumoCombustivelAnual.Size = new System.Drawing.Size(284, 188);
-            this.panelConsumoCombustivelAnual.TabIndex = 87;
             // 
             // pictureBox2
             // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Image = global::GestaoFrota.Properties.Resources.if_fuel_103260;
-            this.pictureBox2.Location = new System.Drawing.Point(181, 22);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Image = global::GestaoFrota.Properties.Resources.if_money_bag_309025;
-            this.pictureBox3.Location = new System.Drawing.Point(83, 21);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(55, 48);
-            this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
             // 
             // label65
             // 
-            this.label65.AutoSize = true;
+            resources.ApplyResources(this.label65, "label65");
             this.label65.BackColor = System.Drawing.Color.Transparent;
             this.label65.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label65.ForeColor = System.Drawing.Color.DarkGray;
-            this.label65.Location = new System.Drawing.Point(3, 2);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(133, 15);
-            this.label65.TabIndex = 2;
-            this.label65.Text = "Combustivel do ano";
             // 
             // listBox1
             // 
+            resources.ApplyResources(this.listBox1, "listBox1");
             this.listBox1.BackColor = System.Drawing.Color.White;
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.Color.Black;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(4, 74);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(271, 100);
-            this.listBox1.TabIndex = 97;
             // 
             // panel11
             // 
+            resources.ApplyResources(this.panel11, "panel11");
             this.panel11.BackColor = System.Drawing.Color.White;
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel11.Controls.Add(this.pictureBox15);
             this.panel11.Controls.Add(this.label94);
             this.panel11.Controls.Add(this.label95);
-            this.panel11.Location = new System.Drawing.Point(592, 258);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(268, 72);
-            this.panel11.TabIndex = 95;
             // 
             // pictureBox15
             // 
+            resources.ApplyResources(this.pictureBox15, "pictureBox15");
             this.pictureBox15.Image = global::GestaoFrota.Properties.Resources.if_news_103657;
-            this.pictureBox15.Location = new System.Drawing.Point(215, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox15.TabIndex = 3;
             this.pictureBox15.TabStop = false;
             // 
             // label94
             // 
-            this.label94.AutoSize = true;
-            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label94, "label94");
             this.label94.ForeColor = System.Drawing.Color.DarkGray;
-            this.label94.Location = new System.Drawing.Point(3, 2);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(205, 15);
-            this.label94.TabIndex = 2;
-            this.label94.Text = "Pagamento Documento do ano";
             // 
             // label95
             // 
-            this.label95.AutoSize = true;
-            this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label95, "label95");
             this.label95.ForeColor = System.Drawing.Color.IndianRed;
-            this.label95.Location = new System.Drawing.Point(8, 23);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(87, 33);
-            this.label95.TabIndex = 1;
-            this.label95.Text = "99,99";
             // 
             // panel10
             // 
+            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.Controls.Add(this.pictureBox14);
             this.panel10.Controls.Add(this.label85);
             this.panel10.Controls.Add(this.label86);
-            this.panel10.Location = new System.Drawing.Point(592, 181);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(268, 72);
-            this.panel10.TabIndex = 94;
             // 
             // pictureBox14
             // 
+            resources.ApplyResources(this.pictureBox14, "pictureBox14");
             this.pictureBox14.Image = global::GestaoFrota.Properties.Resources.if_Vector_icons_39_1041628;
-            this.pictureBox14.Location = new System.Drawing.Point(215, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox14.TabIndex = 3;
             this.pictureBox14.TabStop = false;
             // 
             // label85
             // 
-            this.label85.AutoSize = true;
-            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label85, "label85");
             this.label85.ForeColor = System.Drawing.Color.DarkGray;
-            this.label85.Location = new System.Drawing.Point(3, 2);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(133, 15);
-            this.label85.TabIndex = 2;
-            this.label85.Text = "Seguro total do ano";
             // 
             // label86
             // 
-            this.label86.AutoSize = true;
-            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label86, "label86");
             this.label86.ForeColor = System.Drawing.Color.IndianRed;
-            this.label86.Location = new System.Drawing.Point(5, 24);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(87, 33);
-            this.label86.TabIndex = 1;
-            this.label86.Text = "99,99";
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblKmRodados);
             this.panel1.Controls.Add(this.lblKmAnual);
-            this.panel1.Location = new System.Drawing.Point(304, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(282, 71);
-            this.panel1.TabIndex = 89;
             // 
             // pictureBox1
             // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Image = global::GestaoFrota.Properties.Resources.if_Move_distance_arrow_left_right_2630385;
-            this.pictureBox1.Location = new System.Drawing.Point(222, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // lblKmRodados
             // 
-            this.lblKmRodados.AutoSize = true;
-            this.lblKmRodados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblKmRodados, "lblKmRodados");
             this.lblKmRodados.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblKmRodados.Location = new System.Drawing.Point(3, 2);
             this.lblKmRodados.Name = "lblKmRodados";
-            this.lblKmRodados.Size = new System.Drawing.Size(88, 15);
-            this.lblKmRodados.TabIndex = 2;
-            this.lblKmRodados.Text = "Km rodados ";
             // 
             // lblKmAnual
             // 
-            this.lblKmAnual.AutoSize = true;
-            this.lblKmAnual.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblKmAnual, "lblKmAnual");
             this.lblKmAnual.ForeColor = System.Drawing.Color.Green;
-            this.lblKmAnual.Location = new System.Drawing.Point(24, 27);
             this.lblKmAnual.Name = "lblKmAnual";
-            this.lblKmAnual.Size = new System.Drawing.Size(87, 33);
-            this.lblKmAnual.TabIndex = 1;
-            this.lblKmAnual.Text = "99,99";
             // 
             // panel9
             // 
+            resources.ApplyResources(this.panel9, "panel9");
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.pictureBox13);
             this.panel9.Controls.Add(this.label83);
             this.panel9.Controls.Add(this.label84);
-            this.panel9.Location = new System.Drawing.Point(592, 104);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(268, 72);
-            this.panel9.TabIndex = 93;
             // 
             // pictureBox13
             // 
+            resources.ApplyResources(this.pictureBox13, "pictureBox13");
             this.pictureBox13.Image = global::GestaoFrota.Properties.Resources.if_ticket_216459;
-            this.pictureBox13.Location = new System.Drawing.Point(215, 3);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox13.TabIndex = 3;
             this.pictureBox13.TabStop = false;
             // 
             // label83
             // 
-            this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label83, "label83");
             this.label83.ForeColor = System.Drawing.Color.DarkGray;
-            this.label83.Location = new System.Drawing.Point(3, 2);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(123, 15);
-            this.label83.TabIndex = 2;
-            this.label83.Text = "Multa total do ano";
             // 
             // label84
             // 
-            this.label84.AutoSize = true;
+            resources.ApplyResources(this.label84, "label84");
             this.label84.BackColor = System.Drawing.Color.Transparent;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label84.ForeColor = System.Drawing.Color.IndianRed;
-            this.label84.Location = new System.Drawing.Point(5, 25);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(82, 31);
-            this.label84.TabIndex = 1;
-            this.label84.Text = "99,99";
             // 
             // chart1
             // 
+            resources.ApplyResources(this.chart1, "chart1");
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(14, 238);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(519, 251);
-            this.chart1.TabIndex = 96;
-            this.chart1.Text = "chart1";
             // 
             // label82
             // 
-            this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label82, "label82");
             this.label82.ForeColor = System.Drawing.Color.Red;
-            this.label82.Location = new System.Drawing.Point(14, 223);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(162, 13);
-            this.label82.TabIndex = 95;
-            this.label82.Text = "Partição dos gastos do ano";
             // 
             // panel5
             // 
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.pictureBox7);
             this.panel5.Controls.Add(this.label76);
             this.panel5.Controls.Add(this.label77);
-            this.panel5.Location = new System.Drawing.Point(592, 28);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(268, 72);
-            this.panel5.TabIndex = 91;
             // 
             // pictureBox7
             // 
+            resources.ApplyResources(this.pictureBox7, "pictureBox7");
             this.pictureBox7.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
-            this.pictureBox7.Location = new System.Drawing.Point(215, 3);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox7.TabIndex = 3;
             this.pictureBox7.TabStop = false;
             // 
             // label76
             // 
-            this.label76.AutoSize = true;
+            resources.ApplyResources(this.label76, "label76");
             this.label76.BackColor = System.Drawing.Color.Transparent;
-            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label76.ForeColor = System.Drawing.Color.DarkGray;
-            this.label76.Location = new System.Drawing.Point(3, 2);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(141, 15);
-            this.label76.TabIndex = 2;
-            this.label76.Text = "Manutenções no ano";
             // 
             // label77
             // 
-            this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label77, "label77");
             this.label77.ForeColor = System.Drawing.Color.IndianRed;
-            this.label77.Location = new System.Drawing.Point(5, 27);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(82, 31);
-            this.label77.TabIndex = 1;
-            this.label77.Text = "99,99";
             // 
             // tabPageAbastecimento
             // 
+            resources.ApplyResources(this.tabPageAbastecimento, "tabPageAbastecimento");
             this.tabPageAbastecimento.Controls.Add(this.panel14);
             this.tabPageAbastecimento.Controls.Add(this.panel4);
             this.tabPageAbastecimento.Controls.Add(this.btnAdicionarComprovante);
@@ -809,142 +673,101 @@
             this.tabPageAbastecimento.Controls.Add(this.dtAbastecimento);
             this.tabPageAbastecimento.Controls.Add(this.lblDataAtual);
             this.tabPageAbastecimento.Controls.Add(this.groupBox1);
-            this.tabPageAbastecimento.Location = new System.Drawing.Point(4, 22);
             this.tabPageAbastecimento.Name = "tabPageAbastecimento";
-            this.tabPageAbastecimento.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAbastecimento.Size = new System.Drawing.Size(1278, 577);
-            this.tabPageAbastecimento.TabIndex = 0;
-            this.tabPageAbastecimento.Text = "Abastecimento";
             this.tabPageAbastecimento.UseVisualStyleBackColor = true;
             // 
             // panel14
             // 
+            resources.ApplyResources(this.panel14, "panel14");
             this.panel14.BackColor = System.Drawing.Color.White;
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.pictureBox8);
             this.panel14.Controls.Add(this.label68);
             this.panel14.Controls.Add(this.label69);
-            this.panel14.Location = new System.Drawing.Point(1020, 207);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(252, 71);
-            this.panel14.TabIndex = 91;
             // 
             // pictureBox8
             // 
+            resources.ApplyResources(this.pictureBox8, "pictureBox8");
             this.pictureBox8.Image = global::GestaoFrota.Properties.Resources.if_Move_distance_arrow_left_right_2630385;
-            this.pictureBox8.Location = new System.Drawing.Point(199, 20);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(47, 46);
-            this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
             // 
             // label68
             // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label68, "label68");
             this.label68.ForeColor = System.Drawing.Color.DarkGray;
-            this.label68.Location = new System.Drawing.Point(3, 2);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(88, 15);
-            this.label68.TabIndex = 2;
-            this.label68.Text = "Km rodados ";
             // 
             // label69
             // 
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label69, "label69");
             this.label69.ForeColor = System.Drawing.Color.Green;
-            this.label69.Location = new System.Drawing.Point(18, 27);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(87, 33);
-            this.label69.TabIndex = 1;
-            this.label69.Text = "99,99";
             // 
             // panel4
             // 
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.pictureBox5);
             this.panel4.Controls.Add(this.pictureBox6);
             this.panel4.Controls.Add(this.label66);
             this.panel4.Controls.Add(this.listBox3);
-            this.panel4.Location = new System.Drawing.Point(1020, 13);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(252, 188);
-            this.panel4.TabIndex = 88;
             // 
             // pictureBox5
             // 
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.Image = global::GestaoFrota.Properties.Resources.if_fuel_103260;
-            this.pictureBox5.Location = new System.Drawing.Point(181, 22);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox5.TabIndex = 13;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
             this.pictureBox6.Image = global::GestaoFrota.Properties.Resources.if_money_bag_309025;
-            this.pictureBox6.Location = new System.Drawing.Point(83, 21);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(55, 48);
-            this.pictureBox6.TabIndex = 14;
             this.pictureBox6.TabStop = false;
             // 
             // label66
             // 
-            this.label66.AutoSize = true;
+            resources.ApplyResources(this.label66, "label66");
             this.label66.BackColor = System.Drawing.Color.Transparent;
             this.label66.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label66.ForeColor = System.Drawing.Color.DarkGray;
-            this.label66.Location = new System.Drawing.Point(3, 2);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(133, 15);
-            this.label66.TabIndex = 2;
-            this.label66.Text = "Combustivel do ano";
             // 
             // listBox3
             // 
+            resources.ApplyResources(this.listBox3, "listBox3");
             this.listBox3.BackColor = System.Drawing.Color.White;
             this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox3.ForeColor = System.Drawing.Color.Black;
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 20;
-            this.listBox3.Location = new System.Drawing.Point(4, 74);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(243, 100);
-            this.listBox3.TabIndex = 97;
             // 
             // btnAdicionarComprovante
             // 
+            resources.ApplyResources(this.btnAdicionarComprovante, "btnAdicionarComprovante");
             this.btnAdicionarComprovante.BackColor = System.Drawing.Color.Khaki;
             this.btnAdicionarComprovante.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnAdicionarComprovante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarComprovante.Location = new System.Drawing.Point(734, 537);
             this.btnAdicionarComprovante.Name = "btnAdicionarComprovante";
-            this.btnAdicionarComprovante.Size = new System.Drawing.Size(137, 23);
-            this.btnAdicionarComprovante.TabIndex = 85;
-            this.btnAdicionarComprovante.Text = "Adicionar Comprovante";
             this.btnAdicionarComprovante.UseVisualStyleBackColor = false;
             this.btnAdicionarComprovante.Click += new System.EventHandler(this.btnAdicionarComprovante_Click);
             // 
             // btnVisualizarComprovanteAbastecimento
             // 
+            resources.ApplyResources(this.btnVisualizarComprovanteAbastecimento, "btnVisualizarComprovanteAbastecimento");
             this.btnVisualizarComprovanteAbastecimento.BackColor = System.Drawing.Color.Aquamarine;
             this.btnVisualizarComprovanteAbastecimento.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnVisualizarComprovanteAbastecimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarComprovanteAbastecimento.Location = new System.Drawing.Point(877, 537);
             this.btnVisualizarComprovanteAbastecimento.Name = "btnVisualizarComprovanteAbastecimento";
-            this.btnVisualizarComprovanteAbastecimento.Size = new System.Drawing.Size(137, 23);
-            this.btnVisualizarComprovanteAbastecimento.TabIndex = 84;
-            this.btnVisualizarComprovanteAbastecimento.Text = "Visualizar Comprovante";
             this.btnVisualizarComprovanteAbastecimento.UseVisualStyleBackColor = false;
             this.btnVisualizarComprovanteAbastecimento.Click += new System.EventHandler(this.btnVisualizarComprovanteAbastecimento_Click);
             // 
             // groupBox11
             // 
+            resources.ApplyResources(this.groupBox11, "groupBox11");
             this.groupBox11.Controls.Add(this.btnRemoverFiltroCombustivel);
             this.groupBox11.Controls.Add(this.cmbCombustivelAbastecimentoFiltro);
             this.groupBox11.Controls.Add(this.btnAplicarFiltroAbastecimentos);
@@ -953,114 +776,78 @@
             this.groupBox11.Controls.Add(this.label7);
             this.groupBox11.Controls.Add(this.dateTimePickerFiltroDataInicial);
             this.groupBox11.Controls.Add(this.label6);
-            this.groupBox11.Location = new System.Drawing.Point(262, 13);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(752, 128);
-            this.groupBox11.TabIndex = 23;
             this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Filtrar";
             // 
             // btnRemoverFiltroCombustivel
             // 
+            resources.ApplyResources(this.btnRemoverFiltroCombustivel, "btnRemoverFiltroCombustivel");
             this.btnRemoverFiltroCombustivel.BackColor = System.Drawing.Color.Khaki;
             this.btnRemoverFiltroCombustivel.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
-            this.btnRemoverFiltroCombustivel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoverFiltroCombustivel.Location = new System.Drawing.Point(222, 80);
             this.btnRemoverFiltroCombustivel.Name = "btnRemoverFiltroCombustivel";
-            this.btnRemoverFiltroCombustivel.Size = new System.Drawing.Size(117, 23);
-            this.btnRemoverFiltroCombustivel.TabIndex = 25;
-            this.btnRemoverFiltroCombustivel.Text = "Remover filtro";
             this.btnRemoverFiltroCombustivel.UseVisualStyleBackColor = false;
             this.btnRemoverFiltroCombustivel.Click += new System.EventHandler(this.btnRemoverFiltroCombustivel_Click);
             // 
             // cmbCombustivelAbastecimentoFiltro
             // 
+            resources.ApplyResources(this.cmbCombustivelAbastecimentoFiltro, "cmbCombustivelAbastecimentoFiltro");
             this.cmbCombustivelAbastecimentoFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCombustivelAbastecimentoFiltro.FormattingEnabled = true;
-            this.cmbCombustivelAbastecimentoFiltro.Location = new System.Drawing.Point(9, 82);
             this.cmbCombustivelAbastecimentoFiltro.Name = "cmbCombustivelAbastecimentoFiltro";
-            this.cmbCombustivelAbastecimentoFiltro.Size = new System.Drawing.Size(207, 21);
-            this.cmbCombustivelAbastecimentoFiltro.TabIndex = 24;
             // 
             // btnAplicarFiltroAbastecimentos
             // 
+            resources.ApplyResources(this.btnAplicarFiltroAbastecimentos, "btnAplicarFiltroAbastecimentos");
             this.btnAplicarFiltroAbastecimentos.BackColor = System.Drawing.Color.Moccasin;
             this.btnAplicarFiltroAbastecimentos.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
-            this.btnAplicarFiltroAbastecimentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAplicarFiltroAbastecimentos.Location = new System.Drawing.Point(423, 82);
             this.btnAplicarFiltroAbastecimentos.Name = "btnAplicarFiltroAbastecimentos";
-            this.btnAplicarFiltroAbastecimentos.Size = new System.Drawing.Size(75, 23);
-            this.btnAplicarFiltroAbastecimentos.TabIndex = 23;
-            this.btnAplicarFiltroAbastecimentos.Text = "Aplicar filtro";
             this.btnAplicarFiltroAbastecimentos.UseVisualStyleBackColor = false;
             this.btnAplicarFiltroAbastecimentos.Click += new System.EventHandler(this.btnAplicarFiltroAbastecimentos_Click);
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 66);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Tipo de combustivel";
             // 
             // dateTimePickerFilroDataFinal
             // 
-            this.dateTimePickerFilroDataFinal.Location = new System.Drawing.Point(264, 32);
+            resources.ApplyResources(this.dateTimePickerFilroDataFinal, "dateTimePickerFilroDataFinal");
             this.dateTimePickerFilroDataFinal.Name = "dateTimePickerFilroDataFinal";
-            this.dateTimePickerFilroDataFinal.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerFilroDataFinal.TabIndex = 4;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(264, 16);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Data final";
             // 
             // dateTimePickerFiltroDataInicial
             // 
-            this.dateTimePickerFiltroDataInicial.Location = new System.Drawing.Point(6, 32);
+            resources.ApplyResources(this.dateTimePickerFiltroDataInicial, "dateTimePickerFiltroDataInicial");
             this.dateTimePickerFiltroDataInicial.Name = "dateTimePickerFiltroDataInicial";
-            this.dateTimePickerFiltroDataInicial.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerFiltroDataInicial.TabIndex = 2;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 16);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Data inicial";
             // 
             // dtAbastecimento
             // 
+            resources.ApplyResources(this.dtAbastecimento, "dtAbastecimento");
             this.dtAbastecimento.AllowUserToAddRows = false;
             this.dtAbastecimento.AllowUserToDeleteRows = false;
             this.dtAbastecimento.AllowUserToResizeColumns = false;
             this.dtAbastecimento.AllowUserToResizeRows = false;
             this.dtAbastecimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtAbastecimento.Location = new System.Drawing.Point(262, 147);
             this.dtAbastecimento.Name = "dtAbastecimento";
             this.dtAbastecimento.ReadOnly = true;
-            this.dtAbastecimento.Size = new System.Drawing.Size(752, 384);
-            this.dtAbastecimento.TabIndex = 22;
             // 
             // lblDataAtual
             // 
-            this.lblDataAtual.AutoSize = true;
-            this.lblDataAtual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataAtual.Location = new System.Drawing.Point(8, 13);
+            resources.ApplyResources(this.lblDataAtual, "lblDataAtual");
             this.lblDataAtual.Name = "lblDataAtual";
-            this.lblDataAtual.Size = new System.Drawing.Size(41, 16);
-            this.lblDataAtual.TabIndex = 21;
-            this.lblDataAtual.Text = "Data";
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.btnAnexarComprovante);
             this.groupBox1.Controls.Add(this.label37);
             this.groupBox1.Controls.Add(this.txtPathComprovanteAbastecimento);
@@ -1075,136 +862,89 @@
             this.groupBox1.Controls.Add(this.cmbCombustivelAbastecimento);
             this.groupBox1.Controls.Add(this.dateTimePickerAbastecimento);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(8, 33);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(249, 294);
-            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Inserir abastecimento";
             // 
             // btnAnexarComprovante
             // 
-            this.btnAnexarComprovante.Location = new System.Drawing.Point(206, 236);
+            resources.ApplyResources(this.btnAnexarComprovante, "btnAnexarComprovante");
             this.btnAnexarComprovante.Name = "btnAnexarComprovante";
-            this.btnAnexarComprovante.Size = new System.Drawing.Size(34, 23);
-            this.btnAnexarComprovante.TabIndex = 23;
-            this.btnAnexarComprovante.Text = "...";
             this.btnAnexarComprovante.UseVisualStyleBackColor = true;
             this.btnAnexarComprovante.Click += new System.EventHandler(this.btnAnexarComprovante_Click);
             // 
             // label37
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(6, 222);
+            resources.ApplyResources(this.label37, "label37");
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(105, 13);
-            this.label37.TabIndex = 24;
-            this.label37.Text = "Anexar comprovante";
             // 
             // txtPathComprovanteAbastecimento
             // 
-            this.txtPathComprovanteAbastecimento.Location = new System.Drawing.Point(6, 238);
+            resources.ApplyResources(this.txtPathComprovanteAbastecimento, "txtPathComprovanteAbastecimento");
             this.txtPathComprovanteAbastecimento.Name = "txtPathComprovanteAbastecimento";
-            this.txtPathComprovanteAbastecimento.Size = new System.Drawing.Size(196, 20);
-            this.txtPathComprovanteAbastecimento.TabIndex = 22;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 183);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 13);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Qntd. ( Litros/m³)";
             // 
             // txtQuantidadeAbastecimento
             // 
-            this.txtQuantidadeAbastecimento.Location = new System.Drawing.Point(6, 199);
+            resources.ApplyResources(this.txtQuantidadeAbastecimento, "txtQuantidadeAbastecimento");
             this.txtQuantidadeAbastecimento.Name = "txtQuantidadeAbastecimento";
-            this.txtQuantidadeAbastecimento.Size = new System.Drawing.Size(100, 20);
-            this.txtQuantidadeAbastecimento.TabIndex = 21;
             // 
             // btnInserirAbastecimento
             // 
+            resources.ApplyResources(this.btnInserirAbastecimento, "btnInserirAbastecimento");
             this.btnInserirAbastecimento.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnInserirAbastecimento.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.btnInserirAbastecimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInserirAbastecimento.Location = new System.Drawing.Point(165, 267);
             this.btnInserirAbastecimento.Name = "btnInserirAbastecimento";
-            this.btnInserirAbastecimento.Size = new System.Drawing.Size(75, 23);
-            this.btnInserirAbastecimento.TabIndex = 24;
-            this.btnInserirAbastecimento.Text = "Lançar";
             this.btnInserirAbastecimento.UseVisualStyleBackColor = false;
             this.btnInserirAbastecimento.Click += new System.EventHandler(this.btnInserirAbastecimento_Click);
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 144);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 13);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "KM";
             // 
             // txtKMAbastecimento
             // 
-            this.txtKMAbastecimento.Location = new System.Drawing.Point(6, 160);
+            resources.ApplyResources(this.txtKMAbastecimento, "txtKMAbastecimento");
             this.txtKMAbastecimento.Name = "txtKMAbastecimento";
-            this.txtKMAbastecimento.Size = new System.Drawing.Size(100, 20);
-            this.txtKMAbastecimento.TabIndex = 18;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 105);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Valor (R$)";
             // 
             // txtValorAbastecimento
             // 
-            this.txtValorAbastecimento.Location = new System.Drawing.Point(6, 121);
+            resources.ApplyResources(this.txtValorAbastecimento, "txtValorAbastecimento");
             this.txtValorAbastecimento.Name = "txtValorAbastecimento";
-            this.txtValorAbastecimento.Size = new System.Drawing.Size(100, 20);
-            this.txtValorAbastecimento.TabIndex = 16;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 60);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Combustivel";
             // 
             // cmbCombustivelAbastecimento
             // 
+            resources.ApplyResources(this.cmbCombustivelAbastecimento, "cmbCombustivelAbastecimento");
             this.cmbCombustivelAbastecimento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCombustivelAbastecimento.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cmbCombustivelAbastecimento.Location = new System.Drawing.Point(6, 76);
             this.cmbCombustivelAbastecimento.Name = "cmbCombustivelAbastecimento";
-            this.cmbCombustivelAbastecimento.Size = new System.Drawing.Size(196, 21);
-            this.cmbCombustivelAbastecimento.TabIndex = 14;
             // 
             // dateTimePickerAbastecimento
             // 
-            this.dateTimePickerAbastecimento.Location = new System.Drawing.Point(6, 37);
+            resources.ApplyResources(this.dateTimePickerAbastecimento, "dateTimePickerAbastecimento");
             this.dateTimePickerAbastecimento.Name = "dateTimePickerAbastecimento";
-            this.dateTimePickerAbastecimento.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerAbastecimento.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 21);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Data";
             // 
             // tabPageManutencao
             // 
+            resources.ApplyResources(this.tabPageManutencao, "tabPageManutencao");
             this.tabPageManutencao.Controls.Add(this.btnTipoManutencao);
             this.tabPageManutencao.Controls.Add(this.tabControl2);
             this.tabPageManutencao.Controls.Add(this.panel8);
@@ -1212,41 +952,28 @@
             this.tabPageManutencao.Controls.Add(this.dtManutencao);
             this.tabPageManutencao.Controls.Add(this.btnVisualizarMecanicas);
             this.tabPageManutencao.Controls.Add(this.btnCadastrarMecanica);
-            this.tabPageManutencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageManutencao.Location = new System.Drawing.Point(4, 22);
             this.tabPageManutencao.Name = "tabPageManutencao";
-            this.tabPageManutencao.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageManutencao.Size = new System.Drawing.Size(1278, 577);
-            this.tabPageManutencao.TabIndex = 2;
-            this.tabPageManutencao.Text = "Manutenção";
             this.tabPageManutencao.UseVisualStyleBackColor = true;
             // 
             // btnTipoManutencao
             // 
-            this.btnTipoManutencao.Location = new System.Drawing.Point(411, 7);
+            resources.ApplyResources(this.btnTipoManutencao, "btnTipoManutencao");
             this.btnTipoManutencao.Name = "btnTipoManutencao";
-            this.btnTipoManutencao.Size = new System.Drawing.Size(157, 23);
-            this.btnTipoManutencao.TabIndex = 94;
-            this.btnTipoManutencao.Text = "Tipos de manutenção";
             this.btnTipoManutencao.UseVisualStyleBackColor = true;
             this.btnTipoManutencao.Click += new System.EventHandler(this.btnTipoManutencao_Click);
             // 
             // tabControl2
             // 
-            this.tabControl2.Alignment = System.Windows.Forms.TabAlignment.Left;
+            resources.ApplyResources(this.tabControl2, "tabControl2");
             this.tabControl2.Controls.Add(this.tabPage1);
             this.tabControl2.Controls.Add(this.tabPage2);
-            this.tabControl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl2.Location = new System.Drawing.Point(8, 42);
             this.tabControl2.Multiline = true;
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.ShowToolTips = true;
-            this.tabControl2.Size = new System.Drawing.Size(413, 535);
-            this.tabControl2.TabIndex = 93;
             // 
             // tabPage1
             // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.label111);
             this.tabPage1.Controls.Add(this.label110);
             this.tabPage1.Controls.Add(this.label109);
@@ -1263,175 +990,99 @@
             this.tabPage1.Controls.Add(this.label101);
             this.tabPage1.Controls.Add(this.label100);
             this.tabPage1.Controls.Add(this.label99);
-            this.tabPage1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(24, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(385, 527);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Detalhes";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // label111
             // 
-            this.label111.AutoSize = true;
-            this.label111.Location = new System.Drawing.Point(96, 81);
+            resources.ApplyResources(this.label111, "label111");
             this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(45, 14);
-            this.label111.TabIndex = 14;
-            this.label111.Text = "label111";
             // 
             // label110
             // 
-            this.label110.AutoSize = true;
-            this.label110.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label110.Location = new System.Drawing.Point(19, 81);
+            resources.ApplyResources(this.label110, "label110");
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(71, 14);
-            this.label110.TabIndex = 1;
-            this.label110.Text = "Tipo manu.:";
             // 
             // label109
             // 
-            this.label109.AutoSize = true;
-            this.label109.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label109.Location = new System.Drawing.Point(19, 117);
+            resources.ApplyResources(this.label109, "label109");
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(38, 14);
-            this.label109.TabIndex = 13;
-            this.label109.Text = "Valor:";
             // 
             // btnAnexaComprovanteManutencaoDepois
             // 
+            resources.ApplyResources(this.btnAnexaComprovanteManutencaoDepois, "btnAnexaComprovanteManutencaoDepois");
             this.btnAnexaComprovanteManutencaoDepois.BackColor = System.Drawing.Color.Khaki;
-            this.btnAnexaComprovanteManutencaoDepois.Enabled = false;
             this.btnAnexaComprovanteManutencaoDepois.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnAnexaComprovanteManutencaoDepois.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnexaComprovanteManutencaoDepois.Location = new System.Drawing.Point(236, 498);
             this.btnAnexaComprovanteManutencaoDepois.Name = "btnAnexaComprovanteManutencaoDepois";
-            this.btnAnexaComprovanteManutencaoDepois.Size = new System.Drawing.Size(137, 23);
-            this.btnAnexaComprovanteManutencaoDepois.TabIndex = 87;
-            this.btnAnexaComprovanteManutencaoDepois.Text = "Adicionar Comprovante";
             this.btnAnexaComprovanteManutencaoDepois.UseVisualStyleBackColor = false;
             this.btnAnexaComprovanteManutencaoDepois.Click += new System.EventHandler(this.btnAnexaComprovanteManutencaoDepois_Click);
             // 
             // label108
             // 
-            this.label108.AutoSize = true;
-            this.label108.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label108.Location = new System.Drawing.Point(19, 99);
+            resources.ApplyResources(this.label108, "label108");
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(27, 14);
-            this.label108.TabIndex = 12;
-            this.label108.Text = "KM:";
             // 
             // label107
             // 
-            this.label107.AutoSize = true;
-            this.label107.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label107.Location = new System.Drawing.Point(19, 63);
+            resources.ApplyResources(this.label107, "label107");
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(47, 14);
-            this.label107.TabIndex = 11;
-            this.label107.Text = "Oficina:";
             // 
             // label106
             // 
-            this.label106.AutoSize = true;
-            this.label106.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label106.Location = new System.Drawing.Point(19, 46);
+            resources.ApplyResources(this.label106, "label106");
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(33, 14);
-            this.label106.TabIndex = 10;
-            this.label106.Text = "Data:";
             // 
             // label105
             // 
-            this.label105.AutoSize = true;
-            this.label105.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label105.Location = new System.Drawing.Point(19, 139);
+            resources.ApplyResources(this.label105, "label105");
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(85, 14);
-            this.label105.TabIndex = 9;
-            this.label105.Text = "Comprovante:";
             // 
             // linkLabel1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(19, 154);
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(54, 14);
-            this.linkLabel1.TabIndex = 8;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 195);
-            this.textBox1.Multiline = true;
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(351, 297);
-            this.textBox1.TabIndex = 7;
             // 
             // label104
             // 
-            this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(19, 178);
+            resources.ApplyResources(this.label104, "label104");
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(54, 14);
-            this.label104.TabIndex = 5;
-            this.label104.Text = "Realizado";
             // 
             // label103
             // 
-            this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(96, 117);
+            resources.ApplyResources(this.label103, "label103");
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(47, 14);
-            this.label103.TabIndex = 4;
-            this.label103.Text = "label103";
             // 
             // label102
             // 
-            this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(96, 99);
+            resources.ApplyResources(this.label102, "label102");
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(47, 14);
-            this.label102.TabIndex = 3;
-            this.label102.Text = "label102";
             // 
             // label101
             // 
-            this.label101.AutoSize = true;
-            this.label101.Location = new System.Drawing.Point(96, 63);
+            resources.ApplyResources(this.label101, "label101");
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(47, 14);
-            this.label101.TabIndex = 2;
-            this.label101.Text = "label101";
             // 
             // label100
             // 
-            this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(96, 46);
+            resources.ApplyResources(this.label100, "label100");
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(47, 14);
-            this.label100.TabIndex = 1;
-            this.label100.Text = "label100";
             // 
             // label99
             // 
-            this.label99.AutoSize = true;
-            this.label99.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label99.Location = new System.Drawing.Point(16, 6);
+            resources.ApplyResources(this.label99, "label99");
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(70, 18);
-            this.label99.TabIndex = 0;
-            this.label99.Text = "Detalhes";
             // 
             // tabPage2
             // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.label98);
             this.tabPage2.Controls.Add(this.label97);
             this.tabPage2.Controls.Add(this.cmbTipoManutencao);
@@ -1449,372 +1100,252 @@
             this.tabPage2.Controls.Add(this.label32);
             this.tabPage2.Controls.Add(this.label34);
             this.tabPage2.Controls.Add(this.txtDescricaoManutencao);
-            this.tabPage2.Location = new System.Drawing.Point(24, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(385, 527);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Lançar manutenção";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // label98
             // 
-            this.label98.AutoSize = true;
-            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label98.Location = new System.Drawing.Point(16, 6);
+            resources.ApplyResources(this.label98, "label98");
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(151, 20);
-            this.label98.TabIndex = 63;
-            this.label98.Text = "Lançar manutenção";
             // 
             // label97
             // 
-            this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(16, 42);
+            resources.ApplyResources(this.label97, "label97");
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(238, 15);
-            this.label97.TabIndex = 62;
-            this.label97.Text = "Selecione o tipo de manutenção realizada";
             // 
             // cmbTipoManutencao
             // 
+            resources.ApplyResources(this.cmbTipoManutencao, "cmbTipoManutencao");
             this.cmbTipoManutencao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoManutencao.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cmbTipoManutencao.Location = new System.Drawing.Point(16, 59);
             this.cmbTipoManutencao.Name = "cmbTipoManutencao";
-            this.cmbTipoManutencao.Size = new System.Drawing.Size(296, 23);
-            this.cmbTipoManutencao.TabIndex = 61;
             // 
             // btnAnexarComprovanteManutencao
             // 
-            this.btnAnexarComprovanteManutencao.Location = new System.Drawing.Point(278, 448);
+            resources.ApplyResources(this.btnAnexarComprovanteManutencao, "btnAnexarComprovanteManutencao");
             this.btnAnexarComprovanteManutencao.Name = "btnAnexarComprovanteManutencao";
-            this.btnAnexarComprovanteManutencao.Size = new System.Drawing.Size(34, 23);
-            this.btnAnexarComprovanteManutencao.TabIndex = 53;
-            this.btnAnexarComprovanteManutencao.Text = "...";
             this.btnAnexarComprovanteManutencao.UseVisualStyleBackColor = true;
             // 
             // label26
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(18, 91);
+            resources.ApplyResources(this.label26, "label26");
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(283, 15);
-            this.label26.TabIndex = 55;
-            this.label26.Text = "Selecione a empresa que executou a manutenção";
             // 
             // label40
             // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(17, 406);
+            resources.ApplyResources(this.label40, "label40");
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(119, 15);
-            this.label40.TabIndex = 60;
-            this.label40.Text = "Anexar comprovante";
             // 
             // cmbMecanica
             // 
+            resources.ApplyResources(this.cmbMecanica, "cmbMecanica");
             this.cmbMecanica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMecanica.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cmbMecanica.Location = new System.Drawing.Point(17, 110);
             this.cmbMecanica.Name = "cmbMecanica";
-            this.cmbMecanica.Size = new System.Drawing.Size(295, 23);
-            this.cmbMecanica.TabIndex = 47;
             // 
             // txtPathComprovanteManutencao
             // 
-            this.txtPathComprovanteManutencao.Location = new System.Drawing.Point(17, 422);
+            resources.ApplyResources(this.txtPathComprovanteManutencao, "txtPathComprovanteManutencao");
             this.txtPathComprovanteManutencao.Name = "txtPathComprovanteManutencao";
-            this.txtPathComprovanteManutencao.Size = new System.Drawing.Size(295, 21);
-            this.txtPathComprovanteManutencao.TabIndex = 52;
             // 
             // label33
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(17, 136);
+            resources.ApplyResources(this.label33, "label33");
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(33, 15);
-            this.label33.TabIndex = 56;
-            this.label33.Text = "Data";
             // 
             // label36
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(17, 216);
+            resources.ApplyResources(this.label36, "label36");
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(26, 15);
-            this.label36.TabIndex = 59;
-            this.label36.Text = "KM";
             // 
             // dateTimePickerManutencao
             // 
-            this.dateTimePickerManutencao.Location = new System.Drawing.Point(17, 152);
+            resources.ApplyResources(this.dateTimePickerManutencao, "dateTimePickerManutencao");
             this.dateTimePickerManutencao.Name = "dateTimePickerManutencao";
-            this.dateTimePickerManutencao.Size = new System.Drawing.Size(234, 21);
-            this.dateTimePickerManutencao.TabIndex = 48;
             // 
             // txtKMManutencao
             // 
-            this.txtKMManutencao.Location = new System.Drawing.Point(17, 232);
+            resources.ApplyResources(this.txtKMManutencao, "txtKMManutencao");
             this.txtKMManutencao.Name = "txtKMManutencao";
-            this.txtKMManutencao.Size = new System.Drawing.Size(100, 21);
-            this.txtKMManutencao.TabIndex = 50;
             // 
             // txtValorManutencao
             // 
-            this.txtValorManutencao.Location = new System.Drawing.Point(17, 192);
+            resources.ApplyResources(this.txtValorManutencao, "txtValorManutencao");
             this.txtValorManutencao.Name = "txtValorManutencao";
-            this.txtValorManutencao.Size = new System.Drawing.Size(100, 21);
-            this.txtValorManutencao.TabIndex = 49;
             // 
             // btnLancarManutencao
             // 
+            resources.ApplyResources(this.btnLancarManutencao, "btnLancarManutencao");
             this.btnLancarManutencao.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnLancarManutencao.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.btnLancarManutencao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLancarManutencao.Location = new System.Drawing.Point(236, 481);
             this.btnLancarManutencao.Name = "btnLancarManutencao";
-            this.btnLancarManutencao.Size = new System.Drawing.Size(76, 31);
-            this.btnLancarManutencao.TabIndex = 54;
-            this.btnLancarManutencao.Text = "Lançar";
             this.btnLancarManutencao.UseVisualStyleBackColor = false;
             this.btnLancarManutencao.Click += new System.EventHandler(this.btnLancarManutencao_Click_1);
             // 
             // label32
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(17, 176);
+            resources.ApplyResources(this.label32, "label32");
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(62, 15);
-            this.label32.TabIndex = 57;
-            this.label32.Text = "Valor (R$)";
             // 
             // label34
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(17, 256);
+            resources.ApplyResources(this.label34, "label34");
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(120, 15);
-            this.label34.TabIndex = 58;
-            this.label34.Text = "Descrição do serviço";
             // 
             // txtDescricaoManutencao
             // 
-            this.txtDescricaoManutencao.Location = new System.Drawing.Point(17, 272);
-            this.txtDescricaoManutencao.Multiline = true;
+            resources.ApplyResources(this.txtDescricaoManutencao, "txtDescricaoManutencao");
             this.txtDescricaoManutencao.Name = "txtDescricaoManutencao";
-            this.txtDescricaoManutencao.Size = new System.Drawing.Size(295, 130);
-            this.txtDescricaoManutencao.TabIndex = 51;
             // 
             // panel8
             // 
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.pictureBox12);
             this.panel8.Controls.Add(this.label80);
             this.panel8.Controls.Add(this.label81);
-            this.panel8.Location = new System.Drawing.Point(939, 42);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(193, 94);
-            this.panel8.TabIndex = 92;
             // 
             // pictureBox12
             // 
+            resources.ApplyResources(this.pictureBox12, "pictureBox12");
             this.pictureBox12.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
-            this.pictureBox12.Location = new System.Drawing.Point(3, 39);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox12.TabIndex = 3;
             this.pictureBox12.TabStop = false;
             // 
             // label80
             // 
-            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label80, "label80");
             this.label80.ForeColor = System.Drawing.Color.DarkGray;
-            this.label80.Location = new System.Drawing.Point(3, 8);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(164, 15);
-            this.label80.TabIndex = 2;
-            this.label80.Text = "Manutenções realizadas";
             // 
             // label81
             // 
-            this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label81, "label81");
             this.label81.ForeColor = System.Drawing.Color.Red;
-            this.label81.Location = new System.Drawing.Point(51, 56);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(55, 24);
-            this.label81.TabIndex = 1;
-            this.label81.Text = "99,99";
             // 
             // groupBox26
             // 
+            resources.ApplyResources(this.groupBox26, "groupBox26");
             this.groupBox26.Controls.Add(this.btnAplicarFiltroMecanica);
             this.groupBox26.Controls.Add(this.dateTimePickerDataFinalMecanicaFiltro);
             this.groupBox26.Controls.Add(this.label41);
             this.groupBox26.Controls.Add(this.dateTimePickerDataIncialMecanicaFiltro);
             this.groupBox26.Controls.Add(this.label42);
-            this.groupBox26.Location = new System.Drawing.Point(427, 36);
             this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(506, 100);
-            this.groupBox26.TabIndex = 27;
             this.groupBox26.TabStop = false;
-            this.groupBox26.Text = "Filtrar";
             // 
             // btnAplicarFiltroMecanica
             // 
+            resources.ApplyResources(this.btnAplicarFiltroMecanica, "btnAplicarFiltroMecanica");
             this.btnAplicarFiltroMecanica.BackColor = System.Drawing.Color.Moccasin;
             this.btnAplicarFiltroMecanica.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
-            this.btnAplicarFiltroMecanica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAplicarFiltroMecanica.Location = new System.Drawing.Point(423, 63);
             this.btnAplicarFiltroMecanica.Name = "btnAplicarFiltroMecanica";
-            this.btnAplicarFiltroMecanica.Size = new System.Drawing.Size(75, 23);
-            this.btnAplicarFiltroMecanica.TabIndex = 23;
-            this.btnAplicarFiltroMecanica.Text = "Aplicar filtro";
             this.btnAplicarFiltroMecanica.UseVisualStyleBackColor = false;
             this.btnAplicarFiltroMecanica.Click += new System.EventHandler(this.btnAplicarFiltroMecanica_Click);
             // 
             // dateTimePickerDataFinalMecanicaFiltro
             // 
-            this.dateTimePickerDataFinalMecanicaFiltro.Location = new System.Drawing.Point(264, 32);
+            resources.ApplyResources(this.dateTimePickerDataFinalMecanicaFiltro, "dateTimePickerDataFinalMecanicaFiltro");
             this.dateTimePickerDataFinalMecanicaFiltro.Name = "dateTimePickerDataFinalMecanicaFiltro";
-            this.dateTimePickerDataFinalMecanicaFiltro.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerDataFinalMecanicaFiltro.TabIndex = 4;
             // 
             // label41
             // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(264, 16);
+            resources.ApplyResources(this.label41, "label41");
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(52, 13);
-            this.label41.TabIndex = 5;
-            this.label41.Text = "Data final";
             // 
             // dateTimePickerDataIncialMecanicaFiltro
             // 
-            this.dateTimePickerDataIncialMecanicaFiltro.Location = new System.Drawing.Point(6, 32);
+            resources.ApplyResources(this.dateTimePickerDataIncialMecanicaFiltro, "dateTimePickerDataIncialMecanicaFiltro");
             this.dateTimePickerDataIncialMecanicaFiltro.Name = "dateTimePickerDataIncialMecanicaFiltro";
-            this.dateTimePickerDataIncialMecanicaFiltro.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerDataIncialMecanicaFiltro.TabIndex = 2;
             // 
             // label42
             // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(6, 16);
+            resources.ApplyResources(this.label42, "label42");
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(59, 13);
-            this.label42.TabIndex = 3;
-            this.label42.Text = "Data inicial";
             // 
             // dtManutencao
             // 
+            resources.ApplyResources(this.dtManutencao, "dtManutencao");
             this.dtManutencao.AllowUserToAddRows = false;
             this.dtManutencao.AllowUserToDeleteRows = false;
             this.dtManutencao.AllowUserToResizeColumns = false;
             this.dtManutencao.AllowUserToResizeRows = false;
             this.dtManutencao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtManutencao.Location = new System.Drawing.Point(427, 142);
             this.dtManutencao.Name = "dtManutencao";
             this.dtManutencao.ReadOnly = true;
-            this.dtManutencao.Size = new System.Drawing.Size(705, 435);
-            this.dtManutencao.TabIndex = 23;
             this.dtManutencao.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtManutencao_CellMouseClick);
             // 
             // btnVisualizarMecanicas
             // 
-            this.btnVisualizarMecanicas.Location = new System.Drawing.Point(185, 6);
+            resources.ApplyResources(this.btnVisualizarMecanicas, "btnVisualizarMecanicas");
             this.btnVisualizarMecanicas.Name = "btnVisualizarMecanicas";
-            this.btnVisualizarMecanicas.Size = new System.Drawing.Size(220, 23);
-            this.btnVisualizarMecanicas.TabIndex = 1;
-            this.btnVisualizarMecanicas.Text = "Visualizar Mecânicas/Elétricas cadastradas";
             this.btnVisualizarMecanicas.UseVisualStyleBackColor = true;
             this.btnVisualizarMecanicas.Click += new System.EventHandler(this.btnVisualizarMecanicas_Click);
             // 
             // btnCadastrarMecanica
             // 
-            this.btnCadastrarMecanica.Location = new System.Drawing.Point(8, 6);
+            resources.ApplyResources(this.btnCadastrarMecanica, "btnCadastrarMecanica");
             this.btnCadastrarMecanica.Name = "btnCadastrarMecanica";
-            this.btnCadastrarMecanica.Size = new System.Drawing.Size(171, 23);
-            this.btnCadastrarMecanica.TabIndex = 0;
-            this.btnCadastrarMecanica.Text = "Cadastrar Mecânica ou Elétrica";
             this.btnCadastrarMecanica.UseVisualStyleBackColor = true;
             this.btnCadastrarMecanica.Click += new System.EventHandler(this.btnCadastrarMecanica_Click);
             // 
             // tabPageDocumento
             // 
+            resources.ApplyResources(this.tabPageDocumento, "tabPageDocumento");
             this.tabPageDocumento.Controls.Add(this.groupBox3);
             this.tabPageDocumento.Controls.Add(this.groupBox2);
             this.tabPageDocumento.Controls.Add(this.groupBox36);
-            this.tabPageDocumento.Controls.Add(this.groupBox21);
             this.tabPageDocumento.Controls.Add(this.label92);
             this.tabPageDocumento.Controls.Add(this.dtPagamentoDocumento);
             this.tabPageDocumento.Controls.Add(this.groupBox20);
-            this.tabPageDocumento.Controls.Add(this.groupBoxSeuCarroFIPE);
-            this.tabPageDocumento.Location = new System.Drawing.Point(4, 22);
             this.tabPageDocumento.Name = "tabPageDocumento";
-            this.tabPageDocumento.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDocumento.Size = new System.Drawing.Size(1278, 577);
-            this.tabPageDocumento.TabIndex = 1;
-            this.tabPageDocumento.Text = "Documento";
             this.tabPageDocumento.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
+            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Controls.Add(this.btnCancelarInformarPagamentoDocumento);
             this.groupBox3.Controls.Add(this.btnInformarPagamentoDocumento);
             this.groupBox3.Controls.Add(this.dateTimePickerDataPagamentoDocumento2);
             this.groupBox3.Controls.Add(this.labelDataPagamentoDocumento2);
-            this.groupBox3.Location = new System.Drawing.Point(529, 475);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(281, 96);
-            this.groupBox3.TabIndex = 123;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Informar pagamento";
             // 
             // btnCancelarInformarPagamentoDocumento
             // 
+            resources.ApplyResources(this.btnCancelarInformarPagamentoDocumento, "btnCancelarInformarPagamentoDocumento");
             this.btnCancelarInformarPagamentoDocumento.BackColor = System.Drawing.Color.Coral;
             this.btnCancelarInformarPagamentoDocumento.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.btnCancelarInformarPagamentoDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelarInformarPagamentoDocumento.Location = new System.Drawing.Point(14, 65);
             this.btnCancelarInformarPagamentoDocumento.Name = "btnCancelarInformarPagamentoDocumento";
-            this.btnCancelarInformarPagamentoDocumento.Size = new System.Drawing.Size(63, 23);
-            this.btnCancelarInformarPagamentoDocumento.TabIndex = 111;
-            this.btnCancelarInformarPagamentoDocumento.Text = "Cancelar";
             this.btnCancelarInformarPagamentoDocumento.UseVisualStyleBackColor = false;
             this.btnCancelarInformarPagamentoDocumento.Click += new System.EventHandler(this.btnCancelarInformarPagamentoDocumento_Click);
             // 
             // btnInformarPagamentoDocumento
             // 
+            resources.ApplyResources(this.btnInformarPagamentoDocumento, "btnInformarPagamentoDocumento");
             this.btnInformarPagamentoDocumento.BackColor = System.Drawing.Color.Orange;
             this.btnInformarPagamentoDocumento.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.btnInformarPagamentoDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInformarPagamentoDocumento.Location = new System.Drawing.Point(139, 65);
             this.btnInformarPagamentoDocumento.Name = "btnInformarPagamentoDocumento";
-            this.btnInformarPagamentoDocumento.Size = new System.Drawing.Size(119, 23);
-            this.btnInformarPagamentoDocumento.TabIndex = 110;
-            this.btnInformarPagamentoDocumento.Text = "Informar pagamento";
             this.btnInformarPagamentoDocumento.UseVisualStyleBackColor = false;
             this.btnInformarPagamentoDocumento.Click += new System.EventHandler(this.btnInformarPagamentoDocumento_Click);
             // 
             // dateTimePickerDataPagamentoDocumento2
             // 
-            this.dateTimePickerDataPagamentoDocumento2.Location = new System.Drawing.Point(24, 38);
+            resources.ApplyResources(this.dateTimePickerDataPagamentoDocumento2, "dateTimePickerDataPagamentoDocumento2");
             this.dateTimePickerDataPagamentoDocumento2.Name = "dateTimePickerDataPagamentoDocumento2";
-            this.dateTimePickerDataPagamentoDocumento2.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerDataPagamentoDocumento2.TabIndex = 108;
             // 
             // labelDataPagamentoDocumento2
             // 
-            this.labelDataPagamentoDocumento2.AutoSize = true;
-            this.labelDataPagamentoDocumento2.Location = new System.Drawing.Point(22, 22);
+            resources.ApplyResources(this.labelDataPagamentoDocumento2, "labelDataPagamentoDocumento2");
             this.labelDataPagamentoDocumento2.Name = "labelDataPagamentoDocumento2";
-            this.labelDataPagamentoDocumento2.Size = new System.Drawing.Size(101, 13);
-            this.labelDataPagamentoDocumento2.TabIndex = 109;
-            this.labelDataPagamentoDocumento2.Text = "Data do pagamento";
             // 
             // groupBox2
             // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.txtCodigoPostal);
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Controls.Add(this.txtMedidaPneus);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.lblMensagem);
             this.groupBox2.Controls.Add(this.txtNomeEndereco);
@@ -1836,9 +1367,7 @@
             this.groupBox2.Controls.Add(this.cmbCombustivel);
             this.groupBox2.Controls.Add(this.txtCidade);
             this.groupBox2.Controls.Add(this.label87);
-            this.groupBox2.Controls.Add(this.label21);
             this.groupBox2.Controls.Add(this.label44);
-            this.groupBox2.Controls.Add(this.cmbUf);
             this.groupBox2.Controls.Add(this.label75);
             this.groupBox2.Controls.Add(this.txtChassi);
             this.groupBox2.Controls.Add(this.btnAnexarDocumento);
@@ -1858,422 +1387,262 @@
             this.groupBox2.Controls.Add(this.label72);
             this.groupBox2.Controls.Add(this.txtAnoModelo);
             this.groupBox2.Controls.Add(this.label25);
-            this.groupBox2.Location = new System.Drawing.Point(8, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(512, 559);
-            this.groupBox2.TabIndex = 122;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "DADOS DO DOCUMENTO";
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // txtCodigoPostal
+            // 
+            resources.ApplyResources(this.txtCodigoPostal, "txtCodigoPostal");
+            this.txtCodigoPostal.Name = "txtCodigoPostal";
+            // 
+            // label27
+            // 
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.Name = "label27";
+            // 
+            // txtMedidaPneus
+            // 
+            resources.ApplyResources(this.txtMedidaPneus, "txtMedidaPneus");
+            this.txtMedidaPneus.Name = "txtMedidaPneus";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 31);
+            resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 13);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Cod. Renavam";
             // 
             // lblMensagem
             // 
-            this.lblMensagem.AutoSize = true;
+            resources.ApplyResources(this.lblMensagem, "lblMensagem");
             this.lblMensagem.ForeColor = System.Drawing.Color.Red;
-            this.lblMensagem.Location = new System.Drawing.Point(16, 502);
             this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(35, 13);
-            this.lblMensagem.TabIndex = 81;
-            this.lblMensagem.Text = "label3";
             // 
             // txtNomeEndereco
             // 
-            this.txtNomeEndereco.Location = new System.Drawing.Point(16, 134);
-            this.txtNomeEndereco.Multiline = true;
+            resources.ApplyResources(this.txtNomeEndereco, "txtNomeEndereco");
             this.txtNomeEndereco.Name = "txtNomeEndereco";
-            this.txtNomeEndereco.Size = new System.Drawing.Size(476, 59);
-            this.txtNomeEndereco.TabIndex = 2;
             // 
             // txtRenavam
             // 
+            resources.ApplyResources(this.txtRenavam, "txtRenavam");
             this.txtRenavam.BackColor = System.Drawing.SystemColors.Window;
-            this.txtRenavam.Location = new System.Drawing.Point(16, 46);
             this.txtRenavam.Name = "txtRenavam";
-            this.txtRenavam.Size = new System.Drawing.Size(149, 20);
-            this.txtRenavam.TabIndex = 0;
             // 
             // btnSalvar
             // 
+            resources.ApplyResources(this.btnSalvar, "btnSalvar");
             this.btnSalvar.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Location = new System.Drawing.Point(352, 524);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 81;
-            this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtCPFCNPJ
             // 
-            this.txtCPFCNPJ.Location = new System.Drawing.Point(171, 46);
+            resources.ApplyResources(this.txtCPFCNPJ, "txtCPFCNPJ");
             this.txtCPFCNPJ.Name = "txtCPFCNPJ";
-            this.txtCPFCNPJ.Size = new System.Drawing.Size(156, 20);
-            this.txtCPFCNPJ.TabIndex = 1;
             // 
             // label96
             // 
-            this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(10, 119);
+            resources.ApplyResources(this.label96, "label96");
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(86, 13);
-            this.label96.TabIndex = 121;
-            this.label96.Text = "Nome/Endereço";
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(173, 31);
+            resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(59, 13);
-            this.label16.TabIndex = 106;
-            this.label16.Text = "CPF/CNPJ";
             // 
             // btnEditar
             // 
+            resources.ApplyResources(this.btnEditar, "btnEditar");
             this.btnEditar.BackColor = System.Drawing.Color.LightSalmon;
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.LightSalmon;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Location = new System.Drawing.Point(431, 524);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 82;
-            this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txtPlaca
             // 
-            this.txtPlaca.Location = new System.Drawing.Point(334, 46);
+            resources.ApplyResources(this.txtPlaca, "txtPlaca");
             this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(85, 20);
-            this.txtPlaca.TabIndex = 3;
             // 
             // btnCancelar
             // 
+            resources.ApplyResources(this.btnCancelar, "btnCancelar");
             this.btnCancelar.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(273, 524);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 83;
-            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(331, 31);
+            resources.ApplyResources(this.label17, "label17");
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(34, 13);
-            this.label17.TabIndex = 107;
-            this.label17.Text = "Placa";
             // 
             // txtAnexarDocumento
             // 
-            this.txtAnexarDocumento.Location = new System.Drawing.Point(216, 354);
+            resources.ApplyResources(this.txtAnexarDocumento, "txtAnexarDocumento");
             this.txtAnexarDocumento.Name = "txtAnexarDocumento";
-            this.txtAnexarDocumento.Size = new System.Drawing.Size(236, 20);
-            this.txtAnexarDocumento.TabIndex = 90;
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(16, 75);
+            resources.ApplyResources(this.label18, "label18");
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(40, 13);
-            this.label18.TabIndex = 108;
-            this.label18.Text = "Cidade";
             // 
             // txtKilometragem
             // 
-            this.txtKilometragem.Location = new System.Drawing.Point(109, 354);
+            resources.ApplyResources(this.txtKilometragem, "txtKilometragem");
             this.txtKilometragem.Name = "txtKilometragem";
-            this.txtKilometragem.Size = new System.Drawing.Size(95, 20);
-            this.txtKilometragem.TabIndex = 15;
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(284, 75);
+            resources.ApplyResources(this.label19, "label19");
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(38, 13);
-            this.label19.TabIndex = 109;
-            this.label19.Text = "Chassi";
             // 
             // txtDataAquisicao
             // 
-            this.txtDataAquisicao.Location = new System.Drawing.Point(16, 354);
-            this.txtDataAquisicao.Mask = "00/00/0000";
+            resources.ApplyResources(this.txtDataAquisicao, "txtDataAquisicao");
             this.txtDataAquisicao.Name = "txtDataAquisicao";
-            this.txtDataAquisicao.Size = new System.Drawing.Size(72, 20);
-            this.txtDataAquisicao.TabIndex = 14;
             this.txtDataAquisicao.ValidatingType = typeof(System.DateTime);
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(16, 202);
+            resources.ApplyResources(this.label20, "label20");
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(37, 13);
-            this.label20.TabIndex = 110;
-            this.label20.Text = "Marca";
             // 
             // cmbCombustivel
             // 
+            resources.ApplyResources(this.cmbCombustivel, "cmbCombustivel");
             this.cmbCombustivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCombustivel.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cmbCombustivel.Location = new System.Drawing.Point(277, 307);
             this.cmbCombustivel.Name = "cmbCombustivel";
-            this.cmbCombustivel.Size = new System.Drawing.Size(157, 21);
-            this.cmbCombustivel.TabIndex = 13;
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(16, 90);
+            resources.ApplyResources(this.txtCidade, "txtCidade");
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(200, 20);
-            this.txtCidade.TabIndex = 4;
             // 
             // label87
             // 
-            this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(108, 339);
+            resources.ApplyResources(this.label87, "label87");
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(77, 13);
-            this.label87.TabIndex = 120;
-            this.label87.Text = "Quilometragem";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(222, 75);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(21, 13);
-            this.label21.TabIndex = 111;
-            this.label21.Text = "UF";
             // 
             // label44
             // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(216, 338);
+            resources.ApplyResources(this.label44, "label44");
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(150, 13);
-            this.label44.TabIndex = 91;
-            this.label44.Text = "Anexar documento do veículo";
-            // 
-            // cmbUf
-            // 
-            this.cmbUf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUf.FormattingEnabled = true;
-            this.cmbUf.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC",
-            "SP",
-            "SE",
-            "TO"});
-            this.cmbUf.Location = new System.Drawing.Point(224, 90);
-            this.cmbUf.Name = "cmbUf";
-            this.cmbUf.Size = new System.Drawing.Size(55, 21);
-            this.cmbUf.TabIndex = 5;
             // 
             // label75
             // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(12, 339);
+            resources.ApplyResources(this.label75, "label75");
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(79, 13);
-            this.label75.TabIndex = 119;
-            this.label75.Text = "Data Aquisição";
             // 
             // txtChassi
             // 
+            resources.ApplyResources(this.txtChassi, "txtChassi");
             this.txtChassi.BackColor = System.Drawing.Color.White;
-            this.txtChassi.Location = new System.Drawing.Point(287, 90);
             this.txtChassi.Name = "txtChassi";
-            this.txtChassi.Size = new System.Drawing.Size(205, 20);
-            this.txtChassi.TabIndex = 6;
             // 
             // btnAnexarDocumento
             // 
-            this.btnAnexarDocumento.Location = new System.Drawing.Point(458, 352);
+            resources.ApplyResources(this.btnAnexarDocumento, "btnAnexarDocumento");
             this.btnAnexarDocumento.Name = "btnAnexarDocumento";
-            this.btnAnexarDocumento.Size = new System.Drawing.Size(34, 23);
-            this.btnAnexarDocumento.TabIndex = 92;
-            this.btnAnexarDocumento.Text = "...";
             this.btnAnexarDocumento.UseVisualStyleBackColor = true;
             this.btnAnexarDocumento.Click += new System.EventHandler(this.btnAnexarDocumento_Click);
             // 
             // label22
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(85, 247);
+            resources.ApplyResources(this.label22, "label22");
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(64, 13);
-            this.label22.TabIndex = 112;
-            this.label22.Text = "Ano Modelo";
             // 
             // label74
             // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(276, 292);
+            resources.ApplyResources(this.label74, "label74");
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(66, 13);
-            this.label74.TabIndex = 118;
-            this.label74.Text = "Combustível";
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(15, 247);
+            resources.ApplyResources(this.label23, "label23");
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(47, 13);
-            this.label23.TabIndex = 113;
-            this.label23.Text = "Ano Fab";
             // 
             // btnVisualizarDocumento
             // 
+            resources.ApplyResources(this.btnVisualizarDocumento, "btnVisualizarDocumento");
             this.btnVisualizarDocumento.BackColor = System.Drawing.Color.Aquamarine;
             this.btnVisualizarDocumento.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnVisualizarDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarDocumento.Location = new System.Drawing.Point(355, 380);
             this.btnVisualizarDocumento.Name = "btnVisualizarDocumento";
-            this.btnVisualizarDocumento.Size = new System.Drawing.Size(137, 23);
-            this.btnVisualizarDocumento.TabIndex = 93;
-            this.btnVisualizarDocumento.Text = "Visualizar Documento";
             this.btnVisualizarDocumento.UseVisualStyleBackColor = false;
             this.btnVisualizarDocumento.Click += new System.EventHandler(this.btnVisualizarDocumento_Click);
             // 
             // label24
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(151, 202);
+            resources.ApplyResources(this.label24, "label24");
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(42, 13);
-            this.label24.TabIndex = 114;
-            this.label24.Text = "Modelo";
             // 
             // txtCor
             // 
-            this.txtCor.Location = new System.Drawing.Point(142, 307);
+            resources.ApplyResources(this.txtCor, "txtCor");
             this.txtCor.Name = "txtCor";
-            this.txtCor.Size = new System.Drawing.Size(123, 20);
-            this.txtCor.TabIndex = 12;
             // 
             // txtModelo
             // 
-            this.txtModelo.Location = new System.Drawing.Point(153, 217);
+            resources.ApplyResources(this.txtModelo, "txtModelo");
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(281, 20);
-            this.txtModelo.TabIndex = 8;
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(16, 307);
+            resources.ApplyResources(this.txtCategoria, "txtCategoria");
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(120, 20);
-            this.txtCategoria.TabIndex = 11;
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(16, 217);
+            resources.ApplyResources(this.txtMarca, "txtMarca");
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(129, 20);
-            this.txtMarca.TabIndex = 7;
             // 
             // txtPotencia
             // 
-            this.txtPotencia.Location = new System.Drawing.Point(213, 262);
+            resources.ApplyResources(this.txtPotencia, "txtPotencia");
             this.txtPotencia.Name = "txtPotencia";
-            this.txtPotencia.Size = new System.Drawing.Size(114, 20);
-            this.txtPotencia.TabIndex = 11;
             // 
             // btnAlterarVeiculo
             // 
-            this.btnAlterarVeiculo.Location = new System.Drawing.Point(436, 215);
+            resources.ApplyResources(this.btnAlterarVeiculo, "btnAlterarVeiculo");
             this.btnAlterarVeiculo.Name = "btnAlterarVeiculo";
-            this.btnAlterarVeiculo.Size = new System.Drawing.Size(46, 23);
-            this.btnAlterarVeiculo.TabIndex = 9;
-            this.btnAlterarVeiculo.Text = "Alterar";
             this.btnAlterarVeiculo.UseVisualStyleBackColor = true;
             this.btnAlterarVeiculo.Click += new System.EventHandler(this.btnAlterarVeiculo_Click);
             // 
             // label73
             // 
-            this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(142, 292);
+            resources.ApplyResources(this.label73, "label73");
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(91, 13);
-            this.label73.TabIndex = 117;
-            this.label73.Text = "Cor Predominante";
             // 
             // txtAnoFab
             // 
-            this.txtAnoFab.Location = new System.Drawing.Point(16, 262);
+            resources.ApplyResources(this.txtAnoFab, "txtAnoFab");
             this.txtAnoFab.Name = "txtAnoFab";
-            this.txtAnoFab.Size = new System.Drawing.Size(65, 20);
-            this.txtAnoFab.TabIndex = 9;
             // 
             // label72
             // 
-            this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(16, 292);
+            resources.ApplyResources(this.label72, "label72");
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(52, 13);
-            this.label72.TabIndex = 116;
-            this.label72.Text = "Categoria";
             // 
             // txtAnoModelo
             // 
-            this.txtAnoModelo.Location = new System.Drawing.Point(86, 262);
+            resources.ApplyResources(this.txtAnoModelo, "txtAnoModelo");
             this.txtAnoModelo.Name = "txtAnoModelo";
-            this.txtAnoModelo.Size = new System.Drawing.Size(122, 20);
-            this.txtAnoModelo.TabIndex = 10;
             // 
             // label25
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(212, 247);
+            resources.ApplyResources(this.label25, "label25");
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(75, 13);
-            this.label25.TabIndex = 115;
-            this.label25.Text = "Cap / Pot / Cil";
             // 
             // groupBox36
             // 
+            resources.ApplyResources(this.groupBox36, "groupBox36");
             this.groupBox36.Controls.Add(this.chkPagamentoRealizado);
             this.groupBox36.Controls.Add(this.label71);
             this.groupBox36.Controls.Add(this.dateTimePickerDataVencimentoDocumento);
@@ -2284,477 +1653,240 @@
             this.groupBox36.Controls.Add(this.txtDecricaoPagamentoDocumento);
             this.groupBox36.Controls.Add(this.labelDataPagamentoDocumento);
             this.groupBox36.Controls.Add(this.txtValorPagamentoDocumento);
-            this.groupBox36.Location = new System.Drawing.Point(526, 216);
             this.groupBox36.Name = "groupBox36";
-            this.groupBox36.Size = new System.Drawing.Size(286, 245);
-            this.groupBox36.TabIndex = 105;
             this.groupBox36.TabStop = false;
-            this.groupBox36.Text = "Cadastrar conta de documento";
             // 
             // chkPagamentoRealizado
             // 
-            this.chkPagamentoRealizado.AutoSize = true;
-            this.chkPagamentoRealizado.Location = new System.Drawing.Point(132, 70);
+            resources.ApplyResources(this.chkPagamentoRealizado, "chkPagamentoRealizado");
             this.chkPagamentoRealizado.Name = "chkPagamentoRealizado";
-            this.chkPagamentoRealizado.Size = new System.Drawing.Size(125, 17);
-            this.chkPagamentoRealizado.TabIndex = 52;
-            this.chkPagamentoRealizado.Text = "Pagamento realizado";
             this.chkPagamentoRealizado.UseVisualStyleBackColor = true;
             this.chkPagamentoRealizado.CheckedChanged += new System.EventHandler(this.chkPagamentoRealizado_CheckedChanged);
             // 
             // label71
             // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(25, 24);
+            resources.ApplyResources(this.label71, "label71");
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(97, 13);
-            this.label71.TabIndex = 106;
-            this.label71.Text = "Data do vecimento";
             // 
             // dateTimePickerDataVencimentoDocumento
             // 
-            this.dateTimePickerDataVencimentoDocumento.Location = new System.Drawing.Point(27, 40);
+            resources.ApplyResources(this.dateTimePickerDataVencimentoDocumento, "dateTimePickerDataVencimentoDocumento");
             this.dateTimePickerDataVencimentoDocumento.Name = "dateTimePickerDataVencimentoDocumento";
-            this.dateTimePickerDataVencimentoDocumento.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerDataVencimentoDocumento.TabIndex = 50;
             // 
             // label93
             // 
-            this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(25, 123);
+            resources.ApplyResources(this.label93, "label93");
             this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(55, 13);
-            this.label93.TabIndex = 103;
-            this.label93.Text = "Descrição";
             // 
             // btnLancarPagamentoDocumento
             // 
+            resources.ApplyResources(this.btnLancarPagamentoDocumento, "btnLancarPagamentoDocumento");
             this.btnLancarPagamentoDocumento.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnLancarPagamentoDocumento.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.btnLancarPagamentoDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLancarPagamentoDocumento.Location = new System.Drawing.Point(132, 215);
             this.btnLancarPagamentoDocumento.Name = "btnLancarPagamentoDocumento";
-            this.btnLancarPagamentoDocumento.Size = new System.Drawing.Size(128, 23);
-            this.btnLancarPagamentoDocumento.TabIndex = 55;
-            this.btnLancarPagamentoDocumento.Text = "Lançar pagamento doc";
             this.btnLancarPagamentoDocumento.UseVisualStyleBackColor = false;
             this.btnLancarPagamentoDocumento.Click += new System.EventHandler(this.btnLancarPagamentoDocumento_Click);
             // 
             // dateTimePickerDataPagamentoDocumento
             // 
-            this.dateTimePickerDataPagamentoDocumento.Location = new System.Drawing.Point(27, 93);
+            resources.ApplyResources(this.dateTimePickerDataPagamentoDocumento, "dateTimePickerDataPagamentoDocumento");
             this.dateTimePickerDataPagamentoDocumento.Name = "dateTimePickerDataPagamentoDocumento";
-            this.dateTimePickerDataPagamentoDocumento.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerDataPagamentoDocumento.TabIndex = 53;
             // 
             // label88
             // 
-            this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(123, 166);
+            resources.ApplyResources(this.label88, "label88");
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(54, 13);
-            this.label88.TabIndex = 97;
-            this.label88.Text = "Valor (R$)";
             // 
             // txtDecricaoPagamentoDocumento
             // 
-            this.txtDecricaoPagamentoDocumento.Location = new System.Drawing.Point(27, 139);
+            resources.ApplyResources(this.txtDecricaoPagamentoDocumento, "txtDecricaoPagamentoDocumento");
             this.txtDecricaoPagamentoDocumento.Name = "txtDecricaoPagamentoDocumento";
-            this.txtDecricaoPagamentoDocumento.Size = new System.Drawing.Size(234, 20);
-            this.txtDecricaoPagamentoDocumento.TabIndex = 51;
             // 
             // labelDataPagamentoDocumento
             // 
-            this.labelDataPagamentoDocumento.AutoSize = true;
-            this.labelDataPagamentoDocumento.Location = new System.Drawing.Point(25, 77);
+            resources.ApplyResources(this.labelDataPagamentoDocumento, "labelDataPagamentoDocumento");
             this.labelDataPagamentoDocumento.Name = "labelDataPagamentoDocumento";
-            this.labelDataPagamentoDocumento.Size = new System.Drawing.Size(101, 13);
-            this.labelDataPagamentoDocumento.TabIndex = 99;
-            this.labelDataPagamentoDocumento.Text = "Data do pagamento";
             // 
             // txtValorPagamentoDocumento
             // 
-            this.txtValorPagamentoDocumento.Location = new System.Drawing.Point(126, 182);
+            resources.ApplyResources(this.txtValorPagamentoDocumento, "txtValorPagamentoDocumento");
             this.txtValorPagamentoDocumento.Name = "txtValorPagamentoDocumento";
-            this.txtValorPagamentoDocumento.Size = new System.Drawing.Size(135, 20);
-            this.txtValorPagamentoDocumento.TabIndex = 54;
-            this.txtValorPagamentoDocumento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // groupBox21
-            // 
-            this.groupBox21.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.groupBox21.Controls.Add(this.cmbDetran);
-            this.groupBox21.Controls.Add(this.btnSiteDoDetran);
-            this.groupBox21.Location = new System.Drawing.Point(526, 161);
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(286, 49);
-            this.groupBox21.TabIndex = 87;
-            this.groupBox21.TabStop = false;
-            this.groupBox21.Text = "Visite o DETRAN do seu Estado";
-            // 
-            // cmbDetran
-            // 
-            this.cmbDetran.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDetran.FormattingEnabled = true;
-            this.cmbDetran.Items.AddRange(new object[] {
-            "DETRAN - AC",
-            "DETRAN - AL",
-            "DETRAN - AM",
-            "DETRAN - AP",
-            "DETRAN - BA",
-            "DETRAN - CE",
-            "DETRAN - DF",
-            "DETRAN - ES",
-            "DETRAN - GO",
-            "DETRAN - MA",
-            "DETRAN - MG",
-            "DETRAN - MT",
-            "DETRAN - MS",
-            "DETRAN - PA",
-            "DETRAN - PB",
-            "DETRAN - PR",
-            "DETRAN - PE",
-            "DETRAN - PI",
-            "DETRAN - RJ",
-            "DETRAN - RN",
-            "DETRAN - RS",
-            "DETRAN - RO",
-            "DETRAN - RR",
-            "DETRAN - SC",
-            "DETRAN - SP",
-            "DETRAN - SE",
-            "DETRAN - TO"});
-            this.cmbDetran.Location = new System.Drawing.Point(3, 20);
-            this.cmbDetran.Name = "cmbDetran";
-            this.cmbDetran.Size = new System.Drawing.Size(193, 21);
-            this.cmbDetran.TabIndex = 94;
-            // 
-            // btnSiteDoDetran
-            // 
-            this.btnSiteDoDetran.Location = new System.Drawing.Point(202, 19);
-            this.btnSiteDoDetran.Name = "btnSiteDoDetran";
-            this.btnSiteDoDetran.Size = new System.Drawing.Size(75, 23);
-            this.btnSiteDoDetran.TabIndex = 85;
-            this.btnSiteDoDetran.Text = "Ir para o site";
-            this.btnSiteDoDetran.UseVisualStyleBackColor = true;
-            this.btnSiteDoDetran.Click += new System.EventHandler(this.btnSiteDoDetran_Click);
             // 
             // label92
             // 
-            this.label92.AutoSize = true;
-            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label92.Location = new System.Drawing.Point(815, 116);
+            resources.ApplyResources(this.label92, "label92");
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(166, 13);
-            this.label92.TabIndex = 101;
-            this.label92.Text = "Pagamentos de documentos";
             // 
             // dtPagamentoDocumento
             // 
+            resources.ApplyResources(this.dtPagamentoDocumento, "dtPagamentoDocumento");
             this.dtPagamentoDocumento.AllowUserToAddRows = false;
             this.dtPagamentoDocumento.AllowUserToDeleteRows = false;
             this.dtPagamentoDocumento.AllowUserToResizeColumns = false;
             this.dtPagamentoDocumento.AllowUserToResizeRows = false;
             this.dtPagamentoDocumento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtPagamentoDocumento.Location = new System.Drawing.Point(818, 131);
             this.dtPagamentoDocumento.Name = "dtPagamentoDocumento";
             this.dtPagamentoDocumento.ReadOnly = true;
-            this.dtPagamentoDocumento.Size = new System.Drawing.Size(452, 440);
-            this.dtPagamentoDocumento.TabIndex = 95;
             this.dtPagamentoDocumento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtPagamentoDocumento_CellClick);
             // 
             // groupBox20
             // 
+            resources.ApplyResources(this.groupBox20, "groupBox20");
             this.groupBox20.Controls.Add(this.button1);
             this.groupBox20.Controls.Add(this.dateTimePicker1);
             this.groupBox20.Controls.Add(this.label89);
             this.groupBox20.Controls.Add(this.dateTimePicker2);
             this.groupBox20.Controls.Add(this.label90);
-            this.groupBox20.Location = new System.Drawing.Point(818, 6);
             this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(454, 108);
-            this.groupBox20.TabIndex = 94;
             this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "Filtrar pagamentos";
             // 
             // button1
             // 
+            resources.ApplyResources(this.button1, "button1");
             this.button1.BackColor = System.Drawing.Color.Moccasin;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(246, 77);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Aplicar filtro";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 80);
+            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePicker1.TabIndex = 4;
             // 
             // label89
             // 
-            this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(6, 64);
+            resources.ApplyResources(this.label89, "label89");
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(52, 13);
-            this.label89.TabIndex = 5;
-            this.label89.Text = "Data final";
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(6, 38);
+            resources.ApplyResources(this.dateTimePicker2, "dateTimePicker2");
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePicker2.TabIndex = 2;
             // 
             // label90
             // 
-            this.label90.AutoSize = true;
-            this.label90.Location = new System.Drawing.Point(6, 22);
+            resources.ApplyResources(this.label90, "label90");
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(59, 13);
-            this.label90.TabIndex = 3;
-            this.label90.Text = "Data inicial";
-            // 
-            // groupBoxSeuCarroFIPE
-            // 
-            this.groupBoxSeuCarroFIPE.Controls.Add(this.label15);
-            this.groupBoxSeuCarroFIPE.Controls.Add(this.label14);
-            this.groupBoxSeuCarroFIPE.Controls.Add(this.label13);
-            this.groupBoxSeuCarroFIPE.Controls.Add(this.label12);
-            this.groupBoxSeuCarroFIPE.Controls.Add(this.label11);
-            this.groupBoxSeuCarroFIPE.Controls.Add(this.label10);
-            this.groupBoxSeuCarroFIPE.Location = new System.Drawing.Point(526, 6);
-            this.groupBoxSeuCarroFIPE.Name = "groupBoxSeuCarroFIPE";
-            this.groupBoxSeuCarroFIPE.Size = new System.Drawing.Size(286, 149);
-            this.groupBoxSeuCarroFIPE.TabIndex = 88;
-            this.groupBoxSeuCarroFIPE.TabStop = false;
-            this.groupBoxSeuCarroFIPE.Text = "Seu veículo na FIPE";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 127);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 13);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "label15";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 107);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 13);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "label14";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 87);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "label13";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 67);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "label12";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 47);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "label11";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 27);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "label10";
             // 
             // tabPageSeguro
             // 
+            resources.ApplyResources(this.tabPageSeguro, "tabPageSeguro");
             this.tabPageSeguro.Controls.Add(this.btnAdicionarComprovantePagaSegu);
             this.tabPageSeguro.Controls.Add(this.btnVisualizarComprovantePagaSegu);
             this.tabPageSeguro.Controls.Add(this.groupBox31);
             this.tabPageSeguro.Controls.Add(this.dtPagamentoSeguro);
             this.tabPageSeguro.Controls.Add(this.groupBoxInserirPagamentoSeguro);
             this.tabPageSeguro.Controls.Add(this.groupBox29);
-            this.tabPageSeguro.Location = new System.Drawing.Point(4, 22);
             this.tabPageSeguro.Name = "tabPageSeguro";
-            this.tabPageSeguro.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSeguro.Size = new System.Drawing.Size(1278, 577);
-            this.tabPageSeguro.TabIndex = 4;
-            this.tabPageSeguro.Text = "Seguro";
             this.tabPageSeguro.UseVisualStyleBackColor = true;
             // 
             // btnAdicionarComprovantePagaSegu
             // 
+            resources.ApplyResources(this.btnAdicionarComprovantePagaSegu, "btnAdicionarComprovantePagaSegu");
             this.btnAdicionarComprovantePagaSegu.BackColor = System.Drawing.Color.Khaki;
             this.btnAdicionarComprovantePagaSegu.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnAdicionarComprovantePagaSegu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarComprovantePagaSegu.Location = new System.Drawing.Point(679, 544);
             this.btnAdicionarComprovantePagaSegu.Name = "btnAdicionarComprovantePagaSegu";
-            this.btnAdicionarComprovantePagaSegu.Size = new System.Drawing.Size(137, 23);
-            this.btnAdicionarComprovantePagaSegu.TabIndex = 89;
-            this.btnAdicionarComprovantePagaSegu.Text = "Adicionar Comprovante";
             this.btnAdicionarComprovantePagaSegu.UseVisualStyleBackColor = false;
             // 
             // btnVisualizarComprovantePagaSegu
             // 
+            resources.ApplyResources(this.btnVisualizarComprovantePagaSegu, "btnVisualizarComprovantePagaSegu");
             this.btnVisualizarComprovantePagaSegu.BackColor = System.Drawing.Color.Aquamarine;
             this.btnVisualizarComprovantePagaSegu.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnVisualizarComprovantePagaSegu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarComprovantePagaSegu.Location = new System.Drawing.Point(822, 544);
             this.btnVisualizarComprovantePagaSegu.Name = "btnVisualizarComprovantePagaSegu";
-            this.btnVisualizarComprovantePagaSegu.Size = new System.Drawing.Size(137, 23);
-            this.btnVisualizarComprovantePagaSegu.TabIndex = 88;
-            this.btnVisualizarComprovantePagaSegu.Text = "Visualizar Comprovante";
             this.btnVisualizarComprovantePagaSegu.UseVisualStyleBackColor = false;
             this.btnVisualizarComprovantePagaSegu.Click += new System.EventHandler(this.btnVisualizarComprovantePagaSegu_Click);
             // 
             // groupBox31
             // 
+            resources.ApplyResources(this.groupBox31, "groupBox31");
             this.groupBox31.Controls.Add(this.groupBox32);
             this.groupBox31.Controls.Add(this.groupBox30);
             this.groupBox31.Controls.Add(this.btnAplicarFiltroPagamentoSeguro);
-            this.groupBox31.Location = new System.Drawing.Point(320, 6);
             this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Size = new System.Drawing.Size(639, 174);
-            this.groupBox31.TabIndex = 25;
             this.groupBox31.TabStop = false;
-            this.groupBox31.Text = "Filtrar";
             // 
             // groupBox32
             // 
+            resources.ApplyResources(this.groupBox32, "groupBox32");
             this.groupBox32.Controls.Add(this.cmbFiltroSeguradora);
             this.groupBox32.Controls.Add(this.ckSeguradora);
-            this.groupBox32.Location = new System.Drawing.Point(18, 74);
             this.groupBox32.Name = "groupBox32";
-            this.groupBox32.Size = new System.Drawing.Size(602, 55);
-            this.groupBox32.TabIndex = 91;
             this.groupBox32.TabStop = false;
-            this.groupBox32.Text = "Por Seguradora";
             // 
             // cmbFiltroSeguradora
             // 
+            resources.ApplyResources(this.cmbFiltroSeguradora, "cmbFiltroSeguradora");
             this.cmbFiltroSeguradora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltroSeguradora.FormattingEnabled = true;
-            this.cmbFiltroSeguradora.Location = new System.Drawing.Point(78, 22);
             this.cmbFiltroSeguradora.Name = "cmbFiltroSeguradora";
-            this.cmbFiltroSeguradora.Size = new System.Drawing.Size(363, 21);
-            this.cmbFiltroSeguradora.TabIndex = 24;
             // 
             // ckSeguradora
             // 
-            this.ckSeguradora.AutoSize = true;
-            this.ckSeguradora.Location = new System.Drawing.Point(20, 26);
+            resources.ApplyResources(this.ckSeguradora, "ckSeguradora");
             this.ckSeguradora.Name = "ckSeguradora";
-            this.ckSeguradora.Size = new System.Drawing.Size(15, 14);
-            this.ckSeguradora.TabIndex = 26;
             this.ckSeguradora.UseVisualStyleBackColor = true;
             // 
             // groupBox30
             // 
+            resources.ApplyResources(this.groupBox30, "groupBox30");
             this.groupBox30.Controls.Add(this.dateTimePickerInicialFiltroSeguro);
             this.groupBox30.Controls.Add(this.ckDataSeguro);
             this.groupBox30.Controls.Add(this.label58);
             this.groupBox30.Controls.Add(this.label57);
             this.groupBox30.Controls.Add(this.dateTimePickerFinalFiltroSeguro);
-            this.groupBox30.Location = new System.Drawing.Point(18, 16);
             this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Size = new System.Drawing.Size(602, 55);
-            this.groupBox30.TabIndex = 90;
             this.groupBox30.TabStop = false;
-            this.groupBox30.Text = "Por Periodo";
             // 
             // dateTimePickerInicialFiltroSeguro
             // 
-            this.dateTimePickerInicialFiltroSeguro.Location = new System.Drawing.Point(78, 28);
+            resources.ApplyResources(this.dateTimePickerInicialFiltroSeguro, "dateTimePickerInicialFiltroSeguro");
             this.dateTimePickerInicialFiltroSeguro.Name = "dateTimePickerInicialFiltroSeguro";
-            this.dateTimePickerInicialFiltroSeguro.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerInicialFiltroSeguro.TabIndex = 2;
             // 
             // ckDataSeguro
             // 
-            this.ckDataSeguro.AutoSize = true;
-            this.ckDataSeguro.Location = new System.Drawing.Point(20, 34);
+            resources.ApplyResources(this.ckDataSeguro, "ckDataSeguro");
             this.ckDataSeguro.Name = "ckDataSeguro";
-            this.ckDataSeguro.Size = new System.Drawing.Size(15, 14);
-            this.ckDataSeguro.TabIndex = 25;
             this.ckDataSeguro.UseVisualStyleBackColor = true;
             // 
             // label58
             // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(78, 12);
+            resources.ApplyResources(this.label58, "label58");
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(59, 13);
-            this.label58.TabIndex = 3;
-            this.label58.Text = "Data inicial";
             // 
             // label57
             // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(336, 12);
+            resources.ApplyResources(this.label57, "label57");
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(52, 13);
-            this.label57.TabIndex = 5;
-            this.label57.Text = "Data final";
             // 
             // dateTimePickerFinalFiltroSeguro
             // 
-            this.dateTimePickerFinalFiltroSeguro.Location = new System.Drawing.Point(336, 28);
+            resources.ApplyResources(this.dateTimePickerFinalFiltroSeguro, "dateTimePickerFinalFiltroSeguro");
             this.dateTimePickerFinalFiltroSeguro.Name = "dateTimePickerFinalFiltroSeguro";
-            this.dateTimePickerFinalFiltroSeguro.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerFinalFiltroSeguro.TabIndex = 4;
             // 
             // btnAplicarFiltroPagamentoSeguro
             // 
+            resources.ApplyResources(this.btnAplicarFiltroPagamentoSeguro, "btnAplicarFiltroPagamentoSeguro");
             this.btnAplicarFiltroPagamentoSeguro.BackColor = System.Drawing.Color.Moccasin;
             this.btnAplicarFiltroPagamentoSeguro.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
-            this.btnAplicarFiltroPagamentoSeguro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAplicarFiltroPagamentoSeguro.Location = new System.Drawing.Point(545, 135);
             this.btnAplicarFiltroPagamentoSeguro.Name = "btnAplicarFiltroPagamentoSeguro";
-            this.btnAplicarFiltroPagamentoSeguro.Size = new System.Drawing.Size(75, 23);
-            this.btnAplicarFiltroPagamentoSeguro.TabIndex = 23;
-            this.btnAplicarFiltroPagamentoSeguro.Text = "Aplicar filtro";
             this.btnAplicarFiltroPagamentoSeguro.UseVisualStyleBackColor = false;
             this.btnAplicarFiltroPagamentoSeguro.Click += new System.EventHandler(this.btnAplicarFiltroPagamentoSeguro_Click);
             // 
             // dtPagamentoSeguro
             // 
+            resources.ApplyResources(this.dtPagamentoSeguro, "dtPagamentoSeguro");
             this.dtPagamentoSeguro.AllowUserToAddRows = false;
             this.dtPagamentoSeguro.AllowUserToDeleteRows = false;
             this.dtPagamentoSeguro.AllowUserToResizeColumns = false;
             this.dtPagamentoSeguro.AllowUserToResizeRows = false;
             this.dtPagamentoSeguro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtPagamentoSeguro.Location = new System.Drawing.Point(320, 186);
             this.dtPagamentoSeguro.Name = "dtPagamentoSeguro";
             this.dtPagamentoSeguro.ReadOnly = true;
-            this.dtPagamentoSeguro.Size = new System.Drawing.Size(639, 352);
-            this.dtPagamentoSeguro.TabIndex = 24;
             // 
             // groupBoxInserirPagamentoSeguro
             // 
+            resources.ApplyResources(this.groupBoxInserirPagamentoSeguro, "groupBoxInserirPagamentoSeguro");
             this.groupBoxInserirPagamentoSeguro.Controls.Add(this.btnAnexarComprovantePagaSeguro);
             this.groupBoxInserirPagamentoSeguro.Controls.Add(this.label50);
             this.groupBoxInserirPagamentoSeguro.Controls.Add(this.txtPathAnexarComprovantePagaSeguro);
@@ -2763,86 +1895,58 @@
             this.groupBoxInserirPagamentoSeguro.Controls.Add(this.txtValorPagamentoSeguro);
             this.groupBoxInserirPagamentoSeguro.Controls.Add(this.dateTimePickerPagamentoSeguro);
             this.groupBoxInserirPagamentoSeguro.Controls.Add(this.label55);
-            this.groupBoxInserirPagamentoSeguro.Location = new System.Drawing.Point(8, 348);
             this.groupBoxInserirPagamentoSeguro.Name = "groupBoxInserirPagamentoSeguro";
-            this.groupBoxInserirPagamentoSeguro.Size = new System.Drawing.Size(290, 219);
-            this.groupBoxInserirPagamentoSeguro.TabIndex = 3;
             this.groupBoxInserirPagamentoSeguro.TabStop = false;
-            this.groupBoxInserirPagamentoSeguro.Text = "Inserir pagamento";
             // 
             // btnAnexarComprovantePagaSeguro
             // 
-            this.btnAnexarComprovantePagaSeguro.Location = new System.Drawing.Point(234, 146);
+            resources.ApplyResources(this.btnAnexarComprovantePagaSeguro, "btnAnexarComprovantePagaSeguro");
             this.btnAnexarComprovantePagaSeguro.Name = "btnAnexarComprovantePagaSeguro";
-            this.btnAnexarComprovantePagaSeguro.Size = new System.Drawing.Size(34, 23);
-            this.btnAnexarComprovantePagaSeguro.TabIndex = 23;
-            this.btnAnexarComprovantePagaSeguro.Text = "...";
             this.btnAnexarComprovantePagaSeguro.UseVisualStyleBackColor = true;
             this.btnAnexarComprovantePagaSeguro.Click += new System.EventHandler(this.btnAnexarComprovantePagaSeguro_Click);
             // 
             // label50
             // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(6, 133);
+            resources.ApplyResources(this.label50, "label50");
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(105, 13);
-            this.label50.TabIndex = 24;
-            this.label50.Text = "Anexar comprovante";
             // 
             // txtPathAnexarComprovantePagaSeguro
             // 
-            this.txtPathAnexarComprovantePagaSeguro.Location = new System.Drawing.Point(6, 149);
+            resources.ApplyResources(this.txtPathAnexarComprovantePagaSeguro, "txtPathAnexarComprovantePagaSeguro");
             this.txtPathAnexarComprovantePagaSeguro.Name = "txtPathAnexarComprovantePagaSeguro";
-            this.txtPathAnexarComprovantePagaSeguro.Size = new System.Drawing.Size(222, 20);
-            this.txtPathAnexarComprovantePagaSeguro.TabIndex = 22;
             // 
             // btnLancarPagaSeguro
             // 
+            resources.ApplyResources(this.btnLancarPagaSeguro, "btnLancarPagaSeguro");
             this.btnLancarPagaSeguro.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnLancarPagaSeguro.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.btnLancarPagaSeguro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLancarPagaSeguro.Location = new System.Drawing.Point(193, 186);
             this.btnLancarPagaSeguro.Name = "btnLancarPagaSeguro";
-            this.btnLancarPagaSeguro.Size = new System.Drawing.Size(75, 23);
-            this.btnLancarPagaSeguro.TabIndex = 24;
-            this.btnLancarPagaSeguro.Text = "Lançar";
             this.btnLancarPagaSeguro.UseVisualStyleBackColor = false;
             this.btnLancarPagaSeguro.Click += new System.EventHandler(this.btnLancarPagaSeguro_Click);
             // 
             // label53
             // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(6, 88);
+            resources.ApplyResources(this.label53, "label53");
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(54, 13);
-            this.label53.TabIndex = 17;
-            this.label53.Text = "Valor (R$)";
             // 
             // txtValorPagamentoSeguro
             // 
-            this.txtValorPagamentoSeguro.Location = new System.Drawing.Point(6, 104);
+            resources.ApplyResources(this.txtValorPagamentoSeguro, "txtValorPagamentoSeguro");
             this.txtValorPagamentoSeguro.Name = "txtValorPagamentoSeguro";
-            this.txtValorPagamentoSeguro.Size = new System.Drawing.Size(100, 20);
-            this.txtValorPagamentoSeguro.TabIndex = 16;
             // 
             // dateTimePickerPagamentoSeguro
             // 
-            this.dateTimePickerPagamentoSeguro.Location = new System.Drawing.Point(6, 59);
+            resources.ApplyResources(this.dateTimePickerPagamentoSeguro, "dateTimePickerPagamentoSeguro");
             this.dateTimePickerPagamentoSeguro.Name = "dateTimePickerPagamentoSeguro";
-            this.dateTimePickerPagamentoSeguro.Size = new System.Drawing.Size(262, 20);
-            this.dateTimePickerPagamentoSeguro.TabIndex = 0;
             // 
             // label55
             // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(6, 43);
+            resources.ApplyResources(this.label55, "label55");
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(30, 13);
-            this.label55.TabIndex = 1;
-            this.label55.Text = "Data";
             // 
             // groupBox29
             // 
+            resources.ApplyResources(this.groupBox29, "groupBox29");
             this.groupBox29.Controls.Add(this.btnSalvarAlteracoesSeguro);
             this.groupBox29.Controls.Add(this.btnAnexarCartaoSeguro);
             this.groupBox29.Controls.Add(this.label52);
@@ -2863,193 +1967,130 @@
             this.groupBox29.Controls.Add(this.label45);
             this.groupBox29.Controls.Add(this.btnAtivarContrato);
             this.groupBox29.Controls.Add(this.txtSeguradora);
-            this.groupBox29.Location = new System.Drawing.Point(8, 22);
             this.groupBox29.Name = "groupBox29";
-            this.groupBox29.Size = new System.Drawing.Size(295, 320);
-            this.groupBox29.TabIndex = 0;
             this.groupBox29.TabStop = false;
-            this.groupBox29.Text = "Seguro ativo";
             // 
             // btnSalvarAlteracoesSeguro
             // 
-            this.btnSalvarAlteracoesSeguro.Location = new System.Drawing.Point(7, 291);
+            resources.ApplyResources(this.btnSalvarAlteracoesSeguro, "btnSalvarAlteracoesSeguro");
             this.btnSalvarAlteracoesSeguro.Name = "btnSalvarAlteracoesSeguro";
-            this.btnSalvarAlteracoesSeguro.Size = new System.Drawing.Size(110, 23);
-            this.btnSalvarAlteracoesSeguro.TabIndex = 31;
-            this.btnSalvarAlteracoesSeguro.Text = "Salvar alterações";
             this.btnSalvarAlteracoesSeguro.UseVisualStyleBackColor = true;
             this.btnSalvarAlteracoesSeguro.Click += new System.EventHandler(this.btnSalvarAlteracoesSeguro_Click);
             // 
             // btnAnexarCartaoSeguro
             // 
-            this.btnAnexarCartaoSeguro.Location = new System.Drawing.Point(235, 249);
+            resources.ApplyResources(this.btnAnexarCartaoSeguro, "btnAnexarCartaoSeguro");
             this.btnAnexarCartaoSeguro.Name = "btnAnexarCartaoSeguro";
-            this.btnAnexarCartaoSeguro.Size = new System.Drawing.Size(34, 23);
-            this.btnAnexarCartaoSeguro.TabIndex = 29;
-            this.btnAnexarCartaoSeguro.Text = "...";
             this.btnAnexarCartaoSeguro.UseVisualStyleBackColor = true;
             this.btnAnexarCartaoSeguro.Click += new System.EventHandler(this.btnAnexarCartaoSeguro_Click);
             // 
             // label52
             // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(7, 236);
+            resources.ApplyResources(this.label52, "label52");
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(73, 13);
-            this.label52.TabIndex = 30;
-            this.label52.Text = "Anexar cartão";
             // 
             // txtPathCartaoSeguro
             // 
-            this.txtPathCartaoSeguro.Location = new System.Drawing.Point(7, 252);
+            resources.ApplyResources(this.txtPathCartaoSeguro, "txtPathCartaoSeguro");
             this.txtPathCartaoSeguro.Name = "txtPathCartaoSeguro";
             this.txtPathCartaoSeguro.ReadOnly = true;
-            this.txtPathCartaoSeguro.Size = new System.Drawing.Size(222, 20);
-            this.txtPathCartaoSeguro.TabIndex = 28;
             // 
             // btnAnexarOrcamentoSeguro
             // 
-            this.btnAnexarOrcamentoSeguro.Location = new System.Drawing.Point(235, 204);
+            resources.ApplyResources(this.btnAnexarOrcamentoSeguro, "btnAnexarOrcamentoSeguro");
             this.btnAnexarOrcamentoSeguro.Name = "btnAnexarOrcamentoSeguro";
-            this.btnAnexarOrcamentoSeguro.Size = new System.Drawing.Size(34, 23);
-            this.btnAnexarOrcamentoSeguro.TabIndex = 26;
-            this.btnAnexarOrcamentoSeguro.Text = "...";
             this.btnAnexarOrcamentoSeguro.UseVisualStyleBackColor = true;
             this.btnAnexarOrcamentoSeguro.Click += new System.EventHandler(this.btnAnexarOrcamentoSeguro_Click);
             // 
             // btnRenovarSeguro
             // 
-            this.btnRenovarSeguro.Location = new System.Drawing.Point(179, 291);
+            resources.ApplyResources(this.btnRenovarSeguro, "btnRenovarSeguro");
             this.btnRenovarSeguro.Name = "btnRenovarSeguro";
-            this.btnRenovarSeguro.Size = new System.Drawing.Size(110, 23);
-            this.btnRenovarSeguro.TabIndex = 12;
-            this.btnRenovarSeguro.Text = "Renovar seguro";
             this.btnRenovarSeguro.UseVisualStyleBackColor = true;
             // 
             // label51
             // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(7, 191);
+            resources.ApplyResources(this.label51, "label51");
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(93, 13);
-            this.label51.TabIndex = 27;
-            this.label51.Text = "Anexar orcamento";
             // 
             // btnEncerrarContrato
             // 
-            this.btnEncerrarContrato.Location = new System.Drawing.Point(69, 10);
+            resources.ApplyResources(this.btnEncerrarContrato, "btnEncerrarContrato");
             this.btnEncerrarContrato.Name = "btnEncerrarContrato";
-            this.btnEncerrarContrato.Size = new System.Drawing.Size(110, 23);
-            this.btnEncerrarContrato.TabIndex = 11;
-            this.btnEncerrarContrato.Text = "Encerrar contrato";
             this.btnEncerrarContrato.UseVisualStyleBackColor = true;
             this.btnEncerrarContrato.Click += new System.EventHandler(this.btnEncerrarContrato_Click);
             // 
             // txtPathOrcamentoSeguro
             // 
-            this.txtPathOrcamentoSeguro.Location = new System.Drawing.Point(7, 207);
+            resources.ApplyResources(this.txtPathOrcamentoSeguro, "txtPathOrcamentoSeguro");
             this.txtPathOrcamentoSeguro.Name = "txtPathOrcamentoSeguro";
             this.txtPathOrcamentoSeguro.ReadOnly = true;
-            this.txtPathOrcamentoSeguro.Size = new System.Drawing.Size(222, 20);
-            this.txtPathOrcamentoSeguro.TabIndex = 25;
             // 
             // label49
             // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(185, 145);
+            resources.ApplyResources(this.label49, "label49");
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(61, 13);
-            this.label49.TabIndex = 10;
-            this.label49.Text = "N. Contrato";
             // 
             // txtNumeroContratoSeguro
             // 
-            this.txtNumeroContratoSeguro.Location = new System.Drawing.Point(185, 161);
+            resources.ApplyResources(this.txtNumeroContratoSeguro, "txtNumeroContratoSeguro");
             this.txtNumeroContratoSeguro.Name = "txtNumeroContratoSeguro";
             this.txtNumeroContratoSeguro.ReadOnly = true;
-            this.txtNumeroContratoSeguro.Size = new System.Drawing.Size(105, 20);
-            this.txtNumeroContratoSeguro.TabIndex = 9;
             // 
             // label48
             // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(92, 145);
+            resources.ApplyResources(this.label48, "label48");
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(55, 13);
-            this.label48.TabIndex = 8;
-            this.label48.Text = "Data Final";
             // 
             // txtDataFinalContratoSeguro
             // 
-            this.txtDataFinalContratoSeguro.Location = new System.Drawing.Point(92, 161);
+            resources.ApplyResources(this.txtDataFinalContratoSeguro, "txtDataFinalContratoSeguro");
             this.txtDataFinalContratoSeguro.Name = "txtDataFinalContratoSeguro";
             this.txtDataFinalContratoSeguro.ReadOnly = true;
-            this.txtDataFinalContratoSeguro.Size = new System.Drawing.Size(87, 20);
-            this.txtDataFinalContratoSeguro.TabIndex = 7;
             // 
             // label47
             // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(7, 145);
+            resources.ApplyResources(this.label47, "label47");
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(58, 13);
-            this.label47.TabIndex = 6;
-            this.label47.Text = "Data Inicio";
             // 
             // txtDataInicialContratoSeguro
             // 
-            this.txtDataInicialContratoSeguro.Location = new System.Drawing.Point(7, 161);
+            resources.ApplyResources(this.txtDataInicialContratoSeguro, "txtDataInicialContratoSeguro");
             this.txtDataInicialContratoSeguro.Name = "txtDataInicialContratoSeguro";
             this.txtDataInicialContratoSeguro.ReadOnly = true;
-            this.txtDataInicialContratoSeguro.Size = new System.Drawing.Size(79, 20);
-            this.txtDataInicialContratoSeguro.TabIndex = 5;
             // 
             // label46
             // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(7, 97);
+            resources.ApplyResources(this.label46, "label46");
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(44, 13);
-            this.label46.TabIndex = 4;
-            this.label46.Text = "Corretor";
             // 
             // txtCorretorSeguro
             // 
-            this.txtCorretorSeguro.Location = new System.Drawing.Point(7, 113);
+            resources.ApplyResources(this.txtCorretorSeguro, "txtCorretorSeguro");
             this.txtCorretorSeguro.Name = "txtCorretorSeguro";
             this.txtCorretorSeguro.ReadOnly = true;
-            this.txtCorretorSeguro.Size = new System.Drawing.Size(218, 20);
-            this.txtCorretorSeguro.TabIndex = 3;
             // 
             // label45
             // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(7, 51);
+            resources.ApplyResources(this.label45, "label45");
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(62, 13);
-            this.label45.TabIndex = 2;
-            this.label45.Text = "Seguradora";
             // 
             // btnAtivarContrato
             // 
-            this.btnAtivarContrato.Location = new System.Drawing.Point(180, 10);
+            resources.ApplyResources(this.btnAtivarContrato, "btnAtivarContrato");
             this.btnAtivarContrato.Name = "btnAtivarContrato";
-            this.btnAtivarContrato.Size = new System.Drawing.Size(110, 23);
-            this.btnAtivarContrato.TabIndex = 1;
-            this.btnAtivarContrato.Text = "Adicionar contrato";
             this.btnAtivarContrato.UseVisualStyleBackColor = true;
             this.btnAtivarContrato.Click += new System.EventHandler(this.btnAtivarContrato_Click);
             // 
             // txtSeguradora
             // 
-            this.txtSeguradora.Location = new System.Drawing.Point(7, 67);
+            resources.ApplyResources(this.txtSeguradora, "txtSeguradora");
             this.txtSeguradora.Name = "txtSeguradora";
             this.txtSeguradora.ReadOnly = true;
-            this.txtSeguradora.Size = new System.Drawing.Size(218, 20);
-            this.txtSeguradora.TabIndex = 0;
             // 
             // tabPageMulta
             // 
+            resources.ApplyResources(this.tabPageMulta, "tabPageMulta");
             this.tabPageMulta.Controls.Add(this.dateTimePickerDataPagamentoMulta);
             this.tabPageMulta.Controls.Add(this.label91);
             this.tabPageMulta.Controls.Add(this.btnInformarPagamento);
@@ -3058,71 +2099,49 @@
             this.tabPageMulta.Controls.Add(this.groupBox34);
             this.tabPageMulta.Controls.Add(this.groupBox33);
             this.tabPageMulta.Controls.Add(this.dtMultas);
-            this.tabPageMulta.Location = new System.Drawing.Point(4, 22);
             this.tabPageMulta.Name = "tabPageMulta";
-            this.tabPageMulta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMulta.Size = new System.Drawing.Size(1278, 577);
-            this.tabPageMulta.TabIndex = 5;
-            this.tabPageMulta.Text = "Multa";
             this.tabPageMulta.UseVisualStyleBackColor = true;
             // 
             // dateTimePickerDataPagamentoMulta
             // 
-            this.dateTimePickerDataPagamentoMulta.Location = new System.Drawing.Point(302, 549);
+            resources.ApplyResources(this.dateTimePickerDataPagamentoMulta, "dateTimePickerDataPagamentoMulta");
             this.dateTimePickerDataPagamentoMulta.Name = "dateTimePickerDataPagamentoMulta";
-            this.dateTimePickerDataPagamentoMulta.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerDataPagamentoMulta.TabIndex = 30;
             // 
             // label91
             // 
-            this.label91.AutoSize = true;
-            this.label91.Location = new System.Drawing.Point(299, 533);
+            resources.ApplyResources(this.label91, "label91");
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(86, 13);
-            this.label91.TabIndex = 31;
-            this.label91.Text = "Data pagamento";
             // 
             // btnInformarPagamento
             // 
+            resources.ApplyResources(this.btnInformarPagamento, "btnInformarPagamento");
             this.btnInformarPagamento.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnInformarPagamento.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnInformarPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInformarPagamento.Location = new System.Drawing.Point(543, 546);
             this.btnInformarPagamento.Name = "btnInformarPagamento";
-            this.btnInformarPagamento.Size = new System.Drawing.Size(137, 23);
-            this.btnInformarPagamento.TabIndex = 89;
-            this.btnInformarPagamento.Text = "Informar pagamento";
             this.btnInformarPagamento.UseVisualStyleBackColor = false;
             this.btnInformarPagamento.Click += new System.EventHandler(this.btnInformarPagamento_Click);
             // 
             // btnAdicionarMulta
             // 
+            resources.ApplyResources(this.btnAdicionarMulta, "btnAdicionarMulta");
             this.btnAdicionarMulta.BackColor = System.Drawing.Color.Khaki;
             this.btnAdicionarMulta.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnAdicionarMulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarMulta.Location = new System.Drawing.Point(978, 534);
             this.btnAdicionarMulta.Name = "btnAdicionarMulta";
-            this.btnAdicionarMulta.Size = new System.Drawing.Size(137, 23);
-            this.btnAdicionarMulta.TabIndex = 88;
-            this.btnAdicionarMulta.Text = "Adicionar compro. multa";
             this.btnAdicionarMulta.UseVisualStyleBackColor = false;
             this.btnAdicionarMulta.Click += new System.EventHandler(this.btnAdicionarMulta_Click);
             // 
             // btnVisualizaMulta
             // 
+            resources.ApplyResources(this.btnVisualizaMulta, "btnVisualizaMulta");
             this.btnVisualizaMulta.BackColor = System.Drawing.Color.Aquamarine;
             this.btnVisualizaMulta.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
-            this.btnVisualizaMulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizaMulta.Location = new System.Drawing.Point(1119, 534);
             this.btnVisualizaMulta.Name = "btnVisualizaMulta";
-            this.btnVisualizaMulta.Size = new System.Drawing.Size(137, 23);
-            this.btnVisualizaMulta.TabIndex = 87;
-            this.btnVisualizaMulta.Text = "Visualizar multa";
             this.btnVisualizaMulta.UseVisualStyleBackColor = false;
             this.btnVisualizaMulta.Click += new System.EventHandler(this.btnVisualizaMulta_Click);
             // 
             // groupBox34
             // 
+            resources.ApplyResources(this.groupBox34, "groupBox34");
             this.groupBox34.Controls.Add(this.btnResetFiltro);
             this.groupBox34.Controls.Add(this.label64);
             this.groupBox34.Controls.Add(this.cmbFiltroDataMultaPor);
@@ -3134,122 +2153,83 @@
             this.groupBox34.Controls.Add(this.label62);
             this.groupBox34.Controls.Add(this.dateTimePickerFiltroInicialMulta);
             this.groupBox34.Controls.Add(this.label63);
-            this.groupBox34.Location = new System.Drawing.Point(302, 6);
             this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Size = new System.Drawing.Size(954, 97);
-            this.groupBox34.TabIndex = 28;
             this.groupBox34.TabStop = false;
-            this.groupBox34.Text = "Filtrar";
             // 
             // btnResetFiltro
             // 
-            this.btnResetFiltro.Location = new System.Drawing.Point(755, 69);
+            resources.ApplyResources(this.btnResetFiltro, "btnResetFiltro");
             this.btnResetFiltro.Name = "btnResetFiltro";
-            this.btnResetFiltro.Size = new System.Drawing.Size(112, 23);
-            this.btnResetFiltro.TabIndex = 29;
-            this.btnResetFiltro.Text = "Reset filtro";
             this.btnResetFiltro.UseVisualStyleBackColor = true;
             this.btnResetFiltro.Click += new System.EventHandler(this.btnResetFiltro_Click);
             // 
             // label64
             // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(499, 24);
+            resources.ApplyResources(this.label64, "label64");
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(71, 13);
-            this.label64.TabIndex = 28;
-            this.label64.Text = "Filtro data por";
             // 
             // cmbFiltroDataMultaPor
             // 
+            resources.ApplyResources(this.cmbFiltroDataMultaPor, "cmbFiltroDataMultaPor");
             this.cmbFiltroDataMultaPor.FormattingEnabled = true;
             this.cmbFiltroDataMultaPor.Items.AddRange(new object[] {
-            "Por data vencimento",
-            "Por data ocorrência"});
-            this.cmbFiltroDataMultaPor.Location = new System.Drawing.Point(499, 40);
+            resources.GetString("cmbFiltroDataMultaPor.Items"),
+            resources.GetString("cmbFiltroDataMultaPor.Items1")});
             this.cmbFiltroDataMultaPor.Name = "cmbFiltroDataMultaPor";
-            this.cmbFiltroDataMultaPor.Size = new System.Drawing.Size(234, 21);
-            this.cmbFiltroDataMultaPor.TabIndex = 27;
             // 
             // rdAmbas
             // 
-            this.rdAmbas.AutoSize = true;
-            this.rdAmbas.Location = new System.Drawing.Point(891, 41);
+            resources.ApplyResources(this.rdAmbas, "rdAmbas");
             this.rdAmbas.Name = "rdAmbas";
-            this.rdAmbas.Size = new System.Drawing.Size(57, 17);
-            this.rdAmbas.TabIndex = 26;
             this.rdAmbas.TabStop = true;
-            this.rdAmbas.Text = "Ambas";
             this.rdAmbas.UseVisualStyleBackColor = true;
             // 
             // rdNaoPagas
             // 
-            this.rdNaoPagas.AutoSize = true;
-            this.rdNaoPagas.Location = new System.Drawing.Point(808, 41);
+            resources.ApplyResources(this.rdNaoPagas, "rdNaoPagas");
             this.rdNaoPagas.Name = "rdNaoPagas";
-            this.rdNaoPagas.Size = new System.Drawing.Size(77, 17);
-            this.rdNaoPagas.TabIndex = 25;
             this.rdNaoPagas.TabStop = true;
-            this.rdNaoPagas.Text = "Não pagas";
             this.rdNaoPagas.UseVisualStyleBackColor = true;
             // 
             // rdPagas
             // 
-            this.rdPagas.AutoSize = true;
-            this.rdPagas.Location = new System.Drawing.Point(747, 41);
+            resources.ApplyResources(this.rdPagas, "rdPagas");
             this.rdPagas.Name = "rdPagas";
-            this.rdPagas.Size = new System.Drawing.Size(55, 17);
-            this.rdPagas.TabIndex = 24;
             this.rdPagas.TabStop = true;
-            this.rdPagas.Text = "Pagas";
             this.rdPagas.UseVisualStyleBackColor = true;
             // 
             // btnAplicarFiltroMulta
             // 
+            resources.ApplyResources(this.btnAplicarFiltroMulta, "btnAplicarFiltroMulta");
             this.btnAplicarFiltroMulta.BackColor = System.Drawing.Color.Moccasin;
             this.btnAplicarFiltroMulta.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
-            this.btnAplicarFiltroMulta.Location = new System.Drawing.Point(873, 69);
             this.btnAplicarFiltroMulta.Name = "btnAplicarFiltroMulta";
-            this.btnAplicarFiltroMulta.Size = new System.Drawing.Size(75, 23);
-            this.btnAplicarFiltroMulta.TabIndex = 23;
-            this.btnAplicarFiltroMulta.Text = "Aplicar filtro";
             this.btnAplicarFiltroMulta.UseVisualStyleBackColor = false;
             this.btnAplicarFiltroMulta.Click += new System.EventHandler(this.btnAplicarFiltroMulta_Click);
             // 
             // dateTimePickerFiltroFinalMulta
             // 
-            this.dateTimePickerFiltroFinalMulta.Location = new System.Drawing.Point(251, 41);
+            resources.ApplyResources(this.dateTimePickerFiltroFinalMulta, "dateTimePickerFiltroFinalMulta");
             this.dateTimePickerFiltroFinalMulta.Name = "dateTimePickerFiltroFinalMulta";
-            this.dateTimePickerFiltroFinalMulta.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerFiltroFinalMulta.TabIndex = 4;
             // 
             // label62
             // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(248, 25);
+            resources.ApplyResources(this.label62, "label62");
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(52, 13);
-            this.label62.TabIndex = 5;
-            this.label62.Text = "Data final";
             // 
             // dateTimePickerFiltroInicialMulta
             // 
-            this.dateTimePickerFiltroInicialMulta.Location = new System.Drawing.Point(6, 41);
+            resources.ApplyResources(this.dateTimePickerFiltroInicialMulta, "dateTimePickerFiltroInicialMulta");
             this.dateTimePickerFiltroInicialMulta.Name = "dateTimePickerFiltroInicialMulta";
-            this.dateTimePickerFiltroInicialMulta.Size = new System.Drawing.Size(234, 20);
-            this.dateTimePickerFiltroInicialMulta.TabIndex = 2;
             // 
             // label63
             // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(3, 25);
+            resources.ApplyResources(this.label63, "label63");
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(59, 13);
-            this.label63.TabIndex = 3;
-            this.label63.Text = "Data inicial";
             // 
             // groupBox33
             // 
+            resources.ApplyResources(this.groupBox33, "groupBox33");
             this.groupBox33.Controls.Add(this.ckPagamentoRealizado);
             this.groupBox33.Controls.Add(this.label61);
             this.groupBox33.Controls.Add(this.txtLocalOcorrenciaMulta);
@@ -3263,152 +2243,101 @@
             this.groupBox33.Controls.Add(this.txtValorMulta);
             this.groupBox33.Controls.Add(this.dateTimePickerOcorrenciaMulta);
             this.groupBox33.Controls.Add(this.label59);
-            this.groupBox33.Location = new System.Drawing.Point(6, 6);
             this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Size = new System.Drawing.Size(290, 380);
-            this.groupBox33.TabIndex = 4;
             this.groupBox33.TabStop = false;
-            this.groupBox33.Text = "Inserir multa";
             // 
             // ckPagamentoRealizado
             // 
-            this.ckPagamentoRealizado.AutoSize = true;
-            this.ckPagamentoRealizado.Location = new System.Drawing.Point(125, 243);
+            resources.ApplyResources(this.ckPagamentoRealizado, "ckPagamentoRealizado");
             this.ckPagamentoRealizado.Name = "ckPagamentoRealizado";
-            this.ckPagamentoRealizado.Size = new System.Drawing.Size(125, 17);
-            this.ckPagamentoRealizado.TabIndex = 29;
-            this.ckPagamentoRealizado.Text = "Pagamento realizado";
             this.ckPagamentoRealizado.UseVisualStyleBackColor = true;
             // 
             // label61
             // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(6, 132);
+            resources.ApplyResources(this.label61, "label61");
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(86, 13);
-            this.label61.TabIndex = 28;
-            this.label61.Text = "Local ocorrência";
             // 
             // txtLocalOcorrenciaMulta
             // 
-            this.txtLocalOcorrenciaMulta.Location = new System.Drawing.Point(6, 149);
-            this.txtLocalOcorrenciaMulta.Multiline = true;
+            resources.ApplyResources(this.txtLocalOcorrenciaMulta, "txtLocalOcorrenciaMulta");
             this.txtLocalOcorrenciaMulta.Name = "txtLocalOcorrenciaMulta";
-            this.txtLocalOcorrenciaMulta.Size = new System.Drawing.Size(262, 61);
-            this.txtLocalOcorrenciaMulta.TabIndex = 2;
             // 
             // dateTimePickerVencimentoMulta
             // 
-            this.dateTimePickerVencimentoMulta.Location = new System.Drawing.Point(6, 100);
+            resources.ApplyResources(this.dateTimePickerVencimentoMulta, "dateTimePickerVencimentoMulta");
             this.dateTimePickerVencimentoMulta.Name = "dateTimePickerVencimentoMulta";
-            this.dateTimePickerVencimentoMulta.Size = new System.Drawing.Size(262, 20);
-            this.dateTimePickerVencimentoMulta.TabIndex = 1;
             // 
             // label60
             // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(6, 84);
+            resources.ApplyResources(this.label60, "label60");
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(88, 13);
-            this.label60.TabIndex = 26;
-            this.label60.Text = "Data vencimento";
             // 
             // btnAnexarMulta
             // 
-            this.btnAnexarMulta.Location = new System.Drawing.Point(234, 288);
+            resources.ApplyResources(this.btnAnexarMulta, "btnAnexarMulta");
             this.btnAnexarMulta.Name = "btnAnexarMulta";
-            this.btnAnexarMulta.Size = new System.Drawing.Size(34, 23);
-            this.btnAnexarMulta.TabIndex = 5;
-            this.btnAnexarMulta.Text = "...";
             this.btnAnexarMulta.UseVisualStyleBackColor = true;
             this.btnAnexarMulta.Click += new System.EventHandler(this.btnAnexarMulta_Click);
             // 
             // label54
             // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(6, 273);
+            resources.ApplyResources(this.label54, "label54");
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(68, 13);
-            this.label54.TabIndex = 24;
-            this.label54.Text = "Anexar multa";
             // 
             // txtPathMulta
             // 
-            this.txtPathMulta.Location = new System.Drawing.Point(6, 289);
+            resources.ApplyResources(this.txtPathMulta, "txtPathMulta");
             this.txtPathMulta.Name = "txtPathMulta";
-            this.txtPathMulta.Size = new System.Drawing.Size(222, 20);
-            this.txtPathMulta.TabIndex = 4;
             // 
             // btnLancarMulta
             // 
+            resources.ApplyResources(this.btnLancarMulta, "btnLancarMulta");
             this.btnLancarMulta.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnLancarMulta.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
-            this.btnLancarMulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLancarMulta.Location = new System.Drawing.Point(209, 345);
             this.btnLancarMulta.Name = "btnLancarMulta";
-            this.btnLancarMulta.Size = new System.Drawing.Size(75, 23);
-            this.btnLancarMulta.TabIndex = 6;
-            this.btnLancarMulta.Text = "Lançar";
             this.btnLancarMulta.UseVisualStyleBackColor = false;
             this.btnLancarMulta.Click += new System.EventHandler(this.btnLancarMulta_Click);
             // 
             // label56
             // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(6, 225);
+            resources.ApplyResources(this.label56, "label56");
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(54, 13);
-            this.label56.TabIndex = 17;
-            this.label56.Text = "Valor (R$)";
             // 
             // txtValorMulta
             // 
-            this.txtValorMulta.Location = new System.Drawing.Point(6, 241);
+            resources.ApplyResources(this.txtValorMulta, "txtValorMulta");
             this.txtValorMulta.Name = "txtValorMulta";
-            this.txtValorMulta.Size = new System.Drawing.Size(100, 20);
-            this.txtValorMulta.TabIndex = 3;
             // 
             // dateTimePickerOcorrenciaMulta
             // 
-            this.dateTimePickerOcorrenciaMulta.Location = new System.Drawing.Point(6, 53);
+            resources.ApplyResources(this.dateTimePickerOcorrenciaMulta, "dateTimePickerOcorrenciaMulta");
             this.dateTimePickerOcorrenciaMulta.Name = "dateTimePickerOcorrenciaMulta";
-            this.dateTimePickerOcorrenciaMulta.Size = new System.Drawing.Size(262, 20);
-            this.dateTimePickerOcorrenciaMulta.TabIndex = 0;
             // 
             // label59
             // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(6, 37);
+            resources.ApplyResources(this.label59, "label59");
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(83, 13);
-            this.label59.TabIndex = 1;
-            this.label59.Text = "Data ocorrência";
             // 
             // dtMultas
             // 
+            resources.ApplyResources(this.dtMultas, "dtMultas");
             this.dtMultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtMultas.Location = new System.Drawing.Point(302, 109);
             this.dtMultas.Name = "dtMultas";
-            this.dtMultas.Size = new System.Drawing.Size(954, 419);
-            this.dtMultas.TabIndex = 15;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             // 
-            // frmVeiculo
+            // frmVeiculoPRT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 603);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmVeiculo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Veiculo";
+            this.Name = "frmVeiculoPRT";
             this.Load += new System.EventHandler(this.frmVeiculoPRT_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPageDashDoard.ResumeLayout(false);
@@ -3474,12 +2403,9 @@
             this.groupBox2.PerformLayout();
             this.groupBox36.ResumeLayout(false);
             this.groupBox36.PerformLayout();
-            this.groupBox21.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtPagamentoDocumento)).EndInit();
             this.groupBox20.ResumeLayout(false);
             this.groupBox20.PerformLayout();
-            this.groupBoxSeuCarroFIPE.ResumeLayout(false);
-            this.groupBoxSeuCarroFIPE.PerformLayout();
             this.tabPageSeguro.ResumeLayout(false);
             this.groupBox31.ResumeLayout(false);
             this.groupBox32.ResumeLayout(false);
@@ -3517,7 +2443,6 @@
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.TextBox txtChassi;
-        private System.Windows.Forms.ComboBox cmbUf;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.TextBox txtCPFCNPJ;
         private System.Windows.Forms.TextBox txtPlaca;
@@ -3550,16 +2475,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPotencia;
         private System.Windows.Forms.ComboBox cmbCombustivelAbastecimentoFiltro;
-        private System.Windows.Forms.Button btnSiteDoDetran;
-        private System.Windows.Forms.GroupBox groupBox21;
-        private System.Windows.Forms.GroupBox groupBoxSeuCarroFIPE;
         private System.Windows.Forms.Button btnAlterarVeiculo;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TabPage tabPageManutencao;
         private System.Windows.Forms.Button btnCadastrarMecanica;
         private System.Windows.Forms.Button btnVisualizarMecanicas;
@@ -3687,7 +2603,6 @@
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.Label label86;
-        private System.Windows.Forms.ComboBox cmbDetran;
         private System.Windows.Forms.Button btnLancarPagamentoDocumento;
         private System.Windows.Forms.DateTimePicker dateTimePickerDataPagamentoDocumento;
         private System.Windows.Forms.Label labelDataPagamentoDocumento;
@@ -3725,7 +2640,6 @@
         private System.Windows.Forms.GroupBox groupBox36;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.DateTimePicker dateTimePickerDataVencimentoDocumento;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
@@ -3788,5 +2702,9 @@
         private System.Windows.Forms.Label label106;
         private System.Windows.Forms.Label label111;
         private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txtMedidaPneus;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtCodigoPostal;
     }
 }

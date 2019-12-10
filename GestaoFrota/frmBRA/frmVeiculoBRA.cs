@@ -160,13 +160,13 @@ namespace GestaoFrota
             label12.Text = $"Consumido até o momento em {dataAtual.Year}";            
 
             if (consumo.ValorAlcool != 0)            
-                listBox1.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Alcool:   {0:C}    {1} lts", consumo.ValorAlcool, consumo.QuantidadeAlcool));
+                listBox1.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Alcool:   {0:C}    {1} lts", consumo.ValorAlcool, consumo.QuantidadeAlcool));
             if (consumo.ValorDiesel != 0)
-                listBox1.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Diesel:   {0:C}    {1} lts", consumo.ValorDiesel, consumo.QuantidadeDiesel));
+                listBox1.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Diesel:   {0:C}    {1} lts", consumo.ValorDiesel, consumo.QuantidadeDiesel));
             if (consumo.ValorGasolina != 0)
-                listBox1.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Gasolina: {0:C}    {1} lts", consumo.ValorGasolina, consumo.QuantidadeGasolina));
+                listBox1.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Gasolina: {0:C}    {1} lts", consumo.ValorGasolina, consumo.QuantidadeGasolina));
             if (consumo.ValorGNV != 0)
-                listBox1.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "GNV :       {0:C}    {1} m³ ", consumo.ValorGNV, consumo.QuantidadeGNV));
+                listBox1.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "GNV :       {0:C}    {1} m³ ", consumo.ValorGNV, consumo.QuantidadeGNV));
                       
             graficoPizzaAnual.TotalCombustivel = consumo.ValorAlcool + consumo.ValorDiesel + consumo.ValorGasolina + consumo.ValorGNV;
             graficoPizzaAnual.Total += graficoPizzaAnual.TotalCombustivel;
@@ -177,7 +177,7 @@ namespace GestaoFrota
             ConsumoInfo consumo = new AbastecimentoBLL().GetConsumoAnual(dataAtual.Date, veiculo);
 
             lblKmRodados.Text = $"Percorrido";
-            lblKmAnual.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:N0} Km", consumo.KM);            
+            lblKmAnual.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:N0} Km", consumo.KM);            
         }
                 
         private void CarregarDashBoardGastoManutencaoAnual(DateTime dataAtual, Veiculo veiculo)
@@ -185,7 +185,7 @@ namespace GestaoFrota
             GastoManutencaoInfo gasto = new ManutencaoBLL().GetGastoAnual(dataAtual, veiculo);
 
             label76.Text = $"Valor de manutenção";
-            label77.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", gasto.TotalValor);
+            label77.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", gasto.TotalValor);
 
             graficoPizzaAnual.TotalManutencao = gasto.TotalValor;
             graficoPizzaAnual.Total += graficoPizzaAnual.TotalManutencao;
@@ -195,16 +195,16 @@ namespace GestaoFrota
         {
             GastoManutencaoInfo gasto = new ManutencaoBLL().GetGasto(veiculo);
 
-            label79.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", gasto.TotalValor);
+            label79.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", gasto.TotalValor);
             label80.Text = $"Total de manutenções no veículo";
-            label81.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", gasto.TotalValor);
+            label81.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", gasto.TotalValor);
         }
 
         private void CarregarDashBoardTotalMultaAnual(DateTime dataAtual, Veiculo veiculo)
         {            
             graficoPizzaAnual.TotalMulta = new MultaBLL().GetMultaTotalAnual(dataAtual, veiculo);
             label83.Text = $"Valor de multas";
-            label84.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", graficoPizzaAnual.TotalMulta);
+            label84.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", graficoPizzaAnual.TotalMulta);
             graficoPizzaAnual.Total += graficoPizzaAnual.TotalMulta;
            
         }
@@ -213,7 +213,7 @@ namespace GestaoFrota
         {
             graficoPizzaAnual.TotalSeguro = new ContratoSeguradoraBLL().GetPagamentoSeguroAnual(dataAtual, veiculo);
             label85.Text = $"Valor de seguro";
-            label86.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", graficoPizzaAnual.TotalSeguro);
+            label86.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", graficoPizzaAnual.TotalSeguro);
             graficoPizzaAnual.Total += graficoPizzaAnual.TotalSeguro;
         }
 
@@ -221,7 +221,7 @@ namespace GestaoFrota
         {
             graficoPizzaAnual.TotalDocumento = new PagamentoDocumentoBLL().GetoPagamentoDocumentoTotalAnual(dataAtual, veiculo);
             label94.Text = $"Valor de documento";
-            label95.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", graficoPizzaAnual.TotalDocumento);
+            label95.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", graficoPizzaAnual.TotalDocumento);
             graficoPizzaAnual.Total += graficoPizzaAnual.TotalDocumento;
         }
 
@@ -308,7 +308,7 @@ namespace GestaoFrota
             if (graficoPizzaAnual.Total > 0)
             {
                 //  var total = graficoPizzaAnual.TotalCombustivel + graficoPizzaAnual.TotalManutencao + graficoPizzaAnual.TotalOleo;
-                label82.Text = $"Gasto até o momento: {string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", graficoPizzaAnual.Total)}";
+                label82.Text = $"Gasto até o momento: {string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", graficoPizzaAnual.Total)}";
 
                 //calculo do percentual combustivel
                 double percentualCombustivel = Convert.ToDouble((graficoPizzaAnual.TotalCombustivel * 100) / graficoPizzaAnual.Total);
@@ -327,11 +327,11 @@ namespace GestaoFrota
                 //chart1.Series[0]["PieLabelStyle"] = "Disabled";
                 chart1.Series[0]["PieLabelStyle"] = "Outside";
                 //define os pontos do grafico
-                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Combustivel - {0:C}", graficoPizzaAnual.TotalCombustivel), percentualCombustivel);
-                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Manutenção - {0:C}", graficoPizzaAnual.TotalManutencao), percentualManutencao);               
-                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Multa - {0:C}", graficoPizzaAnual.TotalMulta), percentualMulta);
-                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Seguro - {0:C}", graficoPizzaAnual.TotalSeguro), percentualSeguro);
-                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Documento - {0:C}", graficoPizzaAnual.TotalDocumento), percentualDocumento);
+                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Combustivel - {0:C}", graficoPizzaAnual.TotalCombustivel), percentualCombustivel);
+                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Manutenção - {0:C}", graficoPizzaAnual.TotalManutencao), percentualManutencao);               
+                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Multa - {0:C}", graficoPizzaAnual.TotalMulta), percentualMulta);
+                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Seguro - {0:C}", graficoPizzaAnual.TotalSeguro), percentualSeguro);
+                this.chart1.Series[0].Points.AddXY(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Documento - {0:C}", graficoPizzaAnual.TotalDocumento), percentualDocumento);
 
                 //define as cores dos pontos do grafico
                 this.chart1.Series[0].Points[0].Color = Color.Yellow;
@@ -506,17 +506,17 @@ namespace GestaoFrota
             label66.Text = $"Gasto até o momento em {dataAtual.Year}";
 
             if (consumo.ValorAlcool != 0)
-                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Alcool:   {0:C}    {1} lts", consumo.ValorAlcool, consumo.QuantidadeAlcool));
+                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Alcool:   {0:C}    {1} lts", consumo.ValorAlcool, consumo.QuantidadeAlcool));
             if (consumo.ValorDiesel != 0)
-                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Diesel:   {0:C}    {1} lts", consumo.ValorDiesel, consumo.QuantidadeDiesel));
+                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Diesel:   {0:C}    {1} lts", consumo.ValorDiesel, consumo.QuantidadeDiesel));
             if (consumo.ValorGasolina != 0)
-                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "Gasolina: {0:C}    {1} lts", consumo.ValorGasolina, consumo.QuantidadeGasolina));
+                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Gasolina: {0:C}    {1} lts", consumo.ValorGasolina, consumo.QuantidadeGasolina));
             if (consumo.ValorGNV != 0)
-                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo("pt-BR"), "GNV :       {0:C}    {1} m³ ", consumo.ValorGNV, consumo.QuantidadeGNV));
+                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "GNV :       {0:C}    {1} m³ ", consumo.ValorGNV, consumo.QuantidadeGNV));
 
             //Atualiza o dashboard de KM percorrido parcial
             label68.Text = $"Percorrido até o momento em {dataAtual.Year}";
-            label69.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:N0} Km", consumo.KM);
+            label69.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:N0} Km", consumo.KM);
         }
                
         private void CarregaDatagridAoAbrir(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
@@ -548,7 +548,6 @@ namespace GestaoFrota
         }
 
         #endregion
-
        
         #region Aba Manunteção
 

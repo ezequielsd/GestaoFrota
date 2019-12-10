@@ -62,6 +62,7 @@ namespace GestaoFrota.DAL
                 veiculo.UF = info.UF;
                 veiculo.Potencia = info.Potencia;
                 veiculo.PathDocumentoPDF = info.PathDocumentoPDF;
+                veiculo.MedidasPneus = info.MedidasPneus;
                 
                 context.SaveChanges();
             }
