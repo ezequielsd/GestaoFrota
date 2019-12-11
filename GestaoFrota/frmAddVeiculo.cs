@@ -20,12 +20,15 @@ namespace GestaoFrota
         List<MarcaFIPEinfo> marcas = new List<MarcaFIPEinfo>();
         List<CarroFIPEinfo> carros = new List<CarroFIPEinfo>();
         List<CarroAnoFIPEinfo> carrosAno = new List<CarroAnoFIPEinfo>();
+        string cultureInfo = string.Empty;
 
-        public frmAddVeiculo()
+        public frmAddVeiculo(string culture)
         {
+            this.cultureInfo = culture;
             InitializeComponent();
         }
 
+    
         private void frmAddVeiculo_Load(object sender, EventArgs e)
         {
             PreencherComboBoxTipo();
@@ -82,6 +85,7 @@ namespace GestaoFrota
             info.Tipo = (string)cmbTipo.SelectedValue;
             info.Ativo = true;
             info.DataVencimentoIPVA = DateTime.Now;
+            info.CultureInfo = cultureInfo;
 
             try
             {

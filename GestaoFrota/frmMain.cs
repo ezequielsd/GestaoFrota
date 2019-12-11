@@ -46,12 +46,14 @@ namespace GestaoFrota
                 frmSelecionarPais frm = new frmSelecionarPais();
                 frm.ShowDialog();               
                 this.Visible = true;
+                config = configBll.Get();
+                culture = config.CultureInfo;
             }
         }
 
         private void linkAddVeiculo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (frmAddVeiculo frm = new frmAddVeiculo())
+            using (frmAddVeiculo frm = new frmAddVeiculo(culture))
             {
                 frm.ShowDialog();
             }

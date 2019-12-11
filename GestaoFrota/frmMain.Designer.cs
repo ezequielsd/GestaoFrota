@@ -52,6 +52,7 @@
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.linkLabel4);
             this.panel1.Controls.Add(this.linkLabel3);
@@ -60,13 +61,12 @@
             this.panel1.Controls.Add(this.treeView1);
             this.panel1.Controls.Add(this.linkAddVeiculo);
             this.panel1.Controls.Add(this.menuStrip1);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // linkLabel4
             // 
-            this.linkLabel4.Image = global::GestaoFrota.Properties.Resources.if_chat_173174;
             resources.ApplyResources(this.linkLabel4, "linkLabel4");
+            this.linkLabel4.Image = global::GestaoFrota.Properties.Resources.if_chat_173174;
             this.linkLabel4.LinkColor = System.Drawing.Color.Red;
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.TabStop = true;
@@ -74,8 +74,8 @@
             // 
             // linkLabel3
             // 
-            this.linkLabel3.Image = global::GestaoFrota.Properties.Resources.if_security_1054983;
             resources.ApplyResources(this.linkLabel3, "linkLabel3");
+            this.linkLabel3.Image = global::GestaoFrota.Properties.Resources.if_security_1054983;
             this.linkLabel3.LinkColor = System.Drawing.Color.Red;
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.TabStop = true;
@@ -83,23 +83,23 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listBoxAvisos);
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.listBoxAvisos);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // listBoxAvisos
             // 
-            this.listBoxAvisos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.listBoxAvisos, "listBoxAvisos");
+            this.listBoxAvisos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBoxAvisos.ForeColor = System.Drawing.Color.Red;
             this.listBoxAvisos.FormattingEnabled = true;
             this.listBoxAvisos.Name = "listBoxAvisos";
             // 
             // linkLabel2
             // 
-            this.linkLabel2.Image = global::GestaoFrota.Properties.Resources.if_paper_document_107198;
             resources.ApplyResources(this.linkLabel2, "linkLabel2");
+            this.linkLabel2.Image = global::GestaoFrota.Properties.Resources.if_paper_document_107198;
             this.linkLabel2.LinkColor = System.Drawing.Color.Red;
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.TabStop = true;
@@ -107,8 +107,8 @@
             // 
             // treeView1
             // 
-            this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.treeView1, "treeView1");
+            this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.treeView1.Name = "treeView1";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             ((System.Windows.Forms.TreeNode)(resources.GetObject("treeView1.Nodes")))});
@@ -116,8 +116,8 @@
             // 
             // linkAddVeiculo
             // 
-            this.linkAddVeiculo.Image = global::GestaoFrota.Properties.Resources.if_flat_style_circle_add_1312548;
             resources.ApplyResources(this.linkAddVeiculo, "linkAddVeiculo");
+            this.linkAddVeiculo.Image = global::GestaoFrota.Properties.Resources.if_flat_style_circle_add_1312548;
             this.linkAddVeiculo.LinkColor = System.Drawing.Color.Green;
             this.linkAddVeiculo.Name = "linkAddVeiculo";
             this.linkAddVeiculo.TabStop = true;
@@ -125,55 +125,55 @@
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.atualizaçãoToolStripMenuItem,
             this.sobreToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // atualizaçãoToolStripMenuItem
             // 
+            resources.ApplyResources(this.atualizaçãoToolStripMenuItem, "atualizaçãoToolStripMenuItem");
             this.atualizaçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exportarDadosToolStripMenuItem,
             this.importarDadosToolStripMenuItem});
             this.atualizaçãoToolStripMenuItem.Name = "atualizaçãoToolStripMenuItem";
-            resources.ApplyResources(this.atualizaçãoToolStripMenuItem, "atualizaçãoToolStripMenuItem");
             // 
             // exportarDadosToolStripMenuItem
             // 
-            this.exportarDadosToolStripMenuItem.Name = "exportarDadosToolStripMenuItem";
             resources.ApplyResources(this.exportarDadosToolStripMenuItem, "exportarDadosToolStripMenuItem");
+            this.exportarDadosToolStripMenuItem.Name = "exportarDadosToolStripMenuItem";
             this.exportarDadosToolStripMenuItem.Click += new System.EventHandler(this.exportarDadosToolStripMenuItem_Click);
             // 
             // importarDadosToolStripMenuItem
             // 
-            this.importarDadosToolStripMenuItem.Name = "importarDadosToolStripMenuItem";
             resources.ApplyResources(this.importarDadosToolStripMenuItem, "importarDadosToolStripMenuItem");
+            this.importarDadosToolStripMenuItem.Name = "importarDadosToolStripMenuItem";
             // 
             // sobreToolStripMenuItem
             // 
+            resources.ApplyResources(this.sobreToolStripMenuItem, "sobreToolStripMenuItem");
             this.sobreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.conatoToolStripMenuItem,
             this.sobreToolStripMenuItem1,
             this.manualToolStripMenuItem});
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            resources.ApplyResources(this.sobreToolStripMenuItem, "sobreToolStripMenuItem");
             // 
             // conatoToolStripMenuItem
             // 
-            this.conatoToolStripMenuItem.Name = "conatoToolStripMenuItem";
             resources.ApplyResources(this.conatoToolStripMenuItem, "conatoToolStripMenuItem");
+            this.conatoToolStripMenuItem.Name = "conatoToolStripMenuItem";
             // 
             // sobreToolStripMenuItem1
             // 
-            this.sobreToolStripMenuItem1.Name = "sobreToolStripMenuItem1";
             resources.ApplyResources(this.sobreToolStripMenuItem1, "sobreToolStripMenuItem1");
+            this.sobreToolStripMenuItem1.Name = "sobreToolStripMenuItem1";
             this.sobreToolStripMenuItem1.Click += new System.EventHandler(this.sobreToolStripMenuItem1_Click);
             // 
             // manualToolStripMenuItem
             // 
-            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
             resources.ApplyResources(this.manualToolStripMenuItem, "manualToolStripMenuItem");
+            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
             this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
             // 
             // frmMain
