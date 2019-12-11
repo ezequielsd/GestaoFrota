@@ -281,6 +281,9 @@
     <EmbeddedResource Include="frmMecanicas.resx">
       <DependentUpon>frmMecanicas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPRT\frmVeiculoPRT.pt-BR.resx">
+      <DependentUpon>frmVeiculoPRT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPRT\frmVeiculoPRT.pt-PT.resx">
       <DependentUpon>frmVeiculoPRT.cs</DependentUpon>
     </EmbeddedResource>

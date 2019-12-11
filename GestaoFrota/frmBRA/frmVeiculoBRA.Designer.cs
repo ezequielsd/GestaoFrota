@@ -1470,19 +1470,21 @@
             // label97
             // 
             this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label97.Location = new System.Drawing.Point(16, 42);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(238, 15);
+            this.label97.Size = new System.Drawing.Size(205, 13);
             this.label97.TabIndex = 62;
             this.label97.Text = "Selecione o tipo de manutenção realizada";
             // 
             // cmbTipoManutencao
             // 
             this.cmbTipoManutencao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoManutencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoManutencao.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.cmbTipoManutencao.Location = new System.Drawing.Point(16, 59);
             this.cmbTipoManutencao.Name = "cmbTipoManutencao";
-            this.cmbTipoManutencao.Size = new System.Drawing.Size(296, 23);
+            this.cmbTipoManutencao.Size = new System.Drawing.Size(296, 21);
             this.cmbTipoManutencao.TabIndex = 61;
             // 
             // btnAnexarComprovanteManutencao
@@ -1493,78 +1495,88 @@
             this.btnAnexarComprovanteManutencao.TabIndex = 53;
             this.btnAnexarComprovanteManutencao.Text = "...";
             this.btnAnexarComprovanteManutencao.UseVisualStyleBackColor = true;
+            this.btnAnexarComprovanteManutencao.Click += new System.EventHandler(this.btnAnexarComprovanteManutencao_Click);
             // 
             // label26
             // 
             this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(18, 91);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(283, 15);
+            this.label26.Size = new System.Drawing.Size(245, 13);
             this.label26.TabIndex = 55;
             this.label26.Text = "Selecione a empresa que executou a manutenção";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.Location = new System.Drawing.Point(17, 406);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(119, 15);
+            this.label40.Size = new System.Drawing.Size(105, 13);
             this.label40.TabIndex = 60;
             this.label40.Text = "Anexar comprovante";
             // 
             // cmbMecanica
             // 
             this.cmbMecanica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMecanica.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMecanica.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.cmbMecanica.Location = new System.Drawing.Point(17, 110);
             this.cmbMecanica.Name = "cmbMecanica";
-            this.cmbMecanica.Size = new System.Drawing.Size(295, 23);
+            this.cmbMecanica.Size = new System.Drawing.Size(295, 21);
             this.cmbMecanica.TabIndex = 47;
             // 
             // txtPathComprovanteManutencao
             // 
+            this.txtPathComprovanteManutencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPathComprovanteManutencao.Location = new System.Drawing.Point(17, 422);
             this.txtPathComprovanteManutencao.Name = "txtPathComprovanteManutencao";
-            this.txtPathComprovanteManutencao.Size = new System.Drawing.Size(295, 21);
+            this.txtPathComprovanteManutencao.Size = new System.Drawing.Size(295, 20);
             this.txtPathComprovanteManutencao.TabIndex = 52;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.Location = new System.Drawing.Point(17, 136);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(33, 15);
+            this.label33.Size = new System.Drawing.Size(30, 13);
             this.label33.TabIndex = 56;
             this.label33.Text = "Data";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(17, 216);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(26, 15);
+            this.label36.Size = new System.Drawing.Size(23, 13);
             this.label36.TabIndex = 59;
             this.label36.Text = "KM";
             // 
             // dateTimePickerManutencao
             // 
+            this.dateTimePickerManutencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerManutencao.Location = new System.Drawing.Point(17, 152);
             this.dateTimePickerManutencao.Name = "dateTimePickerManutencao";
-            this.dateTimePickerManutencao.Size = new System.Drawing.Size(234, 21);
+            this.dateTimePickerManutencao.Size = new System.Drawing.Size(295, 20);
             this.dateTimePickerManutencao.TabIndex = 48;
             // 
             // txtKMManutencao
             // 
+            this.txtKMManutencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKMManutencao.Location = new System.Drawing.Point(17, 232);
             this.txtKMManutencao.Name = "txtKMManutencao";
-            this.txtKMManutencao.Size = new System.Drawing.Size(100, 21);
+            this.txtKMManutencao.Size = new System.Drawing.Size(100, 20);
             this.txtKMManutencao.TabIndex = 50;
             // 
             // txtValorManutencao
             // 
+            this.txtValorManutencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValorManutencao.Location = new System.Drawing.Point(17, 192);
             this.txtValorManutencao.Name = "txtValorManutencao";
-            this.txtValorManutencao.Size = new System.Drawing.Size(100, 21);
+            this.txtValorManutencao.Size = new System.Drawing.Size(100, 20);
             this.txtValorManutencao.TabIndex = 49;
             // 
             // btnLancarManutencao
@@ -1583,23 +1595,26 @@
             // label32
             // 
             this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(17, 176);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(62, 15);
+            this.label32.Size = new System.Drawing.Size(54, 13);
             this.label32.TabIndex = 57;
             this.label32.Text = "Valor (R$)";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.Location = new System.Drawing.Point(17, 256);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(120, 15);
+            this.label34.Size = new System.Drawing.Size(107, 13);
             this.label34.TabIndex = 58;
             this.label34.Text = "Descrição do serviço";
             // 
             // txtDescricaoManutencao
             // 
+            this.txtDescricaoManutencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescricaoManutencao.Location = new System.Drawing.Point(17, 272);
             this.txtDescricaoManutencao.Multiline = true;
             this.txtDescricaoManutencao.Name = "txtDescricaoManutencao";
@@ -3396,7 +3411,7 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // frmVeiculo
+            // frmVeiculoBRA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -3406,7 +3421,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmVeiculo";
+            this.Name = "frmVeiculoBRA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Veiculo";
             this.Load += new System.EventHandler(this.frmVeiculoBRA_Load);

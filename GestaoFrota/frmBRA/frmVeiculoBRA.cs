@@ -1916,7 +1916,5 @@ namespace GestaoFrota
                 }
             }
         }
-
-       
     }
 }
