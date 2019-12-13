@@ -1902,8 +1902,6 @@ namespace GestaoFrota
                     }
                 }
             }
-        }
-
-       
+        }       
     }
 }

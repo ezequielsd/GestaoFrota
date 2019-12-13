@@ -1124,6 +1124,7 @@
             resources.ApplyResources(this.btnAnexarComprovanteManutencao, "btnAnexarComprovanteManutencao");
             this.btnAnexarComprovanteManutencao.Name = "btnAnexarComprovanteManutencao";
             this.btnAnexarComprovanteManutencao.UseVisualStyleBackColor = true;
+            this.btnAnexarComprovanteManutencao.Click += new System.EventHandler(this.btnAnexarComprovanteManutencao_Click);
             // 
             // label26
             // 
