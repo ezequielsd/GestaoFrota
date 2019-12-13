@@ -14,8 +14,7 @@ namespace GestaoFrota
     {
         string fileNameManual = "GUIA RÁPIDO DE UTILIZAÇÃO DO GESTÃO DE FROTA PORTABLE.pdf";
         string pathManual = Environment.CurrentDirectory;
-        string pathDestinoManual = string.Empty;
-        Configuracao config;
+        string pathDestinoManual = string.Empty;       
         string culture = "pt-BR";
 
         public frmMain()

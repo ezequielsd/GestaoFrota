@@ -876,7 +876,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::GestaoFrota.Properties.Resources.if_fuel_103260;
-            this.pictureBox5.Location = new System.Drawing.Point(181, 22);
+            this.pictureBox5.Location = new System.Drawing.Point(171, 22);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(55, 50);
             this.pictureBox5.TabIndex = 13;
@@ -885,7 +885,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::GestaoFrota.Properties.Resources.if_money_bag_309025;
-            this.pictureBox6.Location = new System.Drawing.Point(83, 21);
+            this.pictureBox6.Location = new System.Drawing.Point(78, 21);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(55, 48);
             this.pictureBox6.TabIndex = 14;
@@ -908,13 +908,13 @@
             // 
             this.listBox3.BackColor = System.Drawing.Color.White;
             this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox3.ForeColor = System.Drawing.Color.Black;
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 20;
+            this.listBox3.ItemHeight = 16;
             this.listBox3.Location = new System.Drawing.Point(4, 74);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(243, 100);
+            this.listBox3.Size = new System.Drawing.Size(243, 96);
             this.listBox3.TabIndex = 97;
             // 
             // btnAdicionarComprovante

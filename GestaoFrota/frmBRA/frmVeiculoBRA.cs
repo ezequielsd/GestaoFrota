@@ -506,13 +506,13 @@ namespace GestaoFrota
             label66.Text = $"Gasto até o momento em {dataAtual.Year}";
 
             if (consumo.ValorAlcool != 0)
-                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Alcool:   {0:C}    {1} lts", consumo.ValorAlcool, consumo.QuantidadeAlcool));
+                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Alcool:   {0:C}         {1} L", consumo.ValorAlcool, consumo.QuantidadeAlcool));
             if (consumo.ValorDiesel != 0)
-                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Diesel:   {0:C}    {1} lts", consumo.ValorDiesel, consumo.QuantidadeDiesel));
+                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Diesel:   {0:C}         {1} L", consumo.ValorDiesel, consumo.QuantidadeDiesel));
             if (consumo.ValorGasolina != 0)
-                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Gasolina: {0:C}    {1} lts", consumo.ValorGasolina, consumo.QuantidadeGasolina));
+                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Gasolina: {0:C}         {1} L", consumo.ValorGasolina, consumo.QuantidadeGasolina));
             if (consumo.ValorGNV != 0)
-                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "GNV :       {0:C}    {1} m³ ", consumo.ValorGNV, consumo.QuantidadeGNV));
+                listBox3.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "GNV :         {0:C}         {1} m³ ", consumo.ValorGNV, consumo.QuantidadeGNV));
 
             //Atualiza o dashboard de KM percorrido parcial
             label68.Text = $"Percorrido até o momento em {dataAtual.Year}";
