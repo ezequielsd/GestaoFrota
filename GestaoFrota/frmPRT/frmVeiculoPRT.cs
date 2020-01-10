@@ -135,26 +135,48 @@ namespace GestaoFrota
 
         #region Aba DashBoard
 
+        private void btnAplicarFiltroDashboard_Click(object sender, EventArgs e)
+        {
+            CarregarDashboardPorFiltro(dateTimePickerFiltroDashDataInicial.Value, dateTimePickerFiltroDashDataFinal.Value);
+        }
+
         public void CarregarDashboard()
         {
             graficoPizzaAnual.Total = 0;
-            CarregarDashBoardConsumoCombustivelAnual(dataAtual.Date, veiculo);
-            CarregarDashBoardKMAnual(dataAtual.Date, veiculo);
-            CarregarDashBoardGastoManutencaoAnual(dataAtual.Date, veiculo);
-            CarregarDashBoardGastoManutencaoTotal(veiculo);            
-            CarregarDashBoardTotalMultaAnual(dataAtual.Date, veiculo);
-            CarregarDashBoardTotalAnualSeguro(dataAtual.Date, veiculo);
-            CarregarDashBoardTotalPagamentoDocumento(dataAtual.Date, veiculo);
-            CarregarDashBoardConsumo(dataAtual.Date, veiculo);
+            CarregarDashBoardConsumoCombustivelAnual(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
+            CarregarDashBoardKMAnual(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
+            CarregarDashBoardGastoManutencaoAnual(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
+            CarregarDashBoardGastoManutencaoTotal(veiculo);
+            CarregarDashBoardTotalMulta(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
+            CarregarDashBoardTotalSeguro(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
+            CarregarDashBoardTotalPagamentoDocumento(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
+            CarregarDashBoardConsumo(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
             PlotGraficoPizzaAnual();
         }
 
-        private void CarregarDashBoardConsumoCombustivelAnual(DateTime dataAtual, Veiculo veiculo)
+        public void CarregarDashboardPorFiltro(DateTime dtInicial, DateTime dtFinal)
         {
+            graficoPizzaAnual.Total = 0;
+            CarregarDashBoardConsumoCombustivelAnual(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
+            CarregarDashBoardKMAnual(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
+            CarregarDashBoardGastoManutencaoAnual(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
+            CarregarDashBoardGastoManutencaoTotal(veiculo);
+            CarregarDashBoardTotalMulta(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
+            CarregarDashBoardTotalSeguro(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
+            CarregarDashBoardTotalPagamentoDocumento(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
+            CarregarDashBoardConsumo(false, dtInicial, dtFinal, dataAtual.Date, veiculo);
+            PlotGraficoPizzaAnual();
+        }
+
+        private void CarregarDashBoardConsumoCombustivelAnual(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
+        {
+            ConsumoInfo consumo;
             listBox1.Items.Clear();
-            ConsumoInfo consumo = new AbastecimentoBLL().GetConsumoAnual(dataAtual.Date, veiculo);
-            Combustivel combustivelVeiculo = new CombustivelBLL().GetCombustivel(veiculo.Combustivel);
-                       
+            if (filter)
+                consumo = new AbastecimentoBLL().GetConsumo(dataInicial, dataFinal, veiculo);
+            else
+                consumo = new AbastecimentoBLL().GetConsumoAnual(dataAtual.Date, veiculo);
+            
             label65.Text = $"Gasto de combustivel";                       
 
             if (consumo.ValorAlcool != 0)            
@@ -170,17 +192,27 @@ namespace GestaoFrota
             graficoPizzaAnual.Total += graficoPizzaAnual.TotalCombustivel;
         }
 
-        private void CarregarDashBoardKMAnual(DateTime dataAtual, Veiculo veiculo)
+        private void CarregarDashBoardKMAnual(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
         {
-            ConsumoInfo consumo = new AbastecimentoBLL().GetConsumoAnual(dataAtual.Date, veiculo);
+            ConsumoInfo consumo;
+
+            if (filter)
+                consumo = new AbastecimentoBLL().GetConsumo(dataInicial, dataFinal, veiculo);
+            else
+                consumo = new AbastecimentoBLL().GetConsumoAnual(dataAtual.Date, veiculo);
 
             lblKmRodados.Text = $"Percorrido";
             lblKmAnual.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:N0} Km", consumo.KM);            
         }
                 
-        private void CarregarDashBoardGastoManutencaoAnual(DateTime dataAtual, Veiculo veiculo)
+        private void CarregarDashBoardGastoManutencaoAnual(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
         {
-            GastoManutencaoInfo gasto = new ManutencaoBLL().GetGastoAnual(dataAtual, veiculo);
+            GastoManutencaoInfo gasto;
+
+            if (filter)
+                gasto = new ManutencaoBLL().GetGasto(dataInicial, dataFinal, veiculo);
+            else
+                gasto = new ManutencaoBLL().GetGastoAnual(dataAtual, veiculo);
 
             label76.Text = $"Valor de manutenção";
             label77.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", gasto.TotalValor);
@@ -198,35 +230,52 @@ namespace GestaoFrota
             label81.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", gasto.TotalValor);
         }
 
-        private void CarregarDashBoardTotalMultaAnual(DateTime dataAtual, Veiculo veiculo)
-        {            
-            graficoPizzaAnual.TotalMulta = new MultaBLL().GetMultaTotalAnual(dataAtual, veiculo);
+        private void CarregarDashBoardTotalMulta(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
+        {
+            if (filter)
+                graficoPizzaAnual.TotalMulta = new MultaBLL().GetMultaPorPeriodo(dataInicial, dataFinal, veiculo);
+            else
+                graficoPizzaAnual.TotalMulta = new MultaBLL().GetMultaTotalAnual(dataAtual, veiculo);
+
             label83.Text = $"Valor de multas";
             label84.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", graficoPizzaAnual.TotalMulta);
             graficoPizzaAnual.Total += graficoPizzaAnual.TotalMulta;
            
         }
 
-        private void CarregarDashBoardTotalAnualSeguro(DateTime dataAtual, Veiculo veiculo)
+        private void CarregarDashBoardTotalSeguro(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
         {
-            graficoPizzaAnual.TotalSeguro = new ContratoSeguradoraBLL().GetPagamentoSeguroAnual(dataAtual, veiculo);
+            if (filter)
+                graficoPizzaAnual.TotalSeguro = new ContratoSeguradoraBLL().GetPagamentoSeguroAnual(dataInicial, veiculo);
+            else
+                graficoPizzaAnual.TotalSeguro = new ContratoSeguradoraBLL().GetPagamentoSeguroAnual(dataAtual, veiculo);
+
             label85.Text = $"Valor de seguro";
             label86.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", graficoPizzaAnual.TotalSeguro);
             graficoPizzaAnual.Total += graficoPizzaAnual.TotalSeguro;
         }
 
-        private void CarregarDashBoardTotalPagamentoDocumento(DateTime dataAtual, Veiculo veiculo)
+        private void CarregarDashBoardTotalPagamentoDocumento(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
         {
-            graficoPizzaAnual.TotalDocumento = new PagamentoDocumentoBLL().GetoPagamentoDocumentoTotalAnual(dataAtual, veiculo);
+            if (filter)
+                graficoPizzaAnual.TotalDocumento = new PagamentoDocumentoBLL().GetoPagamentoDocumentoTotalAnual(dataInicial, veiculo);
+            else
+                graficoPizzaAnual.TotalDocumento = new PagamentoDocumentoBLL().GetoPagamentoDocumentoTotalAnual(dataAtual, veiculo);
+
             label94.Text = $"Valor de documento";
             label95.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", graficoPizzaAnual.TotalDocumento);
             graficoPizzaAnual.Total += graficoPizzaAnual.TotalDocumento;
         }
 
-        private void CarregarDashBoardConsumo(DateTime dataAtual, Veiculo veiculo)
+        private void CarregarDashBoardConsumo(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
         {
             dataGridView1.Rows.Clear();
-            List<AutonomiaInfo> listMedia = new AbastecimentoBLL().GetAutonomia(dataAtual, veiculo);          
+            List<AutonomiaInfo> listMedia;
+
+            if (filter)
+                listMedia = new AbastecimentoBLL().GetAutonomia(dataAtual, veiculo);
+            else
+                listMedia = new AbastecimentoBLL().GetAutonomia(dataAtual, veiculo);
 
             //header
             if (listMedia.Count > 0)
@@ -1902,6 +1951,7 @@ namespace GestaoFrota
                     }
                 }
             }
-        }       
+        }
+       
     }
 }

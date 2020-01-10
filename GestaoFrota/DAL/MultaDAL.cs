@@ -147,6 +147,14 @@ namespace GestaoFrota.DAL
                 return context.Multas.Where(w => (w.DataPagamento.Year.Equals(dataAtual.Year) && w.Veiculo.Placa.Equals(veiculo.Placa))).Select(s => (decimal?)s.Valor).Sum() ?? 0;
             }
         }
+
+        public decimal GetMultaPorPeriodo(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
+        {
+            using (var context = new Context())
+            {
+                return context.Multas.Where(w => (w.DataPagamento >= dtInicial && w.DataPagamento <= dtFinal) && w.Veiculo.Placa.Equals(veiculo.Placa)).Select(s => (decimal?)s.Valor).Sum() ?? 0;
+            }
+        }
                 
         public void SetPagamento(int id, DateTime dataPagamento)
         {

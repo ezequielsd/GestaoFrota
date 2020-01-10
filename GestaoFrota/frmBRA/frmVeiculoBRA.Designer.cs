@@ -316,6 +316,11 @@
             this.label59 = new System.Windows.Forms.Label();
             this.dtMultas = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerFiltroDashDataInicial = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFiltroDashDataFinal = new System.Windows.Forms.DateTimePicker();
+            this.label27 = new System.Windows.Forms.Label();
+            this.btnAplicarFiltroDashboard = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageDashDoard.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -374,6 +379,7 @@
             this.groupBox34.SuspendLayout();
             this.groupBox33.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -394,7 +400,8 @@
             // 
             // tabPageDashDoard
             // 
-            this.tabPageDashDoard.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPageDashDoard.BackColor = System.Drawing.Color.White;
+            this.tabPageDashDoard.Controls.Add(this.groupBox4);
             this.tabPageDashDoard.Controls.Add(this.panel7);
             this.tabPageDashDoard.Controls.Add(this.groupBox35);
             this.tabPageDashDoard.Controls.Add(this.groupBox27);
@@ -411,15 +418,15 @@
             this.panel7.Controls.Add(this.pictureBox11);
             this.panel7.Controls.Add(this.label78);
             this.panel7.Controls.Add(this.label79);
-            this.panel7.Location = new System.Drawing.Point(5, 499);
+            this.panel7.Location = new System.Drawing.Point(883, 11);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(268, 58);
+            this.panel7.Size = new System.Drawing.Size(389, 58);
             this.panel7.TabIndex = 92;
             // 
             // pictureBox11
             // 
             this.pictureBox11.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
-            this.pictureBox11.Location = new System.Drawing.Point(215, 4);
+            this.pictureBox11.Location = new System.Drawing.Point(333, 4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(50, 52);
             this.pictureBox11.TabIndex = 3;
@@ -441,7 +448,7 @@
             this.label79.AutoSize = true;
             this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label79.ForeColor = System.Drawing.Color.Red;
-            this.label79.Location = new System.Drawing.Point(6, 23);
+            this.label79.Location = new System.Drawing.Point(40, 23);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(82, 31);
             this.label79.TabIndex = 1;
@@ -452,7 +459,7 @@
             this.groupBox35.BackColor = System.Drawing.Color.White;
             this.groupBox35.Controls.Add(this.panel3);
             this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox35.Location = new System.Drawing.Point(883, 7);
+            this.groupBox35.Location = new System.Drawing.Point(883, 76);
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Size = new System.Drawing.Size(389, 213);
             this.groupBox35.TabIndex = 99;
@@ -480,7 +487,7 @@
             // 
             // groupBox27
             // 
-            this.groupBox27.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox27.BackColor = System.Drawing.Color.White;
             this.groupBox27.Controls.Add(this.panelConsumoCombustivelAnual);
             this.groupBox27.Controls.Add(this.panel11);
             this.groupBox27.Controls.Add(this.panel10);
@@ -491,7 +498,7 @@
             this.groupBox27.Controls.Add(this.panel5);
             this.groupBox27.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox27.Location = new System.Drawing.Point(5, 4);
+            this.groupBox27.Location = new System.Drawing.Point(5, 74);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.Size = new System.Drawing.Size(871, 489);
             this.groupBox27.TabIndex = 97;
@@ -3411,6 +3418,58 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.White;
+            this.groupBox4.Controls.Add(this.btnAplicarFiltroDashboard);
+            this.groupBox4.Controls.Add(this.label27);
+            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataFinal);
+            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataInicial);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(6, 11);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(870, 57);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Filtro";
+            // 
+            // dateTimePickerFiltroDashDataInicial
+            // 
+            this.dateTimePickerFiltroDashDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerFiltroDashDataInicial.Location = new System.Drawing.Point(75, 25);
+            this.dateTimePickerFiltroDashDataInicial.Name = "dateTimePickerFiltroDashDataInicial";
+            this.dateTimePickerFiltroDashDataInicial.Size = new System.Drawing.Size(236, 20);
+            this.dateTimePickerFiltroDashDataInicial.TabIndex = 1;
+            // 
+            // dateTimePickerFiltroDashDataFinal
+            // 
+            this.dateTimePickerFiltroDashDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerFiltroDashDataFinal.Location = new System.Drawing.Point(336, 25);
+            this.dateTimePickerFiltroDashDataFinal.Name = "dateTimePickerFiltroDashDataFinal";
+            this.dateTimePickerFiltroDashDataFinal.Size = new System.Drawing.Size(249, 20);
+            this.dateTimePickerFiltroDashDataFinal.TabIndex = 2;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(317, 31);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(13, 13);
+            this.label27.TabIndex = 3;
+            this.label27.Text = "à";
+            // 
+            // btnAplicarFiltroDashboard
+            // 
+            this.btnAplicarFiltroDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAplicarFiltroDashboard.Location = new System.Drawing.Point(603, 23);
+            this.btnAplicarFiltroDashboard.Name = "btnAplicarFiltroDashboard";
+            this.btnAplicarFiltroDashboard.Size = new System.Drawing.Size(75, 23);
+            this.btnAplicarFiltroDashboard.TabIndex = 4;
+            this.btnAplicarFiltroDashboard.Text = "Aplicar";
+            this.btnAplicarFiltroDashboard.UseVisualStyleBackColor = true;
+            this.btnAplicarFiltroDashboard.Click += new System.EventHandler(this.btnAplicarFiltroDashboard_Click);
+            // 
             // frmVeiculoBRA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3513,6 +3572,8 @@
             this.groupBox33.ResumeLayout(false);
             this.groupBox33.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3803,5 +3864,10 @@
         private System.Windows.Forms.Label label106;
         private System.Windows.Forms.Label label111;
         private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btnAplicarFiltroDashboard;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFiltroDashDataFinal;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFiltroDashDataInicial;
     }
 }

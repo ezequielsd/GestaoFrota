@@ -90,25 +90,15 @@ namespace GestaoFrota.DAL
 
         public ConsumoInfo GetConsumo(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
-            ConsumoInfo consumo = new ConsumoInfo
-            {
-                QuantidadeAlcool = 0,
-                QuantidadeDiesel = 0,
-                QuantidadeGasolina = 0,
-                QuantidadeGNV = 0,
-                ValorAlcool = 0,
-                ValorDiesel = 0,
-                ValorGasolina = 0,
-                ValorGNV = 0,
-                KM = 0
-            };
+            Combustivel combustivelVeiculo;
+            List<DGridAbastecimentoInfo> abastecimento;
 
             using (var context = new Context())
             {
-                Combustivel combustivelVeiculo = context.Combustiveis.Where(w => w.Id.Equals(veiculo.Combustivel)).FirstOrDefault();
+                combustivelVeiculo = context.Combustiveis.Where(w => w.Id.Equals(veiculo.Combustivel)).FirstOrDefault();
 
                 //busca o abastecimento do veiculo conforme range de data 
-                List<DGridAbastecimentoInfo> abastecimento = context.Abastecimentos.Where(w => (w.Data >= dtInicial && w.Data <= dtFinal) && w.Veiculo.Placa.Equals(veiculo.Placa)).
+                abastecimento = context.Abastecimentos.Where(w => (w.Data >= dtInicial && w.Data <= dtFinal) && w.Veiculo.Placa.Equals(veiculo.Placa)).
                     Select(s => new DGridAbastecimentoInfo
                     {
                         Data = s.Data,
@@ -116,148 +106,25 @@ namespace GestaoFrota.DAL
                         KM = s.KM,
                         Quantidade = s.Quantidade,
                         Valor = s.Valor
-                    }).OrderBy(or => or.Data).ToList();
-
-                //TODO: Refatorar esse switch
-                switch (combustivelVeiculo.Tipo)
-                {
-                    case "Gasolina":
-                        if(abastecimento.Count() >= 2)
-                        {
-                            consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Last().KM - abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).First().KM;
-                        }                        
-                        break;
-
-                    case "Alcool":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            consumo.QuantidadeAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Last().KM - abastecimento.Where(w => w.Combustivel.Equals("Alcool")).First().KM;
-                        }
-                        break;
-
-                    case "Flex":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            //Gasolina
-                            consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
-                            //Alcool
-                            consumo.QuantidadeAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
-                        }
-                        break;
-
-                    case "GNV":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Last().KM - abastecimento.Where(w => w.Combustivel.Equals("GNV")).First().KM;
-                        }
-                        break;
-
-                    case "Gasolina/GNV":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            //Gasolina
-                            consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
-                            //GNV
-                            consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
-                        }
-                        break;
-
-                    case "Flex/GNV":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            //Gasolina
-                            consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
-                            //Alcool
-                            consumo.QuantidadeAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Valor).Sum();
-                            //GNV
-                            consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
-                        }
-                        break;
-
-                    case "Diesel":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            consumo.QuantidadeDiesel = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorDiesel = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Last().KM - abastecimento.Where(w => w.Combustivel.Equals("Diesel")).First().KM;
-                        }
-                        break;
-
-                    case "Tri-Combustivel":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            //Gasolina
-                            consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
-                            //Alcool
-                            consumo.QuantidadeAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Valor).Sum();
-                            //GNV
-                            consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
-                        }
-                        break;
-
-                    case "Diesel/GNV":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            //Diesel
-                            consumo.QuantidadeDiesel = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorDiesel = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Valor).Sum();
-                            //GNV
-                            consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
-                        }
-                        break;
-                    default:
-                        break;
-                }
+                    }).OrderBy(or => or.Data).ToList();                
             }
-
-
-            return consumo;
+                        
+            return ExtratificaConsumo(veiculo, combustivelVeiculo, abastecimento);
         }
 
         public ConsumoInfo GetConsumoAnual(DateTime dtAtual, Veiculo veiculo)
         {
-            ConsumoInfo consumo = new ConsumoInfo
-            {
-                QuantidadeAlcool = 0,
-                QuantidadeDiesel = 0,
-                QuantidadeGasolina = 0,
-                QuantidadeGNV = 0,
-                ValorAlcool = 0,
-                ValorDiesel = 0,
-                ValorGasolina = 0,
-                ValorGNV = 0,
-                KM = 0
-            };
+            ConsumoInfo consumo = new ConsumoInfo();
+            List<DGridAbastecimentoInfo> abastecimento;
+            Combustivel combustivelVeiculo;
 
             //TODO: Refatorar esse switch
             using (var context = new Context())
             {
-                Combustivel combustivelVeiculo = context.Combustiveis.Where(w => w.Id.Equals(veiculo.Combustivel)).FirstOrDefault();
+                combustivelVeiculo = context.Combustiveis.Where(w => w.Id.Equals(veiculo.Combustivel)).FirstOrDefault();
 
                 //busca o abastecimento do veiculo conforme range de data 
-                List<DGridAbastecimentoInfo> abastecimento = context.Abastecimentos.Where(w => w.Data.Year.Equals(dtAtual.Year) && w.Veiculo.Placa.Equals(veiculo.Placa)).
+                abastecimento = context.Abastecimentos.Where(w => w.Data.Year.Equals(dtAtual.Year) && w.Veiculo.Placa.Equals(veiculo.Placa)).
                     Select(s => new DGridAbastecimentoInfo
                     {
                         Data = s.Data,
@@ -267,117 +134,128 @@ namespace GestaoFrota.DAL
                         Valor = s.Valor
                     }).OrderBy(or => or.Data).ToList();
 
-                switch (combustivelVeiculo.Tipo)
-                {
-                    case "Gasolina":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Last().KM - abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).First().KM;
-                        }
-                        break;
+               
+            }
 
-                    case "Alcool":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            consumo.QuantidadeAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Last().KM - abastecimento.Where(w => w.Combustivel.Equals("Alcool")).First().KM;
-                        }
-                        break;
+            return ExtratificaConsumo(veiculo, combustivelVeiculo, abastecimento);
+        }
 
-                    case "Flex":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            //Gasolina
-                            consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
-                            //Alcool
-                            consumo.QuantidadeAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
-                        }
-                        break;
+        
+        private ConsumoInfo ExtratificaConsumo(Veiculo veiculo, Combustivel combustivel, List<DGridAbastecimentoInfo> abastecimento)
+        {
+            ConsumoInfo consumo = new ConsumoInfo();
 
-                    case "GNV":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Last().KM - abastecimento.Where(w => w.Combustivel.Equals("GNV")).First().KM;
-                        }
-                        break;
+            //TODO: Refatorar esse switch
+            switch (combustivel.Tipo)
+            {
+                case "Gasolina":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
+                        consumo.KM = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Last().KM - abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).First().KM;
+                    }
+                    break;
 
-                    case "Gasolina/GNV":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            //Gasolina
-                            consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
-                            //GNV
-                            consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
-                        }
-                        break;
+                case "Alcool":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        consumo.QuantidadeAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Valor).Sum();
+                        consumo.KM = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Last().KM - abastecimento.Where(w => w.Combustivel.Equals("Alcool")).First().KM;
+                    }
+                    break;
 
-                    case "Flex/GNV":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            //Gasolina
-                            consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
-                            //Alcool
-                            consumo.QuantidadeAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Valor).Sum();
-                            //GNV
-                            consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
-                        }
-                        break;
+                case "Flex":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        //Gasolina
+                        consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
+                        //Alcool
+                        consumo.QuantidadeAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Valor).Sum();
+                        consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
+                    }
+                    break;
 
-                    case "Diesel":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            consumo.QuantidadeDiesel = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorDiesel = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Last().KM - abastecimento.Where(w => w.Combustivel.Equals("Diesel")).First().KM;
-                        }
-                        break;
+                case "GNV":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
+                        consumo.KM = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Last().KM - abastecimento.Where(w => w.Combustivel.Equals("GNV")).First().KM;
+                    }
+                    break;
 
-                    case "Tri-Combustivel":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            //Gasolina
-                            consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
-                            //Alcool
-                            consumo.QuantidadeAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Valor).Sum();
-                            //GNV
-                            consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
-                        }
-                        break;
+                case "Gasolina/GNV":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        //Gasolina
+                        consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
+                        //GNV
+                        consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
+                        consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
+                    }
+                    break;
 
-                    case "Diesel/GNV":
-                        if (abastecimento.Count() >= 2)
-                        {
-                            //Diesel
-                            consumo.QuantidadeDiesel = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorDiesel = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Valor).Sum();
-                            //GNV
-                            consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                            consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
-                            consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
-                        }
-                        break;
-                    default:
-                        break;
-                }
+                case "Flex/GNV":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        //Gasolina
+                        consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
+                        //Alcool
+                        consumo.QuantidadeAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Valor).Sum();
+                        //GNV
+                        consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
+                        consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
+                    }
+                    break;
+
+                case "Diesel":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        consumo.QuantidadeDiesel = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorDiesel = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Valor).Sum();
+                        consumo.KM = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Last().KM - abastecimento.Where(w => w.Combustivel.Equals("Diesel")).First().KM;
+                    }
+                    break;
+
+                case "Tri-Combustivel":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        //Gasolina
+                        consumo.QuantidadeGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorGasolina = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Valor).Sum();
+                        //Alcool
+                        consumo.QuantidadeAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorAlcool = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Valor).Sum();
+                        //GNV
+                        consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
+                        consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
+                    }
+                    break;
+
+                case "Diesel/GNV":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        //Diesel
+                        consumo.QuantidadeDiesel = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorDiesel = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Valor).Sum();
+                        //GNV
+                        consumo.QuantidadeGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
+                        consumo.ValorGNV = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Valor).Sum();
+                        consumo.KM = abastecimento.Last().KM - abastecimento.First().KM;
+                    }
+                    break;
+                default:
+                    break;
             }
 
             return consumo;

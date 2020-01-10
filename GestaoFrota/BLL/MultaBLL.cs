@@ -38,6 +38,11 @@ namespace GestaoFrota.BLL
             return new MultaDAL().GetMultaTotalAnual(dataAtual, veiculo);
         }
 
+        public decimal GetMultaPorPeriodo(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
+        {
+            return new MultaDAL().GetMultaPorPeriodo(dtInicial, dtFinal, veiculo);
+        }
+
         public void SetPagamento(int id, DateTime dataPagamento)
         {
             new MultaDAL().SetPagamento(id, dataPagamento);

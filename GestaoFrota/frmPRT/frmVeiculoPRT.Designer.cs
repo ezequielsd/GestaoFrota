@@ -308,6 +308,11 @@
             this.label59 = new System.Windows.Forms.Label();
             this.dtMultas = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnAplicarFiltroDashboard = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dateTimePickerFiltroDashDataFinal = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFiltroDashDataInicial = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPageDashDoard.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -364,6 +369,7 @@
             this.groupBox34.SuspendLayout();
             this.groupBox33.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -381,7 +387,8 @@
             // tabPageDashDoard
             // 
             resources.ApplyResources(this.tabPageDashDoard, "tabPageDashDoard");
-            this.tabPageDashDoard.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPageDashDoard.BackColor = System.Drawing.Color.White;
+            this.tabPageDashDoard.Controls.Add(this.groupBox4);
             this.tabPageDashDoard.Controls.Add(this.panel7);
             this.tabPageDashDoard.Controls.Add(this.groupBox35);
             this.tabPageDashDoard.Controls.Add(this.groupBox27);
@@ -441,7 +448,7 @@
             // groupBox27
             // 
             resources.ApplyResources(this.groupBox27, "groupBox27");
-            this.groupBox27.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox27.BackColor = System.Drawing.Color.White;
             this.groupBox27.Controls.Add(this.panelConsumoCombustivelAnual);
             this.groupBox27.Controls.Add(this.panel11);
             this.groupBox27.Controls.Add(this.panel10);
@@ -2330,6 +2337,39 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             // 
+            // groupBox4
+            // 
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.BackColor = System.Drawing.Color.White;
+            this.groupBox4.Controls.Add(this.btnAplicarFiltroDashboard);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataFinal);
+            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataInicial);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // btnAplicarFiltroDashboard
+            // 
+            resources.ApplyResources(this.btnAplicarFiltroDashboard, "btnAplicarFiltroDashboard");
+            this.btnAplicarFiltroDashboard.Name = "btnAplicarFiltroDashboard";
+            this.btnAplicarFiltroDashboard.UseVisualStyleBackColor = true;
+            this.btnAplicarFiltroDashboard.Click += new System.EventHandler(this.btnAplicarFiltroDashboard_Click);
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // dateTimePickerFiltroDashDataFinal
+            // 
+            resources.ApplyResources(this.dateTimePickerFiltroDashDataFinal, "dateTimePickerFiltroDashDataFinal");
+            this.dateTimePickerFiltroDashDataFinal.Name = "dateTimePickerFiltroDashDataFinal";
+            // 
+            // dateTimePickerFiltroDashDataInicial
+            // 
+            resources.ApplyResources(this.dateTimePickerFiltroDashDataInicial, "dateTimePickerFiltroDashDataInicial");
+            this.dateTimePickerFiltroDashDataInicial.Name = "dateTimePickerFiltroDashDataInicial";
+            // 
             // frmVeiculoPRT
             // 
             resources.ApplyResources(this, "$this");
@@ -2425,6 +2465,8 @@
             this.groupBox33.ResumeLayout(false);
             this.groupBox33.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2707,5 +2749,10 @@
         private System.Windows.Forms.TextBox txtMedidaPneus;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtCodigoPostal;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btnAplicarFiltroDashboard;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFiltroDashDataFinal;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFiltroDashDataInicial;
     }
 }

@@ -33,23 +33,23 @@ namespace GestaoFrota.Models
     /// </summary>
     public class ConsumoInfo
     {
-        public decimal QuantidadeGasolina { get; set; }
+        public decimal QuantidadeGasolina { get; set; } = 0;
 
-        public decimal QuantidadeGNV { get; set; }
+        public decimal QuantidadeGNV { get; set; } = 0;
 
-        public decimal QuantidadeAlcool { get; set; }
+        public decimal QuantidadeAlcool { get; set; } = 0;
 
-        public decimal QuantidadeDiesel { get; set; }
+        public decimal QuantidadeDiesel { get; set; } = 0;
 
-        public decimal ValorGasolina { get; set; }
+        public decimal ValorGasolina { get; set; } = 0;
 
-        public decimal ValorGNV { get; set; }
+        public decimal ValorGNV { get; set; } = 0;
 
-        public decimal ValorAlcool { get; set; }
+        public decimal ValorAlcool { get; set; } = 0;
 
-        public decimal ValorDiesel { get; set; }
+        public decimal ValorDiesel { get; set; } = 0;
 
-        public long KM { get; set; }
+        public long KM { get; set; } = 0;
     }
 
     /// <summary>
