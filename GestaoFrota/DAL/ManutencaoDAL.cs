@@ -21,11 +21,11 @@ namespace GestaoFrota.DAL
             }
         }
                 
-        public List<DGridManutencaoInfo> List( Veiculo veiculo)
+        public List<DGridManutencaoInfo> ListParcialAnual(DateTime dtAtual, Veiculo veiculo)
         {
             using (var context = new Context())
             {
-                return context.Manutencoes.Where(w => w.Veiculo.Placa.Equals(veiculo.Placa)).Select(s => new DGridManutencaoInfo
+                return context.Manutencoes.Where(w => w.Data.Year.Equals(dtAtual.Year) && w.Veiculo.Placa.Equals(veiculo.Placa)).Select(s => new DGridManutencaoInfo
                 {
                     Id = s.Id,
                     Data = s.Data,

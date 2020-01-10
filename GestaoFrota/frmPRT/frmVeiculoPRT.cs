@@ -568,7 +568,7 @@ namespace GestaoFrota
                
         private void CarregaDatagridAoAbrir(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
-            dtAbastecimento.DataSource = new AbastecimentoBLL().List(DateTime.Now.Date, veiculo);
+            dtAbastecimento.DataSource = new AbastecimentoBLL().ListParcialAnual(DateTime.Now.Date, veiculo);
 
             CarregarDashBoardLocalConsumoCombustivelKmPercorridoParcial(dataInicialdoAno, dataFinaldoAno, veiculo);        
             FormartaDataGridViewAbastecimentos();
@@ -755,7 +755,7 @@ namespace GestaoFrota
 
         private void CarregarDatagridManutencao(Veiculo veiculo)
         {
-            dtManutencao.DataSource = new ManutencaoBLL().List(veiculo);
+            dtManutencao.DataSource = new ManutencaoBLL().ListParcialAnual(DateTime.Now.Date, veiculo);
 
             FormartaDataGridViewManutencao();
         }

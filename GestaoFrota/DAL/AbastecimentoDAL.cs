@@ -21,7 +21,7 @@ namespace GestaoFrota.DAL
             }
         }
 
-        public List<DGridAbastecimentoInfo> List(DateTime dtAtual, Veiculo veiculo)
+        public List<DGridAbastecimentoInfo> ListParcialAnual(DateTime dtAtual, Veiculo veiculo)
         {
             using (var context = new Context())
             {

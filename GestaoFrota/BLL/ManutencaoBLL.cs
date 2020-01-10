@@ -18,9 +18,9 @@ namespace GestaoFrota.BLL
             new ManutencaoDAL().Insert(info);
         }
      
-        public List<DGridManutencaoInfo> List(Veiculo veiculo)
+        public List<DGridManutencaoInfo> ListParcialAnual(DateTime dtAtual, Veiculo veiculo)
         {
-           return new ManutencaoDAL().List(veiculo);            
+           return new ManutencaoDAL().ListParcialAnual(dtAtual, veiculo);            
         }
        
         public List<DGridManutencaoInfo> List(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)

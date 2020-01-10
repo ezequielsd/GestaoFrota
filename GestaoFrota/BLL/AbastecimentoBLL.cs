@@ -17,9 +17,9 @@ namespace GestaoFrota.BLL
             new AbastecimentoDAL().Insert(info);
         }
 
-        public List<DGridAbastecimentoInfo> List(DateTime dtAtual, Veiculo veiculo)
+        public List<DGridAbastecimentoInfo> ListParcialAnual(DateTime dtAtual, Veiculo veiculo)
         {
-            return new AbastecimentoDAL().List(dtAtual, veiculo);           
+            return new AbastecimentoDAL().ListParcialAnual(dtAtual, veiculo);           
         }
         
         public List<DGridAbastecimentoInfo> List(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
