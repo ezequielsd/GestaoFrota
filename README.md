@@ -95,3 +95,18 @@ A versão Release do programa, executável com suas dependencias, basta copiar p
 Atenção, aqui é para aqueles que apenas querem utilizar o programa...
 
 [Gestão de Frota](https://github.com/ezequielsd/GestaoFrota/raw/master/Release/Release.zip)
+
+
+
+# Updates
+
+**13/01/2020**
+
+* Adicionado filtro por periodo de data no Dashboard.
+* Adicionado seleção de idioma Português-BR e Português-PT.
+* Adicionado internacionalização para as moedas.
+* Melhorias na aba de manutenção.
+* Removido aba de óleo e adicionado o cadastro junto a aba de manunteção.
+* Correções de Bug.
+* Liberado para cadastro manual do veiculo, sem consulta a tabela FIPE.
+* Removido o recurso de consulta FIPE no sistema, devido a internacionalização em outro País. Para esta consulta existe um programa específico que pode ser baixado [Aqui](https://ezequieldaniel.wordpress.com/2018/06/25/precisa-realizar-consultas-na-fipe-entao-baixe-este-programa/).
