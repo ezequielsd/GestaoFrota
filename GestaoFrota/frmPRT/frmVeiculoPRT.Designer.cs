@@ -34,6 +34,11 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDashDoard = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnAplicarFiltroDashboard = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dateTimePickerFiltroDashDataFinal = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFiltroDashDataInicial = new System.Windows.Forms.DateTimePicker();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label78 = new System.Windows.Forms.Label();
@@ -70,6 +75,7 @@
             this.label76 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.tabPageAbastecimento = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label68 = new System.Windows.Forms.Label();
@@ -108,6 +114,7 @@
             this.dateTimePickerAbastecimento = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPageManutencao = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
             this.btnTipoManutencao = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -308,13 +315,9 @@
             this.label59 = new System.Windows.Forms.Label();
             this.dtMultas = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnAplicarFiltroDashboard = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePickerFiltroDashDataFinal = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerFiltroDashDataInicial = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPageDashDoard.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.groupBox35.SuspendLayout();
@@ -369,7 +372,6 @@
             this.groupBox34.SuspendLayout();
             this.groupBox33.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).BeginInit();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -393,6 +395,39 @@
             this.tabPageDashDoard.Controls.Add(this.groupBox35);
             this.tabPageDashDoard.Controls.Add(this.groupBox27);
             this.tabPageDashDoard.Name = "tabPageDashDoard";
+            // 
+            // groupBox4
+            // 
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.BackColor = System.Drawing.Color.White;
+            this.groupBox4.Controls.Add(this.btnAplicarFiltroDashboard);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataFinal);
+            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataInicial);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // btnAplicarFiltroDashboard
+            // 
+            resources.ApplyResources(this.btnAplicarFiltroDashboard, "btnAplicarFiltroDashboard");
+            this.btnAplicarFiltroDashboard.Name = "btnAplicarFiltroDashboard";
+            this.btnAplicarFiltroDashboard.UseVisualStyleBackColor = true;
+            this.btnAplicarFiltroDashboard.Click += new System.EventHandler(this.btnAplicarFiltroDashboard_Click);
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // dateTimePickerFiltroDashDataFinal
+            // 
+            resources.ApplyResources(this.dateTimePickerFiltroDashDataFinal, "dateTimePickerFiltroDashDataFinal");
+            this.dateTimePickerFiltroDashDataFinal.Name = "dateTimePickerFiltroDashDataFinal";
+            // 
+            // dateTimePickerFiltroDashDataInicial
+            // 
+            resources.ApplyResources(this.dateTimePickerFiltroDashDataInicial, "dateTimePickerFiltroDashDataInicial");
+            this.dateTimePickerFiltroDashDataInicial.Name = "dateTimePickerFiltroDashDataInicial";
             // 
             // panel7
             // 
@@ -672,6 +707,7 @@
             // tabPageAbastecimento
             // 
             resources.ApplyResources(this.tabPageAbastecimento, "tabPageAbastecimento");
+            this.tabPageAbastecimento.Controls.Add(this.label12);
             this.tabPageAbastecimento.Controls.Add(this.panel14);
             this.tabPageAbastecimento.Controls.Add(this.panel4);
             this.tabPageAbastecimento.Controls.Add(this.btnAdicionarComprovante);
@@ -682,6 +718,11 @@
             this.tabPageAbastecimento.Controls.Add(this.groupBox1);
             this.tabPageAbastecimento.Name = "tabPageAbastecimento";
             this.tabPageAbastecimento.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
             // 
             // panel14
             // 
@@ -952,6 +993,7 @@
             // tabPageManutencao
             // 
             resources.ApplyResources(this.tabPageManutencao, "tabPageManutencao");
+            this.tabPageManutencao.Controls.Add(this.label13);
             this.tabPageManutencao.Controls.Add(this.btnTipoManutencao);
             this.tabPageManutencao.Controls.Add(this.tabControl2);
             this.tabPageManutencao.Controls.Add(this.panel8);
@@ -961,6 +1003,11 @@
             this.tabPageManutencao.Controls.Add(this.btnCadastrarMecanica);
             this.tabPageManutencao.Name = "tabPageManutencao";
             this.tabPageManutencao.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
             // 
             // btnTipoManutencao
             // 
@@ -2337,39 +2384,6 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             // 
-            // groupBox4
-            // 
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.BackColor = System.Drawing.Color.White;
-            this.groupBox4.Controls.Add(this.btnAplicarFiltroDashboard);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataFinal);
-            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataInicial);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
-            // btnAplicarFiltroDashboard
-            // 
-            resources.ApplyResources(this.btnAplicarFiltroDashboard, "btnAplicarFiltroDashboard");
-            this.btnAplicarFiltroDashboard.Name = "btnAplicarFiltroDashboard";
-            this.btnAplicarFiltroDashboard.UseVisualStyleBackColor = true;
-            this.btnAplicarFiltroDashboard.Click += new System.EventHandler(this.btnAplicarFiltroDashboard_Click);
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
-            // 
-            // dateTimePickerFiltroDashDataFinal
-            // 
-            resources.ApplyResources(this.dateTimePickerFiltroDashDataFinal, "dateTimePickerFiltroDashDataFinal");
-            this.dateTimePickerFiltroDashDataFinal.Name = "dateTimePickerFiltroDashDataFinal";
-            // 
-            // dateTimePickerFiltroDashDataInicial
-            // 
-            resources.ApplyResources(this.dateTimePickerFiltroDashDataInicial, "dateTimePickerFiltroDashDataInicial");
-            this.dateTimePickerFiltroDashDataInicial.Name = "dateTimePickerFiltroDashDataInicial";
-            // 
             // frmVeiculoPRT
             // 
             resources.ApplyResources(this, "$this");
@@ -2382,6 +2396,8 @@
             this.Load += new System.EventHandler(this.frmVeiculoPRT_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPageDashDoard.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -2425,6 +2441,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPageManutencao.ResumeLayout(false);
+            this.tabPageManutencao.PerformLayout();
             this.tabControl2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -2465,8 +2482,6 @@
             this.groupBox33.ResumeLayout(false);
             this.groupBox33.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2749,6 +2764,8 @@
         private System.Windows.Forms.TextBox txtMedidaPneus;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtCodigoPostal;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnAplicarFiltroDashboard;
         private System.Windows.Forms.Label label11;

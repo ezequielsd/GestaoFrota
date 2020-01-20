@@ -34,6 +34,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVeiculoBRA));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDashDoard = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnAplicarFiltroDashboard = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.dateTimePickerFiltroDashDataFinal = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFiltroDashDataInicial = new System.Windows.Forms.DateTimePicker();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label78 = new System.Windows.Forms.Label();
@@ -70,6 +75,7 @@
             this.label76 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.tabPageAbastecimento = new System.Windows.Forms.TabPage();
+            this.label28 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label68 = new System.Windows.Forms.Label();
@@ -316,13 +322,10 @@
             this.label59 = new System.Windows.Forms.Label();
             this.dtMultas = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dateTimePickerFiltroDashDataInicial = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerFiltroDashDataFinal = new System.Windows.Forms.DateTimePicker();
-            this.label27 = new System.Windows.Forms.Label();
-            this.btnAplicarFiltroDashboard = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageDashDoard.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.groupBox35.SuspendLayout();
@@ -379,7 +382,6 @@
             this.groupBox34.SuspendLayout();
             this.groupBox33.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).BeginInit();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -411,6 +413,58 @@
             this.tabPageDashDoard.Size = new System.Drawing.Size(1278, 577);
             this.tabPageDashDoard.TabIndex = 6;
             this.tabPageDashDoard.Text = "Painel estatistico";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.White;
+            this.groupBox4.Controls.Add(this.btnAplicarFiltroDashboard);
+            this.groupBox4.Controls.Add(this.label27);
+            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataFinal);
+            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataInicial);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(6, 11);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(870, 57);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Filtro";
+            // 
+            // btnAplicarFiltroDashboard
+            // 
+            this.btnAplicarFiltroDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAplicarFiltroDashboard.Location = new System.Drawing.Point(603, 23);
+            this.btnAplicarFiltroDashboard.Name = "btnAplicarFiltroDashboard";
+            this.btnAplicarFiltroDashboard.Size = new System.Drawing.Size(75, 23);
+            this.btnAplicarFiltroDashboard.TabIndex = 4;
+            this.btnAplicarFiltroDashboard.Text = "Aplicar";
+            this.btnAplicarFiltroDashboard.UseVisualStyleBackColor = true;
+            this.btnAplicarFiltroDashboard.Click += new System.EventHandler(this.btnAplicarFiltroDashboard_Click);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(317, 31);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(13, 13);
+            this.label27.TabIndex = 3;
+            this.label27.Text = "à";
+            // 
+            // dateTimePickerFiltroDashDataFinal
+            // 
+            this.dateTimePickerFiltroDashDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerFiltroDashDataFinal.Location = new System.Drawing.Point(336, 25);
+            this.dateTimePickerFiltroDashDataFinal.Name = "dateTimePickerFiltroDashDataFinal";
+            this.dateTimePickerFiltroDashDataFinal.Size = new System.Drawing.Size(249, 20);
+            this.dateTimePickerFiltroDashDataFinal.TabIndex = 2;
+            // 
+            // dateTimePickerFiltroDashDataInicial
+            // 
+            this.dateTimePickerFiltroDashDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerFiltroDashDataInicial.Location = new System.Drawing.Point(75, 25);
+            this.dateTimePickerFiltroDashDataInicial.Name = "dateTimePickerFiltroDashDataInicial";
+            this.dateTimePickerFiltroDashDataInicial.Size = new System.Drawing.Size(236, 20);
+            this.dateTimePickerFiltroDashDataInicial.TabIndex = 1;
             // 
             // panel7
             // 
@@ -808,6 +862,7 @@
             // 
             // tabPageAbastecimento
             // 
+            this.tabPageAbastecimento.Controls.Add(this.label28);
             this.tabPageAbastecimento.Controls.Add(this.panel14);
             this.tabPageAbastecimento.Controls.Add(this.panel4);
             this.tabPageAbastecimento.Controls.Add(this.btnAdicionarComprovante);
@@ -823,6 +878,16 @@
             this.tabPageAbastecimento.TabIndex = 0;
             this.tabPageAbastecimento.Text = "Abastecimento";
             this.tabPageAbastecimento.UseVisualStyleBackColor = true;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(259, 131);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(103, 13);
+            this.label28.TabIndex = 92;
+            this.label28.Text = "Registros do ano";
             // 
             // panel14
             // 
@@ -962,7 +1027,7 @@
             this.groupBox11.Controls.Add(this.label6);
             this.groupBox11.Location = new System.Drawing.Point(262, 13);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(752, 128);
+            this.groupBox11.Size = new System.Drawing.Size(752, 115);
             this.groupBox11.TabIndex = 23;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Filtrar";
@@ -972,9 +1037,9 @@
             this.btnRemoverFiltroCombustivel.BackColor = System.Drawing.Color.Khaki;
             this.btnRemoverFiltroCombustivel.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
             this.btnRemoverFiltroCombustivel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoverFiltroCombustivel.Location = new System.Drawing.Point(222, 80);
+            this.btnRemoverFiltroCombustivel.Location = new System.Drawing.Point(647, 86);
             this.btnRemoverFiltroCombustivel.Name = "btnRemoverFiltroCombustivel";
-            this.btnRemoverFiltroCombustivel.Size = new System.Drawing.Size(117, 23);
+            this.btnRemoverFiltroCombustivel.Size = new System.Drawing.Size(86, 23);
             this.btnRemoverFiltroCombustivel.TabIndex = 25;
             this.btnRemoverFiltroCombustivel.Text = "Remover filtro";
             this.btnRemoverFiltroCombustivel.UseVisualStyleBackColor = false;
@@ -984,7 +1049,7 @@
             // 
             this.cmbCombustivelAbastecimentoFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCombustivelAbastecimentoFiltro.FormattingEnabled = true;
-            this.cmbCombustivelAbastecimentoFiltro.Location = new System.Drawing.Point(9, 82);
+            this.cmbCombustivelAbastecimentoFiltro.Location = new System.Drawing.Point(515, 31);
             this.cmbCombustivelAbastecimentoFiltro.Name = "cmbCombustivelAbastecimentoFiltro";
             this.cmbCombustivelAbastecimentoFiltro.Size = new System.Drawing.Size(207, 21);
             this.cmbCombustivelAbastecimentoFiltro.TabIndex = 24;
@@ -994,7 +1059,7 @@
             this.btnAplicarFiltroAbastecimentos.BackColor = System.Drawing.Color.Moccasin;
             this.btnAplicarFiltroAbastecimentos.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
             this.btnAplicarFiltroAbastecimentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAplicarFiltroAbastecimentos.Location = new System.Drawing.Point(423, 82);
+            this.btnAplicarFiltroAbastecimentos.Location = new System.Drawing.Point(647, 56);
             this.btnAplicarFiltroAbastecimentos.Name = "btnAplicarFiltroAbastecimentos";
             this.btnAplicarFiltroAbastecimentos.Size = new System.Drawing.Size(75, 23);
             this.btnAplicarFiltroAbastecimentos.TabIndex = 23;
@@ -1005,7 +1070,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 66);
+            this.label8.Location = new System.Drawing.Point(512, 15);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(102, 13);
             this.label8.TabIndex = 17;
@@ -1212,6 +1277,7 @@
             // 
             // tabPageManutencao
             // 
+            this.tabPageManutencao.Controls.Add(this.label29);
             this.tabPageManutencao.Controls.Add(this.btnTipoManutencao);
             this.tabPageManutencao.Controls.Add(this.tabControl2);
             this.tabPageManutencao.Controls.Add(this.panel8);
@@ -1735,10 +1801,10 @@
             this.dtManutencao.AllowUserToResizeColumns = false;
             this.dtManutencao.AllowUserToResizeRows = false;
             this.dtManutencao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtManutencao.Location = new System.Drawing.Point(427, 142);
+            this.dtManutencao.Location = new System.Drawing.Point(427, 159);
             this.dtManutencao.Name = "dtManutencao";
             this.dtManutencao.ReadOnly = true;
-            this.dtManutencao.Size = new System.Drawing.Size(705, 435);
+            this.dtManutencao.Size = new System.Drawing.Size(705, 418);
             this.dtManutencao.TabIndex = 23;
             this.dtManutencao.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtManutencao_CellMouseClick);
             // 
@@ -3418,57 +3484,15 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // groupBox4
+            // label29
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.White;
-            this.groupBox4.Controls.Add(this.btnAplicarFiltroDashboard);
-            this.groupBox4.Controls.Add(this.label27);
-            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataFinal);
-            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataInicial);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(6, 11);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(870, 57);
-            this.groupBox4.TabIndex = 4;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Filtro";
-            // 
-            // dateTimePickerFiltroDashDataInicial
-            // 
-            this.dateTimePickerFiltroDashDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerFiltroDashDataInicial.Location = new System.Drawing.Point(75, 25);
-            this.dateTimePickerFiltroDashDataInicial.Name = "dateTimePickerFiltroDashDataInicial";
-            this.dateTimePickerFiltroDashDataInicial.Size = new System.Drawing.Size(236, 20);
-            this.dateTimePickerFiltroDashDataInicial.TabIndex = 1;
-            // 
-            // dateTimePickerFiltroDashDataFinal
-            // 
-            this.dateTimePickerFiltroDashDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerFiltroDashDataFinal.Location = new System.Drawing.Point(336, 25);
-            this.dateTimePickerFiltroDashDataFinal.Name = "dateTimePickerFiltroDashDataFinal";
-            this.dateTimePickerFiltroDashDataFinal.Size = new System.Drawing.Size(249, 20);
-            this.dateTimePickerFiltroDashDataFinal.TabIndex = 2;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(317, 31);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(13, 13);
-            this.label27.TabIndex = 3;
-            this.label27.Text = "à";
-            // 
-            // btnAplicarFiltroDashboard
-            // 
-            this.btnAplicarFiltroDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAplicarFiltroDashboard.Location = new System.Drawing.Point(603, 23);
-            this.btnAplicarFiltroDashboard.Name = "btnAplicarFiltroDashboard";
-            this.btnAplicarFiltroDashboard.Size = new System.Drawing.Size(75, 23);
-            this.btnAplicarFiltroDashboard.TabIndex = 4;
-            this.btnAplicarFiltroDashboard.Text = "Aplicar";
-            this.btnAplicarFiltroDashboard.UseVisualStyleBackColor = true;
-            this.btnAplicarFiltroDashboard.Click += new System.EventHandler(this.btnAplicarFiltroDashboard_Click);
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(427, 143);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(103, 13);
+            this.label29.TabIndex = 95;
+            this.label29.Text = "Registros do ano";
             // 
             // frmVeiculoBRA
             // 
@@ -3486,6 +3510,8 @@
             this.Load += new System.EventHandler(this.frmVeiculoBRA_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPageDashDoard.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -3529,6 +3555,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPageManutencao.ResumeLayout(false);
+            this.tabPageManutencao.PerformLayout();
             this.tabControl2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -3572,8 +3599,6 @@
             this.groupBox33.ResumeLayout(false);
             this.groupBox33.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3869,5 +3894,7 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.DateTimePicker dateTimePickerFiltroDashDataFinal;
         private System.Windows.Forms.DateTimePicker dateTimePickerFiltroDashDataInicial;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
     }
 }

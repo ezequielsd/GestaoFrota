@@ -76,7 +76,9 @@ namespace GestaoFrota
             dataFinalAtual = new DateTime(dataAtual.Year, dataAtual.Month, DateTime.DaysInMonth(dataAtual.Year, dataAtual.Month));
             dataInicialdoAno = new DateTime(dataAtual.Year, 01, 01); //janeiro do ano corrente
             dataFinaldoAno = new DateTime(dataAtual.Year, 12, 31); // dezembro do ano corrente
-                      
+
+            label12.Text = $"Registros do ano {dataAtual.Year}";
+            label13.Text = $"Registros do ano {dataAtual.Year}";
             groupBox27.Text = $"Parcial do ano, {dataAtual.Year}";
             groupBox35.Text = "Consumo médio de combustivel ultimos 3 meses";
             lblDataAtual.Text = dataAtual.ToShortDateString();           
@@ -137,7 +139,7 @@ namespace GestaoFrota
 
         private void btnAplicarFiltroDashboard_Click(object sender, EventArgs e)
         {
-            CarregarDashboardPorFiltro(dateTimePickerFiltroDashDataInicial.Value, dateTimePickerFiltroDashDataFinal.Value);
+            CarregarDashboardPorFiltro(dateTimePickerFiltroDashDataInicial.Value, dateTimePickerFiltroDashDataFinal.Value);            
         }
 
         public void CarregarDashboard()
@@ -461,7 +463,8 @@ namespace GestaoFrota
                 new CombustivelBLL().GetIdCombustivel(cmbCombustivelAbastecimentoFiltro.Text));
 
             FormartaDataGridViewAbastecimentos();
-            CarregarDashBoardLocalConsumoCombustivelKmPercorridoParcial(dateTimePickerFiltroDataInicial.Value.Date, dateTimePickerFilroDataFinal.Value.Date, veiculo);           
+            CarregarDashBoardLocalConsumoCombustivelKmPercorridoParcial(dateTimePickerFiltroDataInicial.Value.Date, dateTimePickerFilroDataFinal.Value.Date, veiculo);
+            label12.Text = $"Registros de {dateTimePickerFiltroDataInicial.Value.ToShortDateString()} à {dateTimePickerFilroDataFinal.Value.ToShortDateString()}";
         }
 
         private void btnRemoverFiltroCombustivel_Click(object sender, EventArgs e)
@@ -1951,7 +1954,6 @@ namespace GestaoFrota
                     }
                 }
             }
-        }
-       
+        }                
     }
 }
