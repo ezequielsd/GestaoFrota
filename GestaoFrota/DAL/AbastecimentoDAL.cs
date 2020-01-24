@@ -21,11 +21,11 @@ namespace GestaoFrota.DAL
             }
         }
 
-        public List<DGridAbastecimentoInfo> ListParcialAnual(DateTime dtAtual, Veiculo veiculo)
+        public List<DGridAbastecimentoInfo> List(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
             using (var context = new Context())
             {
-                return context.Abastecimentos.Where(w => w.Data.Year.Equals(dtAtual.Year) && w.Veiculo.Placa.Equals(veiculo.Placa)).Select(s => new DGridAbastecimentoInfo
+                return context.Abastecimentos.Where(w => w.Data >= dtInicial && w.Data <= dtFinal && w.Veiculo.Placa.Equals(veiculo.Placa)).Select(s => new DGridAbastecimentoInfo
                 {
                     Id = s.Id,
                     Data = s.Data,
@@ -39,11 +39,11 @@ namespace GestaoFrota.DAL
             }
         }
 
-        public List<DGridAbastecimentoInfo> List(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
+        public List<DGridAbastecimentoInfo> ListParcialAnual(DateTime dtAtual, Veiculo veiculo)
         {
             using (var context = new Context())
             {
-                return context.Abastecimentos.Where(w => w.Data >= dtInicial && w.Data <= dtFinal && w.Veiculo.Placa.Equals(veiculo.Placa)).Select(s => new DGridAbastecimentoInfo
+                return context.Abastecimentos.Where(w => w.Data.Year.Equals(dtAtual.Year) && w.Veiculo.Placa.Equals(veiculo.Placa)).Select(s => new DGridAbastecimentoInfo
                 {
                     Id = s.Id,
                     Data = s.Data,
@@ -106,9 +106,9 @@ namespace GestaoFrota.DAL
                         KM = s.KM,
                         Quantidade = s.Quantidade,
                         Valor = s.Valor
-                    }).OrderBy(or => or.Data).ToList();                
+                    }).OrderBy(or => or.Data).ToList();
             }
-                        
+
             return ExtratificaConsumo(veiculo, combustivelVeiculo, abastecimento);
         }
 
@@ -133,14 +133,191 @@ namespace GestaoFrota.DAL
                         Quantidade = s.Quantidade,
                         Valor = s.Valor
                     }).OrderBy(or => or.Data).ToList();
-
-               
             }
 
             return ExtratificaConsumo(veiculo, combustivelVeiculo, abastecimento);
         }
 
-        
+        public CustoDiario GetDiasRegistroParcialAnual(DateTime dtAtual, Veiculo veiculo)
+        {
+            CustoDiario custoDiario = new CustoDiario { DiasAlcool = 1, DiasDiesel = 1, DiasGasolina = 1, DiasGNV = 1, TotalDiasRegistro = 1 };
+            var combustivel = new CombustivelDAL().GetCombustivel(veiculo.Combustivel);
+            var list = this.ListParcialAnual(dtAtual, veiculo);
+
+            
+            if (list.Count() >= 2)
+            {
+                var dataInicialRegistro = list.OrderBy(or => or.Data).First().Data;
+                var dataFinalRegistro = list.OrderByDescending(or => or.Data).First().Data;
+                custoDiario.TotalDiasRegistro = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+            }
+
+
+            switch (combustivel.Tipo)
+            {
+                case "Gasolina":
+                    var listGasolina = list.Where(w => w.Combustivel.Equals("Gasolina"));
+                    if (listGasolina.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listGasolina.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listGasolina.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasGasolina = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+                    break;
+
+                case "Alcool":
+                    var listAlcool = list.Where(w => w.Combustivel.Equals("Alcool"));
+                    if (listAlcool.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listAlcool.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listAlcool.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasAlcool = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+                    break;
+
+                case "Flex":
+                    //Gasolina
+                    var listGasolinaFlex = list.Where(w => w.Combustivel.Equals("Gasolina"));
+                    if (listGasolinaFlex.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listGasolinaFlex.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listGasolinaFlex.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasGasolina = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+                    //Alcool
+                    var listAlcoolFlex = list.Where(w => w.Combustivel.Equals("Alcool"));
+                    if (listAlcoolFlex.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listGasolinaFlex.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listGasolinaFlex.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasAlcool = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+                    break;
+
+                case "GNV":
+                    var listGNV = list.Where(w => w.Combustivel.Equals("GNV"));
+                    if (listGNV.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listGNV.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listGNV.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasGNV = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+                    break;
+
+                case "Gasolina/GNV":
+
+                    //Gasolina
+                    var listGasolinaGasolinGNV = list.Where(w => w.Combustivel.Equals("Gasolina"));
+                    if (listGasolinaGasolinGNV.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listGasolinaGasolinGNV.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listGasolinaGasolinGNV.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasGasolina = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+                    //GNV
+                    var listGasolinaGNV = list.Where(w => w.Combustivel.Equals("GNV"));
+                    if (listGasolinaGNV.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listGasolinaGNV.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listGasolinaGNV.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasGNV = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+
+                    break;
+
+                case "Flex/GNV":
+
+                    //Gasolina
+                    var listGasolinaFlexGNV = list.Where(w => w.Combustivel.Equals("Gasolina"));
+                    if (listGasolinaFlexGNV.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listGasolinaFlexGNV.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listGasolinaFlexGNV.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasGasolina = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+                    //Alcool
+                    var listAlcoolFlexGNV = list.Where(w => w.Combustivel.Equals("Alcool"));
+                    if (listAlcoolFlexGNV.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listAlcoolFlexGNV.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listAlcoolFlexGNV.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasAlcool = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+                    //GNV
+                    var listGNVGNV = list.Where(w => w.Combustivel.Equals("GNV"));
+                    if (listGNVGNV.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listGNVGNV.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listGNVGNV.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasGNV = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+                    break;
+
+                case "Diesel":
+                    var listDiesel = list.Where(w => w.Combustivel.Equals("Diesel"));
+                    if (listDiesel.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listDiesel.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listDiesel.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasDiesel = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+                    break;
+
+                case "Tri-Combustivel":
+                    //Gasolina
+                    var listGasolinaTRI = list.Where(w => w.Combustivel.Equals("Gasolina"));
+                    if (listGasolinaTRI.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listGasolinaTRI.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listGasolinaTRI.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasGasolina = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+                    //Alcool
+                    var listAlcoolTRI = list.Where(w => w.Combustivel.Equals("Alcool"));
+                    if (listAlcoolTRI.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listAlcoolTRI.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listAlcoolTRI.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasAlcool = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+                    //Diesel
+                    var listDieselTRI = list.Where(w => w.Combustivel.Equals("Diesel"));
+                    if (listDieselTRI.Count() >= 2)
+                    {
+                        var dataInicialRegistro = listDieselTRI.OrderBy(or => or.Data).First().Data;
+                        var dataFinalRegistro = listDieselTRI.OrderByDescending(or => or.Data).First().Data;
+                        custoDiario.DiasDiesel = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                    }
+                    break;
+
+                case "Diesel/GNV":
+                    if (list.Count() >= 2)
+                    {
+                        //Diesel
+                        var listDieselGNV = list.Where(w => w.Combustivel.Equals("Diesel"));
+                        if (listDieselGNV.Count() >= 2)
+                        {
+                            var dataInicialRegistro = listDieselGNV.OrderBy(or => or.Data).First().Data;
+                            var dataFinalRegistro = listDieselGNV.OrderByDescending(or => or.Data).First().Data;
+                            custoDiario.DiasDiesel = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                        }
+                        //GNV
+                        var listGNVDiesel = list.Where(w => w.Combustivel.Equals("GNV"));
+                        if (listGNVDiesel.Count() >= 2)
+                        {
+                            var dataInicialRegistro = listGNVDiesel.OrderBy(or => or.Data).First().Data;
+                            var dataFinalRegistro = listGNVDiesel.OrderByDescending(or => or.Data).First().Data;
+                            custoDiario.DiasGNV = (int)dataFinalRegistro.Subtract(dataInicialRegistro).TotalDays;
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+            return custoDiario;
+        }
+
         private ConsumoInfo ExtratificaConsumo(Veiculo veiculo, Combustivel combustivel, List<DGridAbastecimentoInfo> abastecimento)
         {
             ConsumoInfo consumo = new ConsumoInfo();

@@ -34,6 +34,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVeiculoBRA));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDashDoard = new System.Windows.Forms.TabPage();
+            this.label30 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnAplicarFiltroDashboard = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
@@ -43,15 +44,18 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label78 = new System.Windows.Forms.Label();
             this.label79 = new System.Windows.Forms.Label();
+            this.lblKmAnual = new System.Windows.Forms.Label();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.panelConsumoCombustivelAnual = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label65 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label94 = new System.Windows.Forms.Label();
@@ -60,10 +64,7 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.label85 = new System.Windows.Forms.Label();
             this.label86 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblKmRodados = new System.Windows.Forms.Label();
-            this.lblKmAnual = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label83 = new System.Windows.Forms.Label();
@@ -114,6 +115,7 @@
             this.dateTimePickerAbastecimento = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPageManutencao = new System.Windows.Forms.TabPage();
+            this.label29 = new System.Windows.Forms.Label();
             this.btnTipoManutencao = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -322,7 +324,12 @@
             this.label59 = new System.Windows.Forms.Label();
             this.dtMultas = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label29 = new System.Windows.Forms.Label();
+            this.listBox6 = new System.Windows.Forms.ListBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.lblMediaDiaria = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageDashDoard.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -332,15 +339,10 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox27.SuspendLayout();
-            this.panelConsumoCombustivelAnual.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -403,16 +405,32 @@
             // tabPageDashDoard
             // 
             this.tabPageDashDoard.BackColor = System.Drawing.Color.White;
+            this.tabPageDashDoard.Controls.Add(this.label30);
             this.tabPageDashDoard.Controls.Add(this.groupBox4);
             this.tabPageDashDoard.Controls.Add(this.panel7);
             this.tabPageDashDoard.Controls.Add(this.groupBox35);
             this.tabPageDashDoard.Controls.Add(this.groupBox27);
+            this.tabPageDashDoard.Controls.Add(this.panel5);
+            this.tabPageDashDoard.Controls.Add(this.panel9);
+            this.tabPageDashDoard.Controls.Add(this.panel10);
+            this.tabPageDashDoard.Controls.Add(this.panel11);
+            this.tabPageDashDoard.Controls.Add(this.chart1);
+            this.tabPageDashDoard.Controls.Add(this.label82);
             this.tabPageDashDoard.Location = new System.Drawing.Point(4, 22);
             this.tabPageDashDoard.Name = "tabPageDashDoard";
             this.tabPageDashDoard.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageDashDoard.Size = new System.Drawing.Size(1278, 577);
             this.tabPageDashDoard.TabIndex = 6;
             this.tabPageDashDoard.Text = "Painel estatistico";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(12, 7);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(41, 13);
+            this.label30.TabIndex = 100;
+            this.label30.Text = "label30";
             // 
             // groupBox4
             // 
@@ -421,10 +439,10 @@
             this.groupBox4.Controls.Add(this.label27);
             this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataFinal);
             this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataInicial);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(6, 11);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(185, 19);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(870, 57);
+            this.groupBox4.Size = new System.Drawing.Size(691, 48);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Filtro";
@@ -432,7 +450,7 @@
             // btnAplicarFiltroDashboard
             // 
             this.btnAplicarFiltroDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAplicarFiltroDashboard.Location = new System.Drawing.Point(603, 23);
+            this.btnAplicarFiltroDashboard.Location = new System.Drawing.Point(603, 16);
             this.btnAplicarFiltroDashboard.Name = "btnAplicarFiltroDashboard";
             this.btnAplicarFiltroDashboard.Size = new System.Drawing.Size(75, 23);
             this.btnAplicarFiltroDashboard.TabIndex = 4;
@@ -444,7 +462,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(317, 31);
+            this.label27.Location = new System.Drawing.Point(317, 24);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(13, 13);
             this.label27.TabIndex = 3;
@@ -453,7 +471,7 @@
             // dateTimePickerFiltroDashDataFinal
             // 
             this.dateTimePickerFiltroDashDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerFiltroDashDataFinal.Location = new System.Drawing.Point(336, 25);
+            this.dateTimePickerFiltroDashDataFinal.Location = new System.Drawing.Point(336, 18);
             this.dateTimePickerFiltroDashDataFinal.Name = "dateTimePickerFiltroDashDataFinal";
             this.dateTimePickerFiltroDashDataFinal.Size = new System.Drawing.Size(249, 20);
             this.dateTimePickerFiltroDashDataFinal.TabIndex = 2;
@@ -461,7 +479,7 @@
             // dateTimePickerFiltroDashDataInicial
             // 
             this.dateTimePickerFiltroDashDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerFiltroDashDataInicial.Location = new System.Drawing.Point(75, 25);
+            this.dateTimePickerFiltroDashDataInicial.Location = new System.Drawing.Point(75, 18);
             this.dateTimePickerFiltroDashDataInicial.Name = "dateTimePickerFiltroDashDataInicial";
             this.dateTimePickerFiltroDashDataInicial.Size = new System.Drawing.Size(236, 20);
             this.dateTimePickerFiltroDashDataInicial.TabIndex = 1;
@@ -508,6 +526,17 @@
             this.label79.TabIndex = 1;
             this.label79.Text = "99,99";
             // 
+            // lblKmAnual
+            // 
+            this.lblKmAnual.AutoSize = true;
+            this.lblKmAnual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKmAnual.ForeColor = System.Drawing.Color.Black;
+            this.lblKmAnual.Location = new System.Drawing.Point(101, 203);
+            this.lblKmAnual.Name = "lblKmAnual";
+            this.lblKmAnual.Size = new System.Drawing.Size(38, 15);
+            this.lblKmAnual.TabIndex = 1;
+            this.lblKmAnual.Text = "99,99";
+            // 
             // groupBox35
             // 
             this.groupBox35.BackColor = System.Drawing.Color.White;
@@ -515,7 +544,7 @@
             this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox35.Location = new System.Drawing.Point(883, 76);
             this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Size = new System.Drawing.Size(389, 213);
+            this.groupBox35.Size = new System.Drawing.Size(389, 206);
             this.groupBox35.TabIndex = 99;
             this.groupBox35.TabStop = false;
             this.groupBox35.Text = "groupBox35";
@@ -542,79 +571,106 @@
             // groupBox27
             // 
             this.groupBox27.BackColor = System.Drawing.Color.White;
-            this.groupBox27.Controls.Add(this.panelConsumoCombustivelAnual);
-            this.groupBox27.Controls.Add(this.panel11);
-            this.groupBox27.Controls.Add(this.panel10);
-            this.groupBox27.Controls.Add(this.panel1);
-            this.groupBox27.Controls.Add(this.panel9);
-            this.groupBox27.Controls.Add(this.chart1);
-            this.groupBox27.Controls.Add(this.label82);
-            this.groupBox27.Controls.Add(this.panel5);
+            this.groupBox27.Controls.Add(this.lblMediaDiaria);
+            this.groupBox27.Controls.Add(this.label70);
+            this.groupBox27.Controls.Add(this.label67);
+            this.groupBox27.Controls.Add(this.label65);
+            this.groupBox27.Controls.Add(this.label43);
+            this.groupBox27.Controls.Add(this.lblKmAnual);
+            this.groupBox27.Controls.Add(this.listBox6);
+            this.groupBox27.Controls.Add(this.label39);
+            this.groupBox27.Controls.Add(this.listBox5);
+            this.groupBox27.Controls.Add(this.label38);
+            this.groupBox27.Controls.Add(this.label35);
+            this.groupBox27.Controls.Add(this.listBox4);
+            this.groupBox27.Controls.Add(this.listBox2);
+            this.groupBox27.Controls.Add(this.label31);
+            this.groupBox27.Controls.Add(this.listBox1);
             this.groupBox27.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox27.Location = new System.Drawing.Point(5, 74);
+            this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox27.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.groupBox27.Location = new System.Drawing.Point(5, 64);
             this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Size = new System.Drawing.Size(871, 489);
+            this.groupBox27.Size = new System.Drawing.Size(467, 230);
             this.groupBox27.TabIndex = 97;
             this.groupBox27.TabStop = false;
-            this.groupBox27.Text = "groupBox27";
+            this.groupBox27.Text = "Abastecimento";
             // 
-            // panelConsumoCombustivelAnual
+            // label39
             // 
-            this.panelConsumoCombustivelAnual.BackColor = System.Drawing.Color.White;
-            this.panelConsumoCombustivelAnual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelConsumoCombustivelAnual.Controls.Add(this.pictureBox2);
-            this.panelConsumoCombustivelAnual.Controls.Add(this.pictureBox3);
-            this.panelConsumoCombustivelAnual.Controls.Add(this.label65);
-            this.panelConsumoCombustivelAnual.Controls.Add(this.listBox1);
-            this.panelConsumoCombustivelAnual.Location = new System.Drawing.Point(14, 28);
-            this.panelConsumoCombustivelAnual.Name = "panelConsumoCombustivelAnual";
-            this.panelConsumoCombustivelAnual.Size = new System.Drawing.Size(284, 188);
-            this.panelConsumoCombustivelAnual.TabIndex = 87;
+            this.label39.AutoSize = true;
+            this.label39.ForeColor = System.Drawing.Color.Silver;
+            this.label39.Location = new System.Drawing.Point(281, 46);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(53, 15);
+            this.label39.TabIndex = 104;
+            this.label39.Text = "Por dia";
             // 
-            // pictureBox2
+            // listBox5
             // 
-            this.pictureBox2.Image = global::GestaoFrota.Properties.Resources.if_fuel_103260;
-            this.pictureBox2.Location = new System.Drawing.Point(181, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
+            this.listBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox5.ForeColor = System.Drawing.Color.Black;
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.ItemHeight = 15;
+            this.listBox5.Location = new System.Drawing.Point(284, 67);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(85, 90);
+            this.listBox5.TabIndex = 103;
             // 
-            // pictureBox3
+            // label38
             // 
-            this.pictureBox3.Image = global::GestaoFrota.Properties.Resources.if_money_bag_309025;
-            this.pictureBox3.Location = new System.Drawing.Point(83, 21);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(55, 48);
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
+            this.label38.AutoSize = true;
+            this.label38.ForeColor = System.Drawing.Color.Silver;
+            this.label38.Location = new System.Drawing.Point(190, 46);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(55, 15);
+            this.label38.TabIndex = 102;
+            this.label38.Text = "Volume";
             // 
-            // label65
+            // label35
             // 
-            this.label65.AutoSize = true;
-            this.label65.BackColor = System.Drawing.Color.Transparent;
-            this.label65.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.ForeColor = System.Drawing.Color.DarkGray;
-            this.label65.Location = new System.Drawing.Point(3, 2);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(133, 15);
-            this.label65.TabIndex = 2;
-            this.label65.Text = "Combustivel do ano";
+            this.label35.AutoSize = true;
+            this.label35.ForeColor = System.Drawing.Color.Silver;
+            this.label35.Location = new System.Drawing.Point(99, 46);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(39, 15);
+            this.label35.TabIndex = 101;
+            this.label35.Text = "Total";
             // 
-            // listBox1
+            // listBox4
             // 
-            this.listBox1.BackColor = System.Drawing.Color.White;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.ForeColor = System.Drawing.Color.Black;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(4, 74);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(271, 100);
-            this.listBox1.TabIndex = 97;
+            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox4.ForeColor = System.Drawing.Color.Black;
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 15;
+            this.listBox4.Location = new System.Drawing.Point(193, 67);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(85, 90);
+            this.listBox4.TabIndex = 100;
+            // 
+            // listBox2
+            // 
+            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox2.ForeColor = System.Drawing.Color.Black;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 15;
+            this.listBox2.Location = new System.Drawing.Point(102, 67);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(85, 90);
+            this.listBox2.TabIndex = 99;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.ForeColor = System.Drawing.Color.Orange;
+            this.label31.Location = new System.Drawing.Point(14, 28);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(43, 15);
+            this.label31.TabIndex = 98;
+            this.label31.Text = "Custo";
             // 
             // panel11
             // 
@@ -623,7 +679,7 @@
             this.panel11.Controls.Add(this.pictureBox15);
             this.panel11.Controls.Add(this.label94);
             this.panel11.Controls.Add(this.label95);
-            this.panel11.Location = new System.Drawing.Point(592, 258);
+            this.panel11.Location = new System.Drawing.Point(531, 376);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(268, 72);
             this.panel11.TabIndex = 95;
@@ -666,7 +722,7 @@
             this.panel10.Controls.Add(this.pictureBox14);
             this.panel10.Controls.Add(this.label85);
             this.panel10.Controls.Add(this.label86);
-            this.panel10.Location = new System.Drawing.Point(592, 181);
+            this.panel10.Location = new System.Drawing.Point(888, 450);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(268, 72);
             this.panel10.TabIndex = 94;
@@ -702,48 +758,18 @@
             this.label86.TabIndex = 1;
             this.label86.Text = "99,99";
             // 
-            // panel1
+            // listBox1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lblKmRodados);
-            this.panel1.Controls.Add(this.lblKmAnual);
-            this.panel1.Location = new System.Drawing.Point(304, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(282, 71);
-            this.panel1.TabIndex = 89;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GestaoFrota.Properties.Resources.if_Move_distance_arrow_left_right_2630385;
-            this.pictureBox1.Location = new System.Drawing.Point(222, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblKmRodados
-            // 
-            this.lblKmRodados.AutoSize = true;
-            this.lblKmRodados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKmRodados.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblKmRodados.Location = new System.Drawing.Point(3, 2);
-            this.lblKmRodados.Name = "lblKmRodados";
-            this.lblKmRodados.Size = new System.Drawing.Size(88, 15);
-            this.lblKmRodados.TabIndex = 2;
-            this.lblKmRodados.Text = "Km rodados ";
-            // 
-            // lblKmAnual
-            // 
-            this.lblKmAnual.AutoSize = true;
-            this.lblKmAnual.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKmAnual.ForeColor = System.Drawing.Color.Green;
-            this.lblKmAnual.Location = new System.Drawing.Point(24, 27);
-            this.lblKmAnual.Name = "lblKmAnual";
-            this.lblKmAnual.Size = new System.Drawing.Size(87, 33);
-            this.lblKmAnual.TabIndex = 1;
-            this.lblKmAnual.Text = "99,99";
+            this.listBox1.BackColor = System.Drawing.Color.White;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.Color.Black;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(11, 67);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(85, 90);
+            this.listBox1.TabIndex = 97;
             // 
             // panel9
             // 
@@ -752,7 +778,7 @@
             this.panel9.Controls.Add(this.pictureBox13);
             this.panel9.Controls.Add(this.label83);
             this.panel9.Controls.Add(this.label84);
-            this.panel9.Location = new System.Drawing.Point(592, 104);
+            this.panel9.Location = new System.Drawing.Point(889, 372);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(268, 72);
             this.panel9.TabIndex = 93;
@@ -795,7 +821,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(14, 238);
+            this.chart1.Location = new System.Drawing.Point(6, 318);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -810,7 +836,7 @@
             this.label82.AutoSize = true;
             this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label82.ForeColor = System.Drawing.Color.Red;
-            this.label82.Location = new System.Drawing.Point(14, 223);
+            this.label82.Location = new System.Drawing.Point(6, 298);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(162, 13);
             this.label82.TabIndex = 95;
@@ -823,7 +849,7 @@
             this.panel5.Controls.Add(this.pictureBox7);
             this.panel5.Controls.Add(this.label76);
             this.panel5.Controls.Add(this.label77);
-            this.panel5.Location = new System.Drawing.Point(592, 28);
+            this.panel5.Location = new System.Drawing.Point(888, 294);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(268, 72);
             this.panel5.TabIndex = 91;
@@ -1293,6 +1319,16 @@
             this.tabPageManutencao.TabIndex = 2;
             this.tabPageManutencao.Text = "Manutenção";
             this.tabPageManutencao.UseVisualStyleBackColor = true;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(427, 143);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(103, 13);
+            this.label29.TabIndex = 95;
+            this.label29.Text = "Registros do ano";
             // 
             // btnTipoManutencao
             // 
@@ -3484,15 +3520,68 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label29
+            // listBox6
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(427, 143);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(103, 13);
-            this.label29.TabIndex = 95;
-            this.label29.Text = "Registros do ano";
+            this.listBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox6.ForeColor = System.Drawing.Color.Black;
+            this.listBox6.FormattingEnabled = true;
+            this.listBox6.ItemHeight = 15;
+            this.listBox6.Location = new System.Drawing.Point(375, 67);
+            this.listBox6.Name = "listBox6";
+            this.listBox6.Size = new System.Drawing.Size(85, 90);
+            this.listBox6.TabIndex = 105;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.ForeColor = System.Drawing.Color.Silver;
+            this.label43.Location = new System.Drawing.Point(372, 46);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(54, 15);
+            this.label43.TabIndex = 106;
+            this.label43.Text = "Por KM";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.ForeColor = System.Drawing.Color.Orange;
+            this.label65.Location = new System.Drawing.Point(5, 171);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(67, 15);
+            this.label65.TabIndex = 107;
+            this.label65.Text = "Distância";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.ForeColor = System.Drawing.Color.Silver;
+            this.label67.Location = new System.Drawing.Point(100, 182);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(39, 15);
+            this.label67.TabIndex = 108;
+            this.label67.Text = "Total";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.ForeColor = System.Drawing.Color.Silver;
+            this.label70.Location = new System.Drawing.Point(177, 182);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(88, 15);
+            this.label70.TabIndex = 109;
+            this.label70.Text = "Média diária";
+            // 
+            // lblMediaDiaria
+            // 
+            this.lblMediaDiaria.AutoSize = true;
+            this.lblMediaDiaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMediaDiaria.ForeColor = System.Drawing.Color.Black;
+            this.lblMediaDiaria.Location = new System.Drawing.Point(177, 203);
+            this.lblMediaDiaria.Name = "lblMediaDiaria";
+            this.lblMediaDiaria.Size = new System.Drawing.Size(38, 15);
+            this.lblMediaDiaria.TabIndex = 110;
+            this.lblMediaDiaria.Text = "99,99";
             // 
             // frmVeiculoBRA
             // 
@@ -3510,6 +3599,7 @@
             this.Load += new System.EventHandler(this.frmVeiculoBRA_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPageDashDoard.ResumeLayout(false);
+            this.tabPageDashDoard.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -3520,19 +3610,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox27.ResumeLayout(false);
             this.groupBox27.PerformLayout();
-            this.panelConsumoCombustivelAnual.ResumeLayout(false);
-            this.panelConsumoCombustivelAnual.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
@@ -3759,14 +3842,7 @@
         private System.Windows.Forms.ComboBox cmbFiltroDataMultaPor;
         private System.Windows.Forms.Button btnResetFiltro;
         private System.Windows.Forms.TabPage tabPageDashDoard;
-        private System.Windows.Forms.Panel panelConsumoCombustivelAnual;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblKmRodados;
         private System.Windows.Forms.Label lblKmAnual;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label76;
@@ -3896,5 +3972,19 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerFiltroDashDataInicial;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ListBox listBox5;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.ListBox listBox6;
+        private System.Windows.Forms.Label lblMediaDiaria;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label65;
     }
 }

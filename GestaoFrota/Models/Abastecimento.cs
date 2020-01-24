@@ -53,7 +53,7 @@ namespace GestaoFrota.Models
     }
 
     /// <summary>
-    /// Classe modelo para informa a autonomia 
+    /// Classe modelo para informra a autonomia 
     /// </summary>
     public class AutonomiaInfo
     {   
@@ -64,5 +64,27 @@ namespace GestaoFrota.Models
         public string MediaDiesel { get; set; }
     }
 
-    
+    /// <summary>
+    /// Classe modelo para informar custo diario
+    /// </summary>
+    public class CustoDiario
+    {
+        public int DiasAlcool { get; set; }
+
+        public int DiasGasolina { get; set; }
+
+        public int DiasGNV { get; set; }
+
+        public int DiasDiesel { get; set; }
+
+        public decimal CustoAlcool { get; set; }
+
+        public decimal CustoGasolina { get; set; }
+
+        public decimal CustoGNV { get; set; }
+
+        public decimal CustoDiesel { get; set; }
+
+        public decimal TotalDiasRegistro { get; set; }
+    }
 }

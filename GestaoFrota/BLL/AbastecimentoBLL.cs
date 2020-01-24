@@ -17,14 +17,14 @@ namespace GestaoFrota.BLL
             new AbastecimentoDAL().Insert(info);
         }
 
+        public List<DGridAbastecimentoInfo> List(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
+        {
+            return new AbastecimentoDAL().List(dtInicial, dtFinal, veiculo);
+        }
+
         public List<DGridAbastecimentoInfo> ListParcialAnual(DateTime dtAtual, Veiculo veiculo)
         {
             return new AbastecimentoDAL().ListParcialAnual(dtAtual, veiculo);           
-        }
-        
-        public List<DGridAbastecimentoInfo> List(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
-        {
-            return new AbastecimentoDAL().List(dtInicial, dtFinal, veiculo);            
         }
       
         public List<DGridAbastecimentoInfo> ListPorFiltro(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo, int combustivel)
@@ -40,6 +40,11 @@ namespace GestaoFrota.BLL
         public ConsumoInfo GetConsumoAnual(DateTime dtAtual, Veiculo veiculo)
         {
             return new AbastecimentoDAL().GetConsumoAnual(dtAtual, veiculo);
+        }
+
+        public CustoDiario GetDiasRegistroParcialAnual(DateTime dtAtual, Veiculo veiculo) 
+        {
+            return new AbastecimentoDAL().GetDiasRegistroParcialAnual(dtAtual, veiculo);
         }
 
         public List<Abastecimento> ListExport()
