@@ -28,52 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVeiculoPRT));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVeiculoPRT));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDashDoard = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnAplicarFiltroDashboard = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePickerFiltroDashDataFinal = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerFiltroDashDataInicial = new System.Windows.Forms.DateTimePicker();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.groupBox35 = new System.Windows.Forms.GroupBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.panelConsumoCombustivelAnual = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label65 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.label94 = new System.Windows.Forms.Label();
-            this.label95 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.label85 = new System.Windows.Forms.Label();
-            this.label86 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblKmRodados = new System.Windows.Forms.Label();
+            this.lblMediaDiaria = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
             this.lblKmAnual = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label82 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.listBox6 = new System.Windows.Forms.ListBox();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label65 = new System.Windows.Forms.Label();
             this.tabPageAbastecimento = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -315,29 +291,31 @@
             this.label59 = new System.Windows.Forms.Label();
             this.dtMultas = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.groupBox35 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label82 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnAplicarFiltroDashboard = new System.Windows.Forms.Button();
+            this.dateTimePickerFiltroDashDataFinal = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFiltroDashDataInicial = new System.Windows.Forms.DateTimePicker();
+            this.label30 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageDashDoard.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.groupBox35.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox27.SuspendLayout();
-            this.panelConsumoCombustivelAnual.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.tabPageAbastecimento.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -372,341 +350,171 @@
             this.groupBox34.SuspendLayout();
             this.groupBox33.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox35.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPageDashDoard);
             this.tabControl1.Controls.Add(this.tabPageAbastecimento);
             this.tabControl1.Controls.Add(this.tabPageManutencao);
             this.tabControl1.Controls.Add(this.tabPageDocumento);
             this.tabControl1.Controls.Add(this.tabPageSeguro);
             this.tabControl1.Controls.Add(this.tabPageMulta);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
             // tabPageDashDoard
             // 
-            resources.ApplyResources(this.tabPageDashDoard, "tabPageDashDoard");
             this.tabPageDashDoard.BackColor = System.Drawing.Color.White;
+            this.tabPageDashDoard.Controls.Add(this.label30);
             this.tabPageDashDoard.Controls.Add(this.groupBox4);
-            this.tabPageDashDoard.Controls.Add(this.panel7);
+            this.tabPageDashDoard.Controls.Add(this.label82);
             this.tabPageDashDoard.Controls.Add(this.groupBox35);
+            this.tabPageDashDoard.Controls.Add(this.groupBox5);
             this.tabPageDashDoard.Controls.Add(this.groupBox27);
+            this.tabPageDashDoard.Controls.Add(this.chart1);
+            resources.ApplyResources(this.tabPageDashDoard, "tabPageDashDoard");
             this.tabPageDashDoard.Name = "tabPageDashDoard";
-            // 
-            // groupBox4
-            // 
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.BackColor = System.Drawing.Color.White;
-            this.groupBox4.Controls.Add(this.btnAplicarFiltroDashboard);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataFinal);
-            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataInicial);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
-            // btnAplicarFiltroDashboard
-            // 
-            resources.ApplyResources(this.btnAplicarFiltroDashboard, "btnAplicarFiltroDashboard");
-            this.btnAplicarFiltroDashboard.Name = "btnAplicarFiltroDashboard";
-            this.btnAplicarFiltroDashboard.UseVisualStyleBackColor = true;
-            this.btnAplicarFiltroDashboard.Click += new System.EventHandler(this.btnAplicarFiltroDashboard_Click);
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
-            // 
-            // dateTimePickerFiltroDashDataFinal
-            // 
-            resources.ApplyResources(this.dateTimePickerFiltroDashDataFinal, "dateTimePickerFiltroDashDataFinal");
-            this.dateTimePickerFiltroDashDataFinal.Name = "dateTimePickerFiltroDashDataFinal";
-            // 
-            // dateTimePickerFiltroDashDataInicial
-            // 
-            resources.ApplyResources(this.dateTimePickerFiltroDashDataInicial, "dateTimePickerFiltroDashDataInicial");
-            this.dateTimePickerFiltroDashDataInicial.Name = "dateTimePickerFiltroDashDataInicial";
-            // 
-            // panel7
-            // 
-            resources.ApplyResources(this.panel7, "panel7");
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.pictureBox11);
-            this.panel7.Controls.Add(this.label78);
-            this.panel7.Controls.Add(this.label79);
-            this.panel7.Name = "panel7";
-            // 
-            // pictureBox11
-            // 
-            resources.ApplyResources(this.pictureBox11, "pictureBox11");
-            this.pictureBox11.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.TabStop = false;
-            // 
-            // label78
-            // 
-            resources.ApplyResources(this.label78, "label78");
-            this.label78.ForeColor = System.Drawing.Color.DarkGray;
-            this.label78.Name = "label78";
-            // 
-            // label79
-            // 
-            resources.ApplyResources(this.label79, "label79");
-            this.label79.ForeColor = System.Drawing.Color.Red;
-            this.label79.Name = "label79";
-            // 
-            // groupBox35
-            // 
-            resources.ApplyResources(this.groupBox35, "groupBox35");
-            this.groupBox35.BackColor = System.Drawing.Color.White;
-            this.groupBox35.Controls.Add(this.panel3);
-            this.groupBox35.Name = "groupBox35";
-            this.groupBox35.TabStop = false;
-            // 
-            // panel3
-            // 
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Name = "panel3";
-            // 
-            // dataGridView1
-            // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Name = "dataGridView1";
             // 
             // groupBox27
             // 
-            resources.ApplyResources(this.groupBox27, "groupBox27");
             this.groupBox27.BackColor = System.Drawing.Color.White;
-            this.groupBox27.Controls.Add(this.panelConsumoCombustivelAnual);
-            this.groupBox27.Controls.Add(this.panel11);
-            this.groupBox27.Controls.Add(this.panel10);
-            this.groupBox27.Controls.Add(this.panel1);
-            this.groupBox27.Controls.Add(this.panel9);
-            this.groupBox27.Controls.Add(this.chart1);
-            this.groupBox27.Controls.Add(this.label82);
-            this.groupBox27.Controls.Add(this.panel5);
+            this.groupBox27.Controls.Add(this.lblMediaDiaria);
+            this.groupBox27.Controls.Add(this.label70);
+            this.groupBox27.Controls.Add(this.label67);
+            this.groupBox27.Controls.Add(this.lblKmAnual);
+            this.groupBox27.Controls.Add(this.label14);
+            this.groupBox27.Controls.Add(this.label43);
+            this.groupBox27.Controls.Add(this.label39);
+            this.groupBox27.Controls.Add(this.label38);
+            this.groupBox27.Controls.Add(this.label35);
+            this.groupBox27.Controls.Add(this.listBox6);
+            this.groupBox27.Controls.Add(this.listBox5);
+            this.groupBox27.Controls.Add(this.listBox4);
+            this.groupBox27.Controls.Add(this.listBox2);
+            this.groupBox27.Controls.Add(this.listBox1);
+            this.groupBox27.Controls.Add(this.label65);
             this.groupBox27.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            resources.ApplyResources(this.groupBox27, "groupBox27");
+            this.groupBox27.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.TabStop = false;
             // 
-            // panelConsumoCombustivelAnual
+            // lblMediaDiaria
             // 
-            resources.ApplyResources(this.panelConsumoCombustivelAnual, "panelConsumoCombustivelAnual");
-            this.panelConsumoCombustivelAnual.BackColor = System.Drawing.Color.White;
-            this.panelConsumoCombustivelAnual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelConsumoCombustivelAnual.Controls.Add(this.pictureBox2);
-            this.panelConsumoCombustivelAnual.Controls.Add(this.pictureBox3);
-            this.panelConsumoCombustivelAnual.Controls.Add(this.label65);
-            this.panelConsumoCombustivelAnual.Controls.Add(this.listBox1);
-            this.panelConsumoCombustivelAnual.Name = "panelConsumoCombustivelAnual";
+            resources.ApplyResources(this.lblMediaDiaria, "lblMediaDiaria");
+            this.lblMediaDiaria.ForeColor = System.Drawing.Color.Black;
+            this.lblMediaDiaria.Name = "lblMediaDiaria";
             // 
-            // pictureBox2
+            // label70
             // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Image = global::GestaoFrota.Properties.Resources.if_fuel_103260;
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
+            resources.ApplyResources(this.label70, "label70");
+            this.label70.ForeColor = System.Drawing.Color.Silver;
+            this.label70.Name = "label70";
             // 
-            // pictureBox3
+            // label67
             // 
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Image = global::GestaoFrota.Properties.Resources.if_money_bag_309025;
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
+            resources.ApplyResources(this.label67, "label67");
+            this.label67.ForeColor = System.Drawing.Color.Silver;
+            this.label67.Name = "label67";
+            // 
+            // lblKmAnual
+            // 
+            resources.ApplyResources(this.lblKmAnual, "lblKmAnual");
+            this.lblKmAnual.ForeColor = System.Drawing.Color.Black;
+            this.lblKmAnual.Name = "lblKmAnual";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.ForeColor = System.Drawing.Color.Orange;
+            this.label14.Name = "label14";
+            // 
+            // label43
+            // 
+            resources.ApplyResources(this.label43, "label43");
+            this.label43.ForeColor = System.Drawing.Color.Silver;
+            this.label43.Name = "label43";
+            // 
+            // label39
+            // 
+            resources.ApplyResources(this.label39, "label39");
+            this.label39.ForeColor = System.Drawing.Color.Silver;
+            this.label39.Name = "label39";
+            // 
+            // label38
+            // 
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.ForeColor = System.Drawing.Color.Silver;
+            this.label38.Name = "label38";
+            // 
+            // label35
+            // 
+            resources.ApplyResources(this.label35, "label35");
+            this.label35.ForeColor = System.Drawing.Color.Silver;
+            this.label35.Name = "label35";
+            // 
+            // listBox6
+            // 
+            this.listBox6.BackColor = System.Drawing.Color.White;
+            this.listBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.listBox6, "listBox6");
+            this.listBox6.ForeColor = System.Drawing.Color.Black;
+            this.listBox6.FormattingEnabled = true;
+            this.listBox6.Name = "listBox6";
+            // 
+            // listBox5
+            // 
+            this.listBox5.BackColor = System.Drawing.Color.White;
+            this.listBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.listBox5, "listBox5");
+            this.listBox5.ForeColor = System.Drawing.Color.Black;
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.Name = "listBox5";
+            // 
+            // listBox4
+            // 
+            this.listBox4.BackColor = System.Drawing.Color.White;
+            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.listBox4, "listBox4");
+            this.listBox4.ForeColor = System.Drawing.Color.Black;
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Name = "listBox4";
+            // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.Color.White;
+            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.listBox2, "listBox2");
+            this.listBox2.ForeColor = System.Drawing.Color.Black;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Name = "listBox2";
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.White;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.listBox1, "listBox1");
+            this.listBox1.ForeColor = System.Drawing.Color.Black;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Name = "listBox1";
             // 
             // label65
             // 
             resources.ApplyResources(this.label65, "label65");
             this.label65.BackColor = System.Drawing.Color.Transparent;
             this.label65.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label65.ForeColor = System.Drawing.Color.DarkGray;
+            this.label65.ForeColor = System.Drawing.Color.Orange;
             this.label65.Name = "label65";
-            // 
-            // listBox1
-            // 
-            resources.ApplyResources(this.listBox1, "listBox1");
-            this.listBox1.BackColor = System.Drawing.Color.White;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.ForeColor = System.Drawing.Color.Black;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Name = "listBox1";
-            // 
-            // panel11
-            // 
-            resources.ApplyResources(this.panel11, "panel11");
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.pictureBox15);
-            this.panel11.Controls.Add(this.label94);
-            this.panel11.Controls.Add(this.label95);
-            this.panel11.Name = "panel11";
-            // 
-            // pictureBox15
-            // 
-            resources.ApplyResources(this.pictureBox15, "pictureBox15");
-            this.pictureBox15.Image = global::GestaoFrota.Properties.Resources.if_news_103657;
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.TabStop = false;
-            // 
-            // label94
-            // 
-            resources.ApplyResources(this.label94, "label94");
-            this.label94.ForeColor = System.Drawing.Color.DarkGray;
-            this.label94.Name = "label94";
-            // 
-            // label95
-            // 
-            resources.ApplyResources(this.label95, "label95");
-            this.label95.ForeColor = System.Drawing.Color.IndianRed;
-            this.label95.Name = "label95";
-            // 
-            // panel10
-            // 
-            resources.ApplyResources(this.panel10, "panel10");
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.pictureBox14);
-            this.panel10.Controls.Add(this.label85);
-            this.panel10.Controls.Add(this.label86);
-            this.panel10.Name = "panel10";
-            // 
-            // pictureBox14
-            // 
-            resources.ApplyResources(this.pictureBox14, "pictureBox14");
-            this.pictureBox14.Image = global::GestaoFrota.Properties.Resources.if_Vector_icons_39_1041628;
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.TabStop = false;
-            // 
-            // label85
-            // 
-            resources.ApplyResources(this.label85, "label85");
-            this.label85.ForeColor = System.Drawing.Color.DarkGray;
-            this.label85.Name = "label85";
-            // 
-            // label86
-            // 
-            resources.ApplyResources(this.label86, "label86");
-            this.label86.ForeColor = System.Drawing.Color.IndianRed;
-            this.label86.Name = "label86";
-            // 
-            // panel1
-            // 
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lblKmRodados);
-            this.panel1.Controls.Add(this.lblKmAnual);
-            this.panel1.Name = "panel1";
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::GestaoFrota.Properties.Resources.if_Move_distance_arrow_left_right_2630385;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblKmRodados
-            // 
-            resources.ApplyResources(this.lblKmRodados, "lblKmRodados");
-            this.lblKmRodados.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblKmRodados.Name = "lblKmRodados";
-            // 
-            // lblKmAnual
-            // 
-            resources.ApplyResources(this.lblKmAnual, "lblKmAnual");
-            this.lblKmAnual.ForeColor = System.Drawing.Color.Green;
-            this.lblKmAnual.Name = "lblKmAnual";
-            // 
-            // panel9
-            // 
-            resources.ApplyResources(this.panel9, "panel9");
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.pictureBox13);
-            this.panel9.Controls.Add(this.label83);
-            this.panel9.Controls.Add(this.label84);
-            this.panel9.Name = "panel9";
-            // 
-            // pictureBox13
-            // 
-            resources.ApplyResources(this.pictureBox13, "pictureBox13");
-            this.pictureBox13.Image = global::GestaoFrota.Properties.Resources.if_ticket_216459;
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.TabStop = false;
-            // 
-            // label83
-            // 
-            resources.ApplyResources(this.label83, "label83");
-            this.label83.ForeColor = System.Drawing.Color.DarkGray;
-            this.label83.Name = "label83";
-            // 
-            // label84
-            // 
-            resources.ApplyResources(this.label84, "label84");
-            this.label84.BackColor = System.Drawing.Color.Transparent;
-            this.label84.ForeColor = System.Drawing.Color.IndianRed;
-            this.label84.Name = "label84";
-            // 
-            // chart1
-            // 
-            resources.ApplyResources(this.chart1, "chart1");
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            // 
-            // label82
-            // 
-            resources.ApplyResources(this.label82, "label82");
-            this.label82.ForeColor = System.Drawing.Color.Red;
-            this.label82.Name = "label82";
-            // 
-            // panel5
-            // 
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.pictureBox7);
-            this.panel5.Controls.Add(this.label76);
-            this.panel5.Controls.Add(this.label77);
-            this.panel5.Name = "panel5";
-            // 
-            // pictureBox7
-            // 
-            resources.ApplyResources(this.pictureBox7, "pictureBox7");
-            this.pictureBox7.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.TabStop = false;
-            // 
-            // label76
-            // 
-            resources.ApplyResources(this.label76, "label76");
-            this.label76.BackColor = System.Drawing.Color.Transparent;
-            this.label76.ForeColor = System.Drawing.Color.DarkGray;
-            this.label76.Name = "label76";
-            // 
-            // label77
-            // 
-            resources.ApplyResources(this.label77, "label77");
-            this.label77.ForeColor = System.Drawing.Color.IndianRed;
-            this.label77.Name = "label77";
             // 
             // tabPageAbastecimento
             // 
-            resources.ApplyResources(this.tabPageAbastecimento, "tabPageAbastecimento");
             this.tabPageAbastecimento.Controls.Add(this.label12);
             this.tabPageAbastecimento.Controls.Add(this.panel14);
             this.tabPageAbastecimento.Controls.Add(this.panel4);
@@ -716,6 +524,7 @@
             this.tabPageAbastecimento.Controls.Add(this.dtAbastecimento);
             this.tabPageAbastecimento.Controls.Add(this.lblDataAtual);
             this.tabPageAbastecimento.Controls.Add(this.groupBox1);
+            resources.ApplyResources(this.tabPageAbastecimento, "tabPageAbastecimento");
             this.tabPageAbastecimento.Name = "tabPageAbastecimento";
             this.tabPageAbastecimento.UseVisualStyleBackColor = true;
             // 
@@ -726,18 +535,18 @@
             // 
             // panel14
             // 
-            resources.ApplyResources(this.panel14, "panel14");
             this.panel14.BackColor = System.Drawing.Color.White;
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.pictureBox8);
             this.panel14.Controls.Add(this.label68);
             this.panel14.Controls.Add(this.label69);
+            resources.ApplyResources(this.panel14, "panel14");
             this.panel14.Name = "panel14";
             // 
             // pictureBox8
             // 
-            resources.ApplyResources(this.pictureBox8, "pictureBox8");
             this.pictureBox8.Image = global::GestaoFrota.Properties.Resources.if_Move_distance_arrow_left_right_2630385;
+            resources.ApplyResources(this.pictureBox8, "pictureBox8");
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.TabStop = false;
             // 
@@ -755,26 +564,26 @@
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.pictureBox5);
             this.panel4.Controls.Add(this.pictureBox6);
             this.panel4.Controls.Add(this.label66);
             this.panel4.Controls.Add(this.listBox3);
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // pictureBox5
             // 
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.Image = global::GestaoFrota.Properties.Resources.if_fuel_103260;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
-            resources.ApplyResources(this.pictureBox6, "pictureBox6");
             this.pictureBox6.Image = global::GestaoFrota.Properties.Resources.if_money_bag_309025;
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
             // 
@@ -788,34 +597,33 @@
             // 
             // listBox3
             // 
-            resources.ApplyResources(this.listBox3, "listBox3");
             this.listBox3.BackColor = System.Drawing.Color.White;
             this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.listBox3, "listBox3");
             this.listBox3.ForeColor = System.Drawing.Color.Black;
             this.listBox3.FormattingEnabled = true;
             this.listBox3.Name = "listBox3";
             // 
             // btnAdicionarComprovante
             // 
-            resources.ApplyResources(this.btnAdicionarComprovante, "btnAdicionarComprovante");
             this.btnAdicionarComprovante.BackColor = System.Drawing.Color.Khaki;
             this.btnAdicionarComprovante.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
+            resources.ApplyResources(this.btnAdicionarComprovante, "btnAdicionarComprovante");
             this.btnAdicionarComprovante.Name = "btnAdicionarComprovante";
             this.btnAdicionarComprovante.UseVisualStyleBackColor = false;
             this.btnAdicionarComprovante.Click += new System.EventHandler(this.btnAdicionarComprovante_Click);
             // 
             // btnVisualizarComprovanteAbastecimento
             // 
-            resources.ApplyResources(this.btnVisualizarComprovanteAbastecimento, "btnVisualizarComprovanteAbastecimento");
             this.btnVisualizarComprovanteAbastecimento.BackColor = System.Drawing.Color.Aquamarine;
             this.btnVisualizarComprovanteAbastecimento.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
+            resources.ApplyResources(this.btnVisualizarComprovanteAbastecimento, "btnVisualizarComprovanteAbastecimento");
             this.btnVisualizarComprovanteAbastecimento.Name = "btnVisualizarComprovanteAbastecimento";
             this.btnVisualizarComprovanteAbastecimento.UseVisualStyleBackColor = false;
             this.btnVisualizarComprovanteAbastecimento.Click += new System.EventHandler(this.btnVisualizarComprovanteAbastecimento_Click);
             // 
             // groupBox11
             // 
-            resources.ApplyResources(this.groupBox11, "groupBox11");
             this.groupBox11.Controls.Add(this.btnRemoverFiltroCombustivel);
             this.groupBox11.Controls.Add(this.cmbCombustivelAbastecimentoFiltro);
             this.groupBox11.Controls.Add(this.btnAplicarFiltroAbastecimentos);
@@ -824,30 +632,31 @@
             this.groupBox11.Controls.Add(this.label7);
             this.groupBox11.Controls.Add(this.dateTimePickerFiltroDataInicial);
             this.groupBox11.Controls.Add(this.label6);
+            resources.ApplyResources(this.groupBox11, "groupBox11");
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.TabStop = false;
             // 
             // btnRemoverFiltroCombustivel
             // 
-            resources.ApplyResources(this.btnRemoverFiltroCombustivel, "btnRemoverFiltroCombustivel");
             this.btnRemoverFiltroCombustivel.BackColor = System.Drawing.Color.Khaki;
             this.btnRemoverFiltroCombustivel.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
+            resources.ApplyResources(this.btnRemoverFiltroCombustivel, "btnRemoverFiltroCombustivel");
             this.btnRemoverFiltroCombustivel.Name = "btnRemoverFiltroCombustivel";
             this.btnRemoverFiltroCombustivel.UseVisualStyleBackColor = false;
             this.btnRemoverFiltroCombustivel.Click += new System.EventHandler(this.btnRemoverFiltroCombustivel_Click);
             // 
             // cmbCombustivelAbastecimentoFiltro
             // 
-            resources.ApplyResources(this.cmbCombustivelAbastecimentoFiltro, "cmbCombustivelAbastecimentoFiltro");
             this.cmbCombustivelAbastecimentoFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCombustivelAbastecimentoFiltro.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbCombustivelAbastecimentoFiltro, "cmbCombustivelAbastecimentoFiltro");
             this.cmbCombustivelAbastecimentoFiltro.Name = "cmbCombustivelAbastecimentoFiltro";
             // 
             // btnAplicarFiltroAbastecimentos
             // 
-            resources.ApplyResources(this.btnAplicarFiltroAbastecimentos, "btnAplicarFiltroAbastecimentos");
             this.btnAplicarFiltroAbastecimentos.BackColor = System.Drawing.Color.Moccasin;
             this.btnAplicarFiltroAbastecimentos.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
+            resources.ApplyResources(this.btnAplicarFiltroAbastecimentos, "btnAplicarFiltroAbastecimentos");
             this.btnAplicarFiltroAbastecimentos.Name = "btnAplicarFiltroAbastecimentos";
             this.btnAplicarFiltroAbastecimentos.UseVisualStyleBackColor = false;
             this.btnAplicarFiltroAbastecimentos.Click += new System.EventHandler(this.btnAplicarFiltroAbastecimentos_Click);
@@ -879,12 +688,12 @@
             // 
             // dtAbastecimento
             // 
-            resources.ApplyResources(this.dtAbastecimento, "dtAbastecimento");
             this.dtAbastecimento.AllowUserToAddRows = false;
             this.dtAbastecimento.AllowUserToDeleteRows = false;
             this.dtAbastecimento.AllowUserToResizeColumns = false;
             this.dtAbastecimento.AllowUserToResizeRows = false;
             this.dtAbastecimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dtAbastecimento, "dtAbastecimento");
             this.dtAbastecimento.Name = "dtAbastecimento";
             this.dtAbastecimento.ReadOnly = true;
             // 
@@ -895,7 +704,6 @@
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.btnAnexarComprovante);
             this.groupBox1.Controls.Add(this.label37);
             this.groupBox1.Controls.Add(this.txtPathComprovanteAbastecimento);
@@ -910,6 +718,7 @@
             this.groupBox1.Controls.Add(this.cmbCombustivelAbastecimento);
             this.groupBox1.Controls.Add(this.dateTimePickerAbastecimento);
             this.groupBox1.Controls.Add(this.label1);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
@@ -942,9 +751,9 @@
             // 
             // btnInserirAbastecimento
             // 
-            resources.ApplyResources(this.btnInserirAbastecimento, "btnInserirAbastecimento");
             this.btnInserirAbastecimento.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnInserirAbastecimento.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            resources.ApplyResources(this.btnInserirAbastecimento, "btnInserirAbastecimento");
             this.btnInserirAbastecimento.Name = "btnInserirAbastecimento";
             this.btnInserirAbastecimento.UseVisualStyleBackColor = false;
             this.btnInserirAbastecimento.Click += new System.EventHandler(this.btnInserirAbastecimento_Click);
@@ -976,8 +785,8 @@
             // 
             // cmbCombustivelAbastecimento
             // 
-            resources.ApplyResources(this.cmbCombustivelAbastecimento, "cmbCombustivelAbastecimento");
             this.cmbCombustivelAbastecimento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cmbCombustivelAbastecimento, "cmbCombustivelAbastecimento");
             this.cmbCombustivelAbastecimento.Name = "cmbCombustivelAbastecimento";
             // 
             // dateTimePickerAbastecimento
@@ -992,7 +801,6 @@
             // 
             // tabPageManutencao
             // 
-            resources.ApplyResources(this.tabPageManutencao, "tabPageManutencao");
             this.tabPageManutencao.Controls.Add(this.label13);
             this.tabPageManutencao.Controls.Add(this.btnTipoManutencao);
             this.tabPageManutencao.Controls.Add(this.tabControl2);
@@ -1001,6 +809,7 @@
             this.tabPageManutencao.Controls.Add(this.dtManutencao);
             this.tabPageManutencao.Controls.Add(this.btnVisualizarMecanicas);
             this.tabPageManutencao.Controls.Add(this.btnCadastrarMecanica);
+            resources.ApplyResources(this.tabPageManutencao, "tabPageManutencao");
             this.tabPageManutencao.Name = "tabPageManutencao";
             this.tabPageManutencao.UseVisualStyleBackColor = true;
             // 
@@ -1027,7 +836,6 @@
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.label111);
             this.tabPage1.Controls.Add(this.label110);
             this.tabPage1.Controls.Add(this.label109);
@@ -1044,6 +852,7 @@
             this.tabPage1.Controls.Add(this.label101);
             this.tabPage1.Controls.Add(this.label100);
             this.tabPage1.Controls.Add(this.label99);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -1064,8 +873,8 @@
             // 
             // btnAnexaComprovanteManutencaoDepois
             // 
-            resources.ApplyResources(this.btnAnexaComprovanteManutencaoDepois, "btnAnexaComprovanteManutencaoDepois");
             this.btnAnexaComprovanteManutencaoDepois.BackColor = System.Drawing.Color.Khaki;
+            resources.ApplyResources(this.btnAnexaComprovanteManutencaoDepois, "btnAnexaComprovanteManutencaoDepois");
             this.btnAnexaComprovanteManutencaoDepois.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
             this.btnAnexaComprovanteManutencaoDepois.Name = "btnAnexaComprovanteManutencaoDepois";
             this.btnAnexaComprovanteManutencaoDepois.UseVisualStyleBackColor = false;
@@ -1136,7 +945,6 @@
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.label98);
             this.tabPage2.Controls.Add(this.label97);
             this.tabPage2.Controls.Add(this.cmbTipoManutencao);
@@ -1154,6 +962,7 @@
             this.tabPage2.Controls.Add(this.label32);
             this.tabPage2.Controls.Add(this.label34);
             this.tabPage2.Controls.Add(this.txtDescricaoManutencao);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
@@ -1169,8 +978,8 @@
             // 
             // cmbTipoManutencao
             // 
-            resources.ApplyResources(this.cmbTipoManutencao, "cmbTipoManutencao");
             this.cmbTipoManutencao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cmbTipoManutencao, "cmbTipoManutencao");
             this.cmbTipoManutencao.Name = "cmbTipoManutencao";
             // 
             // btnAnexarComprovanteManutencao
@@ -1192,8 +1001,8 @@
             // 
             // cmbMecanica
             // 
-            resources.ApplyResources(this.cmbMecanica, "cmbMecanica");
             this.cmbMecanica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cmbMecanica, "cmbMecanica");
             this.cmbMecanica.Name = "cmbMecanica";
             // 
             // txtPathComprovanteManutencao
@@ -1228,9 +1037,9 @@
             // 
             // btnLancarManutencao
             // 
-            resources.ApplyResources(this.btnLancarManutencao, "btnLancarManutencao");
             this.btnLancarManutencao.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnLancarManutencao.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            resources.ApplyResources(this.btnLancarManutencao, "btnLancarManutencao");
             this.btnLancarManutencao.Name = "btnLancarManutencao";
             this.btnLancarManutencao.UseVisualStyleBackColor = false;
             this.btnLancarManutencao.Click += new System.EventHandler(this.btnLancarManutencao_Click_1);
@@ -1252,17 +1061,17 @@
             // 
             // panel8
             // 
-            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.pictureBox12);
             this.panel8.Controls.Add(this.label80);
             this.panel8.Controls.Add(this.label81);
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             // 
             // pictureBox12
             // 
-            resources.ApplyResources(this.pictureBox12, "pictureBox12");
             this.pictureBox12.Image = global::GestaoFrota.Properties.Resources.if_mechanic2_216509;
+            resources.ApplyResources(this.pictureBox12, "pictureBox12");
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.TabStop = false;
             // 
@@ -1280,20 +1089,20 @@
             // 
             // groupBox26
             // 
-            resources.ApplyResources(this.groupBox26, "groupBox26");
             this.groupBox26.Controls.Add(this.btnAplicarFiltroMecanica);
             this.groupBox26.Controls.Add(this.dateTimePickerDataFinalMecanicaFiltro);
             this.groupBox26.Controls.Add(this.label41);
             this.groupBox26.Controls.Add(this.dateTimePickerDataIncialMecanicaFiltro);
             this.groupBox26.Controls.Add(this.label42);
+            resources.ApplyResources(this.groupBox26, "groupBox26");
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.TabStop = false;
             // 
             // btnAplicarFiltroMecanica
             // 
-            resources.ApplyResources(this.btnAplicarFiltroMecanica, "btnAplicarFiltroMecanica");
             this.btnAplicarFiltroMecanica.BackColor = System.Drawing.Color.Moccasin;
             this.btnAplicarFiltroMecanica.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
+            resources.ApplyResources(this.btnAplicarFiltroMecanica, "btnAplicarFiltroMecanica");
             this.btnAplicarFiltroMecanica.Name = "btnAplicarFiltroMecanica";
             this.btnAplicarFiltroMecanica.UseVisualStyleBackColor = false;
             this.btnAplicarFiltroMecanica.Click += new System.EventHandler(this.btnAplicarFiltroMecanica_Click);
@@ -1320,12 +1129,12 @@
             // 
             // dtManutencao
             // 
-            resources.ApplyResources(this.dtManutencao, "dtManutencao");
             this.dtManutencao.AllowUserToAddRows = false;
             this.dtManutencao.AllowUserToDeleteRows = false;
             this.dtManutencao.AllowUserToResizeColumns = false;
             this.dtManutencao.AllowUserToResizeRows = false;
             this.dtManutencao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dtManutencao, "dtManutencao");
             this.dtManutencao.Name = "dtManutencao";
             this.dtManutencao.ReadOnly = true;
             this.dtManutencao.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtManutencao_CellMouseClick);
@@ -1346,40 +1155,40 @@
             // 
             // tabPageDocumento
             // 
-            resources.ApplyResources(this.tabPageDocumento, "tabPageDocumento");
             this.tabPageDocumento.Controls.Add(this.groupBox3);
             this.tabPageDocumento.Controls.Add(this.groupBox2);
             this.tabPageDocumento.Controls.Add(this.groupBox36);
             this.tabPageDocumento.Controls.Add(this.label92);
             this.tabPageDocumento.Controls.Add(this.dtPagamentoDocumento);
             this.tabPageDocumento.Controls.Add(this.groupBox20);
+            resources.ApplyResources(this.tabPageDocumento, "tabPageDocumento");
             this.tabPageDocumento.Name = "tabPageDocumento";
             this.tabPageDocumento.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Controls.Add(this.btnCancelarInformarPagamentoDocumento);
             this.groupBox3.Controls.Add(this.btnInformarPagamentoDocumento);
             this.groupBox3.Controls.Add(this.dateTimePickerDataPagamentoDocumento2);
             this.groupBox3.Controls.Add(this.labelDataPagamentoDocumento2);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
             // btnCancelarInformarPagamentoDocumento
             // 
-            resources.ApplyResources(this.btnCancelarInformarPagamentoDocumento, "btnCancelarInformarPagamentoDocumento");
             this.btnCancelarInformarPagamentoDocumento.BackColor = System.Drawing.Color.Coral;
             this.btnCancelarInformarPagamentoDocumento.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            resources.ApplyResources(this.btnCancelarInformarPagamentoDocumento, "btnCancelarInformarPagamentoDocumento");
             this.btnCancelarInformarPagamentoDocumento.Name = "btnCancelarInformarPagamentoDocumento";
             this.btnCancelarInformarPagamentoDocumento.UseVisualStyleBackColor = false;
             this.btnCancelarInformarPagamentoDocumento.Click += new System.EventHandler(this.btnCancelarInformarPagamentoDocumento_Click);
             // 
             // btnInformarPagamentoDocumento
             // 
-            resources.ApplyResources(this.btnInformarPagamentoDocumento, "btnInformarPagamentoDocumento");
             this.btnInformarPagamentoDocumento.BackColor = System.Drawing.Color.Orange;
             this.btnInformarPagamentoDocumento.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            resources.ApplyResources(this.btnInformarPagamentoDocumento, "btnInformarPagamentoDocumento");
             this.btnInformarPagamentoDocumento.Name = "btnInformarPagamentoDocumento";
             this.btnInformarPagamentoDocumento.UseVisualStyleBackColor = false;
             this.btnInformarPagamentoDocumento.Click += new System.EventHandler(this.btnInformarPagamentoDocumento_Click);
@@ -1396,7 +1205,6 @@
             // 
             // groupBox2
             // 
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txtCodigoPostal);
             this.groupBox2.Controls.Add(this.label27);
@@ -1442,6 +1250,7 @@
             this.groupBox2.Controls.Add(this.label72);
             this.groupBox2.Controls.Add(this.txtAnoModelo);
             this.groupBox2.Controls.Add(this.label25);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
@@ -1483,15 +1292,15 @@
             // 
             // txtRenavam
             // 
-            resources.ApplyResources(this.txtRenavam, "txtRenavam");
             this.txtRenavam.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRenavam, "txtRenavam");
             this.txtRenavam.Name = "txtRenavam";
             // 
             // btnSalvar
             // 
-            resources.ApplyResources(this.btnSalvar, "btnSalvar");
             this.btnSalvar.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            resources.ApplyResources(this.btnSalvar, "btnSalvar");
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -1513,9 +1322,9 @@
             // 
             // btnEditar
             // 
-            resources.ApplyResources(this.btnEditar, "btnEditar");
             this.btnEditar.BackColor = System.Drawing.Color.LightSalmon;
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.LightSalmon;
+            resources.ApplyResources(this.btnEditar, "btnEditar");
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -1527,9 +1336,9 @@
             // 
             // btnCancelar
             // 
-            resources.ApplyResources(this.btnCancelar, "btnCancelar");
             this.btnCancelar.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
+            resources.ApplyResources(this.btnCancelar, "btnCancelar");
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -1572,8 +1381,8 @@
             // 
             // cmbCombustivel
             // 
-            resources.ApplyResources(this.cmbCombustivel, "cmbCombustivel");
             this.cmbCombustivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cmbCombustivel, "cmbCombustivel");
             this.cmbCombustivel.Name = "cmbCombustivel";
             // 
             // txtCidade
@@ -1598,8 +1407,8 @@
             // 
             // txtChassi
             // 
-            resources.ApplyResources(this.txtChassi, "txtChassi");
             this.txtChassi.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.txtChassi, "txtChassi");
             this.txtChassi.Name = "txtChassi";
             // 
             // btnAnexarDocumento
@@ -1626,9 +1435,9 @@
             // 
             // btnVisualizarDocumento
             // 
-            resources.ApplyResources(this.btnVisualizarDocumento, "btnVisualizarDocumento");
             this.btnVisualizarDocumento.BackColor = System.Drawing.Color.Aquamarine;
             this.btnVisualizarDocumento.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
+            resources.ApplyResources(this.btnVisualizarDocumento, "btnVisualizarDocumento");
             this.btnVisualizarDocumento.Name = "btnVisualizarDocumento";
             this.btnVisualizarDocumento.UseVisualStyleBackColor = false;
             this.btnVisualizarDocumento.Click += new System.EventHandler(this.btnVisualizarDocumento_Click);
@@ -1697,7 +1506,6 @@
             // 
             // groupBox36
             // 
-            resources.ApplyResources(this.groupBox36, "groupBox36");
             this.groupBox36.Controls.Add(this.chkPagamentoRealizado);
             this.groupBox36.Controls.Add(this.label71);
             this.groupBox36.Controls.Add(this.dateTimePickerDataVencimentoDocumento);
@@ -1708,6 +1516,7 @@
             this.groupBox36.Controls.Add(this.txtDecricaoPagamentoDocumento);
             this.groupBox36.Controls.Add(this.labelDataPagamentoDocumento);
             this.groupBox36.Controls.Add(this.txtValorPagamentoDocumento);
+            resources.ApplyResources(this.groupBox36, "groupBox36");
             this.groupBox36.Name = "groupBox36";
             this.groupBox36.TabStop = false;
             // 
@@ -1735,9 +1544,9 @@
             // 
             // btnLancarPagamentoDocumento
             // 
-            resources.ApplyResources(this.btnLancarPagamentoDocumento, "btnLancarPagamentoDocumento");
             this.btnLancarPagamentoDocumento.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnLancarPagamentoDocumento.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            resources.ApplyResources(this.btnLancarPagamentoDocumento, "btnLancarPagamentoDocumento");
             this.btnLancarPagamentoDocumento.Name = "btnLancarPagamentoDocumento";
             this.btnLancarPagamentoDocumento.UseVisualStyleBackColor = false;
             this.btnLancarPagamentoDocumento.Click += new System.EventHandler(this.btnLancarPagamentoDocumento_Click);
@@ -1774,32 +1583,32 @@
             // 
             // dtPagamentoDocumento
             // 
-            resources.ApplyResources(this.dtPagamentoDocumento, "dtPagamentoDocumento");
             this.dtPagamentoDocumento.AllowUserToAddRows = false;
             this.dtPagamentoDocumento.AllowUserToDeleteRows = false;
             this.dtPagamentoDocumento.AllowUserToResizeColumns = false;
             this.dtPagamentoDocumento.AllowUserToResizeRows = false;
             this.dtPagamentoDocumento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dtPagamentoDocumento, "dtPagamentoDocumento");
             this.dtPagamentoDocumento.Name = "dtPagamentoDocumento";
             this.dtPagamentoDocumento.ReadOnly = true;
             this.dtPagamentoDocumento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtPagamentoDocumento_CellClick);
             // 
             // groupBox20
             // 
-            resources.ApplyResources(this.groupBox20, "groupBox20");
             this.groupBox20.Controls.Add(this.button1);
             this.groupBox20.Controls.Add(this.dateTimePicker1);
             this.groupBox20.Controls.Add(this.label89);
             this.groupBox20.Controls.Add(this.dateTimePicker2);
             this.groupBox20.Controls.Add(this.label90);
+            resources.ApplyResources(this.groupBox20, "groupBox20");
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.TabStop = false;
             // 
             // button1
             // 
-            resources.ApplyResources(this.button1, "button1");
             this.button1.BackColor = System.Drawing.Color.Moccasin;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -1825,55 +1634,55 @@
             // 
             // tabPageSeguro
             // 
-            resources.ApplyResources(this.tabPageSeguro, "tabPageSeguro");
             this.tabPageSeguro.Controls.Add(this.btnAdicionarComprovantePagaSegu);
             this.tabPageSeguro.Controls.Add(this.btnVisualizarComprovantePagaSegu);
             this.tabPageSeguro.Controls.Add(this.groupBox31);
             this.tabPageSeguro.Controls.Add(this.dtPagamentoSeguro);
             this.tabPageSeguro.Controls.Add(this.groupBoxInserirPagamentoSeguro);
             this.tabPageSeguro.Controls.Add(this.groupBox29);
+            resources.ApplyResources(this.tabPageSeguro, "tabPageSeguro");
             this.tabPageSeguro.Name = "tabPageSeguro";
             this.tabPageSeguro.UseVisualStyleBackColor = true;
             // 
             // btnAdicionarComprovantePagaSegu
             // 
-            resources.ApplyResources(this.btnAdicionarComprovantePagaSegu, "btnAdicionarComprovantePagaSegu");
             this.btnAdicionarComprovantePagaSegu.BackColor = System.Drawing.Color.Khaki;
             this.btnAdicionarComprovantePagaSegu.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
+            resources.ApplyResources(this.btnAdicionarComprovantePagaSegu, "btnAdicionarComprovantePagaSegu");
             this.btnAdicionarComprovantePagaSegu.Name = "btnAdicionarComprovantePagaSegu";
             this.btnAdicionarComprovantePagaSegu.UseVisualStyleBackColor = false;
             // 
             // btnVisualizarComprovantePagaSegu
             // 
-            resources.ApplyResources(this.btnVisualizarComprovantePagaSegu, "btnVisualizarComprovantePagaSegu");
             this.btnVisualizarComprovantePagaSegu.BackColor = System.Drawing.Color.Aquamarine;
             this.btnVisualizarComprovantePagaSegu.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
+            resources.ApplyResources(this.btnVisualizarComprovantePagaSegu, "btnVisualizarComprovantePagaSegu");
             this.btnVisualizarComprovantePagaSegu.Name = "btnVisualizarComprovantePagaSegu";
             this.btnVisualizarComprovantePagaSegu.UseVisualStyleBackColor = false;
             this.btnVisualizarComprovantePagaSegu.Click += new System.EventHandler(this.btnVisualizarComprovantePagaSegu_Click);
             // 
             // groupBox31
             // 
-            resources.ApplyResources(this.groupBox31, "groupBox31");
             this.groupBox31.Controls.Add(this.groupBox32);
             this.groupBox31.Controls.Add(this.groupBox30);
             this.groupBox31.Controls.Add(this.btnAplicarFiltroPagamentoSeguro);
+            resources.ApplyResources(this.groupBox31, "groupBox31");
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.TabStop = false;
             // 
             // groupBox32
             // 
-            resources.ApplyResources(this.groupBox32, "groupBox32");
             this.groupBox32.Controls.Add(this.cmbFiltroSeguradora);
             this.groupBox32.Controls.Add(this.ckSeguradora);
+            resources.ApplyResources(this.groupBox32, "groupBox32");
             this.groupBox32.Name = "groupBox32";
             this.groupBox32.TabStop = false;
             // 
             // cmbFiltroSeguradora
             // 
-            resources.ApplyResources(this.cmbFiltroSeguradora, "cmbFiltroSeguradora");
             this.cmbFiltroSeguradora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltroSeguradora.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbFiltroSeguradora, "cmbFiltroSeguradora");
             this.cmbFiltroSeguradora.Name = "cmbFiltroSeguradora";
             // 
             // ckSeguradora
@@ -1884,12 +1693,12 @@
             // 
             // groupBox30
             // 
-            resources.ApplyResources(this.groupBox30, "groupBox30");
             this.groupBox30.Controls.Add(this.dateTimePickerInicialFiltroSeguro);
             this.groupBox30.Controls.Add(this.ckDataSeguro);
             this.groupBox30.Controls.Add(this.label58);
             this.groupBox30.Controls.Add(this.label57);
             this.groupBox30.Controls.Add(this.dateTimePickerFinalFiltroSeguro);
+            resources.ApplyResources(this.groupBox30, "groupBox30");
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.TabStop = false;
             // 
@@ -1921,27 +1730,26 @@
             // 
             // btnAplicarFiltroPagamentoSeguro
             // 
-            resources.ApplyResources(this.btnAplicarFiltroPagamentoSeguro, "btnAplicarFiltroPagamentoSeguro");
             this.btnAplicarFiltroPagamentoSeguro.BackColor = System.Drawing.Color.Moccasin;
             this.btnAplicarFiltroPagamentoSeguro.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
+            resources.ApplyResources(this.btnAplicarFiltroPagamentoSeguro, "btnAplicarFiltroPagamentoSeguro");
             this.btnAplicarFiltroPagamentoSeguro.Name = "btnAplicarFiltroPagamentoSeguro";
             this.btnAplicarFiltroPagamentoSeguro.UseVisualStyleBackColor = false;
             this.btnAplicarFiltroPagamentoSeguro.Click += new System.EventHandler(this.btnAplicarFiltroPagamentoSeguro_Click);
             // 
             // dtPagamentoSeguro
             // 
-            resources.ApplyResources(this.dtPagamentoSeguro, "dtPagamentoSeguro");
             this.dtPagamentoSeguro.AllowUserToAddRows = false;
             this.dtPagamentoSeguro.AllowUserToDeleteRows = false;
             this.dtPagamentoSeguro.AllowUserToResizeColumns = false;
             this.dtPagamentoSeguro.AllowUserToResizeRows = false;
             this.dtPagamentoSeguro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dtPagamentoSeguro, "dtPagamentoSeguro");
             this.dtPagamentoSeguro.Name = "dtPagamentoSeguro";
             this.dtPagamentoSeguro.ReadOnly = true;
             // 
             // groupBoxInserirPagamentoSeguro
             // 
-            resources.ApplyResources(this.groupBoxInserirPagamentoSeguro, "groupBoxInserirPagamentoSeguro");
             this.groupBoxInserirPagamentoSeguro.Controls.Add(this.btnAnexarComprovantePagaSeguro);
             this.groupBoxInserirPagamentoSeguro.Controls.Add(this.label50);
             this.groupBoxInserirPagamentoSeguro.Controls.Add(this.txtPathAnexarComprovantePagaSeguro);
@@ -1950,6 +1758,7 @@
             this.groupBoxInserirPagamentoSeguro.Controls.Add(this.txtValorPagamentoSeguro);
             this.groupBoxInserirPagamentoSeguro.Controls.Add(this.dateTimePickerPagamentoSeguro);
             this.groupBoxInserirPagamentoSeguro.Controls.Add(this.label55);
+            resources.ApplyResources(this.groupBoxInserirPagamentoSeguro, "groupBoxInserirPagamentoSeguro");
             this.groupBoxInserirPagamentoSeguro.Name = "groupBoxInserirPagamentoSeguro";
             this.groupBoxInserirPagamentoSeguro.TabStop = false;
             // 
@@ -1972,9 +1781,9 @@
             // 
             // btnLancarPagaSeguro
             // 
-            resources.ApplyResources(this.btnLancarPagaSeguro, "btnLancarPagaSeguro");
             this.btnLancarPagaSeguro.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnLancarPagaSeguro.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            resources.ApplyResources(this.btnLancarPagaSeguro, "btnLancarPagaSeguro");
             this.btnLancarPagaSeguro.Name = "btnLancarPagaSeguro";
             this.btnLancarPagaSeguro.UseVisualStyleBackColor = false;
             this.btnLancarPagaSeguro.Click += new System.EventHandler(this.btnLancarPagaSeguro_Click);
@@ -2001,7 +1810,6 @@
             // 
             // groupBox29
             // 
-            resources.ApplyResources(this.groupBox29, "groupBox29");
             this.groupBox29.Controls.Add(this.btnSalvarAlteracoesSeguro);
             this.groupBox29.Controls.Add(this.btnAnexarCartaoSeguro);
             this.groupBox29.Controls.Add(this.label52);
@@ -2022,6 +1830,7 @@
             this.groupBox29.Controls.Add(this.label45);
             this.groupBox29.Controls.Add(this.btnAtivarContrato);
             this.groupBox29.Controls.Add(this.txtSeguradora);
+            resources.ApplyResources(this.groupBox29, "groupBox29");
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.TabStop = false;
             // 
@@ -2145,7 +1954,6 @@
             // 
             // tabPageMulta
             // 
-            resources.ApplyResources(this.tabPageMulta, "tabPageMulta");
             this.tabPageMulta.Controls.Add(this.dateTimePickerDataPagamentoMulta);
             this.tabPageMulta.Controls.Add(this.label91);
             this.tabPageMulta.Controls.Add(this.btnInformarPagamento);
@@ -2154,6 +1962,7 @@
             this.tabPageMulta.Controls.Add(this.groupBox34);
             this.tabPageMulta.Controls.Add(this.groupBox33);
             this.tabPageMulta.Controls.Add(this.dtMultas);
+            resources.ApplyResources(this.tabPageMulta, "tabPageMulta");
             this.tabPageMulta.Name = "tabPageMulta";
             this.tabPageMulta.UseVisualStyleBackColor = true;
             // 
@@ -2169,34 +1978,33 @@
             // 
             // btnInformarPagamento
             // 
-            resources.ApplyResources(this.btnInformarPagamento, "btnInformarPagamento");
             this.btnInformarPagamento.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnInformarPagamento.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
+            resources.ApplyResources(this.btnInformarPagamento, "btnInformarPagamento");
             this.btnInformarPagamento.Name = "btnInformarPagamento";
             this.btnInformarPagamento.UseVisualStyleBackColor = false;
             this.btnInformarPagamento.Click += new System.EventHandler(this.btnInformarPagamento_Click);
             // 
             // btnAdicionarMulta
             // 
-            resources.ApplyResources(this.btnAdicionarMulta, "btnAdicionarMulta");
             this.btnAdicionarMulta.BackColor = System.Drawing.Color.Khaki;
             this.btnAdicionarMulta.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
+            resources.ApplyResources(this.btnAdicionarMulta, "btnAdicionarMulta");
             this.btnAdicionarMulta.Name = "btnAdicionarMulta";
             this.btnAdicionarMulta.UseVisualStyleBackColor = false;
             this.btnAdicionarMulta.Click += new System.EventHandler(this.btnAdicionarMulta_Click);
             // 
             // btnVisualizaMulta
             // 
-            resources.ApplyResources(this.btnVisualizaMulta, "btnVisualizaMulta");
             this.btnVisualizaMulta.BackColor = System.Drawing.Color.Aquamarine;
             this.btnVisualizaMulta.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
+            resources.ApplyResources(this.btnVisualizaMulta, "btnVisualizaMulta");
             this.btnVisualizaMulta.Name = "btnVisualizaMulta";
             this.btnVisualizaMulta.UseVisualStyleBackColor = false;
             this.btnVisualizaMulta.Click += new System.EventHandler(this.btnVisualizaMulta_Click);
             // 
             // groupBox34
             // 
-            resources.ApplyResources(this.groupBox34, "groupBox34");
             this.groupBox34.Controls.Add(this.btnResetFiltro);
             this.groupBox34.Controls.Add(this.label64);
             this.groupBox34.Controls.Add(this.cmbFiltroDataMultaPor);
@@ -2208,6 +2016,7 @@
             this.groupBox34.Controls.Add(this.label62);
             this.groupBox34.Controls.Add(this.dateTimePickerFiltroInicialMulta);
             this.groupBox34.Controls.Add(this.label63);
+            resources.ApplyResources(this.groupBox34, "groupBox34");
             this.groupBox34.Name = "groupBox34";
             this.groupBox34.TabStop = false;
             // 
@@ -2225,11 +2034,11 @@
             // 
             // cmbFiltroDataMultaPor
             // 
-            resources.ApplyResources(this.cmbFiltroDataMultaPor, "cmbFiltroDataMultaPor");
             this.cmbFiltroDataMultaPor.FormattingEnabled = true;
             this.cmbFiltroDataMultaPor.Items.AddRange(new object[] {
             resources.GetString("cmbFiltroDataMultaPor.Items"),
             resources.GetString("cmbFiltroDataMultaPor.Items1")});
+            resources.ApplyResources(this.cmbFiltroDataMultaPor, "cmbFiltroDataMultaPor");
             this.cmbFiltroDataMultaPor.Name = "cmbFiltroDataMultaPor";
             // 
             // rdAmbas
@@ -2255,9 +2064,9 @@
             // 
             // btnAplicarFiltroMulta
             // 
-            resources.ApplyResources(this.btnAplicarFiltroMulta, "btnAplicarFiltroMulta");
             this.btnAplicarFiltroMulta.BackColor = System.Drawing.Color.Moccasin;
             this.btnAplicarFiltroMulta.FlatAppearance.BorderColor = System.Drawing.Color.Moccasin;
+            resources.ApplyResources(this.btnAplicarFiltroMulta, "btnAplicarFiltroMulta");
             this.btnAplicarFiltroMulta.Name = "btnAplicarFiltroMulta";
             this.btnAplicarFiltroMulta.UseVisualStyleBackColor = false;
             this.btnAplicarFiltroMulta.Click += new System.EventHandler(this.btnAplicarFiltroMulta_Click);
@@ -2284,7 +2093,6 @@
             // 
             // groupBox33
             // 
-            resources.ApplyResources(this.groupBox33, "groupBox33");
             this.groupBox33.Controls.Add(this.ckPagamentoRealizado);
             this.groupBox33.Controls.Add(this.label61);
             this.groupBox33.Controls.Add(this.txtLocalOcorrenciaMulta);
@@ -2298,6 +2106,7 @@
             this.groupBox33.Controls.Add(this.txtValorMulta);
             this.groupBox33.Controls.Add(this.dateTimePickerOcorrenciaMulta);
             this.groupBox33.Controls.Add(this.label59);
+            resources.ApplyResources(this.groupBox33, "groupBox33");
             this.groupBox33.Name = "groupBox33";
             this.groupBox33.TabStop = false;
             // 
@@ -2346,9 +2155,9 @@
             // 
             // btnLancarMulta
             // 
-            resources.ApplyResources(this.btnLancarMulta, "btnLancarMulta");
             this.btnLancarMulta.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnLancarMulta.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
+            resources.ApplyResources(this.btnLancarMulta, "btnLancarMulta");
             this.btnLancarMulta.Name = "btnLancarMulta";
             this.btnLancarMulta.UseVisualStyleBackColor = false;
             this.btnLancarMulta.Click += new System.EventHandler(this.btnLancarMulta_Click);
@@ -2375,14 +2184,172 @@
             // 
             // dtMultas
             // 
-            resources.ApplyResources(this.dtMultas, "dtMultas");
             this.dtMultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dtMultas, "dtMultas");
             this.dtMultas.Name = "dtMultas";
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label85);
+            this.groupBox5.Controls.Add(this.label86);
+            this.groupBox5.Controls.Add(this.label83);
+            this.groupBox5.Controls.Add(this.label84);
+            this.groupBox5.Controls.Add(this.label76);
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.label94);
+            this.groupBox5.Controls.Add(this.label21);
+            this.groupBox5.Controls.Add(this.label95);
+            this.groupBox5.Controls.Add(this.label77);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            // 
+            // label85
+            // 
+            resources.ApplyResources(this.label85, "label85");
+            this.label85.ForeColor = System.Drawing.Color.Orange;
+            this.label85.Name = "label85";
+            // 
+            // label86
+            // 
+            resources.ApplyResources(this.label86, "label86");
+            this.label86.ForeColor = System.Drawing.Color.Red;
+            this.label86.Name = "label86";
+            // 
+            // label83
+            // 
+            resources.ApplyResources(this.label83, "label83");
+            this.label83.ForeColor = System.Drawing.Color.Orange;
+            this.label83.Name = "label83";
+            // 
+            // label84
+            // 
+            resources.ApplyResources(this.label84, "label84");
+            this.label84.BackColor = System.Drawing.Color.Transparent;
+            this.label84.ForeColor = System.Drawing.Color.Red;
+            this.label84.Name = "label84";
+            // 
+            // label76
+            // 
+            resources.ApplyResources(this.label76, "label76");
+            this.label76.BackColor = System.Drawing.Color.Transparent;
+            this.label76.ForeColor = System.Drawing.Color.Orange;
+            this.label76.Name = "label76";
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Name = "label15";
+            // 
+            // label94
+            // 
+            resources.ApplyResources(this.label94, "label94");
+            this.label94.ForeColor = System.Drawing.Color.Orange;
+            this.label94.Name = "label94";
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.ForeColor = System.Drawing.Color.Orange;
+            this.label21.Name = "label21";
+            // 
+            // label95
+            // 
+            resources.ApplyResources(this.label95, "label95");
+            this.label95.ForeColor = System.Drawing.Color.Red;
+            this.label95.Name = "label95";
+            // 
+            // label77
+            // 
+            resources.ApplyResources(this.label77, "label77");
+            this.label77.ForeColor = System.Drawing.Color.Red;
+            this.label77.Name = "label77";
+            // 
+            // groupBox35
+            // 
+            this.groupBox35.BackColor = System.Drawing.Color.White;
+            this.groupBox35.Controls.Add(this.dataGridView1);
+            resources.ApplyResources(this.groupBox35, "groupBox35");
+            this.groupBox35.Name = "groupBox35";
+            this.groupBox35.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            resources.ApplyResources(this.chart1, "chart1");
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            // 
+            // label82
+            // 
+            resources.ApplyResources(this.label82, "label82");
+            this.label82.ForeColor = System.Drawing.Color.Red;
+            this.label82.Name = "label82";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.White;
+            this.groupBox4.Controls.Add(this.label112);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.btnAplicarFiltroDashboard);
+            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataFinal);
+            this.groupBox4.Controls.Add(this.dateTimePickerFiltroDashDataInicial);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // label112
+            // 
+            resources.ApplyResources(this.label112, "label112");
+            this.label112.Name = "label112";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // btnAplicarFiltroDashboard
+            // 
+            resources.ApplyResources(this.btnAplicarFiltroDashboard, "btnAplicarFiltroDashboard");
+            this.btnAplicarFiltroDashboard.Name = "btnAplicarFiltroDashboard";
+            this.btnAplicarFiltroDashboard.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePickerFiltroDashDataFinal
+            // 
+            resources.ApplyResources(this.dateTimePickerFiltroDashDataFinal, "dateTimePickerFiltroDashDataFinal");
+            this.dateTimePickerFiltroDashDataFinal.Name = "dateTimePickerFiltroDashDataFinal";
+            // 
+            // dateTimePickerFiltroDashDataInicial
+            // 
+            resources.ApplyResources(this.dateTimePickerFiltroDashDataInicial, "dateTimePickerFiltroDashDataInicial");
+            this.dateTimePickerFiltroDashDataInicial.Name = "dateTimePickerFiltroDashDataInicial";
+            // 
+            // label30
+            // 
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.Name = "label30";
             // 
             // frmVeiculoPRT
             // 
@@ -2396,36 +2363,9 @@
             this.Load += new System.EventHandler(this.frmVeiculoPRT_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPageDashDoard.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.groupBox35.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPageDashDoard.PerformLayout();
             this.groupBox27.ResumeLayout(false);
             this.groupBox27.PerformLayout();
-            this.panelConsumoCombustivelAnual.ResumeLayout(false);
-            this.panelConsumoCombustivelAnual.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.tabPageAbastecimento.ResumeLayout(false);
             this.tabPageAbastecimento.PerformLayout();
             this.panel14.ResumeLayout(false);
@@ -2482,6 +2422,13 @@
             this.groupBox33.ResumeLayout(false);
             this.groupBox33.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtMultas)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox35.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2632,35 +2579,12 @@
         private System.Windows.Forms.ComboBox cmbFiltroDataMultaPor;
         private System.Windows.Forms.Button btnResetFiltro;
         private System.Windows.Forms.TabPage tabPageDashDoard;
-        private System.Windows.Forms.Panel panelConsumoCombustivelAnual;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblKmRodados;
         private System.Windows.Forms.Label lblKmAnual;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Label label79;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label80;
         private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.Label label85;
-        private System.Windows.Forms.Label label86;
         private System.Windows.Forms.Button btnLancarPagamentoDocumento;
         private System.Windows.Forms.DateTimePicker dateTimePickerDataPagamentoDocumento;
         private System.Windows.Forms.Label labelDataPagamentoDocumento;
@@ -2676,16 +2600,8 @@
         private System.Windows.Forms.Label label92;
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.TextBox txtDecricaoPagamentoDocumento;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.Label label94;
-        private System.Windows.Forms.Label label95;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.GroupBox groupBox27;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.GroupBox groupBox35;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -2766,10 +2682,39 @@
         private System.Windows.Forms.TextBox txtCodigoPostal;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ListBox listBox6;
+        private System.Windows.Forms.ListBox listBox5;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblMediaDiaria;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.GroupBox groupBox35;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Label label82;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnAplicarFiltroDashboard;
+        private System.Windows.Forms.Label label112;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnAplicarFiltroDashboard;
         private System.Windows.Forms.DateTimePicker dateTimePickerFiltroDashDataFinal;
         private System.Windows.Forms.DateTimePicker dateTimePickerFiltroDashDataInicial;
+        private System.Windows.Forms.Label label30;
     }
 }

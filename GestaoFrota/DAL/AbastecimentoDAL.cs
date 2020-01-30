@@ -463,7 +463,7 @@ namespace GestaoFrota.DAL
 
             List<AutonomiaInfo> list = new List<AutonomiaInfo>();
 
-            long km = 0;
+            
 
             // Loop para buscar abastecimento de 3 meses anteriores
             for (int i = 0; i < 3; i++)
@@ -473,7 +473,7 @@ namespace GestaoFrota.DAL
                     Combustivel combustivelVeiculo = context.Combustiveis.Where(w => w.Id.Equals(veiculo.Combustivel)).FirstOrDefault();
 
                     //busca o abastecimento do veiculo conforme range de data 
-                    List<DGridAbastecimentoInfo> abastecimento = context.Abastecimentos.Where(w => (w.Data.Month.Equals(dataMesInicial.Month)) && w.Veiculo.Placa.Equals(veiculo.Placa)).
+                    List<DGridAbastecimentoInfo> abastecimento = context.Abastecimentos.Where(w => (w.Data.Month.Equals(dataMesInicial.Month) && w.Data.Year.Equals(dataMesInicial.Year) && w.Veiculo.Placa.Equals(veiculo.Placa))).
                         Select(s => new DGridAbastecimentoInfo
                         {
                             Data = s.Data,
@@ -482,141 +482,146 @@ namespace GestaoFrota.DAL
                             Quantidade = s.Quantidade,
                             Valor = s.Valor
                         }).OrderBy(or => or.Data).ToList();
-
-
-                    var kmInicial = abastecimento.Select(s => s.KM).FirstOrDefault();
-                    var kmFinal = abastecimento.Select(s => s.KM).LastOrDefault();
-
-                    km = kmFinal - kmInicial;
-
-                    AutonomiaInfo autonomia = new AutonomiaInfo();
-
-                    switch (combustivelVeiculo.Tipo)
-                    {
-                        case "Gasolina":
-                            if (abastecimento.Count() >= 2)
-                            {
-                                var quantidadeGasolina1 = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                                var mediaGasolina1 = km / quantidadeGasolina1;
-                                autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                                autonomia.MediaGasolina = $"{Math.Round(mediaGasolina1, 2)} km/l";
-                            }
-                            break;
-                        case "Alcool":
-                            if (abastecimento.Count() >= 2)
-                            {
-                                var quantidadeAlcool1 = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
-                                var mediaAlcool1 = km / quantidadeAlcool1;
-                                autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                                autonomia.MediaAlcool = $"{Math.Round(mediaAlcool1, 2)} km/l";
-                            }
-                            break;
-                        case "Flex":
-                            if (abastecimento.Count() >= 2)
-                            {
-                                //Gasolina
-                                var quantidadeGasolina2 = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                                var mediaGasolina2 = km / quantidadeGasolina2;
-                                //Alcool
-                                var quantidadeAlcool2 = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
-                                var mediaAlcool2 = km / quantidadeAlcool2;
-                                autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                                autonomia.MediaGasolina = $"{Math.Round(mediaGasolina2, 2)} km/l";
-                                autonomia.MediaAlcool = $"{Math.Round(mediaAlcool2, 2)} km/l";
-                            }
-                            break;
-                        case "GNV":
-                            if (abastecimento.Count() >= 2)
-                            {
-                                var quantidadeGNV1 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                                var mediaGNV1 = km / quantidadeGNV1;
-                                autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                                autonomia.MediaGNV = $"{Math.Round(mediaGNV1, 2)} km/m³";
-                            }
-                            break;
-                        case "Gasolina/GNV":
-                            if (abastecimento.Count() >= 2)
-                            {
-                                //Gasolina
-                                var quantidadeGasolina3 = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                                var mediaGasolina3 = km / quantidadeGasolina3;
-                                //GNV
-                                var quantidadeGNV2 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                                var mediaGNV2 = km / quantidadeGNV2;
-                                autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                                autonomia.MediaGasolina = $"{Math.Round(mediaGasolina3, 2)} km/l";
-                                autonomia.MediaGNV = $"{Math.Round(mediaGNV2, 2)} km/m³";
-                            }
-                            break;
-                        case "Flex/GNV":
-                            if (abastecimento.Count() >= 2)
-                            {
-                                //Gasolina
-                                var quantidadeGasolina4 = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                                var mediaGasolina4 = km / quantidadeGasolina4;
-                                //Alcool
-                                var quantidadeAlcool3 = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
-                                var mediaAlcool3 = km / quantidadeAlcool3;
-                                //GNV
-                                var quantidadeGNV3 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                                var mediaGNV3 = km / quantidadeGNV3;
-                                autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                                autonomia.MediaGasolina = $"{Math.Round(mediaGasolina4, 2)} km/l";
-                                autonomia.MediaAlcool = $"{Math.Round(mediaAlcool3, 2)} km/l";
-                                autonomia.MediaGNV = $"{Math.Round(mediaGNV3, 2)} km/m³";
-                            }
-                            break;
-                        case "Diesel":
-                            if (abastecimento.Count() >= 2)
-                            {
-                                var quantidadeDiesel1 = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Quantidade).Sum();
-                                var mediaDiesel1 = km / quantidadeDiesel1;
-                                autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                                autonomia.MediaDiesel = $"{Math.Round(mediaDiesel1, 2)} km/l";
-                            }
-                            break;
-                        case "Tri-Combustivel":
-                            if (abastecimento.Count() >= 2)
-                            {                            //Gasolina
-                                var quantidadeGasolina5 = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
-                                var mediaGasolina5 = km / quantidadeGasolina5;
-                                //Alcool
-                                var quantidadeAlcool4 = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
-                                var mediaAlcool4 = km / quantidadeAlcool4;
-                                //GNV
-                                var quantidadeGNV4 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                                var mediaGNV4 = km / quantidadeGNV4;
-                                autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                                autonomia.MediaGasolina = $"{Math.Round(mediaGasolina5, 2)} km/l";
-                                autonomia.MediaAlcool = $"{Math.Round(mediaAlcool4, 2)} km/l";
-                                autonomia.MediaGNV = $"{Math.Round(mediaGNV4, 2)} km/m³";
-                            }
-                            break;
-                        case "Diesel/GNV":
-                            if (abastecimento.Count() >= 2)
-                            {
-                                //Diesel
-                                var quantidadeDiesel2 = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Quantidade).Sum();
-                                var mediaDiesel2 = km / quantidadeDiesel2;
-                                //GNV
-                                var quantidadeGNV5 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
-                                var mediaGNV5 = km / quantidadeGNV5;
-                                autonomia.Mes = GetMesPacalCase(dataMesInicial.Month);
-                                autonomia.MediaDiesel = $"{Math.Round(mediaDiesel2, 2)} km/l";
-                                autonomia.MediaGNV = $"{Math.Round(mediaGNV5, 2)} km/m³";
-                            }
-                            break;
-                        default:
-                            break;
-                    }
+                    
+                    list.Add(CalculoAutonomiaDoMes(dataMesInicial, abastecimento, combustivelVeiculo.Tipo));
 
                     dataMesInicial = dataMesInicial.AddMonths(1);
-
-                    list.Add(autonomia);
                 }
             }
 
             return list;
+        }
+
+        private AutonomiaInfo CalculoAutonomiaDoMes(DateTime data,  List<DGridAbastecimentoInfo> abastecimento, string combustivelTipo)
+        {
+            long km = 0;
+            AutonomiaInfo autonomia = new AutonomiaInfo();
+
+            var kmInicial = abastecimento.Select(s => s.KM).FirstOrDefault();
+            var kmFinal = abastecimento.Select(s => s.KM).LastOrDefault();
+
+            km = kmFinal - kmInicial;            
+
+            switch (combustivelTipo)
+            {
+                case "Gasolina":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        var quantidadeGasolina1 = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
+                        var mediaGasolina1 = (quantidadeGasolina1 > 0 ? km/quantidadeGasolina1 : 0 );
+                        autonomia.Mes = GetMesPacalCase(data.Month);
+                        autonomia.MediaGasolina = $"{Math.Round(mediaGasolina1, 2)} km/l";
+                    }
+                    break;
+                case "Alcool":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        var quantidadeAlcool1 = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
+                        var mediaAlcool1 = (quantidadeAlcool1 > 0 ? km/quantidadeAlcool1 : 0);
+                        autonomia.Mes = GetMesPacalCase(data.Month);
+                        autonomia.MediaAlcool = $"{Math.Round(mediaAlcool1, 2)} km/l";
+                    }
+                    break;
+                case "Flex":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        //Gasolina
+                        var quantidadeGasolina2 = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
+                        var mediaGasolina2 = (quantidadeGasolina2 > 0 ? km/quantidadeGasolina2 : 0);
+                        //Alcool
+                        var quantidadeAlcool2 = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
+                        var mediaAlcool2 = (quantidadeAlcool2 > 0 ? km/quantidadeAlcool2 : 0);
+                        autonomia.Mes = GetMesPacalCase(data.Month);
+                        autonomia.MediaGasolina = $"{Math.Round(mediaGasolina2, 2)} km/l";
+                        autonomia.MediaAlcool = $"{Math.Round(mediaAlcool2, 2)} km/l";
+                    }
+                    break;
+                case "GNV":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        var quantidadeGNV1 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
+                        var mediaGNV1 = (quantidadeGNV1 > 0 ? km/quantidadeGNV1 : 0);
+                        autonomia.Mes = GetMesPacalCase(data.Month);
+                        autonomia.MediaGNV = $"{Math.Round(mediaGNV1, 2)} km/m³";
+                    }
+                    break;
+                case "Gasolina/GNV":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        //Gasolina
+                        var quantidadeGasolina3 = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
+                        var mediaGasolina3 = (quantidadeGasolina3 > 0 ? km/quantidadeGasolina3 : 0);
+                        //GNV
+                        var quantidadeGNV2 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
+                        var mediaGNV2 = (quantidadeGNV2 > 0 ? km/quantidadeGNV2 : 0);
+                        autonomia.Mes = GetMesPacalCase(data.Month);
+                        autonomia.MediaGasolina = $"{Math.Round(mediaGasolina3, 2)} km/l";
+                        autonomia.MediaGNV = $"{Math.Round(mediaGNV2, 2)} km/m³";
+                    }
+                    break;
+                case "Flex/GNV":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        //Gasolina
+                        var quantidadeGasolina4 = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
+                        var mediaGasolina4 = (quantidadeGasolina4 > 0 ? km/quantidadeGasolina4 : 0);
+                        //Alcool
+                        var quantidadeAlcool3 = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
+                        var mediaAlcool3 = (quantidadeAlcool3 > 0 ? km/quantidadeAlcool3 : 0);
+                        //GNV
+                        var quantidadeGNV3 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
+                        var mediaGNV3 = (quantidadeGNV3 > 0 ? km/quantidadeGNV3 : 1);
+                        autonomia.Mes = GetMesPacalCase(data.Month);
+                        autonomia.MediaGasolina = $"{Math.Round(mediaGasolina4, 2)} km/l";
+                        autonomia.MediaAlcool = $"{Math.Round(mediaAlcool3, 2)} km/l";
+                        autonomia.MediaGNV = $"{Math.Round(mediaGNV3, 2)} km/m³";
+                    }
+                    break;
+                case "Diesel":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        var quantidadeDiesel1 = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Quantidade).Sum();
+                        var mediaDiesel1 = (quantidadeDiesel1 > 0 ? km/quantidadeDiesel1 : 0);
+                        autonomia.Mes = GetMesPacalCase(data.Month);
+                        autonomia.MediaDiesel = $"{Math.Round(mediaDiesel1, 2)} km/l";
+                    }
+                    break;
+                case "Tri-Combustivel":
+                    if (abastecimento.Count() >= 2)
+                    {                            //Gasolina
+                        var quantidadeGasolina5 = abastecimento.Where(w => w.Combustivel.Equals("Gasolina")).Select(s => s.Quantidade).Sum();
+                        var mediaGasolina5 = (quantidadeGasolina5 > 0 ? km/quantidadeGasolina5 : 0);
+                        //Alcool
+                        var quantidadeAlcool4 = abastecimento.Where(w => w.Combustivel.Equals("Alcool")).Select(s => s.Quantidade).Sum();
+                        var mediaAlcool4 = (quantidadeAlcool4 > 0 ? km/quantidadeAlcool4 : 0);
+                        //GNV
+                        var quantidadeGNV4 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
+                        var mediaGNV4 = quantidadeGNV4 > 0 ? km/quantidadeGNV4 : 3;
+                        autonomia.Mes = GetMesPacalCase(data.Month);
+                        autonomia.MediaGasolina = $"{Math.Round(mediaGasolina5, 2)} km/l";
+                        autonomia.MediaAlcool = $"{Math.Round(mediaAlcool4, 2)} km/l";
+                        autonomia.MediaGNV = $"{Math.Round(mediaGNV4, 2)} km/m³";
+                    }
+                    break;
+                case "Diesel/GNV":
+                    if (abastecimento.Count() >= 2)
+                    {
+                        //Diesel
+                        var quantidadeDiesel2 = abastecimento.Where(w => w.Combustivel.Equals("Diesel")).Select(s => s.Quantidade).Sum();
+                        var mediaDiesel2 = (quantidadeDiesel2 > 0 ? km/quantidadeDiesel2 : 0);
+                        //GNV
+                        var quantidadeGNV5 = abastecimento.Where(w => w.Combustivel.Equals("GNV")).Select(s => s.Quantidade).Sum();
+                        var mediaGNV5 = (quantidadeGNV5 > 0 ? km/quantidadeGNV5 : 0);
+                        autonomia.Mes = GetMesPacalCase(data.Month);
+                        autonomia.MediaDiesel = $"{Math.Round(mediaDiesel2, 2)} km/l";
+                        autonomia.MediaGNV = $"{Math.Round(mediaGNV5, 2)} km/m³";
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+            return autonomia;
         }
 
         /// <summary>

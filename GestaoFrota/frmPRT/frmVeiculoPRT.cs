@@ -78,9 +78,8 @@ namespace GestaoFrota
             dataFinaldoAno = new DateTime(dataAtual.Year, 12, 31); // dezembro do ano corrente
 
             label12.Text = $"Registros do ano {dataAtual.Year}";
-            label13.Text = $"Registros do ano {dataAtual.Year}";
-            groupBox27.Text = $"Parcial do ano, {dataAtual.Year}";
-            groupBox35.Text = "Consumo médio de combustivel ultimos 3 meses";
+            label13.Text = $"Registros do ano {dataAtual.Year}";            
+            groupBox35.Text = "Consumo médio dos últimos 3 meses";
             lblDataAtual.Text = dataAtual.ToShortDateString();           
             btnSalvarAlteracoesSeguro.Visible = false;
             rdAmbas.Checked = true;
@@ -174,22 +173,72 @@ namespace GestaoFrota
         {
             ConsumoInfo consumo;
             listBox1.Items.Clear();
-            if (filter)
-                consumo = new AbastecimentoBLL().GetConsumo(dataInicial, dataFinal, veiculo);
-            else
-                consumo = new AbastecimentoBLL().GetConsumoAnual(dataAtual.Date, veiculo);
-            
-            label65.Text = $"Gasto de combustivel";                       
+            listBox2.Items.Clear();
+            listBox4.Items.Clear();
+            listBox5.Items.Clear();
+            listBox6.Items.Clear();
 
-            if (consumo.ValorAlcool != 0)            
-                listBox1.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Alcool:   {0:C}    {1} lts", consumo.ValorAlcool, consumo.QuantidadeAlcool));
+            AbastecimentoBLL abastecimentoBLL = new AbastecimentoBLL();
+
+            if (filter)
+                consumo = abastecimentoBLL.GetConsumo(dataInicial, dataFinal, veiculo);
+            else
+                consumo = abastecimentoBLL.GetConsumoAnual(dataAtual.Date, veiculo);
+
+            #region Preenchimento do custo do consumo
+
+            var quantidadeDiasRegistro = abastecimentoBLL.GetDiasRegistroParcialAnual(dataAtual, veiculo);
+            decimal custoDiario = 0;
+
+            label65.Text = $"Consumido até o momento em {dataAtual.Year}";
+
+
+            if (consumo.ValorAlcool != 0)
+            {
+                listBox1.Items.Add("Alcool:");
+                listBox2.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", consumo.ValorAlcool));
+                listBox4.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0} lts", consumo.QuantidadeAlcool));
+                custoDiario = consumo.ValorAlcool / quantidadeDiasRegistro.DiasAlcool;
+                listBox5.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", custoDiario));
+                listBox6.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", (consumo.ValorAlcool / consumo.KM)));
+            }
             if (consumo.ValorDiesel != 0)
-                listBox1.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Diesel:   {0:C}    {1} lts", consumo.ValorDiesel, consumo.QuantidadeDiesel));
+            {
+                listBox1.Items.Add("Diesel:");
+                listBox2.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", consumo.ValorDiesel));
+                listBox4.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0} lts", consumo.QuantidadeDiesel));
+                custoDiario = consumo.ValorDiesel / quantidadeDiasRegistro.DiasDiesel;
+                listBox5.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", custoDiario));
+                listBox6.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", (consumo.ValorDiesel / consumo.KM)));
+            }
             if (consumo.ValorGasolina != 0)
-                listBox1.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "Gasolina: {0:C}    {1} lts", consumo.ValorGasolina, consumo.QuantidadeGasolina));
+            {
+                listBox1.Items.Add("Gasolina:");
+                listBox2.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", consumo.ValorGasolina));
+                listBox4.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0} lts", consumo.QuantidadeGasolina));
+                custoDiario = consumo.ValorGasolina / quantidadeDiasRegistro.DiasGasolina;
+                listBox5.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", custoDiario));
+                listBox6.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", (consumo.ValorGasolina / consumo.KM)));
+            }
             if (consumo.ValorGNV != 0)
-                listBox1.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "GNV :       {0:C}    {1} m³ ", consumo.ValorGNV, consumo.QuantidadeGNV));
-                      
+            {
+                listBox1.Items.Add("GNV:");
+                listBox2.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", consumo.ValorGNV));
+                listBox4.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0} m³ ", consumo.QuantidadeGNV));
+                custoDiario = consumo.ValorGNV / quantidadeDiasRegistro.DiasGNV;
+                listBox5.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", custoDiario));
+                listBox6.Items.Add(string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", (consumo.ValorGNV / consumo.KM)));
+            }
+
+            #endregion
+
+            #region Preenchimento Distancia           
+
+            lblKmAnual.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:N0} Km", consumo.KM);
+            lblMediaDiaria.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:N0} Km", (consumo.KM / quantidadeDiasRegistro.TotalDiasRegistro));
+
+            #endregion
+
             graficoPizzaAnual.TotalCombustivel = consumo.ValorAlcool + consumo.ValorDiesel + consumo.ValorGasolina + consumo.ValorGNV;
             graficoPizzaAnual.Total += graficoPizzaAnual.TotalCombustivel;
         }
@@ -202,8 +251,7 @@ namespace GestaoFrota
                 consumo = new AbastecimentoBLL().GetConsumo(dataInicial, dataFinal, veiculo);
             else
                 consumo = new AbastecimentoBLL().GetConsumoAnual(dataAtual.Date, veiculo);
-
-            lblKmRodados.Text = $"Percorrido";
+                        
             lblKmAnual.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:N0} Km", consumo.KM);            
         }
                 
@@ -227,7 +275,7 @@ namespace GestaoFrota
         {
             GastoManutencaoInfo gasto = new ManutencaoBLL().GetGasto(veiculo);
 
-            label79.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", gasto.TotalValor);
+            label15.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", gasto.TotalValor);
             label80.Text = $"Total de manutenções no veículo";
             label81.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", gasto.TotalValor);
         }

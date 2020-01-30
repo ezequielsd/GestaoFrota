@@ -79,9 +79,8 @@ namespace GestaoFrota
 
             label28.Text = $"Registros do ano {dataAtual.Year}";
             label29.Text = $"Registros do ano {dataAtual.Year}";
-            label30.Text = $"Dados parciais do ano de {dataAtual.Year}";
-           // groupBox27.Text = $"Parcial do ano, {dataAtual.Year}";
-            groupBox35.Text = "Consumo médio de combustivel ultimos 3 meses";
+            label30.Text = $"Dados parciais do ano de {dataAtual.Year}";           
+            groupBox35.Text = "Consumo médio dos últimos 3 meses";
             lblDataAtual.Text = dataAtual.ToShortDateString();           
             btnSalvarAlteracoesSeguro.Visible = false;
             rdAmbas.Checked = true;
@@ -147,28 +146,26 @@ namespace GestaoFrota
         public void CarregarDashboard()
         {
             graficoPizzaAnual.Total = 0;
-            CarregarDashBoardConsumoCombustivelKM(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
-            CarregarDashBoardKMAnual(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
+            CarregarDashBoardConsumoCombustivelKM(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);           
             CarregarDashBoardGastoManutencaoAnual(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
             CarregarDashBoardGastoManutencaoTotal(veiculo);            
             CarregarDashBoardTotalMulta(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
             CarregarDashBoardTotalSeguro(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
             CarregarDashBoardTotalPagamentoDocumento(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
-            CarregarDashBoardConsumo(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
+            CarregarDashBoardMediaUltimosTresMeses(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
             PlotGraficoPizzaAnual();
         }
 
         public void CarregarDashboardPorFiltro(DateTime dtInicial, DateTime dtFinal)
         {
             graficoPizzaAnual.Total = 0;
-            CarregarDashBoardConsumoCombustivelKM(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
-            CarregarDashBoardKMAnual(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
+            CarregarDashBoardConsumoCombustivelKM(true, dtInicial, dtFinal, dataAtual.Date, veiculo);            
             CarregarDashBoardGastoManutencaoAnual(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
             CarregarDashBoardGastoManutencaoTotal(veiculo);
             CarregarDashBoardTotalMulta(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
             CarregarDashBoardTotalSeguro(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
             CarregarDashBoardTotalPagamentoDocumento(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
-            CarregarDashBoardConsumo(false, dtInicial, dtFinal, dataAtual.Date, veiculo);
+            CarregarDashBoardMediaUltimosTresMeses(false, dtInicial, dtFinal, dataAtual.Date, veiculo);
             PlotGraficoPizzaAnual();
         }
 
@@ -179,6 +176,7 @@ namespace GestaoFrota
             listBox2.Items.Clear();
             listBox4.Items.Clear();
             listBox5.Items.Clear();
+            listBox6.Items.Clear();
 
             AbastecimentoBLL abastecimentoBLL = new AbastecimentoBLL();
 
@@ -243,12 +241,7 @@ namespace GestaoFrota
             graficoPizzaAnual.TotalCombustivel = consumo.ValorAlcool + consumo.ValorDiesel + consumo.ValorGasolina + consumo.ValorGNV;
             graficoPizzaAnual.Total += graficoPizzaAnual.TotalCombustivel;
         }
-
-        private void CarregarDashBoardKMAnual(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
-        {
-            
-        }
-                
+                              
         private void CarregarDashBoardGastoManutencaoAnual(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
         {
             GastoManutencaoInfo gasto;
@@ -311,7 +304,7 @@ namespace GestaoFrota
             graficoPizzaAnual.Total += graficoPizzaAnual.TotalDocumento;
         }
 
-        private void CarregarDashBoardConsumo(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
+        private void CarregarDashBoardMediaUltimosTresMeses(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
         {
             dataGridView1.Rows.Clear();
             List<AutonomiaInfo> listMedia;
