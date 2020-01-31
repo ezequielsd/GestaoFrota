@@ -65,6 +65,8 @@ Baixem e usem, duvidas, reclamações, problemas ou sugestões, podem me informa
 
 ![TelaManutencao](Release/manutencao.PNG)
 
+![TelaManutencao](Release/manutencao2.PNG)
+
 ![TelaFIPE](Release/fipe.PNG)
 
 **Dica:**
@@ -99,6 +101,13 @@ Atenção, aqui é para aqueles que apenas querem utilizar o programa...
 
 
 # Updates
+
+**31/01/2020**
+
+* Melhorias visuais no Dashboard.
+* Correções de Bug.
+* Adicionado calculo de média diária, custo por KM, por dia
+
 
 **13/01/2020**
 
