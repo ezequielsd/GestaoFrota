@@ -77,9 +77,12 @@ namespace GestaoFrota
             dataInicialdoAno = new DateTime(dataAtual.Year, 01, 01); //janeiro do ano corrente
             dataFinaldoAno = new DateTime(dataAtual.Year, 12, 31); // dezembro do ano corrente
 
+            dateTimePickerFiltroDashDataInicial.Value = dataInicialdoAno;
+            dateTimePickerFiltroDashDataFinal.Value = dataAtual;
+
             label28.Text = $"Registros do ano {dataAtual.Year}";
             label29.Text = $"Registros do ano {dataAtual.Year}";
-            label30.Text = $"Dados parciais do ano de {dataAtual.Year}";           
+            label30.Text = $"Dados parciais de {dataInicialdoAno.ToShortDateString()} à {dataAtual.ToShortDateString()}";           
             groupBox35.Text = "Consumo médio dos últimos 3 meses";
             lblDataAtual.Text = dataAtual.ToShortDateString();           
             btnSalvarAlteracoesSeguro.Visible = false;
@@ -140,6 +143,7 @@ namespace GestaoFrota
 
         private void btnAplicarFiltroDashboard_Click(object sender, EventArgs e)
         {
+            label30.Text = $"Dados parciais de {dateTimePickerFiltroDashDataInicial.Value.ToShortDateString()} à {dateTimePickerFiltroDashDataFinal.Value.ToShortDateString()}";
             CarregarDashboardPorFiltro(dateTimePickerFiltroDashDataInicial.Value, dateTimePickerFiltroDashDataFinal.Value);            
         }
 
