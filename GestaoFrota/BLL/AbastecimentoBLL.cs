@@ -47,6 +47,11 @@ namespace GestaoFrota.BLL
             return new AbastecimentoDAL().GetDiasRegistroParcialAnual(dtAtual, veiculo);
         }
 
+        public CustoDiario GetDiasRegistro(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
+        {
+            return new AbastecimentoDAL().GetDiasRegistro(dtInicial, dtFinal, veiculo);
+        }
+
         public List<Abastecimento> ListExport()
         {
             return new AbastecimentoDAL().ListExport();

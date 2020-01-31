@@ -183,15 +183,22 @@ namespace GestaoFrota
             listBox6.Items.Clear();
 
             AbastecimentoBLL abastecimentoBLL = new AbastecimentoBLL();
+            CustoDiario quantidadeDiasRegistro; 
 
             if (filter)
+            {
                 consumo = abastecimentoBLL.GetConsumo(dataInicial, dataFinal, veiculo);
+                quantidadeDiasRegistro = abastecimentoBLL.GetDiasRegistro(dataInicial, dataFinal, veiculo);
+            }                
             else
+            {
                 consumo = abastecimentoBLL.GetConsumoAnual(dataAtual.Date, veiculo);
+                quantidadeDiasRegistro = abastecimentoBLL.GetDiasRegistroParcialAnual(dataAtual, veiculo);
+            }
+                
 
             #region Preenchimento do custo do consumo
-
-            var quantidadeDiasRegistro = abastecimentoBLL.GetDiasRegistroParcialAnual(dataAtual, veiculo);
+            
             decimal custoDiario = 0;
             
             label12.Text = $"Consumido até o momento em {dataAtual.Year}";

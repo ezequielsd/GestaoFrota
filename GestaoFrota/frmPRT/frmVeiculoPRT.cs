@@ -149,8 +149,7 @@ namespace GestaoFrota
         public void CarregarDashboard()
         {
             graficoPizzaAnual.Total = 0;
-            CarregarDashBoardConsumoCombustivelAnual(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
-            CarregarDashBoardKMAnual(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
+            CarregarDashBoardConsumoCombustivelKm(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);          
             CarregarDashBoardGastoManutencaoAnual(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
             CarregarDashBoardGastoManutencaoTotal(veiculo);
             CarregarDashBoardTotalMulta(false, DateTime.Now, DateTime.Now, dataAtual.Date, veiculo);
@@ -163,8 +162,7 @@ namespace GestaoFrota
         public void CarregarDashboardPorFiltro(DateTime dtInicial, DateTime dtFinal)
         {
             graficoPizzaAnual.Total = 0;
-            CarregarDashBoardConsumoCombustivelAnual(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
-            CarregarDashBoardKMAnual(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
+            CarregarDashBoardConsumoCombustivelKm(true, dtInicial, dtFinal, dataAtual.Date, veiculo);            
             CarregarDashBoardGastoManutencaoAnual(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
             CarregarDashBoardGastoManutencaoTotal(veiculo);
             CarregarDashBoardTotalMulta(true, dtInicial, dtFinal, dataAtual.Date, veiculo);
@@ -174,7 +172,7 @@ namespace GestaoFrota
             PlotGraficoPizzaAnual();
         }
 
-        private void CarregarDashBoardConsumoCombustivelAnual(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
+        private void CarregarDashBoardConsumoCombustivelKm(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
         {
             ConsumoInfo consumo;
             listBox1.Items.Clear();
@@ -185,18 +183,24 @@ namespace GestaoFrota
 
             AbastecimentoBLL abastecimentoBLL = new AbastecimentoBLL();
 
+            CustoDiario quantidadeDiasRegistro;
+
             if (filter)
+            {
                 consumo = abastecimentoBLL.GetConsumo(dataInicial, dataFinal, veiculo);
+                quantidadeDiasRegistro = abastecimentoBLL.GetDiasRegistro(dataInicial, dataFinal, veiculo);
+            }
             else
+            {
                 consumo = abastecimentoBLL.GetConsumoAnual(dataAtual.Date, veiculo);
+                quantidadeDiasRegistro = abastecimentoBLL.GetDiasRegistroParcialAnual(dataAtual, veiculo);
+            }
 
             #region Preenchimento do custo do consumo
-
-            var quantidadeDiasRegistro = abastecimentoBLL.GetDiasRegistroParcialAnual(dataAtual, veiculo);
+                   
             decimal custoDiario = 0;
 
             label65.Text = $"Consumido até o momento em {dataAtual.Year}";
-
 
             if (consumo.ValorAlcool != 0)
             {
@@ -247,19 +251,7 @@ namespace GestaoFrota
             graficoPizzaAnual.TotalCombustivel = consumo.ValorAlcool + consumo.ValorDiesel + consumo.ValorGasolina + consumo.ValorGNV;
             graficoPizzaAnual.Total += graficoPizzaAnual.TotalCombustivel;
         }
-
-        private void CarregarDashBoardKMAnual(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
-        {
-            ConsumoInfo consumo;
-
-            if (filter)
-                consumo = new AbastecimentoBLL().GetConsumo(dataInicial, dataFinal, veiculo);
-            else
-                consumo = new AbastecimentoBLL().GetConsumoAnual(dataAtual.Date, veiculo);
-                        
-            lblKmAnual.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:N0} Km", consumo.KM);            
-        }
-                
+                                
         private void CarregarDashBoardGastoManutencaoAnual(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
         {
             GastoManutencaoInfo gasto;
