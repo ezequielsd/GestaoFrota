@@ -8,8 +8,25 @@ using GestaoFrota.Models;
 
 namespace GestaoFrota.DAL
 {
-    public class VeiculoDAL
-    {        
+    public sealed class VeiculoDAL
+    {
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static VeiculoDAL _instancia;
+        public static VeiculoDAL Instancia
+        {
+            get { return _instancia ?? (_instancia = new VeiculoDAL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private VeiculoDAL() { }
+
+        #endregion
+
         public void Insert(Veiculo info)
         {
             using (var context = new Context())

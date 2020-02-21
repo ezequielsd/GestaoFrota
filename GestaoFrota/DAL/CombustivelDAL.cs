@@ -4,8 +4,24 @@ using CFSqlCe.Dal;
 
 namespace GestaoFrota.DAL
 {
-    public class CombustivelDAL
-    {       
+    public sealed class CombustivelDAL
+    {
+        #region Propriedades
+
+        static CombustivelDAL _instancia;
+        public static CombustivelDAL Instancia
+        {
+            get { return _instancia ?? (_instancia = new CombustivelDAL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private CombustivelDAL() { }
+
+        #endregion
+
         public List<Combustivel> GetList()
         {
             using (var context = new Context())

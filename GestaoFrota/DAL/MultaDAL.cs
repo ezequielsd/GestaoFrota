@@ -8,8 +8,25 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.DAL
 {
-    public class MultaDAL
-    {        
+    public sealed class MultaDAL
+    {
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static MultaDAL _instancia;
+        public static MultaDAL Instancia
+        {
+            get { return _instancia ?? (_instancia = new MultaDAL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private MultaDAL() { }
+
+        #endregion
+
         public void Insert(Multa multa)
         {
             using (var context = new Context())

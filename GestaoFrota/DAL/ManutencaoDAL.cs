@@ -10,6 +10,23 @@ namespace GestaoFrota.DAL
 {
     public class ManutencaoDAL
     {
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static ManutencaoDAL _instancia;
+        public static ManutencaoDAL Instancia
+        {
+            get { return _instancia ?? (_instancia = new ManutencaoDAL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private ManutencaoDAL() { }
+
+        #endregion
+
         public void Insert(Manutencao manutencao)
         {
             using (var context = new Context())

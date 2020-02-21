@@ -10,35 +10,37 @@ using System.Threading.Tasks;
 namespace GestaoFrota.BLL
 {
     public class SeguradoraBLL
-    {        
+    {
+        SeguradoraDAL dal = SeguradoraDAL.Instancia;
+
         public void Insert(Seguradora info)
         {
-            new SeguradoraDAL().Insert(info);
+            dal.Insert(info);
         }
        
         public List<Seguradora> List()
         {
-            return new SeguradoraDAL().List();
+            return dal.List();
         }
         
         public List<DGridSeguradoraInfo> ListDt()
         {
-            return new SeguradoraDAL().ListDt();
+            return dal.ListDt();
         }
         
         public Seguradora Get(int id)
         {
-            return new SeguradoraDAL().Get(id);
+            return dal.Get(id);
         }
         
         public void Save(Seguradora info)
         {
-            new SeguradoraDAL().Save(info);
+            dal.Save(info);
         }
        
         public List<Seguradora> ListExport()
         {
-            return new SeguradoraDAL().ListExport();
+            return dal.ListExport();
         }
     }
 }

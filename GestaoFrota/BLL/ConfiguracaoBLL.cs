@@ -10,11 +10,13 @@ namespace GestaoFrota.BLL
 {
     public class ConfiguracaoBLL
     {
+        ConfiguracaoDAL configuracaoDAL = ConfiguracaoDAL.Instancia;
+
         public Configuracao Get()
         {
             try
             {
-                return new ConfiguracaoDAL().Get();
+                return configuracaoDAL.Get();
             }
             catch (Exception ex)
             {                
@@ -26,7 +28,7 @@ namespace GestaoFrota.BLL
         {
             try
             {
-                new ConfiguracaoDAL().Insert(config);
+                configuracaoDAL.Insert(config);
             }
             catch (Exception ex)
             {

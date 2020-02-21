@@ -10,35 +10,37 @@ using System.Threading.Tasks;
 namespace GestaoFrota.BLL
 {
     public class MecanicaBLL
-    {       
+    {
+        MecanicaDAL dal = MecanicaDAL.Instancia;
+
         public void Insert(Mecanica info)
         {
-            new MecanicaDAL().Insert(info);
+            dal.Insert(info);
         }
        
         public List<Mecanica> List()
         {
-            return new MecanicaDAL().List();
+            return dal.List();
         }
       
         public List<DGridMecanicaInfo> ListDt()
         {
-            return new MecanicaDAL().ListDt();
+            return dal.ListDt();
         }
 
         public Mecanica Get(int id)
         {
-            return new MecanicaDAL().Get(id);
+            return dal.Get(id);
         }
         
         public void Save(Mecanica info)
         {
-            new MecanicaDAL().Save(info);
+            dal.Save(info);
         }
        
         public List<Mecanica> ListExport()
         {
-            return new MecanicaDAL().ListExport();
+            return dal.ListExport();
         }
     }
 }

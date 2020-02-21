@@ -8,8 +8,25 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.DAL
 {
-    public class ContratoSeguradoraDAL
+    public sealed class ContratoSeguradoraDAL
     {
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static ContratoSeguradoraDAL _instancia;
+        public static ContratoSeguradoraDAL Instancia
+        {
+            get { return _instancia ?? (_instancia = new ContratoSeguradoraDAL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private ContratoSeguradoraDAL() { }
+
+        #endregion
+
         public void Insert(ContratoSeguro info)
         {
             using (var context = new Context())

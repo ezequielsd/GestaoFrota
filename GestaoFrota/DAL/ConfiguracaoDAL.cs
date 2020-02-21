@@ -7,8 +7,25 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.DAL
 {
-    public class ConfiguracaoDAL
+    public sealed class ConfiguracaoDAL
     {
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static ConfiguracaoDAL _instancia;
+        public static ConfiguracaoDAL Instancia
+        {
+            get { return _instancia ?? (_instancia = new ConfiguracaoDAL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private ConfiguracaoDAL() { }
+
+        #endregion
+
         public Configuracao Get()
         {
             using (var context = new Context())

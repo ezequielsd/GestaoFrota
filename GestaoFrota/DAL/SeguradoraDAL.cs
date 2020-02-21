@@ -9,7 +9,24 @@ using System.Threading.Tasks;
 namespace GestaoFrota.DAL
 {
     public class SeguradoraDAL
-    {       
+    {
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static SeguradoraDAL _instancia;
+        public static SeguradoraDAL Instancia
+        {
+            get { return _instancia ?? (_instancia = new SeguradoraDAL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private SeguradoraDAL() { }
+
+        #endregion
+
         public void Insert(Seguradora info)
         {
             using (var context = new Context())

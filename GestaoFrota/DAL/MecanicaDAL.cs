@@ -8,8 +8,25 @@ using GestaoFrota.Models;
 
 namespace GestaoFrota.DAL
 {
-    public class MecanicaDAL
+    public sealed class MecanicaDAL
     {
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static MecanicaDAL _instancia;
+        public static MecanicaDAL Instancia
+        {
+            get { return _instancia ?? (_instancia = new MecanicaDAL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private MecanicaDAL() { }
+
+        #endregion
+
         /// <summary>
         /// Cadasrar uma mecanica ou elétrica
         /// </summary>

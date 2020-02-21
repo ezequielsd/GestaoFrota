@@ -8,8 +8,25 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.DAL
 {
-    public class PagamentoDocumentoDAL
+    public sealed class PagamentoDocumentoDAL
     {
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static PagamentoDocumentoDAL _instancia;
+        public static PagamentoDocumentoDAL Instancia
+        {
+            get { return _instancia ?? (_instancia = new PagamentoDocumentoDAL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private PagamentoDocumentoDAL() { }
+
+        #endregion
+
         public void Insert(PagamentoDocumento info)
         {
             using (var context = new Context())

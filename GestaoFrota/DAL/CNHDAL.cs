@@ -8,8 +8,25 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.DAL
 {
-    public class CNHDAL
-    {       
+    public sealed class CNHDAL
+    {
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static CNHDAL _instancia;
+        public static CNHDAL Instancia
+        {
+            get { return _instancia ?? (_instancia = new CNHDAL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private CNHDAL() { }
+
+        #endregion
+
         public List<DGridCNHInfo> ListDt()
         {
             using (var context = new Context())

@@ -10,27 +10,29 @@ using GestaoFrota.Models;
 namespace GestaoFrota.BLL
 {
     public class VeiculoBLL
-    {       
+    {
+        VeiculoDAL dal = VeiculoDAL.Instancia;
+
         public void Insert(Veiculo info)
-        { 
-            new VeiculoDAL().Insert(info);                             
+        {
+            dal.Insert(info);                             
         }
        
         public List<VeiculosTreeViewInfo> GetListTreeView()
         {
-            return new VeiculoDAL().ListTreeView();
+            return dal.ListTreeView();
         }
                
         public Veiculo GetPorPlaca(string placa)
         {
-            return new VeiculoDAL().GetPorPlaca(placa);
+            return dal.GetPorPlaca(placa);
         }
                
         public void Salvar(Veiculo info)
         {            
             try
             {
-                new VeiculoDAL().Alter(info);
+                dal.Alter(info);
             }
             catch (Exception)
             {
@@ -40,7 +42,7 @@ namespace GestaoFrota.BLL
         
         public List<Veiculo> ListExport()
         {
-            return new VeiculoDAL().ListExport();
+            return dal.ListExport();
         }
     }
 }

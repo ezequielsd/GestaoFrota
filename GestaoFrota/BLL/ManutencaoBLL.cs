@@ -11,71 +11,72 @@ namespace GestaoFrota.BLL
 {
     public class ManutencaoBLL
     {
-       
+        ManutencaoDAL dal = ManutencaoDAL.Instancia;
+
         public void Insert(Manutencao info)
         {
             info.DataS = info.Data.ToShortDateString();
-            new ManutencaoDAL().Insert(info);
+            dal.Insert(info);
         }
      
         public List<DGridManutencaoInfo> ListParcialAnual(DateTime dtAtual, Veiculo veiculo)
         {
-           return new ManutencaoDAL().ListParcialAnual(dtAtual, veiculo);            
+           return  dal.ListParcialAnual(dtAtual, veiculo);            
         }
        
         public List<DGridManutencaoInfo> List(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
-            return new ManutencaoDAL().List(dtInicial, dtFinal, veiculo);            
+            return dal.List(dtInicial, dtFinal, veiculo);            
         }
        
         public Manutencao Get(int id)
         {
-            return new ManutencaoDAL().Get(id);
+            return dal.Get(id);
         }
 
         public GastoManutencaoInfo GetGasto(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
-            return new ManutencaoDAL().GetGasto(dtInicial, dtFinal, veiculo);
+            return dal.GetGasto(dtInicial, dtFinal, veiculo);
         }
 
         public GastoManutencaoInfo GetGastoAnual(DateTime dtAtual, Veiculo veiculo)
         {
-            return new ManutencaoDAL().GetGastoAnual(dtAtual, veiculo);
+            return dal.GetGastoAnual(dtAtual, veiculo);
         }
 
         public GastoManutencaoInfo GetGasto(Veiculo veiculo)
         {
-            return new ManutencaoDAL().GetGasto(veiculo);
+            return dal.GetGasto(veiculo);
         }
 
         public List<Manutencao> ListExport()
         {
-            return new ManutencaoDAL().ListExport();
+            return dal.ListExport();
         }
        
         public void AnexarComprovante(int id, string pathComprovante)
         {
-            new ManutencaoDAL().AnexarComprovante(id, pathComprovante);
+            dal.AnexarComprovante(id, pathComprovante);
         }
 
         public List<TipoManutencao> ListTipoManutencao()
         {
-            return new ManutencaoDAL().ListTipoManutencao();
+            return dal.ListTipoManutencao();
         }
 
         public void InsertTipoManutencao(TipoManutencao tipoManutencao)
         {
-            new ManutencaoDAL().InsertTipoManutencao(tipoManutencao);
+            dal.InsertTipoManutencao(tipoManutencao);
         }
 
         public TipoManutencao GetTipoManutencao(int id)
         {
-            return new ManutencaoDAL().GetTipoManutencao(id);
+            return dal.GetTipoManutencao(id);
         }
 
         public void DeleteTipoManutencao(int id)
         {
-            new ManutencaoDAL().DeleteTipoManutencao(id);
+            dal.DeleteTipoManutencao(id);
         }
     }
 }

@@ -9,8 +9,31 @@ using System.Globalization;
 
 namespace GestaoFrota.DAL
 {
-    public class AbastecimentoDAL
+    public sealed class AbastecimentoDAL
     {
+        #region Variaveis
+
+        CombustivelDAL combustivelDAL = CombustivelDAL.Instancia;
+
+        #endregion
+
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static AbastecimentoDAL _instancia;
+        public static AbastecimentoDAL Instancia
+        {
+            get { return _instancia ?? (_instancia = new AbastecimentoDAL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private AbastecimentoDAL() { }
+
+        #endregion
+
         public void Insert(Abastecimento info)
         {
             using (var context = new Context())
@@ -140,7 +163,7 @@ namespace GestaoFrota.DAL
 
         public CustoDiario GetDiasRegistroParcialAnual(DateTime dtAtual, Veiculo veiculo)
         {            
-            var combustivel = new CombustivelDAL().GetCombustivel(veiculo.Combustivel);
+            var combustivel = combustivelDAL.GetCombustivel(veiculo.Combustivel);
             var list = this.ListParcialAnual(dtAtual, veiculo);
             
             if (list.Count() >= 2)
@@ -154,8 +177,8 @@ namespace GestaoFrota.DAL
         }
 
         public CustoDiario GetDiasRegistro(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
-        {            
-            var combustivel = new CombustivelDAL().GetCombustivel(veiculo.Combustivel);
+        {   
+            var combustivel = combustivelDAL.GetCombustivel(veiculo.Combustivel);
             var list = this.List(dtInicial, dtFinal, veiculo);
 
             if (list.Count() >= 2)

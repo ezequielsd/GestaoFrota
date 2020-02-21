@@ -10,61 +10,63 @@ using System.Threading.Tasks;
 namespace GestaoFrota.BLL
 {
     public class AbastecimentoBLL
-    { 
+    {
+        AbastecimentoDAL dal = AbastecimentoDAL.Instancia;
+
         public void Insert(Abastecimento info)
         {
             info.DataS = info.Data.ToShortDateString();
-            new AbastecimentoDAL().Insert(info);
+            dal.Insert(info);            
         }
 
         public List<DGridAbastecimentoInfo> List(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
-            return new AbastecimentoDAL().List(dtInicial, dtFinal, veiculo);
+            return dal.List(dtInicial, dtFinal, veiculo);
         }
 
         public List<DGridAbastecimentoInfo> ListParcialAnual(DateTime dtAtual, Veiculo veiculo)
         {
-            return new AbastecimentoDAL().ListParcialAnual(dtAtual, veiculo);           
+            return dal.ListParcialAnual(dtAtual, veiculo);           
         }
       
         public List<DGridAbastecimentoInfo> ListPorFiltro(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo, int combustivel)
         {
-           return new AbastecimentoDAL().ListPorFiltro(dtInicial, dtFinal, veiculo, combustivel);            
+           return dal.ListPorFiltro(dtInicial, dtFinal, veiculo, combustivel);            
         }
       
         public ConsumoInfo GetConsumo(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
-            return new AbastecimentoDAL().GetConsumo(dtInicial, dtFinal, veiculo);
+            return dal.GetConsumo(dtInicial, dtFinal, veiculo);
         }
 
         public ConsumoInfo GetConsumoAnual(DateTime dtAtual, Veiculo veiculo)
         {
-            return new AbastecimentoDAL().GetConsumoAnual(dtAtual, veiculo);
+            return dal.GetConsumoAnual(dtAtual, veiculo);
         }
 
         public CustoDiario GetDiasRegistroParcialAnual(DateTime dtAtual, Veiculo veiculo) 
         {
-            return new AbastecimentoDAL().GetDiasRegistroParcialAnual(dtAtual, veiculo);
+            return dal.GetDiasRegistroParcialAnual(dtAtual, veiculo);
         }
 
         public CustoDiario GetDiasRegistro(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
-            return new AbastecimentoDAL().GetDiasRegistro(dtInicial, dtFinal, veiculo);
+            return dal.GetDiasRegistro(dtInicial, dtFinal, veiculo);
         }
 
         public List<Abastecimento> ListExport()
         {
-            return new AbastecimentoDAL().ListExport();
+            return dal.ListExport();
         }
        
         public void AnexarComprovante(int id, string pathComprovante)
         {
-            new AbastecimentoDAL().AnexarComprovante(id, pathComprovante);
+            dal.AnexarComprovante(id, pathComprovante);
         }
 
         public List<AutonomiaInfo> GetAutonomia(DateTime dataMes, Veiculo veiculo)
         {
-            return new AbastecimentoDAL().GetAutonomia(dataMes, veiculo);
+            return dal.GetAutonomia(dataMes, veiculo);
         }
     }
 }

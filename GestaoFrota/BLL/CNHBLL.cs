@@ -11,32 +11,33 @@ namespace GestaoFrota.BLL
 {
     public class CNHBLL
     {
-       
+        CNHDAL dal = CNHDAL.Instancia;
+
         public List<DGridCNHInfo> ListDt()
         {
-            return new CNHDAL().ListDt();
+            return dal.ListDt();
         }
       
         public List<CNH> List()
         {
-            return new CNHDAL().List();
+            return dal.List();
         }
         
         public CNH Get(string reg)
         {
-            return new CNHDAL().Get(reg);
+            return dal.Get(reg);
         }
        
         public void Insert(CNH info)
         {
             info.Aivo = true;
 
-            new CNHDAL().Insert(info);
+            dal.Insert(info);
         }
       
         public void Alterar(CNH info)
         {
-            new CNHDAL().Alterar(info);
+            dal.Alterar(info);
         }
     }
 }
