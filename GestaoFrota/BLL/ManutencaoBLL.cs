@@ -9,9 +9,30 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.BLL
 {
-    public class ManutencaoBLL
+    public sealed class ManutencaoBLL
     {
+        #region Variaveis
+
         ManutencaoDAL dal = ManutencaoDAL.Instancia;
+
+        #endregion
+
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static ManutencaoBLL _instancia;
+        public static ManutencaoBLL Instancia
+        {
+            get { return _instancia ?? (_instancia = new ManutencaoBLL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private ManutencaoBLL() { }
+
+        #endregion
 
         public void Insert(Manutencao info)
         {

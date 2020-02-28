@@ -12,6 +12,10 @@ namespace GestaoFrota
     public class Export
     {        
         static readonly object _logLockObj = new object();
+        static VeiculoBLL veiculoBLL = VeiculoBLL.Instancia;
+        static AbastecimentoBLL abastecimentoBLL = AbastecimentoBLL.Instancia;
+        static ManutencaoBLL manutencaoBLL = ManutencaoBLL.Instancia;
+        static MecanicaBLL mecanicaBLL = MecanicaBLL.Instancia;
 
         public static void ExportDB()
         {
@@ -37,7 +41,7 @@ namespace GestaoFrota
         {
             string fileName = Path.Combine(path, "Veiculo.txt");
 
-            List<Veiculo> list = new VeiculoBLL().ListExport();
+            List<Veiculo> list = veiculoBLL.ListExport();
             StringBuilder conteudo = new StringBuilder();
 
             foreach (Veiculo item in list)
@@ -66,7 +70,7 @@ namespace GestaoFrota
         {
             string fileName = Path.Combine(path, "Mecanica.txt");
 
-            List<Mecanica> list = new MecanicaBLL().ListExport();
+            List<Mecanica> list = mecanicaBLL.ListExport();
             StringBuilder conteudo = new StringBuilder();
 
             foreach (Mecanica item in list)
@@ -95,7 +99,7 @@ namespace GestaoFrota
         {           
             string fileName = Path.Combine(path, "Abastecimento.txt");
 
-            List<Abastecimento> list = new AbastecimentoBLL().ListExport();
+            List<Abastecimento> list = abastecimentoBLL.ListExport();
             StringBuilder conteudo = new StringBuilder();
 
             foreach (Abastecimento item in list)
@@ -124,7 +128,7 @@ namespace GestaoFrota
         {
             string fileName = Path.Combine(path, "Manutencao.txt");
 
-            List<Manutencao> list = new ManutencaoBLL().ListExport();
+            List<Manutencao> list = manutencaoBLL.ListExport();
             StringBuilder conteudo = new StringBuilder();
 
             foreach (Manutencao item in list)

@@ -9,9 +9,30 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.BLL
 {
-    public class ContratoSeguradoraBLL
+    public sealed class ContratoSeguradoraBLL
     {
+        #region Variaveis
+
         ContratoSeguradoraDAL dal = ContratoSeguradoraDAL.Instancia;
+
+        #endregion
+
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static ContratoSeguradoraBLL _instancia;
+        public static ContratoSeguradoraBLL Instancia
+        {
+            get { return _instancia ?? (_instancia = new ContratoSeguradoraBLL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private ContratoSeguradoraBLL() { }
+
+        #endregion
 
         public void Insert(ContratoSeguro info)
         {

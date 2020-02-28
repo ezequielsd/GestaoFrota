@@ -9,9 +9,26 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.BLL
 {
-    public class MecanicaBLL
+    public sealed class MecanicaBLL
     {
         MecanicaDAL dal = MecanicaDAL.Instancia;
+
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static MecanicaBLL _instancia;
+        public static MecanicaBLL Instancia
+        {
+            get { return _instancia ?? (_instancia = new MecanicaBLL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private MecanicaBLL() { }
+
+        #endregion
 
         public void Insert(Mecanica info)
         {

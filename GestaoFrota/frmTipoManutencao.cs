@@ -13,6 +13,8 @@ namespace GestaoFrota
 {
     public partial class frmTipoManutencao : Form
     {
+        ManutencaoBLL manutencaoBLL = ManutencaoBLL.Instancia;
+
         public frmTipoManutencao()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace GestaoFrota
 
         private void CarregaDatagrid()
         {
-            dtTipoManutencao.DataSource = new ManutencaoBLL().ListTipoManutencao();
+            dtTipoManutencao.DataSource = manutencaoBLL.ListTipoManutencao();
 
             FormartaDataGridViewAbastecimentos();
         }

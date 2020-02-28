@@ -16,6 +16,9 @@ namespace GestaoFrota
 {
     public partial class frmAdicionarComprovante : Form
     {
+        AbastecimentoBLL abastecimentoBLL = AbastecimentoBLL.Instancia;
+        ManutencaoBLL manutencaoBLL = ManutencaoBLL.Instancia;
+        MultaBLL multaBLL = MultaBLL.Instancia;
         string pathOrigemComprovante = string.Empty;
         string pathDestinoComprovante = string.Empty;
         string pathOrigemMulta = string.Empty;
@@ -71,7 +74,7 @@ namespace GestaoFrota
                     {
                         VerificaPasta(pathComprovante);
                         CopiaComprovante(pathOrigemComprovante, pathDestinoComprovante);
-                        new AbastecimentoBLL().AnexarComprovante(idC, fileNameComprovante);
+                        abastecimentoBLL.AnexarComprovante(idC, fileNameComprovante);
                         this.Close();
                     }
                     else
@@ -82,7 +85,7 @@ namespace GestaoFrota
                     {
                         VerificaPasta(pathComprovante);
                         CopiaComprovante(pathOrigemComprovante, pathDestinoComprovante);
-                        new ManutencaoBLL().AnexarComprovante(idC, fileNameComprovante);
+                        manutencaoBLL.AnexarComprovante(idC, fileNameComprovante);
                         this.Close();
                     }
                     else
@@ -93,7 +96,7 @@ namespace GestaoFrota
                     {
                         VerificaPasta(pathMultas);
                         CopiaComprovante(pathOrigemMulta, pathDestinoMulta);
-                        new MultaBLL().AnexarComprovante(idC, fileNameMulta);
+                        multaBLL.AnexarComprovante(idC, fileNameMulta);
                         this.Close();
                     }
                     else

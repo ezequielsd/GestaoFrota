@@ -9,8 +9,25 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.BLL
 {
-    public class SeguradoraBLL
+    public sealed class SeguradoraBLL
     {
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static SeguradoraBLL _instancia;
+        public static SeguradoraBLL Instancia
+        {
+            get { return _instancia ?? (_instancia = new SeguradoraBLL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private SeguradoraBLL() { }
+
+        #endregion
+
         SeguradoraDAL dal = SeguradoraDAL.Instancia;
 
         public void Insert(Seguradora info)

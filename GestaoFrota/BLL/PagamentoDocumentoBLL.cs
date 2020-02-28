@@ -9,9 +9,31 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.BLL
 {
-    public class PagamentoDocumentoBLL
+    public sealed class PagamentoDocumentoBLL
     {
+        #region Variaveis
+
         PagamentoDocumentoDAL dal = PagamentoDocumentoDAL.Instancia;
+
+        #endregion
+
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static PagamentoDocumentoBLL _instancia;
+        public static PagamentoDocumentoBLL Instancia
+        {
+            get { return _instancia ?? (_instancia = new PagamentoDocumentoBLL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private PagamentoDocumentoBLL() { }
+
+        #endregion
+
 
         public void Insert(PagamentoDocumento info)
         {

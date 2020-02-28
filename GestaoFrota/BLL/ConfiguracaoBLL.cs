@@ -8,9 +8,30 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.BLL
 {
-    public class ConfiguracaoBLL
+    public sealed class ConfiguracaoBLL
     {
+        #region Variaveis
+
         ConfiguracaoDAL configuracaoDAL = ConfiguracaoDAL.Instancia;
+
+        #endregion
+
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static ConfiguracaoBLL _instancia;
+        public static ConfiguracaoBLL Instancia
+        {
+            get { return _instancia ?? (_instancia = new ConfiguracaoBLL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private ConfiguracaoBLL() { }
+
+        #endregion
 
         public Configuracao Get()
         {

@@ -24,6 +24,15 @@ namespace GestaoFrota
         DateTime dataAtual;
         DateTime dataInicialdoAno;
         DateTime dataFinaldoAno;
+        MultaBLL multaBLL = MultaBLL.Instancia;
+        AbastecimentoBLL abastecimentoBLL = AbastecimentoBLL.Instancia;
+        ManutencaoBLL manutencaoBLL = ManutencaoBLL.Instancia;
+        ContratoSeguradoraBLL contratoSeguradoraBLL = ContratoSeguradoraBLL.Instancia;
+        CombustivelBLL combustivelBLL = CombustivelBLL.Instancia;
+        PagamentoDocumentoBLL pagamentoDocumentoBLL = PagamentoDocumentoBLL.Instancia;
+        MecanicaBLL mecanicaBLL = MecanicaBLL.Instancia;
+        VeiculoBLL veiculoBLL = VeiculoBLL.Instancia;
+        SeguradoraBLL seguradoraBLL = SeguradoraBLL.Instancia;
         List<TipoFIPEinfo> tiposFIPE = new List<TipoFIPEinfo>();
         List<MarcaFIPEinfo> marcasFIPE = new List<MarcaFIPEinfo>();
         List<CarroFIPEinfo> carrosFIPE = new List<CarroFIPEinfo>();
@@ -181,8 +190,7 @@ namespace GestaoFrota
             listBox4.Items.Clear();
             listBox5.Items.Clear();
             listBox6.Items.Clear();
-
-            AbastecimentoBLL abastecimentoBLL = new AbastecimentoBLL();
+                        
             CustoDiario quantidadeDiasRegistro; 
 
             if (filter)
@@ -258,9 +266,9 @@ namespace GestaoFrota
             GastoManutencaoInfo gasto;
 
             if (filter)
-                gasto = new ManutencaoBLL().GetGasto(dataInicial, dataFinal, veiculo);
+                gasto = manutencaoBLL.GetGasto(dataInicial, dataFinal, veiculo);
             else
-                gasto = new ManutencaoBLL().GetGastoAnual(dataAtual, veiculo);
+                gasto = manutencaoBLL.GetGastoAnual(dataAtual, veiculo);
 
             label76.Text = $"Valor de manutenção";
             label77.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", gasto.TotalValor);
@@ -271,7 +279,7 @@ namespace GestaoFrota
 
         private void CarregarDashBoardGastoManutencaoTotal(Veiculo veiculo)
         {
-            GastoManutencaoInfo gasto = new ManutencaoBLL().GetGasto(veiculo);
+            GastoManutencaoInfo gasto = manutencaoBLL.GetGasto(veiculo);
 
             label79.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", gasto.TotalValor);
             label80.Text = $"Total de manutenções no veículo";
@@ -281,9 +289,9 @@ namespace GestaoFrota
         private void CarregarDashBoardTotalMulta(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
         {
             if (filter)
-                graficoPizzaAnual.TotalMulta = new MultaBLL().GetMultaPorPeriodo(dataInicial, dataFinal, veiculo);
+                graficoPizzaAnual.TotalMulta = multaBLL.GetMultaPorPeriodo(dataInicial, dataFinal, veiculo);
             else
-                graficoPizzaAnual.TotalMulta = new MultaBLL().GetMultaTotalAnual(dataAtual, veiculo);
+                graficoPizzaAnual.TotalMulta = multaBLL.GetMultaTotalAnual(dataAtual, veiculo);
             
             label83.Text = $"Valor de multas";
             label84.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", graficoPizzaAnual.TotalMulta);
@@ -294,9 +302,9 @@ namespace GestaoFrota
         private void CarregarDashBoardTotalSeguro(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
         {
             if (filter)
-                graficoPizzaAnual.TotalSeguro = new ContratoSeguradoraBLL().GetPagamentoSeguroAnual(dataInicial, veiculo);
+                graficoPizzaAnual.TotalSeguro = contratoSeguradoraBLL.GetPagamentoSeguroAnual(dataInicial, veiculo);
             else
-                graficoPizzaAnual.TotalSeguro = new ContratoSeguradoraBLL().GetPagamentoSeguroAnual(dataAtual, veiculo);
+                graficoPizzaAnual.TotalSeguro = contratoSeguradoraBLL.GetPagamentoSeguroAnual(dataAtual, veiculo);
 
             label85.Text = $"Valor de seguro";
             label86.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", graficoPizzaAnual.TotalSeguro);
@@ -306,9 +314,9 @@ namespace GestaoFrota
         private void CarregarDashBoardTotalPagamentoDocumento(bool filter, DateTime dataInicial, DateTime dataFinal, DateTime dataAtual, Veiculo veiculo)
         {
             if (filter)
-                graficoPizzaAnual.TotalDocumento = new PagamentoDocumentoBLL().GetoPagamentoDocumentoTotalAnual(dataInicial, veiculo);
+                graficoPizzaAnual.TotalDocumento = pagamentoDocumentoBLL.GetoPagamentoDocumentoTotalAnual(dataInicial, veiculo);
             else
-                graficoPizzaAnual.TotalDocumento = new PagamentoDocumentoBLL().GetoPagamentoDocumentoTotalAnual(dataAtual, veiculo);
+                graficoPizzaAnual.TotalDocumento = pagamentoDocumentoBLL.GetoPagamentoDocumentoTotalAnual(dataAtual, veiculo);
 
             label94.Text = $"Valor de documento";
             label95.Text = string.Format(CultureInfo.GetCultureInfo(veiculo.CultureInfo), "{0:C}", graficoPizzaAnual.TotalDocumento);
@@ -321,9 +329,9 @@ namespace GestaoFrota
             List<AutonomiaInfo> listMedia;
 
             if (filter)
-                listMedia = new AbastecimentoBLL().GetAutonomia(dataAtual, veiculo);          
+                listMedia = abastecimentoBLL.GetAutonomia(dataAtual, veiculo);          
             else
-                listMedia = new AbastecimentoBLL().GetAutonomia(dataAtual, veiculo);
+                listMedia = abastecimentoBLL.GetAutonomia(dataAtual, veiculo);
 
             //header
             if (listMedia.Count > 0)
@@ -479,13 +487,13 @@ namespace GestaoFrota
                     Data = dateTimePickerAbastecimento.Value.Date,
                     KM = Convert.ToInt64(txtKMAbastecimento.Text),
                     Veiculo = veiculo,
-                    CombustivelId = new CombustivelBLL().GetIdCombustivel(cmbCombustivelAbastecimento.Text),
+                    CombustivelId = combustivelBLL.GetIdCombustivel(cmbCombustivelAbastecimento.Text),
                     Valor = Convert.ToDecimal(txtValorAbastecimento.Text),
                     Quantidade = Convert.ToDecimal(txtQuantidadeAbastecimento.Text),
                     PathComprovantePDF = fileNameComprovante
                 };
 
-                new AbastecimentoBLL().Insert(info);
+                abastecimentoBLL.Insert(info);
 
                 cmbCombustivelAbastecimento.SelectedIndex = -1;
                 txtKMAbastecimento.Clear();
@@ -504,9 +512,9 @@ namespace GestaoFrota
 
         private void btnAplicarFiltroAbastecimentos_Click(object sender, EventArgs e)
         {
-            dtAbastecimento.DataSource = new AbastecimentoBLL().ListPorFiltro(dateTimePickerFiltroDataInicial.Value.Date,
-                dateTimePickerFilroDataFinal.Value.Date, veiculo, 
-                new CombustivelBLL().GetIdCombustivel(cmbCombustivelAbastecimentoFiltro.Text));
+            dtAbastecimento.DataSource = abastecimentoBLL.ListPorFiltro(dateTimePickerFiltroDataInicial.Value.Date,
+                dateTimePickerFilroDataFinal.Value.Date, veiculo,
+                combustivelBLL.GetIdCombustivel(cmbCombustivelAbastecimentoFiltro.Text));
 
             FormartaDataGridViewAbastecimentos();
             CarregarDashBoardLocalConsumoCombustivelKmPercorridoParcial(dateTimePickerFiltroDataInicial.Value.Date, dateTimePickerFilroDataFinal.Value.Date, veiculo);
@@ -574,7 +582,7 @@ namespace GestaoFrota
 
         private void PreencherComboBoxAbastecimento()
         {
-            var combusitiveis = new CombustivelBLL().GetList(veiculo);
+            var combusitiveis = combustivelBLL.GetList(veiculo);
 
             //preenche o combo combustivel Abastecimento
             cmbCombustivelAbastecimento.DataSource = combusitiveis;
@@ -585,7 +593,7 @@ namespace GestaoFrota
 
         private void PreencherComboBoxAbastecimentoFiltro()
         {
-            var combusitiveis = new CombustivelBLL().GetList(veiculo);
+            var combusitiveis = combustivelBLL.GetList(veiculo);
 
             //preenche o combo combustivel Abastecimento filtro
             cmbCombustivelAbastecimentoFiltro.DataSource = combusitiveis;
@@ -597,7 +605,7 @@ namespace GestaoFrota
         private void CarregarDashBoardLocalConsumoCombustivelKmPercorridoParcial(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
             listBox3.Items.Clear();
-            ConsumoInfo consumo = new AbastecimentoBLL().GetConsumo(dtInicial.Date, dtFinal.Date, veiculo);          
+            ConsumoInfo consumo = abastecimentoBLL.GetConsumo(dtInicial.Date, dtFinal.Date, veiculo);          
 
             label66.Text = $"Gasto até o momento em {dataAtual.Year}";
 
@@ -617,7 +625,7 @@ namespace GestaoFrota
                
         private void CarregaDatagridAoAbrir(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
-            dtAbastecimento.DataSource = new AbastecimentoBLL().ListParcialAnual(DateTime.Now.Date, veiculo);
+            dtAbastecimento.DataSource = abastecimentoBLL.ListParcialAnual(DateTime.Now.Date, veiculo);
 
             CarregarDashBoardLocalConsumoCombustivelKmPercorridoParcial(dataInicialdoAno, dataFinaldoAno, veiculo);        
             FormartaDataGridViewAbastecimentos();
@@ -669,7 +677,7 @@ namespace GestaoFrota
         {
             try
             {
-                var mecanicas = new MecanicaBLL().List();
+                var mecanicas = mecanicaBLL.List();
 
                 //preenche o combo combustivel Abastecimento filtro
                 cmbMecanica.DataSource = mecanicas;
@@ -687,7 +695,7 @@ namespace GestaoFrota
         {
             try
             {
-                var tipos = new ManutencaoBLL().ListTipoManutencao();
+                var tipos = manutencaoBLL.ListTipoManutencao();
 
                 //preenche o combo combustivel Abastecimento filtro
                 cmbTipoManutencao.DataSource = tipos;
@@ -723,7 +731,7 @@ namespace GestaoFrota
                     PathComprovantePDF = fileNameComprovante
                 };
 
-                new ManutencaoBLL().Insert(manu);
+                manutencaoBLL.Insert(manu);
 
                 txtValorManutencao.Clear();
                 txtDescricaoManutencao.Clear();
@@ -803,14 +811,14 @@ namespace GestaoFrota
 
         private void CarregarDatagridManutencao(Veiculo veiculo)
         {
-            dtManutencao.DataSource = new ManutencaoBLL().ListParcialAnual(DateTime.Now.Date, veiculo);
+            dtManutencao.DataSource = manutencaoBLL.ListParcialAnual(DateTime.Now.Date, veiculo);
 
             FormartaDataGridViewManutencao();
         }
 
         private void CarregarDatagridManutencao(DateTime dtInicial, DateTime dtFinal, Veiculo veiculo)
         {
-            dtManutencao.DataSource = new ManutencaoBLL().List(dtInicial.Date, dtFinal.Date, veiculo);
+            dtManutencao.DataSource = manutencaoBLL.List(dtInicial.Date, dtFinal.Date, veiculo);
 
             FormartaDataGridViewManutencao();
             CarregarGastoManutencaoParcial(dtInicial.Date, dtFinal.Date, veiculo);
@@ -818,7 +826,7 @@ namespace GestaoFrota
 
         private void CarregarGastoManutencaoParcial(DateTime dataIniAtual, DateTime dataFinAtual, Veiculo veiculo)
         {
-            GastoManutencaoInfo gasto = new ManutencaoBLL().GetGasto(dataIniAtual.Date, dataFinAtual.Date, veiculo);
+            GastoManutencaoInfo gasto = manutencaoBLL.GetGasto(dataIniAtual.Date, dataFinAtual.Date, veiculo);
 
             label80.Text = $"Total de manutenções de {dataIniAtual.ToShortDateString()} à {dataFinAtual.ToShortDateString()}";
             label81.Text = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", gasto.TotalValor);
@@ -869,7 +877,7 @@ namespace GestaoFrota
         {
             manutencaoVisualizacao = null;
             int id = (int)dtManutencao.CurrentRow.Cells[0].Value;
-            manutencaoVisualizacao = new ManutencaoBLL().Get(id);
+            manutencaoVisualizacao = manutencaoBLL.Get(id);
 
             if (manutencaoVisualizacao != null)
             {
@@ -1011,7 +1019,7 @@ namespace GestaoFrota
                 else
                     info.DataPagamento = new DateTime(2000, 01, 01);
 
-                new PagamentoDocumentoBLL().Insert(info);
+                pagamentoDocumentoBLL.Insert(info);
 
                 txtValorPagamentoDocumento.Clear();
                 txtDecricaoPagamentoDocumento.Clear();
@@ -1066,7 +1074,7 @@ namespace GestaoFrota
                 if (String.IsNullOrEmpty(dataPagamento) || String.IsNullOrWhiteSpace(dataPagamento))
                 {
                     int id = (int)dtPagamentoDocumento.CurrentRow.Cells[0].Value;
-                    new PagamentoDocumentoBLL().InformarPagamento(id, dateTimePickerDataPagamentoDocumento2.Value);
+                    pagamentoDocumentoBLL.InformarPagamento(id, dateTimePickerDataPagamentoDocumento2.Value);
                     CarregarGridPagamentoDocumento(dataAtual, veiculo);
                     CarregarDashboard();
                 }
@@ -1097,7 +1105,7 @@ namespace GestaoFrota
 
         private void PreencherComboBoxCombustivel()
         {
-            var combusitiveis = new CombustivelBLL().GetList();
+            var combusitiveis = combustivelBLL.GetList();
 
             //preenche o combo combustivel
             cmbCombustivel.DataSource = combusitiveis;
@@ -1449,7 +1457,7 @@ namespace GestaoFrota
                 VerificaPasta(pathDocumentos);
                 if (!(String.IsNullOrEmpty(txtAnexarDocumento.Text) && String.IsNullOrWhiteSpace(txtAnexarDocumento.Text)))
                     CopiaComprovante(pathOrigemComprovante, pathDestinoComprovante);
-                new VeiculoBLL().Salvar(veiculo);
+                veiculoBLL.Salvar(veiculo);
             }
             catch (Exception)
             {
@@ -1459,7 +1467,7 @@ namespace GestaoFrota
 
         private void CarregarGridPagamentoDocumento(DateTime dtAtual, Veiculo veiculo)
         {
-            dtPagamentoDocumento.DataSource = new PagamentoDocumentoBLL().List(dtAtual.Date, veiculo);
+            dtPagamentoDocumento.DataSource = pagamentoDocumentoBLL.List(dtAtual.Date, veiculo);
 
             FormartaDataGridViewPagamentoDocumento();
         }
@@ -1523,7 +1531,7 @@ namespace GestaoFrota
         {
             try
             {
-                new ContratoSeguradoraBLL().EncerrarContrato(contratoSeguro);
+                contratoSeguradoraBLL.EncerrarContrato(contratoSeguro);
                 CarregarContratoSeguro();
             }
             catch (Exception ex)
@@ -1553,12 +1561,12 @@ namespace GestaoFrota
                     PathPagamentoPDF = fileNameComprovante
                 };
 
-                new ContratoSeguradoraBLL().InsertPagamento(pagamento);
+                contratoSeguradoraBLL.InsertPagamento(pagamento);
 
                 txtValorPagamentoSeguro.Clear();
                 dateTimePickerPagamentoSeguro.Value = DateTime.Now;
                 txtPathAnexarComprovantePagaSeguro.Clear();
-                dtPagamentoSeguro.DataSource = new ContratoSeguradoraBLL().ListPagamentos(contratoSeguro.DataInicialContrato, contratoSeguro.DataFinalContrato, veiculo, contratoSeguro);
+                dtPagamentoSeguro.DataSource = contratoSeguradoraBLL.ListPagamentos(contratoSeguro.DataInicialContrato, contratoSeguro.DataFinalContrato, veiculo, contratoSeguro);
                 FormartaDataGridViewPagamentoSeguro();
                 CarregarDashboard();
             }
@@ -1591,7 +1599,7 @@ namespace GestaoFrota
         {
             if (ckDataSeguro.Checked && !ckSeguradora.Checked)
             {
-                dtPagamentoSeguro.DataSource = new ContratoSeguradoraBLL().ListPagamentos(dateTimePickerInicialFiltroSeguro.Value.Date, dateTimePickerFinalFiltroSeguro.Value.Date, veiculo);
+                dtPagamentoSeguro.DataSource = contratoSeguradoraBLL.ListPagamentos(dateTimePickerInicialFiltroSeguro.Value.Date, dateTimePickerFinalFiltroSeguro.Value.Date, veiculo);
                 FormartaDataGridViewPagamentoSeguro();
             }
 
@@ -1603,7 +1611,7 @@ namespace GestaoFrota
                 }
                 else
                 {
-                    dtPagamentoSeguro.DataSource = new ContratoSeguradoraBLL().ListPagamentos((int)cmbFiltroSeguradora.SelectedValue, veiculo);
+                    dtPagamentoSeguro.DataSource = contratoSeguradoraBLL.ListPagamentos((int)cmbFiltroSeguradora.SelectedValue, veiculo);
                     FormartaDataGridViewPagamentoSeguro();
                 }
             }
@@ -1616,7 +1624,7 @@ namespace GestaoFrota
                 }
                 else
                 {
-                    dtPagamentoSeguro.DataSource = new ContratoSeguradoraBLL().ListPagamentos((int)cmbFiltroSeguradora.SelectedValue, dateTimePickerInicialFiltroSeguro.Value.Date, dateTimePickerFinalFiltroSeguro.Value.Date, veiculo, contratoSeguro);
+                    dtPagamentoSeguro.DataSource = contratoSeguradoraBLL.ListPagamentos((int)cmbFiltroSeguradora.SelectedValue, dateTimePickerInicialFiltroSeguro.Value.Date, dateTimePickerFinalFiltroSeguro.Value.Date, veiculo, contratoSeguro);
                     FormartaDataGridViewPagamentoSeguro();
                 }
             }
@@ -1626,7 +1634,7 @@ namespace GestaoFrota
         {
             try
             {
-                seguradoras = new SeguradoraBLL().ListDt();
+                seguradoras = seguradoraBLL.ListDt();
 
                 //preenche o combo carros
                 cmbFiltroSeguradora.DataSource = seguradoras;
@@ -1642,11 +1650,11 @@ namespace GestaoFrota
 
         private void CarregarContratoSeguro()
         {
-            contratoSeguro = new ContratoSeguradoraBLL().GetSeguroAtivo();
+            contratoSeguro = contratoSeguradoraBLL.GetSeguroAtivo();
 
             if (contratoSeguro != null)
             {
-                dtPagamentoSeguro.DataSource = new ContratoSeguradoraBLL().ListPagamentos(contratoSeguro.DataInicialContrato.Date, contratoSeguro.DataFinalContrato.Date, veiculo, contratoSeguro);
+                dtPagamentoSeguro.DataSource = contratoSeguradoraBLL.ListPagamentos(contratoSeguro.DataInicialContrato.Date, contratoSeguro.DataFinalContrato.Date, veiculo, contratoSeguro);
                 FormartaDataGridViewPagamentoSeguro();
                 txtNumeroContratoSeguro.Text = contratoSeguro.NumeroApolice;
                 txtSeguradora.Text = contratoSeguro.Seguradora.Nome;
@@ -1663,7 +1671,7 @@ namespace GestaoFrota
             }
             else
             {
-                dtPagamentoSeguro.DataSource = new ContratoSeguradoraBLL().ListPagamentos(dataInicialAtual.Date, dataFinalAtual.Date, veiculo);
+                dtPagamentoSeguro.DataSource = contratoSeguradoraBLL.ListPagamentos(dataInicialAtual.Date, dataFinalAtual.Date, veiculo);
                 FormartaDataGridViewPagamentoSeguro();
                 groupBoxInserirPagamentoSeguro.Visible = false;
                 btnRenovarSeguro.Visible = false;
@@ -1767,7 +1775,7 @@ namespace GestaoFrota
                 contratoSeguro.PathCartaoPDF = fileNameCartaoSeguro;
                 contratoSeguro.PathOrcamentoPDF = fileNameOrcamentoSeguro;
 
-                new ContratoSeguradoraBLL().EditarAnexos(contratoSeguro);
+                contratoSeguradoraBLL.EditarAnexos(contratoSeguro);
 
                 btnSalvarAlteracoesSeguro.Visible = false;
                 MessageBox.Show($"Anexos alterados com sucesso!", "Salvo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -1823,7 +1831,7 @@ namespace GestaoFrota
                     DataPagamento = new DateTime(2000,01,01)
                 };
 
-                new MultaBLL().Insert(multa);
+                multaBLL.Insert(multa);
 
                 dateTimePickerOcorrenciaMulta.Value = DateTime.Now;
                 dateTimePickerVencimentoMulta.Value = DateTime.Now;
@@ -1902,7 +1910,7 @@ namespace GestaoFrota
                 tipoStatusMulta = 0;
 
 
-            dtMultas.DataSource = new MultaBLL().List(dateTimePickerFiltroInicialMulta.Value.Date, dateTimePickerFiltroFinalMulta.Value.Date, tipoStatusMulta, cmbFiltroDataMultaPor.SelectedIndex, veiculo);
+            dtMultas.DataSource = multaBLL.List(dateTimePickerFiltroInicialMulta.Value.Date, dateTimePickerFiltroFinalMulta.Value.Date, tipoStatusMulta, cmbFiltroDataMultaPor.SelectedIndex, veiculo);
             FormartaDataGridViewMulta();
 
         }
@@ -1914,7 +1922,7 @@ namespace GestaoFrota
             {
                 int id = (int)dtMultas.CurrentRow.Cells[0].Value;
 
-                new MultaBLL().SetPagamento(id, dateTimePickerDataPagamentoMulta.Value);
+                multaBLL.SetPagamento(id, dateTimePickerDataPagamentoMulta.Value);
                 CarregarDatagridMulta(veiculo);
                 CarregarDashboard();
             }
@@ -1931,7 +1939,7 @@ namespace GestaoFrota
 
         private void CarregarDatagridMulta(Veiculo veiculo)
         {
-            dtMultas.DataSource = new MultaBLL().List(veiculo);
+            dtMultas.DataSource = multaBLL.List(veiculo);
 
             FormartaDataGridViewMulta();
         }

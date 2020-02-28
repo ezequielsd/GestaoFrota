@@ -14,6 +14,8 @@ namespace GestaoFrota
 {
     public partial class frmAddTipoManutencao : Form
     {
+        ManutencaoBLL manutencaoBLL = ManutencaoBLL.Instancia;
+
         public frmAddTipoManutencao()
         {
             InitializeComponent();
@@ -24,7 +26,7 @@ namespace GestaoFrota
             if (!String.IsNullOrEmpty(txtTipoManutencao.Text) && !String.IsNullOrWhiteSpace(txtTipoManutencao.Text))
             {
                 TipoManutencao tipoManutencao = new TipoManutencao { Descricao = txtTipoManutencao.Text };
-                new ManutencaoBLL().InsertTipoManutencao(tipoManutencao);
+                manutencaoBLL.InsertTipoManutencao(tipoManutencao);
                 Close();
             }
             else

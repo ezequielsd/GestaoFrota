@@ -16,11 +16,19 @@ namespace GestaoFrota
 {
     public partial class frmAddVeiculo : Form
     {
+        #region Variaveis
+
+        CombustivelBLL combustivelBLL = CombustivelBLL.Instancia;
+        VeiculoBLL veiculoBLL = VeiculoBLL.Instancia;
         List<TipoFIPEinfo> tipos = new List<TipoFIPEinfo>();
         List<MarcaFIPEinfo> marcas = new List<MarcaFIPEinfo>();
         List<CarroFIPEinfo> carros = new List<CarroFIPEinfo>();
         List<CarroAnoFIPEinfo> carrosAno = new List<CarroAnoFIPEinfo>();
         string cultureInfo = string.Empty;
+
+        #endregion
+
+        #region Construtores
 
         public frmAddVeiculo(string culture)
         {
@@ -28,7 +36,8 @@ namespace GestaoFrota
             InitializeComponent();
         }
 
-    
+        #endregion
+
         private void frmAddVeiculo_Load(object sender, EventArgs e)
         {
             PreencherComboBoxTipo();
@@ -53,13 +62,11 @@ namespace GestaoFrota
                 return;
             }
 
-
             if (String.IsNullOrEmpty(txtModelo.Text) || String.IsNullOrWhiteSpace(txtModelo.Text))
             {
                 MessageBox.Show("Informe um nodelo válido.", "mesagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
 
             if (String.IsNullOrEmpty(txtAnoModelo.Text) || String.IsNullOrWhiteSpace(txtAnoModelo.Text))
             {
@@ -72,9 +79,7 @@ namespace GestaoFrota
                 MessageBox.Show("Informe a placa do veículo corretamente.", "mesagem de erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            VeiculoBLL veiculoBll = new VeiculoBLL();
-
+            
             Veiculo info = new Veiculo();
 
             info.FIPEModelo = txtModelo.Text;                
@@ -89,7 +94,7 @@ namespace GestaoFrota
 
             try
             {
-                veiculoBll.Insert(info);
+                veiculoBLL.Insert(info);
             }
             catch (Exception ex)
             {
@@ -129,7 +134,7 @@ namespace GestaoFrota
 
         private void PreencherComboBoxCombustivel()
         {
-            var combusitiveis = new CombustivelBLL().GetList();
+            var combusitiveis = combustivelBLL.GetList();
 
             //preenche o combo combustivel
             cmbCombustivel.DataSource = combusitiveis;

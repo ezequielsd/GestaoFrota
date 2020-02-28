@@ -27,7 +27,7 @@ namespace GestaoFrota.DAL
 
         #endregion
 
-        public List<DGridCNHInfo> ListDt()
+        public List<DGridCNHInfo> ListGrid()
         {
             using (var context = new Context())
             {

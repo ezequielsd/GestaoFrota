@@ -9,9 +9,30 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.BLL
 {
-    public class MultaBLL
+    public sealed class MultaBLL
     {
+        #region Variaveis
+
         MultaDAL dal = MultaDAL.Instancia;
+
+        #endregion
+
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static MultaBLL _instancia;
+        public static MultaBLL Instancia
+        {
+            get { return _instancia ?? (_instancia = new MultaBLL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private MultaBLL() { }
+
+        #endregion
 
         public void Insert(Multa multa)
         {

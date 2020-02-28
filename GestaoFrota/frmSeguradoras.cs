@@ -13,6 +13,8 @@ namespace GestaoFrota
 {
     public partial class frmSeguradoras : Form
     {
+        SeguradoraBLL seguradoraBLL = SeguradoraBLL.Instancia;
+
         public frmSeguradoras()
         {
             InitializeComponent();
@@ -47,7 +49,7 @@ namespace GestaoFrota
 
         private void PreencherDtSeguradoras()
         {
-            dtSeguradoras.DataSource = new SeguradoraBLL().ListDt();
+            dtSeguradoras.DataSource = seguradoraBLL.ListDt();
 
             ////esconde as colunas desnecessárias
             //dtAbastecimento.Columns["NumeroOrcamento"].Visible = false;

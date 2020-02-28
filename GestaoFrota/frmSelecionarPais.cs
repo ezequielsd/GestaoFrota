@@ -9,6 +9,8 @@ namespace GestaoFrota
 {
     public partial class frmSelecionarPais : Form
     {
+        ConfiguracaoBLL configuracaoBLL = ConfiguracaoBLL.Instancia;
+
         public frmSelecionarPais()
         {
             InitializeComponent();
@@ -31,8 +33,8 @@ namespace GestaoFrota
                 config.CodPais = internacionalizacaoSelecionado.CodPais;
                 config.CultureInfo = internacionalizacaoSelecionado.CodCultura;
                 config.Idioma = internacionalizacaoSelecionado.Idioma;
-                
-                new ConfiguracaoBLL().Insert(config);
+
+                configuracaoBLL.Insert(config);
                 this.Close();
             }            
         }
@@ -48,7 +50,6 @@ namespace GestaoFrota
             cmbPais.SelectedIndex = -1;
 
         }
-
         
     }
 }

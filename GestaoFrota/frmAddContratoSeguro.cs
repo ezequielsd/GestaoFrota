@@ -17,6 +17,8 @@ namespace GestaoFrota
     public partial class frmAddContratoSeguro : Form
     {
         Veiculo veiculo;
+        SeguradoraBLL seguradoraBLL = SeguradoraBLL.Instancia;
+        ContratoSeguradoraBLL contratoSeguradoraBLL = ContratoSeguradoraBLL.Instancia;
         List<DGridSeguradoraInfo> seguradoras = new List<DGridSeguradoraInfo>();
         string pathOrigemOrcamento = string.Empty;
         string pathDestinoOrcamento = string.Empty;
@@ -51,7 +53,7 @@ namespace GestaoFrota
         {
             try
             {
-                seguradoras = new SeguradoraBLL().ListDt();
+                seguradoras = seguradoraBLL.ListDt();
 
                 //preenche o combo carros
                 cmbSeguradora.DataSource = seguradoras;
@@ -96,8 +98,8 @@ namespace GestaoFrota
                         Ativo = true                        
                     };
 
-                    contrato.Seguradora = new SeguradoraBLL().Get(contrato.SeguradoraId);
-                    new ContratoSeguradoraBLL().Insert(contrato);
+                    contrato.Seguradora = seguradoraBLL.Get(contrato.SeguradoraId);
+                    contratoSeguradoraBLL.Insert(contrato);
                     this.Contrato = contrato;
                     this.Close();
                 }

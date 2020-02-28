@@ -13,7 +13,8 @@ using System.Windows.Forms;
 namespace GestaoFrota
 {
     public partial class frmCadastarMecanica : Form
-    {        
+    {
+        MecanicaBLL mecanicaBLL = MecanicaBLL.Instancia;
         Mecanica mecanica;
 
         public frmCadastarMecanica()
@@ -29,7 +30,7 @@ namespace GestaoFrota
             InitializeComponent();            
             btnAdicionar.Visible = false;
             btnEditar.Visible = true;
-            mecanica = new MecanicaBLL().Get(Id);
+            mecanica = mecanicaBLL.Get(Id);
             PreencherFormulario();
             DesabilitarCampos();
             btnEditar.Location = new Point(595, 417);
@@ -61,7 +62,7 @@ namespace GestaoFrota
 
             try
             {
-                new MecanicaBLL().Insert(mecanica);
+                mecanicaBLL.Insert(mecanica);
                 this.Close();
             }
             catch (Exception ex)
@@ -105,7 +106,7 @@ namespace GestaoFrota
 
             try
             {
-                new MecanicaBLL().Save(mecanica);
+                mecanicaBLL.Save(mecanica);
                 DesabilitarCampos();
                 btnEditar.Visible = true;
                 btnSalvar.Visible = false;

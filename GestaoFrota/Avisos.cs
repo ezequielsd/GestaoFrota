@@ -10,12 +10,17 @@ using System.Threading.Tasks;
 namespace GestaoFrota
 {
     public class Avisos
-    {       
+    {
+        CNHBLL cNHBLL = CNHBLL.Instancia;
+        MultaBLL multaBLL = MultaBLL.Instancia;
+        VeiculoBLL veiculoBLL = VeiculoBLL.Instancia;
+        PagamentoDocumentoBLL pagamentoDocumentoBLL = PagamentoDocumentoBLL.Instancia;
+
         public List<string> AvisosCNH()
         {
             List<string> list = new List<string>();
 
-            var listCNH = new CNHBLL().List();
+            var listCNH = cNHBLL.List();
 
             foreach (CNH item in listCNH)
             {
@@ -32,7 +37,7 @@ namespace GestaoFrota
         {
             List<string> list = new List<string>();
 
-            var lisMulta = new MultaBLL().List();
+            var lisMulta = multaBLL.List();
 
             foreach (Multa item in lisMulta)
             {
@@ -49,18 +54,18 @@ namespace GestaoFrota
         {
             List<string> list = new List<string>();
 
-            List<VeiculosTreeViewInfo> listVeiculos = new VeiculoBLL().GetListTreeView();
+            List<VeiculosTreeViewInfo> listVeiculos = veiculoBLL.GetListTreeView();
 
             foreach (var item in listVeiculos)
             {
                 //aviso de conta pagamento de documento não lançado para ano corrente
-                var quantidadePagamentoDocumentoNoAno = new PagamentoDocumentoBLL().GetPagamentoDocumentoLancadoDoAno(DateTime.Now, item.Placa);
+                var quantidadePagamentoDocumentoNoAno = pagamentoDocumentoBLL.GetPagamentoDocumentoLancadoDoAno(DateTime.Now, item.Placa);
 
                 if (quantidadePagamentoDocumentoNoAno == 0)
                     list.Add($"Não há pagamento de documento lançado para o veículo: {item.Placa}, para o ano de {DateTime.Now.Year}");
 
                 //Aviso de documento a vencer e vencido
-                List<PagamentoDocumento> documentosNaoPago = new PagamentoDocumentoBLL().GetDocumentoNaoPago(DateTime.Now, item.Placa);
+                List<PagamentoDocumento> documentosNaoPago = pagamentoDocumentoBLL.GetDocumentoNaoPago(DateTime.Now, item.Placa);
 
                 foreach (PagamentoDocumento pagamento in documentosNaoPago)
                 {

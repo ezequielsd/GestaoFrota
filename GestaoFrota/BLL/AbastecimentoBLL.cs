@@ -9,8 +9,26 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.BLL
 {
-    public class AbastecimentoBLL
+    public sealed class AbastecimentoBLL
     {
+
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static AbastecimentoBLL _instancia;
+        public static AbastecimentoBLL Instancia
+        {
+            get { return _instancia ?? (_instancia = new AbastecimentoBLL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private AbastecimentoBLL() { }
+
+        #endregion
+
         AbastecimentoDAL dal = AbastecimentoDAL.Instancia;
 
         public void Insert(Abastecimento info)

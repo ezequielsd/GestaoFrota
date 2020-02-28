@@ -16,6 +16,7 @@ namespace GestaoFrota
 {
     public partial class frmCNH : Form
     {
+        CNHBLL cNHBLL = CNHBLL.Instancia;
         string reg = string.Empty;
         CNH cnh = new CNH();
         string pathOrigemDocumento = string.Empty;
@@ -34,7 +35,7 @@ namespace GestaoFrota
         public frmCNH(string registro)
         {
             InitializeComponent();
-            cnh = new CNHBLL().Get(registro);
+            cnh = cNHBLL.Get(registro);
             DesativaControle();
             CarregaComponentes();
             btnAdicionar.Visible = false;
@@ -87,7 +88,7 @@ namespace GestaoFrota
 
             try
             {
-                new CNHBLL().Alterar(cnh);
+                cNHBLL.Alterar(cnh);
                 this.Close();
             }
             catch (Exception ex)
@@ -131,7 +132,7 @@ namespace GestaoFrota
                 };
 
 
-                new CNHBLL().Insert(cnh);
+                cNHBLL.Insert(cnh);
                 LimpaCampos();
                 this.Close();
             }

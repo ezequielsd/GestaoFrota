@@ -14,6 +14,8 @@ namespace GestaoFrota
 {
     public partial class frmMecanicas : Form
     {
+        MecanicaBLL mecanicaBLL = MecanicaBLL.Instancia;
+
         public frmMecanicas()
         {
             InitializeComponent();
@@ -26,7 +28,7 @@ namespace GestaoFrota
 
         private void PreencherDtMecanicas()
         {
-            dtMecanicas.DataSource = new MecanicaBLL().ListDt();
+            dtMecanicas.DataSource = mecanicaBLL.ListDt();
 
             ////esconde as colunas desnecessárias
             //dtAbastecimento.Columns["NumeroOrcamento"].Visible = false;

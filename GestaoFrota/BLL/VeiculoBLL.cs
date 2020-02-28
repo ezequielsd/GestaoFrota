@@ -9,8 +9,26 @@ using GestaoFrota.Models;
 
 namespace GestaoFrota.BLL
 {
-    public class VeiculoBLL
+    public sealed class VeiculoBLL
     {
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static VeiculoBLL _instancia;
+        public static VeiculoBLL Instancia
+        {
+            get { return _instancia ?? (_instancia = new VeiculoBLL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private VeiculoBLL() { }
+
+        #endregion
+
+
         VeiculoDAL dal = VeiculoDAL.Instancia;
 
         public void Insert(Veiculo info)

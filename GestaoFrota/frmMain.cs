@@ -12,15 +12,16 @@ namespace GestaoFrota
 {
     public partial class frmMain : Form
     {
+        ConfiguracaoBLL configuracaoBLL = ConfiguracaoBLL.Instancia;
+        VeiculoBLL veiculoBLL = VeiculoBLL.Instancia;
         string fileNameManual = "GUIA RÁPIDO DE UTILIZAÇÃO DO GESTÃO DE FROTA PORTABLE.pdf";
         string pathManual = Environment.CurrentDirectory;
         string pathDestinoManual = string.Empty;       
         string culture = "pt-BR";
 
         public frmMain()
-        {
-            ConfiguracaoBLL configBll = new ConfiguracaoBLL();
-            Configuracao config = configBll.Get();
+        {            
+            Configuracao config = configuracaoBLL.Get();
             if (config != null)
             {
                 culture = config.CultureInfo;
@@ -35,9 +36,8 @@ namespace GestaoFrota
         {
             AtualizaTreeView();
             GetAvisos();
-
-            ConfiguracaoBLL configBll = new ConfiguracaoBLL();
-            Configuracao config = configBll.Get();
+                        
+            Configuracao config = configuracaoBLL.Get();
 
             if (config == null)
             {
@@ -45,7 +45,7 @@ namespace GestaoFrota
                 frmSelecionarPais frm = new frmSelecionarPais();
                 frm.ShowDialog();               
                 this.Visible = true;
-                config = configBll.Get();
+                config = configuracaoBLL.Get();
                 culture = config.CultureInfo;
             }
         }
@@ -57,7 +57,7 @@ namespace GestaoFrota
                 frm.ShowDialog();
             }
 
-            List<VeiculosTreeViewInfo> list = new VeiculoBLL().GetListTreeView();
+            List<VeiculosTreeViewInfo> list = veiculoBLL.GetListTreeView();
             AtualizaTreeView();
             GetAvisos();
         }
@@ -66,7 +66,7 @@ namespace GestaoFrota
         {
             var nodeSelecionado = e.Node.Text;
             string[] veiculo = nodeSelecionado.Split('_');
-            Veiculo veicu = new VeiculoBLL().GetPorPlaca(veiculo[0]);
+            Veiculo veicu = veiculoBLL.GetPorPlaca(veiculo[0]);
             if (veicu == null)
                 MessageBox.Show("Selecione um veículo!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
@@ -156,7 +156,7 @@ namespace GestaoFrota
 
         private void AtualizaTreeView()
         {
-            List<VeiculosTreeViewInfo> list = new VeiculoBLL().GetListTreeView();
+            List<VeiculosTreeViewInfo> list = veiculoBLL.GetListTreeView();
 
             if (treeView1.Nodes.Count > 0)
             {

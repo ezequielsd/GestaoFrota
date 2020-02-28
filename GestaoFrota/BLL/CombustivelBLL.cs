@@ -8,9 +8,29 @@ using GestaoFrota.DAL;
 
 namespace GestaoFrota.BLL
 {
-    public class CombustivelBLL
+    public sealed class CombustivelBLL
     {
+        #region Variaveis
+
         CombustivelDAL dal = CombustivelDAL.Instancia;
+
+        #endregion
+
+        #region Propriedades
+
+        static CombustivelBLL _instancia;
+        public static CombustivelBLL Instancia
+        {
+            get { return _instancia ?? (_instancia = new CombustivelBLL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private CombustivelBLL() { }
+
+        #endregion
 
         /// <summary>
         /// Lista tipos de combustiveis
@@ -18,7 +38,7 @@ namespace GestaoFrota.BLL
         /// <returns>Lista de tipos de combustiveis</returns>
         public List<Combustivel> GetList()
         {
-            return dal.GetList();
+            return dal.List();
         }
 
         /// <summary>
@@ -27,7 +47,7 @@ namespace GestaoFrota.BLL
         /// <returns>Lista de tipos de combustiveis</returns>
         public List<Combustivel> GetList(Veiculo veiculo)
         {
-            return dal.GetList(veiculo);
+            return dal.List(veiculo);
         }
 
         /// <summary>
@@ -37,7 +57,7 @@ namespace GestaoFrota.BLL
         /// <returns>retorna o tipo de combustivel</returns>
         public Combustivel GetCombustivel(int id)
         {
-            return dal.GetCombustivel(id);
+            return dal.Get(id);
         }
 
         /// <summary>

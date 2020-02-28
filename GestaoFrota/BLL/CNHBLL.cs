@@ -9,13 +9,31 @@ using System.Threading.Tasks;
 
 namespace GestaoFrota.BLL
 {
-    public class CNHBLL
+    public sealed class CNHBLL
     {
+
+        #region Propriedades
+
+        //Aplicando o Pattern Singleton
+        static CNHBLL _instancia;
+        public static CNHBLL Instancia
+        {
+            get { return _instancia ?? (_instancia = new CNHBLL()); }
+        }
+
+        #endregion
+
+        #region Construtores
+
+        private CNHBLL() { }
+
+        #endregion
+        
         CNHDAL dal = CNHDAL.Instancia;
 
         public List<DGridCNHInfo> ListDt()
         {
-            return dal.ListDt();
+            return dal.ListGrid();
         }
       
         public List<CNH> List()

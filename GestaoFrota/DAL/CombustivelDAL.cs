@@ -22,7 +22,7 @@ namespace GestaoFrota.DAL
 
         #endregion
 
-        public List<Combustivel> GetList()
+        public List<Combustivel> List()
         {
             using (var context = new Context())
             {
@@ -30,7 +30,7 @@ namespace GestaoFrota.DAL
             }
         }
                
-        public List<Combustivel> GetList(Veiculo veiculo)
+        public List<Combustivel> List(Veiculo veiculo)
         {
 
             switch (veiculo.Combustivel)
@@ -92,14 +92,14 @@ namespace GestaoFrota.DAL
             }           
         }
 
-        public Combustivel GetCombustivel(int id)
+        public Combustivel Get(int id)
         {
             using (var context = new Context())
             {
                 return context.Combustiveis.Find(id);
             }
         }
-
+                
         public int GetIdCombustivel(string combustivel)
         {
             using (var context = new Context())

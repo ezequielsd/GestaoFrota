@@ -13,6 +13,8 @@ namespace GestaoFrota
 {
     public partial class frmCNHs : Form
     {
+        CNHBLL cNHBLL = CNHBLL.Instancia;
+
         public frmCNHs()
         {
             InitializeComponent();
@@ -47,7 +49,7 @@ namespace GestaoFrota
 
         private void CarregaDatagrid()
         {
-            dtCNHs.DataSource = new CNHBLL().ListDt();
+            dtCNHs.DataSource = cNHBLL.ListDt();
 
             FormartaDataGridViewAbastecimentos();
         }

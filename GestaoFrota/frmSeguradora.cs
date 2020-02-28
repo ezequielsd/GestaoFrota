@@ -14,6 +14,7 @@ namespace GestaoFrota
 {
     public partial class frmSeguradora : Form
     {
+        SeguradoraBLL seguradoraBLL = SeguradoraBLL.Instancia;
         Seguradora seguradora;
 
         public frmSeguradora()
@@ -29,7 +30,7 @@ namespace GestaoFrota
             InitializeComponent();
             btnAdicionar.Visible = false;
             btnEditar.Visible = true;
-            seguradora = new SeguradoraBLL().Get(Id);
+            seguradora = seguradoraBLL.Get(Id);
             PreencherFormulario();
             DesabilitarCampos();
             btnEditar.Location = new Point(595, 417);
@@ -131,7 +132,7 @@ namespace GestaoFrota
 
             try
             {
-                new SeguradoraBLL().Insert(segurad);
+                seguradoraBLL.Insert(segurad);
                 this.Close();
             }
             catch (Exception ex)
@@ -170,7 +171,7 @@ namespace GestaoFrota
 
             try
             {
-                new SeguradoraBLL().Save(seguradora);
+                seguradoraBLL.Save(seguradora);
                 DesabilitarCampos();
                 btnEditar.Visible = true;
                 btnSalvar.Visible = false;
