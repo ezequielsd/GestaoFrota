@@ -22,12 +22,9 @@ namespace FIPE
 
         public List<MarcaFIPEinfo> FindMarcasFIPE(string tipo)
         {
-            var client = new RestClient
-            {
-                BaseUrl = new Uri("http://fipeapi.appspot.com/")
-            };
+            var client = new RestClient(new Uri("http://fipeapi.appspot.com/"));
 
-            var req = new RestRequest("api/1/{tipo}/marcas.json", Method.GET);
+            var req = new RestRequest("api/1/{tipo}/marcas.json", Method.Get);
 
             req.AddParameter("tipo", tipo, ParameterType.UrlSegment);
 
@@ -39,12 +36,9 @@ namespace FIPE
 
         public List<CarroFIPEinfo> FindCarrosFIPE(string tipo, int idMarca)
         {
-            var client = new RestClient
-            {
-                BaseUrl = new Uri("http://fipeapi.appspot.com/")
-            };
+            var client = new RestClient(new Uri("http://fipeapi.appspot.com/")); ;
 
-            var req = new RestRequest("api/1/{tipo}/veiculos/{id}.json", Method.GET);
+            var req = new RestRequest("api/1/{tipo}/veiculos/{id}.json", Method.Get);
 
             req.AddParameter("tipo", tipo, ParameterType.UrlSegment);
             req.AddParameter("id", idMarca, ParameterType.UrlSegment);
@@ -57,12 +51,9 @@ namespace FIPE
 
         public List<CarroAnoFIPEinfo> FindCarrosAnoFIPE(string tipo, int idMarca, long idCarro)
         {
-            var client = new RestClient
-            {
-                BaseUrl = new Uri("http://fipeapi.appspot.com/")
-            };
+            var client = new RestClient(new Uri("http://fipeapi.appspot.com/"));
 
-            var req = new RestRequest("api/1/{tipo}/veiculo/{id}/{idC}.json", Method.GET);
+            var req = new RestRequest("api/1/{tipo}/veiculo/{id}/{idC}.json", Method.Get);
 
             req.AddParameter("tipo", tipo, ParameterType.UrlSegment);
             req.AddParameter("id", idMarca, ParameterType.UrlSegment);
@@ -76,12 +67,9 @@ namespace FIPE
 
         public ConsultaFIPEinfo FindPrecoFIPE(string tipo, int idMarca, long idCarro, string idAno)
         {
-            var client = new RestClient
-            {
-                BaseUrl = new Uri("http://fipeapi.appspot.com/")
-            };
+            var client = new RestClient(new Uri("http://fipeapi.appspot.com/"));
 
-            var req = new RestRequest("api/1/{tipo}/veiculo/{id}/{idC}/{idA}.json", Method.GET);
+            var req = new RestRequest("api/1/{tipo}/veiculo/{id}/{idC}/{idA}.json", Method.Get);
 
             req.AddParameter("tipo", tipo, ParameterType.UrlSegment);
             req.AddParameter("id", idMarca, ParameterType.UrlSegment);
