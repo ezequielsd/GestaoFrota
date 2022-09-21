@@ -12,6 +12,12 @@ O objetivo deste projeto é gerenciar os gastos com seu veículo ou frota de ve�
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
 ![](Release/dashboard.PNG)
 
+
+Elaborado por Ezequiel da Silva Daniel
+
+<a href="https://www.linkedin.com/in/ezequielsd/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>  
+
+
 ## Detalhes do projeto
 
 Textos e imagens que descrevam seu projeto, suas conquistas, seus desafios, próximos passos, etc...
