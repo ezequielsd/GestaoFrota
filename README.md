@@ -1,12 +1,12 @@
 # Nome do meu projeto
 
-Rápida descrição do objetivo de fazer esse projeto
+O objetivo deste projeto é gerenciar os gastos com seu veículo ou frota de veículos.
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
-| :sparkles: Nome        | **Titulo do meu projeto**
-| :label: Tecnologias | java, html, ruby, c# (tecnologias utilizadas)
-| :rocket: URL         | https://url-deploy.com.br
+| :sparkles: Nome        | **Gestão de Frota**
+| :label: Tecnologias | c#
+| :rocket: URL         | https://github.com/ezequielsd/GestaoFrotaVitrine
 | :fire: Desafio     | https://url-do-desafio.com.br
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
