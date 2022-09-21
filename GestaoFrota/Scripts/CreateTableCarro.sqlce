@@ -1,0 +1,10 @@
+﻿-- Script Date: 03/10/2017 16:40  - ErikEJ.SqlCeScripting version 3.5.2.72
+CREATE TABLE [Carro] (
+  [Id] int IDENTITY (1,1) NOT NULL
+, [Modelo] nvarchar(100) NOT NULL
+, [Marca] nvarchar(100) NOT NULL
+, [Placa] nvarchar(100) NOT NULL
+);
+GO
+ALTER TABLE [Carro] ADD CONSTRAINT [PK_Carro] PRIMARY KEY ([Id]);
+GO

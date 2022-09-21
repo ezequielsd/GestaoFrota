@@ -1,0 +1,44 @@
+﻿-- Script Date: 10/03/2018 10:58  - ErikEJ.SqlCeScripting version 3.5.2.75
+SET IDENTITY_INSERT [Abastecimentoes] ON;
+GO
+INSERT INTO [Abastecimentoes] ([Id],[Quantidade],[CombustivelId],[Valor],[KM],[PathComprovantePDF],[Data],[VeiculoID], [DataS]) VALUES (
+1,9.42,5,19.77,135490,N'Novo Documento 2018-02-04 (1).pdf',{ts '2018-01-23 16:56:50.000'},N'LRH-0484', N'23/01/2018');
+GO
+INSERT INTO [Abastecimentoes] ([Id],[Quantidade],[CombustivelId],[Valor],[KM],[PathComprovantePDF],[Data],[VeiculoID], [DataS]) VALUES (
+2,7.23,2,30.00,135517,N'Novo Documento 2018-02-04.pdf',{ts '2018-01-24 16:56:50.000'},N'LRH-0484', N'24/01/2018');
+GO
+INSERT INTO [Abastecimentoes] ([Id],[Quantidade],[CombustivelId],[Valor],[KM],[PathComprovantePDF],[Data],[VeiculoID], [DataS]) VALUES (
+3,11.53,5,23.04,135807,N'Novo Documento 2018-02-04 (2).pdf',{ts '2018-02-01 16:56:50.000'},N'LRH-0484', N'01/01/2018');
+GO
+INSERT INTO [Abastecimentoes] ([Id],[Quantidade],[CombustivelId],[Valor],[KM],[PathComprovantePDF],[Data],[VeiculoID], [DataS]) VALUES (
+4,5.24,2,20.00,135807,N'Novo Documento 2018-02-04 (2).pdf',{ts '2018-02-01 16:56:50.000'},N'LRH-0484', N'01/02/2018');
+GO
+INSERT INTO [Abastecimentoes] ([Id],[Quantidade],[CombustivelId],[Valor],[KM],[PathComprovantePDF],[Data],[VeiculoID], [DataS]) VALUES (
+5,11.99,5,23.85,135638,N'Novo Documento 2018-02-04 (3).pdf',{ts '2018-01-28 16:56:50.000'},N'LRH-0484', N'28/01/2018');
+GO
+INSERT INTO [Abastecimentoes] ([Id],[Quantidade],[CombustivelId],[Valor],[KM],[PathComprovantePDF],[Data],[VeiculoID], [DataS]) VALUES (
+6,10.00,5,20.00,135957,N'Office Lens 05032018 2203.pdf',{ts '2018-02-06 00:00:00.000'},N'LRH-0484', N'06/02/2018');
+GO
+INSERT INTO [Abastecimentoes] ([Id],[Quantidade],[CombustivelId],[Valor],[KM],[PathComprovantePDF],[Data],[VeiculoID], [DataS]) VALUES (
+7,5.27,2,20.00,136084,N'20180306084229239_0001.pdf',{ts '2018-02-09 00:00:00.000'},N'LRH-0484', N'09/02/2018');
+GO
+INSERT INTO [Abastecimentoes] ([Id],[Quantidade],[CombustivelId],[Valor],[KM],[PathComprovantePDF],[Data],[VeiculoID], [DataS]) VALUES (
+8,13.52,5,27.02,136243,N'Office Lens 05032018 2202.pdf',{ts '2018-02-16 00:00:00.000'},N'LRH-0484', N'16/02/2018');
+GO
+INSERT INTO [Abastecimentoes] ([Id],[Quantidade],[CombustivelId],[Valor],[KM],[PathComprovantePDF],[Data],[VeiculoID], [DataS]) VALUES (
+9,10.75,5,21.48,136392,N'Office Lens 05032018 2200 1.pdf',{ts '2018-02-21 00:00:00.000'},N'LRH-0484', N'21/02/2018');
+GO
+INSERT INTO [Abastecimentoes] ([Id],[Quantidade],[CombustivelId],[Valor],[KM],[PathComprovantePDF],[Data],[VeiculoID]), [DataS] VALUES (
+10,8.01,2,30.00,136392,N'Office Lens 05032018 2200 1.pdf',{ts '2018-02-21 00:00:00.000'},N'LRH-0484', N'21/02/2018');
+GO
+INSERT INTO [Abastecimentoes] ([Id],[Quantidade],[CombustivelId],[Valor],[KM],[PathComprovantePDF],[Data],[VeiculoID]), [DataS] VALUES (
+11,11.89,5,23.76,136522,N'Office Lens 05032018 2200.pdf',{ts '2018-02-26 00:00:00.000'},N'LRH-0484', N'26/02/2018');
+GO
+INSERT INTO [Abastecimentoes] ([Id],[Quantidade],[CombustivelId],[Valor],[KM],[PathComprovantePDF],[Data],[VeiculoID]), [DataS] VALUES (
+12,12.58,5,25.00,136696,N'Office Lens 05032018 2208.pdf',{ts '2018-03-03 00:00:00.000'},N'LRH-0484', N'03/03/208');
+GO
+SET IDENTITY_INSERT [Abastecimentoes] OFF;
+GO
+ALTER TABLE [Abastecimentoes] ALTER COLUMN [Id] IDENTITY (13,1);
+GO
+

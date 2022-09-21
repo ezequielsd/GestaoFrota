@@ -1,0 +1,4 @@
+﻿-- Script Date: 10/03/2018 11:02  - ErikEJ.SqlCeScripting version 3.5.2.75
+INSERT INTO [Veiculoes] ([Placa],[Tipo],[FipeNameMarca],[IdFIPEMarca],[KeyFIPEMarca],[FIPEModelo],[IdFIPEModelo],[KeyFIPEModelo],[FipeNameAno],[IdFipeAno],[Renavam],[Chassi],[Combustivel],[AnoFab],[AnoModelo],[Capacidade],[Cor],[Cidade],[UF],[CPFCNPJ],[Categoria],[KM],[NomeEndereco],[DataAquisicao],[Observacao],[Potencia],[PathDocumentoPDF],[DataVencimentoIPVA],[Ativo]) VALUES (
+N'LRH-0484',N'carros',N'Toyota',56,N'toyota-56',N'Corolla Fielder SW 1.8/1.8 XEi Flex Aut.',2221,N'corolla-2221',N'2005 Gasolina',N'2005-1',N'828431671',N'9BR72ZEC258557961',6,N'2004',N'2005 Gasolina',NULL,N'CINZA',N'Joinville',N'SC',N'03450097970',N'PARTICULAR',91000,N'Ezequiel da Silva Daniel',N'01/10/2014',NULL,N'5P/136CV',N'Office Lens 04022018 2025.pdf',{ts '2014-05-09 17:28:57.000'},1);
+GO
