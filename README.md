@@ -10,7 +10,7 @@ O objetivo deste projeto é gerenciar os gastos com seu veículo ou frota de ve�
 | :fire: Desafio     | https://url-do-desafio.com.br
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](Release/dashboard.PNG#vitrinedev)
+![](https://github.com/ezequielsd/GestaoFrota/blob/main/Release/dashboard.PNG#vitrinedev)
 
 
 Elaborado por Ezequiel da Silva Daniel
