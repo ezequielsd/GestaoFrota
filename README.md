@@ -7,7 +7,7 @@ O objetivo deste projeto é gerenciar os gastos com seu veículo ou frota de ve�
 | :sparkles: Nome        | **Gestão de Frota**
 | :label: Tecnologias | c#
 | :rocket: URL         | https://github.com/ezequielsd/GestaoFrotaVitrine
-| :fire: Desafio     | https://url-do-desafio.com.br
+| :fire: Site     | https://ezequieldaniel.wordpress.com/
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
 ![](https://github.com/ezequielsd/GestaoFrota/blob/main/Release/dashboard.PNG#vitrinedev)
@@ -118,5 +118,5 @@ A versão Release do programa, executável com suas dependencias, basta copiar p
 
 Atenção, aqui é para aqueles que apenas querem utilizar o programa...
 
-[Gestão de Frota](https://github.com/ezequielsd/GestaoFrota/raw/master/Release/Release.zip)
+[Gestão de Frota](Release/Release.zip)
 
