@@ -43,7 +43,7 @@ Para realizar debug e compilar, deve clonar o repositório ou baixar o código f
 **Para usuários**
 
 Basta baixar o programa no tópico **Release** mais abaixo, descompactar em alguma pasta e rodar o GestaoFrota.exe. Ele é estilo portable, ou seja, não é necessário sua instalação, sendo assim, é aconselhado a colocar a pasta em um pen driver ou hd externo e levar para qualquer lugar. Ao executar ele pela primeira vez, um arquivo chamado **Frota.sdf** será criado, ele é o banco de dados onde conterá todas as informações, e será gerado dentro da própria localização do executável. O sistema suporta uma boa capacidade de dados, porém para frotas acima de 5 carros entre em contato comigo que é mais aconselhado a usar um banco na nuvem, ou se for para empresa, será melhor instalar um banco SQL Server Express. Mas nestá situação, entre em contato que passo as orientações.
-Na pasta do programa, será criado tres novas pastas:
+Na pasta do programa, será criado estas novas pastas:
 
 * Comprovantes - esta pasta será usada para o programa salvar os comprovantes de abastecimentos, troca de oleo, anexadas no momento do lançamento do gasto.
 * Documentos - esta pasta será usada para salvar os documentos do carro, CNH anexadas no programa.
